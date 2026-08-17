@@ -1,0 +1,30 @@
+---
+title: "Claude Code for Research"
+subtitle: "A 4-hour hands-on course — QLab, Artificial Intelligence Laboratory, PUCP"
+author: "Alexander Quispe"
+date: "2026-08-17"
+format:
+  html:
+    theme: cosmo
+    toc: false
+---
+
+Agentic AI tools are changing how empirical research gets done. This short course takes you from **zero knowledge** to running real research tasks with [Claude Code](https://code.claude.com/docs) — safely, reproducibly, and as a lab.
+
+## Slides
+
+| Session | Deck | Topics |
+|---------|------|--------|
+| **Day 1** (Aug 17, 2h) | [Foundations](slides/day1-foundations.html) | claude.ai vs. Cowork vs. Claude Code · the agent loop · `/init` & `CLAUDE.md` · permission modes · **Plan Mode** |
+| **Day 2** (Aug 18, 2h) | [Power Tools](slides/day2-power-tools.html) | custom commands & subagents · **MCP** servers · dashboards · **Whisper** for paper discussions · the Sant'Anna academic workflow |
+
+## Before class
+
+- A [GitHub](https://github.com) account and [VS Code](https://code.visualstudio.com) installed
+- Claude Code installed and logged in: `curl -fsSL https://claude.ai/install.sh | bash`
+- The **Claude Code** extension for VS Code
+
+## Based on
+
+- Pedro H. C. Sant'Anna — [*My Claude Code Workflow*](https://psantanna.com/claude-code-my-workflow/workflow-guide.html) and the [claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow) template
+- Anthropic — [Claude Code documentation](https://code.claude.com/docs)

@@ -1,0 +1,376 @@
+---
+title: "Claude Code for Research"
+subtitle: "Day 2 — Power Tools: MCPs, Dashboards, Whisper & the Academic Workflow"
+author: "Alexander Quispe"
+institute: "QLab — Artificial Intelligence Laboratory, PUCP"
+date: "2026-08-18"
+date-format: "MMMM D, YYYY"
+---
+
+## Plan for today (2 hours) {.smaller}
+
+| Block | Topic | Time |
+|-------|-------|------|
+| 1 | Warm-up: yesterday in 5 commands | 10 min |
+| 2 | Make it yours: custom slash commands & subagents | 25 min |
+| 3 | MCP: connecting Claude to the outside world | 25 min |
+| 4 | Demo: CSV → dashboard in minutes | 15 min |
+| 5 | Whisper: audio/video → structured paper discussions | 20 min |
+| 6 | The full academic workflow (Sant'Anna framework) | 20 min |
+| 7 | Best practices + wrap-up | 5 min |
+
+## Warm-up — yesterday in 5 moves {.smaller}
+
+```bash
+cd project/ && claude          # 1. start where the work lives
+```
+
+| Move | Key / command |
+|------|---------------|
+| Project memory | `/init` → edit `CLAUDE.md` → commit |
+| Think first | <kbd>Shift</kbd>+<kbd>Tab</kbd> ×2 → **Plan Mode** |
+| Go fast | <kbd>Shift</kbd>+<kbd>Tab</kbd> → **auto-accept** |
+| Stay safe | `git diff` after, <kbd>Esc</kbd> to interrupt |
+| Stay sharp | `/clear` between tasks, `/compact` when long |
+
+. . .
+
+Quick check: *who ran `/init` on a real project last night? What did it get wrong?*
+
+# Block 2 — Make It Yours
+
+## Custom slash commands
+
+Any prompt you type twice deserves a file. Create `.claude/commands/`:
+
+```markdown
+<!-- .claude/commands/regression-check.md -->
+Review the staged R changes for econometric correctness:
+1. Are standard errors clustered per CLAUDE.md conventions?
+2. Do sample filters match across specifications?
+3. Any hardcoded paths or magic numbers?
+Report issues as a checklist; do not edit files. $ARGUMENTS
+```
+
+. . .
+
+Now `/regression-check` is a command in every session — and, committed to git, **your whole lab has it**.
+
+```text
+> /regression-check focus on the event-study script
+```
+
+## Subagents: delegating with a clean context
+
+::: incremental
+- A **subagent** is a Claude instance your session spawns for a subtask — with its **own separate context window**.
+- Your main session stays clean: it receives only the *conclusion*, not 50 files of noise.
+- Claude uses them automatically for big searches; you can define **specialists**.
+:::
+
+. . .
+
+```markdown
+<!-- .claude/agents/proofreader.md -->
+---
+name: proofreader
+description: Reviews LaTeX/Quarto text for grammar, clarity, and flow.
+tools: Read, Grep, Glob
+---
+You are an academic copy editor. Never change math or citations.
+Report issues with file:line references...
+```
+
+```text
+> use the proofreader agent on sections 4 and 5
+```
+
+Manage them with `/agents`. Pedro's framework ships **18** of these.
+
+## Headless mode: Claude in scripts
+
+`claude -p "prompt"` runs one task and exits — Claude Code as a **building block**:
+
+```bash
+# nightly reproducibility check (cron / GitHub Actions)
+claude -p "run scripts/00_master.R; if any table in tables/
+  changed vs git HEAD, summarize what changed and why" \
+  --allowedTools "Bash,Read" > repro_report.md
+```
+
+This is how you go from "AI assistant" to "AI **infrastructure**".
+
+# Block 3 — MCP: Connecting the Outside World
+
+## What is MCP?
+
+**Model Context Protocol** — an open standard: *"USB-C for AI tools."*
+
+::: incremental
+- Out of the box, Claude Code sees your **filesystem + shell**.
+- An **MCP server** plugs in a new capability: GitHub, databases, browsers, Slack, Notion, arXiv...
+- Each server exposes *tools* Claude can call — with the same permission system you already know.
+:::
+
+. . .
+
+```bash
+claude mcp add github        # guided install, most popular servers
+claude mcp list              # what's connected
+/mcp                         # manage inside a session
+```
+
+## MCP servers worth knowing {.smaller}
+
+| Server | What Claude can then do |
+|--------|-------------------------|
+| **GitHub** | Read/comment issues & PRs, review your coauthor's pull request |
+| **Postgres / BigQuery** | Query the lab database directly: *"how many obs per wave?"* |
+| **Chrome / Playwright** | Drive a browser: check a deployed dashboard, scrape a table |
+| **Filesystem (scoped)** | Give access to a data folder *outside* the repo |
+| **arXiv / paper-search** | Pull abstracts and metadata into a lit review |
+
+. . .
+
+Configuration lives in `.mcp.json` (project) — commit it and your **whole team** gets the same connections.
+
+::: {.callout-warning}
+## Security minute
+An MCP server runs with *your* credentials. Only install servers you trust, scope database users to **read-only**, and never point Claude at production with write access.
+:::
+
+## Demo: GitHub MCP {.your-turn}
+
+**Watch, then replicate (10 min):**
+
+```bash
+claude mcp add github
+```
+
+```text
+> what open issues does this repo have?
+> summarize PR #3 — what does it change and is anything risky?
+> draft a polite review comment asking for a test on the
+  sample-restriction change
+```
+
+The pattern: **conversation in the terminal, actions on GitHub** — no tab-switching, no copy-paste.
+
+# Block 4 — Dashboards in Minutes
+
+## From CSV to dashboard
+
+Quarto (which renders these slides) also does **dashboards**. Watch:
+
+```text
+[plan mode] > I have data/enaho_sample.csv (household survey).
+  Create a Quarto dashboard: value boxes with N and mean income;
+  a bar chart of income by region; a scatter of income vs.
+  education colored by urban/rural. Render it and fix any errors.
+```
+
+. . .
+
+Claude writes `dashboard.qmd`, runs `quarto render`, reads the errors, fixes them, and iterates — the **agent loop** doing the boring part.
+
+```yaml
+format: dashboard    # that's the magic line
+```
+
+## Why this matters for QLab
+
+::: incremental
+- **Exploration speed**: every dataset gets a browsable overview in ~5 minutes.
+- **Communication**: send coauthors a *link*, not 14 PNG attachments.
+- **Living documents**: dashboard re-renders from the pipeline — no stale figures.
+- Works the same for **Shiny**, **Streamlit**, `plotly` — Claude Code doesn't care about the stack.
+:::
+
+. . .
+
+::: {.callout-tip}
+Publish free with `quarto publish gh-pages` — Claude can set that up for you too. (Ask it to.)
+:::
+
+# Block 5 — Whisper: Audio & Video → Research Input
+
+## The use case
+
+Research conversations are **spoken**: seminars, coauthor calls, referee workshops, your own voice memos after reading a paper.
+
+::: incremental
+- That content usually **evaporates**.
+- Pipeline: **record → transcribe (Whisper) → structure (Claude Code) → commit to the repo**.
+- Now your paper discussion is *searchable, quotable, and versioned*.
+:::
+
+## Step 1 — Transcribe with Whisper
+
+[Whisper](https://github.com/openai/whisper): OpenAI's open-source speech-to-text. Runs **locally** — recordings never leave your machine.
+
+```bash
+pip install -U openai-whisper          # needs ffmpeg installed
+# Apple Silicon (much faster): pip install mlx-whisper
+
+# video? extract audio first
+ffmpeg -i seminar.mp4 -ar 16000 -ac 1 audio.wav
+
+whisper audio.wav --model medium --language en \
+  --output_format txt --output_dir transcripts/
+```
+
+- `--model small` fast / `medium` good default / `large-v3` best
+- Handles Spanish (`--language es`) and code-switching seminars well
+
+## Step 2 — Structure it with Claude Code
+
+Drop the transcript in the repo, then:
+
+```text
+> read transcripts/seminar_2026-08-12.txt — it's a discussion
+  of Callaway & Sant'Anna (2021) at our reading group.
+
+  Produce notes/cs2021_discussion.md with:
+  1. The 5 main claims discussed, each with a direct quote
+  2. Open questions the group raised
+  3. Concrete implications for our minimum-wage paper
+  4. A "who said what" attribution table
+
+  Then check: does anything contradict our current
+  identification strategy in notes/identification.md?
+```
+
+. . .
+
+That last line is the leap: the transcript becomes **connected knowledge**, cross-checked against the rest of the project.
+
+## The compounding effect
+
+```
+seminar.mp4 ─► whisper ─► transcript.txt ─► claude ─► notes/*.md ─► git
+                                                        │
+   next session: "what did we conclude about        ◄───┘
+   parallel trends in the June reading group?"
+```
+
+::: incremental
+- Every meeting becomes **queryable memory** for the whole project.
+- Works for: advisor meetings, conference talks (with permission!), interview data, your own voice memos.
+- QLab idea: a `reading-group/` repo where every session gets transcribed, structured, and linked.
+:::
+
+# Block 6 — The Full Academic Workflow
+
+## Sant'Anna's `claude-code-my-workflow` {.smaller}
+
+Everything from these two days, **industrialized**. A fork-ready template from a PhD course at Emory:
+
+[github.com/pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow)
+
+| Piece | Count | Examples |
+|-------|-------|----------|
+| **Skills** (slash commands) | 52+ | `/create-lecture`, `/lit-review`, `/review-paper --peer AER`, `/data-analysis`, `/audit-reproducibility` |
+| **Agents** (specialists) | 18 | proofreader, slide-auditor, methods-referee, claim-verifier, r-reviewer |
+| **Rules** (conventions) | 32 | DiD conventions, confidential data, verification protocol |
+| **Hooks** | — | pre-commit quality gates, context monitors |
+
+## The "contractor model"
+
+You stop crafting prompts. You state a **goal** and invoke a skill:
+
+```text
+> /review-paper --peer "Journal of Econometrics"
+```
+
+. . .
+
+The skill orchestrates agents through a loop:
+
+```
+implement → verify → review (critic) → fix → re-verify → score
+```
+
+- Work is **scored** (0–100). Commits blocked below 80; PRs below 90.
+- An adversarial *critic–fixer* loop runs until no new issues appear.
+- `/verify-claims`: a fact-checker with **fresh context** that never saw the draft re-derives every numeric claim from the code.
+
+. . .
+
+::: {.callout-tip}
+This solves the real problem with AI-assisted research: not generation — **verification**.
+:::
+
+## How to adopt it
+
+```bash
+# 1. Fork on GitHub, then:
+git clone https://github.com/<you>/claude-code-my-workflow my-paper
+cd my-paper && ./scripts/validate-setup.sh
+
+# 2. Start Claude Code and paste the starter prompt:
+claude
+> I am starting to work on [PROJECT] in this repo. [2–3 sentence
+  description.] Please read the configuration files and adapt
+  them for my project. Enter plan mode and start.
+```
+
+. . .
+
+Community forks to study: **Blattman** (Chicago, non-technical guide) · **Cunningham/MixtapeTools** (Baylor, presentations) · **clo-author** (Hugo Sant'Anna, paper pipelines).
+
+**QLab opportunity:** a *QLab fork* with our conventions — Spanish/English output styles, ENAHO/INEI data rules, tectonic instead of xelatex.
+
+# Block 7 — Wrap-Up
+
+## Best practices — the honest list {.smaller}
+
+::: incremental
+1. **Verify everything that will be published.** Claude is a brilliant RA who occasionally hallucinates with total confidence. The workflow (plan → execute → diff → verify) exists because of this.
+2. **Git always.** Small commits. `git diff` is your reading assignment.
+3. **Never let Claude touch `data/raw/`.** Encode it in `CLAUDE.md`.
+4. **Plan Mode for anything ≥ 3 steps.** Reviewing a plan costs 2 minutes; reviewing 400 changed lines costs an afternoon.
+5. **Spend context wisely**: `/clear` between tasks, subagents for big searches.
+6. **Reproducibility is the point**, not speed: if Claude wrote it and you can't re-run it, you don't have a result.
+7. **Disclose AI use** per journal policy — and remember: *you* are the author of record.
+:::
+
+## What you can do now that you couldn't yesterday
+
+| Yesterday | Today |
+|-----------|-------|
+| Chat with claude.ai | Run an agent inside your repo |
+| Re-explain your project every time | `/init` + `CLAUDE.md` in git |
+| Accept edits blindly or slowly | Plan Mode → auto-accept → diff |
+| Copy-paste from GitHub / SQL / browser | MCP servers |
+| Static figures by email | Quarto dashboards |
+| Seminar knowledge evaporates | Whisper → structured, versioned notes |
+| Solo prompting | A forkable lab **framework** with quality gates |
+
+## Your mission {.your-turn}
+
+**This week:**
+
+1. Pick one real project. Run `/init`, write the rules, commit.
+2. Do one real task with **Plan Mode → auto-accept → git diff**.
+3. Transcribe one recording (class, seminar, voice memo) and turn it into structured notes in the repo.
+
+**This semester (QLab):**
+
+- Fork `claude-code-my-workflow` → adapt it as **`qlab-workflow`**.
+- One shared `reading-group/` repo with Whisper + discussion notes.
+
+## References — Day 2 {.smaller}
+
+- Sant'Anna, P. H. C. — *My Claude Code Workflow*: [psantanna.com/claude-code-my-workflow](https://psantanna.com/claude-code-my-workflow/workflow-guide.html) · [repo](https://github.com/pedrohcgs/claude-code-my-workflow)
+- Anthropic — Claude Code docs: [code.claude.com/docs](https://code.claude.com/docs) (subagents, MCP, hooks, headless mode)
+- Model Context Protocol: [modelcontextprotocol.io](https://modelcontextprotocol.io)
+- OpenAI Whisper: [github.com/openai/whisper](https://github.com/openai/whisper) · Apple Silicon: `mlx-whisper`
+- Quarto dashboards: [quarto.org/docs/dashboards](https://quarto.org/docs/dashboards/)
+
+. . .
+
+**Thank you!** — questions: alexander.quispe@pucp.edu.pe
+
+::: aside
+These slides: written in Quarto, themed, debugged, and rendered by Claude Code.
+:::

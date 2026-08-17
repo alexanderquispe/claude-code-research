@@ -1,0 +1,136 @@
+/*-- scss:defaults --*/
+
+// QLab PUCP — academic navy + teal accent
+$primary: #0f2d52;        // deep navy
+$accent: #0e7c86;         // teal
+$accent-warm: #c05621;    // burnt orange for emphasis
+$body-bg: #ffffff;
+$body-color: #1a202c;
+$link-color: $accent;
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+$font-family-monospace: "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+$presentation-heading-color: $primary;
+$presentation-heading-font-weight: 700;
+$presentation-h1-font-size: 2.2em;
+$presentation-h2-font-size: 1.35em;
+$presentation-font-size-root: 36px;
+
+$code-block-bg: #f6f8fa;
+$code-block-border-color: #e2e8f0;
+$code-color: #b83280;
+
+/*-- scss:rules --*/
+
+.reveal .slide-logo {
+  max-height: 2.2em;
+}
+
+// Title slide
+#title-slide {
+  .title {
+    color: $primary;
+    font-size: 1.9em;
+    font-weight: 800;
+  }
+  .subtitle {
+    color: $accent;
+    font-size: 1.1em;
+    margin-top: 0.4em;
+  }
+  .quarto-title-author-name,
+  .date,
+  .institute {
+    color: #4a5568;
+  }
+}
+
+// Section divider slides: <h1> on its own slide
+.reveal section h1 {
+  color: $primary;
+}
+
+.reveal .slides section .fragment.highlight-current-blue.current-fragment {
+  color: $accent;
+}
+
+// Code blocks: slightly smaller, roomy
+.reveal pre code {
+  font-size: 0.82em;
+  line-height: 1.45;
+  padding: 0.7em 0.9em;
+  border-radius: 8px;
+  max-height: 520px;
+}
+
+.reveal code {
+  color: $code-color;
+  background-color: #faf0f6;
+  padding: 0.05em 0.25em;
+  border-radius: 4px;
+}
+
+.reveal pre code * {
+  background-color: transparent;
+}
+
+// Terminal-style code blocks: add {.terminal} to a div wrapping the block
+.reveal .terminal pre code {
+  background-color: #1a202c;
+  color: #e2e8f0;
+  border: none;
+}
+
+// Tables
+.reveal table {
+  font-size: 0.78em;
+  th {
+    background-color: $primary;
+    color: white;
+    padding: 0.35em 0.6em;
+  }
+  td {
+    padding: 0.32em 0.6em;
+  }
+  tr:nth-child(even) td {
+    background-color: #f1f5f9;
+  }
+}
+
+// Callouts a bit smaller on slides
+.reveal .callout {
+  font-size: 0.85em;
+}
+
+// Utility classes
+.accent { color: $accent; font-weight: 700; }
+.warm   { color: $accent-warm; font-weight: 700; }
+.muted  { color: #718096; }
+.small  { font-size: 0.75em; }
+.big    { font-size: 1.25em; }
+
+// "Your turn" hands-on slides
+.your-turn {
+  border-left: 6px solid $accent;
+  background: #e6fbfc;
+  padding: 0.5em 0.9em;
+  border-radius: 0 8px 8px 0;
+}
+
+// Keyboard keys
+kbd {
+  background: #edf2f7;
+  border: 1px solid #cbd5e0;
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  padding: 0.05em 0.4em;
+  font-family: $font-family-monospace;
+  font-size: 0.85em;
+  color: $primary;
+}
+
+.reveal .footer {
+  color: #a0aec0;
+  font-size: 0.5em;
+}

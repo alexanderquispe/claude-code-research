@@ -1,0 +1,26 @@
+project:
+  type: default
+  output-dir: docs
+  render:
+    - index.qmd
+    - slides/day1-foundations.qmd
+    - slides/day2-power-tools.qmd
+
+format:
+  revealjs:
+    theme: [default, ../styles/theme.scss]
+    slide-number: c/t
+    hash: true
+    transition: fade
+    transition-speed: fast
+    fragments: false
+    incremental: false
+    code-copy: true
+    code-line-numbers: false
+    highlight-style: github
+    footer: "Claude Code for Research — QLab PUCP · August 2026"
+    center-title-slide: true
+    controls: true
+    progress: true
+    history: true
+    pdf-separate-fragments: false
