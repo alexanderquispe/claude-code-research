@@ -1,6 +1,6 @@
 ---
 title: "Claude Code for Research"
-subtitle: "A 4-hour hands-on course — QLab, Artificial Intelligence Laboratory, PUCP"
+subtitle: "A 4-hour hands-on course — [Q-LAB](https://qlab.pucp.edu.pe/), Laboratorio de Inteligencia Artificial y Métodos Computacionales en Ciencias Sociales, PUCP"
 author: "Alexander Quispe"
 date: "2026-08-17"
 format:

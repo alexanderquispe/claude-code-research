@@ -18,7 +18,7 @@ format:
     code-copy: true
     code-line-numbers: false
     highlight-style: github
-    footer: "Claude Code for Research — QLab PUCP · August 2026"
+    footer: "Claude Code for Research — Q-LAB PUCP · August 2026"
     center-title-slide: true
     controls: true
     progress: true

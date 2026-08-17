@@ -1,8 +1,8 @@
-# Claude Code for Research — QLab PUCP
+# Claude Code for Research — Q-LAB PUCP
 
 A 4-hour hands-on course (2 sessions × 2 hours) introducing agentic AI workflows for empirical research with [Claude Code](https://code.claude.com/docs).
 
-**Instructor:** Alexander Quispe · QLab, Artificial Intelligence Laboratory, PUCP · August 2026
+**Instructor:** Alexander Quispe · [Q-LAB](https://qlab.pucp.edu.pe/) — Laboratorio de Inteligencia Artificial y Métodos Computacionales en Ciencias Sociales, PUCP · August 2026
 
 ## Slides
 

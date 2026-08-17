@@ -2,7 +2,7 @@
 title: "Claude Code for Research"
 subtitle: "Day 2 — Power Tools: MCPs, Dashboards, Whisper & the Academic Workflow"
 author: "Alexander Quispe"
-institute: "QLab — Artificial Intelligence Laboratory, PUCP"
+institute: "Q-LAB · Laboratorio de Inteligencia Artificial y Métodos Computacionales en Ciencias Sociales — PUCP"
 date: "2026-08-18"
 date-format: "MMMM D, YYYY"
 ---
@@ -177,7 +177,7 @@ Claude writes `dashboard.qmd`, runs `quarto render`, reads the errors, fixes the
 format: dashboard    # that's the magic line
 ```
 
-## Why this matters for QLab
+## Why this matters for Q-LAB
 
 ::: incremental
 - **Exploration speed**: every dataset gets a browsable overview in ~5 minutes.
@@ -256,7 +256,7 @@ seminar.mp4 ─► whisper ─► transcript.txt ─► claude ─► notes/*.md
 ::: incremental
 - Every meeting becomes **queryable memory** for the whole project.
 - Works for: advisor meetings, conference talks (with permission!), interview data, your own voice memos.
-- QLab idea: a `reading-group/` repo where every session gets transcribed, structured, and linked.
+- Q-LAB idea: a `reading-group/` repo where every session gets transcribed, structured, and linked.
 :::
 
 # Block 6 — The Full Academic Workflow
@@ -318,7 +318,7 @@ claude
 
 Community forks to study: **Blattman** (Chicago, non-technical guide) · **Cunningham/MixtapeTools** (Baylor, presentations) · **clo-author** (Hugo Sant'Anna, paper pipelines).
 
-**QLab opportunity:** a *QLab fork* with our conventions — Spanish/English output styles, ENAHO/INEI data rules, tectonic instead of xelatex.
+**Q-LAB opportunity:** a *Q-LAB fork* with our conventions — Spanish/English output styles, ENAHO/INEI data rules, tectonic instead of xelatex.
 
 # Block 7 — Wrap-Up
 
@@ -354,7 +354,7 @@ Community forks to study: **Blattman** (Chicago, non-technical guide) · **Cunni
 2. Do one real task with **Plan Mode → auto-accept → git diff**.
 3. Transcribe one recording (class, seminar, voice memo) and turn it into structured notes in the repo.
 
-**This semester (QLab):**
+**This semester (Q-LAB):**
 
 - Fork `claude-code-my-workflow` → adapt it as **`qlab-workflow`**.
 - One shared `reading-group/` repo with Whisper + discussion notes.

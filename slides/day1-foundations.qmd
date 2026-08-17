@@ -2,7 +2,7 @@
 title: "Claude Code for Research"
 subtitle: "Day 1 — Foundations: From Zero to Agentic Workflows"
 author: "Alexander Quispe"
-institute: "QLab — Artificial Intelligence Laboratory, PUCP"
+institute: "Q-LAB · Laboratorio de Inteligencia Artificial y Métodos Computacionales en Ciencias Sociales — PUCP"
 date: "2026-08-17"
 date-format: "MMMM D, YYYY"
 ---
