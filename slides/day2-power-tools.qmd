@@ -12,12 +12,13 @@ date-format: "MMMM D, YYYY"
 | Block | Topic | Time |
 |-------|-------|------|
 | 1 | Warm-up: yesterday in 5 commands | 10 min |
-| 2 | Make it yours: custom slash commands & subagents | 25 min |
-| 3 | MCP: connecting Claude to the outside world | 25 min |
+| 2 | Make it yours: custom slash commands & subagents | 20 min |
+| 3 | MCP: connecting Claude to the outside world | 20 min |
 | 4 | Demo: CSV → dashboard in minutes | 15 min |
-| 5 | Whisper: audio/video → structured paper discussions | 20 min |
-| 6 | The full academic workflow (Sant'Anna framework) | 20 min |
-| 7 | Best practices + wrap-up | 5 min |
+| 5 | **Deep Research**: cross-checked answers at scale | 15 min |
+| 6 | Whisper: audio/video → structured paper discussions | 20 min |
+| 7 | The full academic workflow (Sant'Anna framework) | 15 min |
+| 8 | Best practices + wrap-up | 5 min |
 
 ## Warm-up — yesterday in 5 moves {.smaller}
 
@@ -60,7 +61,7 @@ Now `/regression-check` is a command in every session — and, committed to git,
 > /regression-check focus on the event-study script
 ```
 
-## Subagents: delegating with a clean context
+## Subagents: delegating with a clean context {.smaller}
 
 ::: incremental
 - A **subagent** is a Claude instance your session spawns for a subtask — with its **own separate context window**.
@@ -192,7 +193,58 @@ format: dashboard    # that's the magic line
 Publish free with `quarto publish gh-pages` — Claude can set that up for you too. (Ask it to.)
 :::
 
-# Block 5 — Whisper: Audio & Video → Research Input
+# Block 5 — Deep Research
+
+## `/deep-research` — one command, a fleet of investigators {.smaller}
+
+A **bundled workflow**: a script that orchestrates many subagents *in the background* — your session stays free while they work.
+
+```text
+/deep-research What does the empirical literature since 2019 say about
+  employment effects of minimum-wage increases in economies with high
+  informality? Distinguish short- vs long-run effects.
+```
+
+What actually happens behind that one command:
+
+```
+1. FAN OUT      parallel web searches from several distinct angles
+2. FETCH        agents read and extract from the sources they find
+3. CROSS-CHECK  independent agents VOTE on every claim
+4. SYNTHESIZE   one cited report — claims that fail verification
+                are filtered out before you ever see them
+```
+
+- Claims that *couldn't* be checked are labeled **unverified** — not silently kept, not counted as refuted.
+- Monitor live with `/workflows`: phases, agents, tokens, elapsed time.
+
+[Requires Claude Code ≥ 2.1.154, the WebSearch tool, and a paid plan or API access (on Pro: enable *Dynamic workflows* in `/config`).]{.small .muted}
+
+## Why it beats asking directly {.smaller}
+
+| | Single prompt | `/deep-research` |
+|---|---------------|------------------|
+| **Coverage** | One pass, one search angle | Several angles searched in parallel |
+| **Errors** | Compound silently inside one context | Independent agents vote them out |
+| **Citations** | Ask and hope | Every surviving claim is cited |
+| **Your session** | Fills up with search noise | Stays clean — only the final report lands |
+
+. . .
+
+**Use it for:** literature reviews, policy scans, *"what's the state of the debate on X"*, method comparisons — **multi-source questions where being wrong is expensive**.
+
+**Don't use it for:** single-fact lookups, questions one search answers, or anything about *your own repo* — normal prompts and subagents are cheaper and faster there.
+
+## Getting the most out of it {.smaller}
+
+1. **Ask like a referee, not like Google.** Scope + time window + what counts as an answer.
+   [Weak: *"research minimum wage"* → Strong: the prompt two slides back — population, period, outcome, and the distinction you need.]{.small}
+2. **Pilot narrow, then widen.** Run a small version first to gauge cost — `/workflows` shows per-agent tokens, and a run projected past **25 agents / 1.5M tokens** gets a *Large workflow* warning.
+3. **Steer mid-run.** `/workflows` → drill into any phase or agent · <kbd>p</kbd> pause · <kbd>x</kbd> stop · <kbd>s</kbd> save the script.
+4. **Read it like a referee too.** The citations are for *you* to check — start with the **unverified** list before anything enters your paper.
+5. **Turn it into lab infrastructure.** Save the run's script as a command in `.claude/workflows/` (takes arguments) — imagine a Q-LAB `/lit-scan <question>` every RA can run. The `ultracode` keyword makes Claude write *custom* research workflows on demand.
+
+# Block 6 — Whisper: Audio & Video → Research Input
 
 ## The use case
 
@@ -259,7 +311,7 @@ seminar.mp4 ─► whisper ─► transcript.txt ─► claude ─► notes/*.md
 - Q-LAB idea: a `reading-group/` repo where every session gets transcribed, structured, and linked.
 :::
 
-# Block 6 — The Full Academic Workflow
+# Block 7 — The Full Academic Workflow
 
 ## Sant'Anna's `claude-code-my-workflow` {.smaller}
 
@@ -274,7 +326,7 @@ Everything from these two days, **industrialized**. A fork-ready template from a
 | **Rules** (conventions) | 32 | DiD conventions, confidential data, verification protocol |
 | **Hooks** | — | pre-commit quality gates, context monitors |
 
-## The "contractor model"
+## The "contractor model" {.smaller}
 
 You stop crafting prompts. You state a **goal** and invoke a skill:
 
@@ -300,7 +352,7 @@ implement → verify → review (critic) → fix → re-verify → score
 This solves the real problem with AI-assisted research: not generation — **verification**.
 :::
 
-## How to adopt it
+## How to adopt it {.smaller}
 
 ```bash
 # 1. Fork on GitHub, then:
@@ -320,7 +372,7 @@ Community forks to study: **Blattman** (Chicago, non-technical guide) · **Cunni
 
 **Q-LAB opportunity:** a *Q-LAB fork* with our conventions — Spanish/English output styles, ENAHO/INEI data rules, tectonic instead of xelatex.
 
-# Block 7 — Wrap-Up
+# Block 8 — Wrap-Up
 
 ## Best practices — the honest list {.smaller}
 
@@ -334,7 +386,7 @@ Community forks to study: **Blattman** (Chicago, non-technical guide) · **Cunni
 7. **Disclose AI use** per journal policy — and remember: *you* are the author of record.
 :::
 
-## What you can do now that you couldn't yesterday
+## What you can do now that you couldn't yesterday {.smaller}
 
 | Yesterday | Today |
 |-----------|-------|
@@ -342,11 +394,12 @@ Community forks to study: **Blattman** (Chicago, non-technical guide) · **Cunni
 | Re-explain your project every time | `/init` + `CLAUDE.md` in git |
 | Accept edits blindly or slowly | Plan Mode → auto-accept → diff |
 | Copy-paste from GitHub / SQL / browser | MCP servers |
+| Manual Googling, uncertain sources | `/deep-research` — cross-checked, cited reports |
 | Static figures by email | Quarto dashboards |
 | Seminar knowledge evaporates | Whisper → structured, versioned notes |
 | Solo prompting | A forkable lab **framework** with quality gates |
 
-## Your mission {.your-turn}
+## Your mission {.your-turn .smaller}
 
 **This week:**
 
@@ -371,6 +424,4 @@ Community forks to study: **Blattman** (Chicago, non-technical guide) · **Cunni
 
 **Thank you!** — questions: alexander.quispe@pucp.edu.pe
 
-::: aside
-These slides: written in Quarto, themed, debugged, and rendered by Claude Code.
-:::
+[These slides: written in Quarto, themed, debugged, and rendered by Claude Code.]{.small .muted}

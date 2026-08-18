@@ -235,12 +235,12 @@ Alexander Quispe
 <tr class="even">
 <td>2</td>
 <td>Make it yours: custom slash commands &amp; subagents</td>
-<td>25 min</td>
+<td>20 min</td>
 </tr>
 <tr class="odd">
 <td>3</td>
 <td>MCP: connecting Claude to the outside world</td>
-<td>25 min</td>
+<td>20 min</td>
 </tr>
 <tr class="even">
 <td>4</td>
@@ -249,16 +249,21 @@ Alexander Quispe
 </tr>
 <tr class="odd">
 <td>5</td>
-<td>Whisper: audio/video → structured paper discussions</td>
-<td>20 min</td>
+<td><strong>Deep Research</strong>: cross-checked answers at scale</td>
+<td>15 min</td>
 </tr>
 <tr class="even">
 <td>6</td>
-<td>The full academic workflow (Sant’Anna framework)</td>
+<td>Whisper: audio/video → structured paper discussions</td>
 <td>20 min</td>
 </tr>
 <tr class="odd">
 <td>7</td>
+<td>The full academic workflow (Sant’Anna framework)</td>
+<td>15 min</td>
+</tr>
+<tr class="even">
+<td>8</td>
 <td>Best practices + wrap-up</td>
 <td>5 min</td>
 </tr>
@@ -321,7 +326,7 @@ Alexander Quispe
 <pre class="text"><code>&gt; /regression-check focus on the event-study script</code></pre>
 </div>
 </section>
-<section id="subagents-delegating-with-a-clean-context" class="slide level2">
+<section id="subagents-delegating-with-a-clean-context" class="slide level2 smaller">
 <h2>Subagents: delegating with a clean context</h2>
 <ul>
 <li class="fragment">A <strong>subagent</strong> is a Claude instance your session spawns for a subtask — with its <strong>own separate context window</strong>.</li>
@@ -474,8 +479,84 @@ Alexander Quispe
 </div>
 </section></section>
 <section>
-<section id="block-5-whisper-audio-video-research-input" class="title-slide slide level1 center">
-<h1>Block 5 — Whisper: Audio &amp; Video → Research Input</h1>
+<section id="block-5-deep-research" class="title-slide slide level1 center">
+<h1>Block 5 — Deep Research</h1>
+
+</section>
+<section id="deep-research-one-command-a-fleet-of-investigators" class="slide level2 smaller">
+<h2><code>/deep-research</code> — one command, a fleet of investigators</h2>
+<p>A <strong>bundled workflow</strong>: a script that orchestrates many subagents <em>in the background</em> — your session stays free while they work.</p>
+<pre class="text"><code>/deep-research What does the empirical literature since 2019 say about
+  employment effects of minimum-wage increases in economies with high
+  informality? Distinguish short- vs long-run effects.</code></pre>
+<p>What actually happens behind that one command:</p>
+<pre><code>1. FAN OUT      parallel web searches from several distinct angles
+2. FETCH        agents read and extract from the sources they find
+3. CROSS-CHECK  independent agents VOTE on every claim
+4. SYNTHESIZE   one cited report — claims that fail verification
+                are filtered out before you ever see them</code></pre>
+<ul>
+<li>Claims that <em>couldn’t</em> be checked are labeled <strong>unverified</strong> — not silently kept, not counted as refuted.</li>
+<li>Monitor live with <code>/workflows</code>: phases, agents, tokens, elapsed time.</li>
+</ul>
+<p><span class="small muted">Requires Claude Code ≥ 2.1.154, the WebSearch tool, and a paid plan or API access (on Pro: enable <em>Dynamic workflows</em> in <code>/config</code>).</span></p>
+</section>
+<section id="why-it-beats-asking-directly" class="slide level2 smaller">
+<h2>Why it beats asking directly</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 41%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Single prompt</th>
+<th><code>/deep-research</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Coverage</strong></td>
+<td>One pass, one search angle</td>
+<td>Several angles searched in parallel</td>
+</tr>
+<tr class="even">
+<td><strong>Errors</strong></td>
+<td>Compound silently inside one context</td>
+<td>Independent agents vote them out</td>
+</tr>
+<tr class="odd">
+<td><strong>Citations</strong></td>
+<td>Ask and hope</td>
+<td>Every surviving claim is cited</td>
+</tr>
+<tr class="even">
+<td><strong>Your session</strong></td>
+<td>Fills up with search noise</td>
+<td>Stays clean — only the final report lands</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><strong>Use it for:</strong> literature reviews, policy scans, <em>“what’s the state of the debate on X”</em>, method comparisons — <strong>multi-source questions where being wrong is expensive</strong>.</p>
+<p><strong>Don’t use it for:</strong> single-fact lookups, questions one search answers, or anything about <em>your own repo</em> — normal prompts and subagents are cheaper and faster there.</p>
+</div>
+</section>
+<section id="getting-the-most-out-of-it" class="slide level2 smaller">
+<h2>Getting the most out of it</h2>
+<ol type="1">
+<li><strong>Ask like a referee, not like Google.</strong> Scope + time window + what counts as an answer. <span class="small">Weak: <em>“research minimum wage”</em> → Strong: the prompt two slides back — population, period, outcome, and the distinction you need.</span></li>
+<li><strong>Pilot narrow, then widen.</strong> Run a small version first to gauge cost — <code>/workflows</code> shows per-agent tokens, and a run projected past <strong>25 agents / 1.5M tokens</strong> gets a <em>Large workflow</em> warning.</li>
+<li><strong>Steer mid-run.</strong> <code>/workflows</code> → drill into any phase or agent · <kbd>p</kbd> pause · <kbd>x</kbd> stop · <kbd>s</kbd> save the script.</li>
+<li><strong>Read it like a referee too.</strong> The citations are for <em>you</em> to check — start with the <strong>unverified</strong> list before anything enters your paper.</li>
+<li><strong>Turn it into lab infrastructure.</strong> Save the run’s script as a command in <code>.claude/workflows/</code> (takes arguments) — imagine a Q-LAB <code>/lit-scan &lt;question&gt;</code> every RA can run. The <code>ultracode</code> keyword makes Claude write <em>custom</em> research workflows on demand.</li>
+</ol>
+</section></section>
+<section>
+<section id="block-6-whisper-audio-video-research-input" class="title-slide slide level1 center">
+<h1>Block 6 — Whisper: Audio &amp; Video → Research Input</h1>
 
 </section>
 <section id="the-use-case" class="slide level2">
@@ -490,14 +571,14 @@ Alexander Quispe
 <section id="step-1-transcribe-with-whisper" class="slide level2">
 <h2>Step 1 — Transcribe with Whisper</h2>
 <p><a href="https://github.com/openai/whisper">Whisper</a>: OpenAI’s open-source speech-to-text. Runs <strong>locally</strong> — recordings never leave your machine.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-U</span> openai-whisper          <span class="co"># needs ffmpeg installed</span></span>
-<span id="cb12-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># Apple Silicon (much faster): pip install mlx-whisper</span></span>
-<span id="cb12-3"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># video? extract audio first</span></span>
-<span id="cb12-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">ffmpeg</span> <span class="at">-i</span> seminar.mp4 <span class="at">-ar</span> 16000 <span class="at">-ac</span> 1 audio.wav</span>
-<span id="cb12-6"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">whisper</span> audio.wav <span class="at">--model</span> medium <span class="at">--language</span> en <span class="dt">\</span></span>
-<span id="cb12-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">--output_format</span> txt <span class="at">--output_dir</span> transcripts/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-U</span> openai-whisper          <span class="co"># needs ffmpeg installed</span></span>
+<span id="cb14-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># Apple Silicon (much faster): pip install mlx-whisper</span></span>
+<span id="cb14-3"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># video? extract audio first</span></span>
+<span id="cb14-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">ffmpeg</span> <span class="at">-i</span> seminar.mp4 <span class="at">-ar</span> 16000 <span class="at">-ac</span> 1 audio.wav</span>
+<span id="cb14-6"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">whisper</span> audio.wav <span class="at">--model</span> medium <span class="at">--language</span> en <span class="dt">\</span></span>
+<span id="cb14-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">--output_format</span> txt <span class="at">--output_dir</span> transcripts/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><code>--model small</code> fast / <code>medium</code> good default / <code>large-v3</code> best</li>
 <li>Handles Spanish (<code>--language es</code>) and code-switching seminars well</li>
@@ -534,8 +615,8 @@ Alexander Quispe
 </ul>
 </section></section>
 <section>
-<section id="block-6-the-full-academic-workflow" class="title-slide slide level1 center">
-<h1>Block 6 — The Full Academic Workflow</h1>
+<section id="block-7-the-full-academic-workflow" class="title-slide slide level1 center">
+<h1>Block 7 — The Full Academic Workflow</h1>
 
 </section>
 <section id="santannas-claude-code-my-workflow" class="slide level2 smaller">
@@ -579,7 +660,7 @@ Alexander Quispe
 </tbody>
 </table>
 </section>
-<section id="the-contractor-model" class="slide level2">
+<section id="the-contractor-model" class="slide level2 smaller">
 <h2>The “contractor model”</h2>
 <p>You stop crafting prompts. You state a <strong>goal</strong> and invoke a skill:</p>
 <pre class="text"><code>&gt; /review-paper --peer "Journal of Econometrics"</code></pre>
@@ -608,25 +689,25 @@ Alexander Quispe
 </div>
 </div>
 </section>
-<section id="how-to-adopt-it" class="slide level2">
+<section id="how-to-adopt-it" class="slide level2 smaller">
 <h2>How to adopt it</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Fork on GitHub, then:</span></span>
-<span id="cb17-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>you<span class="op">&gt;</span>/claude-code-my-workflow my-paper</span>
-<span id="cb17-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-paper <span class="kw">&amp;&amp;</span> <span class="ex">./scripts/validate-setup.sh</span></span>
-<span id="cb17-4"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Start Claude Code and paste the starter prompt:</span></span>
-<span id="cb17-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span>
-<span id="cb17-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> I <span class="ex">am</span> starting to work on <span class="pp">[</span><span class="ss">PROJECT</span><span class="pp">]</span> in this repo. [2–3 sentence</span>
-<span id="cb17-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="ex">description.]</span> Please read the configuration files and adapt</span>
-<span id="cb17-9"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="ex">them</span> for my project. Enter plan mode and start.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Fork on GitHub, then:</span></span>
+<span id="cb19-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>you<span class="op">&gt;</span>/claude-code-my-workflow my-paper</span>
+<span id="cb19-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-paper <span class="kw">&amp;&amp;</span> <span class="ex">./scripts/validate-setup.sh</span></span>
+<span id="cb19-4"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Start Claude Code and paste the starter prompt:</span></span>
+<span id="cb19-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span>
+<span id="cb19-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> I <span class="ex">am</span> starting to work on <span class="pp">[</span><span class="ss">PROJECT</span><span class="pp">]</span> in this repo. [2–3 sentence</span>
+<span id="cb19-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="ex">description.]</span> Please read the configuration files and adapt</span>
+<span id="cb19-9"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="ex">them</span> for my project. Enter plan mode and start.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="fragment">
 <p>Community forks to study: <strong>Blattman</strong> (Chicago, non-technical guide) · <strong>Cunningham/MixtapeTools</strong> (Baylor, presentations) · <strong>clo-author</strong> (Hugo Sant’Anna, paper pipelines).</p>
 <p><strong>Q-LAB opportunity:</strong> a <em>Q-LAB fork</em> with our conventions — Spanish/English output styles, ENAHO/INEI data rules, tectonic instead of xelatex.</p>
 </div>
 </section></section>
 <section>
-<section id="block-7-wrap-up" class="title-slide slide level1 center">
-<h1>Block 7 — Wrap-Up</h1>
+<section id="block-8-wrap-up" class="title-slide slide level1 center">
+<h1>Block 8 — Wrap-Up</h1>
 
 </section>
 <section id="best-practices-the-honest-list" class="slide level2 smaller">
@@ -641,9 +722,13 @@ Alexander Quispe
 <li class="fragment"><strong>Disclose AI use</strong> per journal policy — and remember: <em>you</em> are the author of record.</li>
 </ol>
 </section>
-<section id="what-you-can-do-now-that-you-couldnt-yesterday" class="slide level2">
+<section id="what-you-can-do-now-that-you-couldnt-yesterday" class="slide level2 smaller">
 <h2>What you can do now that you couldn’t yesterday</h2>
 <table class="caption-top">
+<colgroup>
+<col style="width: 61%">
+<col style="width: 38%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Yesterday</th>
@@ -668,21 +753,25 @@ Alexander Quispe
 <td>MCP servers</td>
 </tr>
 <tr class="odd">
+<td>Manual Googling, uncertain sources</td>
+<td><code>/deep-research</code> — cross-checked, cited reports</td>
+</tr>
+<tr class="even">
 <td>Static figures by email</td>
 <td>Quarto dashboards</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Seminar knowledge evaporates</td>
 <td>Whisper → structured, versioned notes</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Solo prompting</td>
 <td>A forkable lab <strong>framework</strong> with quality gates</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="your-mission" class="slide level2 your-turn">
+<section id="your-mission" class="slide level2 your-turn smaller">
 <h2>Your mission</h2>
 <p><strong>This week:</strong></p>
 <ol type="1">
@@ -707,12 +796,10 @@ Alexander Quispe
 </ul>
 <div class="fragment">
 <p><strong>Thank you!</strong> — questions: alexander.quispe@pucp.edu.pe</p>
-
+<p><span class="small muted">These slides: written in Quarto, themed, debugged, and rendered by Claude Code.</span></p>
 
 </div>
-<aside><div>
-<p>These slides: written in Quarto, themed, debugged, and rendered by Claude Code.</p>
-</div></aside></section></section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

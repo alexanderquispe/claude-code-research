@@ -18,9 +18,7 @@ date-format: "MMMM D, YYYY"
 | 5 | Permission modes: default, auto-accept, **Plan Mode** | 25 min |
 | 6 | Hands-on: your first agentic session | 15 min |
 
-::: aside
-Tomorrow (Day 2): MCPs, subagents, custom commands, dashboards, Whisper for paper discussions, and a full academic workflow.
-:::
+[Tomorrow (Day 2): MCPs, subagents, custom commands, dashboards, Whisper for paper discussions, and a full academic workflow.]{.small .muted}
 
 ## Why this course?
 
@@ -150,7 +148,7 @@ Claude Code is not autocomplete. It runs a **loop**:
 - You are the **principal investigator**; Claude is a very fast RA.
 :::
 
-## Setup check — do this now {.your-turn}
+## Setup check — do this now {.your-turn .smaller}
 
 **Your turn (5 min):** open a terminal in VS Code (`` Ctrl+` ``) and run:
 
@@ -232,7 +230,7 @@ Rule of thumb: **write the prompt like an email to a new RA** — context, task,
 | `!ls -la` | Run a shell command yourself, output enters the chat |
 | `/help` | Everything else |
 
-## Context: the one resource you manage
+## Context: the one resource you manage {.smaller}
 
 ::: incremental
 - Claude has a **context window** — its working memory for the session.
@@ -365,7 +363,7 @@ Complex task  →  Plan Mode  →  read the plan critically
               →  git diff  →  commit
 ```
 
-## Plan Mode: a research example
+## Plan Mode: a research example {.smaller}
 
 ```text
 [plan mode] > I want to add an event-study specification to
@@ -427,7 +425,7 @@ Finished early? Ask Claude to write a `README.md` and re-run everything from scr
 - **Plan Mode → review → auto-accept → git diff** is the professional workflow.
 :::
 
-## Tomorrow: Day 2
+## Tomorrow: Day 2 {.smaller}
 
 - **Custom commands & subagents** — build your own `/lit-review`
 - **MCP servers** — connect Claude to GitHub, databases, your browser
@@ -446,6 +444,4 @@ Finished early? Ask Claude to write a `README.md` and re-run everything from scr
 - Anthropic — Claude Code docs: [code.claude.com/docs](https://code.claude.com/docs)
 - Anthropic — *Claude Code: Best practices for agentic coding* (engineering blog)
 
-::: aside
-Slides built with Quarto + reveal.js — using Claude Code, of course.
-:::
+[Slides built with Quarto + reveal.js — using Claude Code, of course.]{.small .muted}
