@@ -88,6 +88,10 @@ Report issues with file:line references...
 
 Manage them with `/agents`. Pedro's framework ships **18** of these.
 
+## Subagents, visually
+
+![](../figures/subagents.svg){width=84% fig-align="center"}
+
 ## Headless mode: Claude in scripts
 
 `claude -p "prompt"` runs one task and exits — Claude Code as a **building block**:
@@ -120,6 +124,10 @@ claude mcp add github        # guided install, most popular servers
 claude mcp list              # what's connected
 /mcp                         # manage inside a session
 ```
+
+## One protocol, many tools
+
+![](../figures/mcp-hub.svg){width=82% fig-align="center"}
 
 ## MCP servers worth knowing {.smaller}
 
@@ -205,20 +213,14 @@ A **bundled workflow**: a script that orchestrates many subagents *in the backgr
   informality? Distinguish short- vs long-run effects.
 ```
 
-What actually happens behind that one command:
-
-```
-1. FAN OUT      parallel web searches from several distinct angles
-2. FETCH        agents read and extract from the sources they find
-3. CROSS-CHECK  independent agents VOTE on every claim
-4. SYNTHESIZE   one cited report — claims that fail verification
-                are filtered out before you ever see them
-```
-
 - Claims that *couldn't* be checked are labeled **unverified** — not silently kept, not counted as refuted.
 - Monitor live with `/workflows`: phases, agents, tokens, elapsed time.
 
 [Requires Claude Code ≥ 2.1.154, the WebSearch tool, and a paid plan or API access (on Pro: enable *Dynamic workflows* in `/config`).]{.small .muted}
+
+## Inside `/deep-research`
+
+![](../figures/deep-research-pipeline.svg){width=94% fig-align="center"}
 
 ## Why it beats asking directly {.smaller}
 
@@ -296,14 +298,9 @@ Drop the transcript in the repo, then:
 
 That last line is the leap: the transcript becomes **connected knowledge**, cross-checked against the rest of the project.
 
-## The compounding effect
+## The compounding effect {.smaller}
 
-```
-seminar.mp4 ─► whisper ─► transcript.txt ─► claude ─► notes/*.md ─► git
-                                                        │
-   next session: "what did we conclude about        ◄───┘
-   parallel trends in the June reading group?"
-```
+![](../figures/whisper-pipeline.svg){width=80% fig-align="center"}
 
 ::: incremental
 - Every meeting becomes **queryable memory** for the whole project.
@@ -351,6 +348,10 @@ implement → verify → review (critic) → fix → re-verify → score
 ::: {.callout-tip}
 This solves the real problem with AI-assisted research: not generation — **verification**.
 :::
+
+## The contractor loop, visually
+
+![](../figures/contractor-loop.svg){width=80% fig-align="center"}
 
 ## How to adopt it {.smaller}
 

@@ -346,6 +346,10 @@ Alexander Quispe
 <p>Manage them with <code>/agents</code>. Pedro’s framework ships <strong>18</strong> of these.</p>
 </div>
 </section>
+<section id="subagents-visually" class="slide level2">
+<h2>Subagents, visually</h2>
+
+<img data-src="../figures/subagents.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:84.0%"></section>
 <section id="headless-mode-claude-in-scripts" class="slide level2">
 <h2>Headless mode: Claude in scripts</h2>
 <p><code>claude -p "prompt"</code> runs one task and exits — Claude Code as a <strong>building block</strong>:</p>
@@ -374,6 +378,10 @@ Alexander Quispe
 <span id="cb7-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">/mcp</span>                         <span class="co"># manage inside a session</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
+<section id="one-protocol-many-tools" class="slide level2">
+<h2>One protocol, many tools</h2>
+
+<img data-src="../figures/mcp-hub.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:82.0%"></section>
 <section id="mcp-servers-worth-knowing" class="slide level2 smaller">
 <h2>MCP servers worth knowing</h2>
 <table class="caption-top">
@@ -489,18 +497,16 @@ Alexander Quispe
 <pre class="text"><code>/deep-research What does the empirical literature since 2019 say about
   employment effects of minimum-wage increases in economies with high
   informality? Distinguish short- vs long-run effects.</code></pre>
-<p>What actually happens behind that one command:</p>
-<pre><code>1. FAN OUT      parallel web searches from several distinct angles
-2. FETCH        agents read and extract from the sources they find
-3. CROSS-CHECK  independent agents VOTE on every claim
-4. SYNTHESIZE   one cited report — claims that fail verification
-                are filtered out before you ever see them</code></pre>
 <ul>
 <li>Claims that <em>couldn’t</em> be checked are labeled <strong>unverified</strong> — not silently kept, not counted as refuted.</li>
 <li>Monitor live with <code>/workflows</code>: phases, agents, tokens, elapsed time.</li>
 </ul>
 <p><span class="small muted">Requires Claude Code ≥ 2.1.154, the WebSearch tool, and a paid plan or API access (on Pro: enable <em>Dynamic workflows</em> in <code>/config</code>).</span></p>
 </section>
+<section id="inside-deep-research" class="slide level2">
+<h2>Inside <code>/deep-research</code></h2>
+
+<img data-src="../figures/deep-research-pipeline.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:94.0%"></section>
 <section id="why-it-beats-asking-directly" class="slide level2 smaller">
 <h2>Why it beats asking directly</h2>
 <table class="caption-top">
@@ -571,14 +577,14 @@ Alexander Quispe
 <section id="step-1-transcribe-with-whisper" class="slide level2">
 <h2>Step 1 — Transcribe with Whisper</h2>
 <p><a href="https://github.com/openai/whisper">Whisper</a>: OpenAI’s open-source speech-to-text. Runs <strong>locally</strong> — recordings never leave your machine.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-U</span> openai-whisper          <span class="co"># needs ffmpeg installed</span></span>
-<span id="cb14-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># Apple Silicon (much faster): pip install mlx-whisper</span></span>
-<span id="cb14-3"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># video? extract audio first</span></span>
-<span id="cb14-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">ffmpeg</span> <span class="at">-i</span> seminar.mp4 <span class="at">-ar</span> 16000 <span class="at">-ac</span> 1 audio.wav</span>
-<span id="cb14-6"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">whisper</span> audio.wav <span class="at">--model</span> medium <span class="at">--language</span> en <span class="dt">\</span></span>
-<span id="cb14-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">--output_format</span> txt <span class="at">--output_dir</span> transcripts/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-U</span> openai-whisper          <span class="co"># needs ffmpeg installed</span></span>
+<span id="cb13-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># Apple Silicon (much faster): pip install mlx-whisper</span></span>
+<span id="cb13-3"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># video? extract audio first</span></span>
+<span id="cb13-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">ffmpeg</span> <span class="at">-i</span> seminar.mp4 <span class="at">-ar</span> 16000 <span class="at">-ac</span> 1 audio.wav</span>
+<span id="cb13-6"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">whisper</span> audio.wav <span class="at">--model</span> medium <span class="at">--language</span> en <span class="dt">\</span></span>
+<span id="cb13-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">--output_format</span> txt <span class="at">--output_dir</span> transcripts/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><code>--model small</code> fast / <code>medium</code> good default / <code>large-v3</code> best</li>
 <li>Handles Spanish (<code>--language es</code>) and code-switching seminars well</li>
@@ -602,13 +608,10 @@ Alexander Quispe
 <p>That last line is the leap: the transcript becomes <strong>connected knowledge</strong>, cross-checked against the rest of the project.</p>
 </div>
 </section>
-<section id="the-compounding-effect" class="slide level2">
+<section id="the-compounding-effect" class="slide level2 smaller">
 <h2>The compounding effect</h2>
-<pre><code>seminar.mp4 ─► whisper ─► transcript.txt ─► claude ─► notes/*.md ─► git
-                                                        │
-   next session: "what did we conclude about        ◄───┘
-   parallel trends in the June reading group?"</code></pre>
-<ul>
+
+<img data-src="../figures/whisper-pipeline.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><ul>
 <li class="fragment">Every meeting becomes <strong>queryable memory</strong> for the whole project.</li>
 <li class="fragment">Works for: advisor meetings, conference talks (with permission!), interview data, your own voice memos.</li>
 <li class="fragment">Q-LAB idea: a <code>reading-group/</code> repo where every session gets transcribed, structured, and linked.</li>
@@ -689,17 +692,21 @@ Alexander Quispe
 </div>
 </div>
 </section>
+<section id="the-contractor-loop-visually" class="slide level2">
+<h2>The contractor loop, visually</h2>
+
+<img data-src="../figures/contractor-loop.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
 <section id="how-to-adopt-it" class="slide level2 smaller">
 <h2>How to adopt it</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Fork on GitHub, then:</span></span>
-<span id="cb19-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>you<span class="op">&gt;</span>/claude-code-my-workflow my-paper</span>
-<span id="cb19-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-paper <span class="kw">&amp;&amp;</span> <span class="ex">./scripts/validate-setup.sh</span></span>
-<span id="cb19-4"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Start Claude Code and paste the starter prompt:</span></span>
-<span id="cb19-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span>
-<span id="cb19-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> I <span class="ex">am</span> starting to work on <span class="pp">[</span><span class="ss">PROJECT</span><span class="pp">]</span> in this repo. [2–3 sentence</span>
-<span id="cb19-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="ex">description.]</span> Please read the configuration files and adapt</span>
-<span id="cb19-9"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="ex">them</span> for my project. Enter plan mode and start.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Fork on GitHub, then:</span></span>
+<span id="cb17-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>you<span class="op">&gt;</span>/claude-code-my-workflow my-paper</span>
+<span id="cb17-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-paper <span class="kw">&amp;&amp;</span> <span class="ex">./scripts/validate-setup.sh</span></span>
+<span id="cb17-4"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Start Claude Code and paste the starter prompt:</span></span>
+<span id="cb17-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span>
+<span id="cb17-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> I <span class="ex">am</span> starting to work on <span class="pp">[</span><span class="ss">PROJECT</span><span class="pp">]</span> in this repo. [2–3 sentence</span>
+<span id="cb17-8"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="ex">description.]</span> Please read the configuration files and adapt</span>
+<span id="cb17-9"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="ex">them</span> for my project. Enter plan mode and start.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="fragment">
 <p>Community forks to study: <strong>Blattman</strong> (Chicago, non-technical guide) · <strong>Cunningham/MixtapeTools</strong> (Baylor, presentations) · <strong>clo-author</strong> (Hugo Sant’Anna, paper pipelines).</p>
 <p><strong>Q-LAB opportunity:</strong> a <em>Q-LAB fork</em> with our conventions — Spanish/English output styles, ENAHO/INEI data rules, tectonic instead of xelatex.</p>

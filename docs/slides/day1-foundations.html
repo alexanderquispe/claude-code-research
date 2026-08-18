@@ -284,6 +284,10 @@ Alexander Quispe
 <h1>Block 1 — The Claude Ecosystem</h1>
 
 </section>
+<section id="the-ecosystem-at-a-glance" class="slide level2">
+<h2>The ecosystem at a glance</h2>
+
+<img data-src="../figures/ecosystem.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:88.0%"></section>
 <section id="one-model-family-three-products" class="slide level2">
 <h2>One model family, three products</h2>
 <p>Anthropic trains the <strong>Claude models</strong> (Opus, Sonnet, Haiku). You can reach the <em>same intelligence</em> through different products:</p>
@@ -488,14 +492,8 @@ Alexander Quispe
 <section id="the-agent-loop" class="slide level2">
 <h2>The agent loop</h2>
 <p>Claude Code is not autocomplete. It runs a <strong>loop</strong>:</p>
-<pre><code>┌─────────────────────────────────────────────┐
-│  1. GATHER CONTEXT   read files, search,    │
-│                      run `ls`, `git log`    │
-│  2. TAKE ACTION      edit file, run script  │
-│  3. VERIFY           run tests, check output│
-│  4. REPEAT           until the task is done │
-└─────────────────────────────────────────────┘</code></pre>
-<ul>
+
+<img data-src="../figures/agent-loop.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:66.0%"><ul>
 <li class="fragment">Every action goes through <strong>tools</strong>: Read, Edit, Bash, Search, Web.</li>
 <li class="fragment">Every risky action requires <strong>your approval</strong> (more on this in Block 5).</li>
 <li class="fragment">You are the <strong>principal investigator</strong>; Claude is a very fast RA.</li>
@@ -504,8 +502,8 @@ Alexander Quispe
 <section id="setup-check-do-this-now" class="slide level2 your-turn smaller">
 <h2>Setup check — do this now</h2>
 <p><strong>Your turn (5 min):</strong> open a terminal in VS Code (<code>Ctrl+`</code>) and run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> <span class="at">--version</span>        <span class="co"># should print 2.x</span></span>
-<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span>                  <span class="co"># starts an interactive session</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> <span class="at">--version</span>        <span class="co"># should print 2.x</span></span>
+<span id="cb2-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span>                  <span class="co"># starts an interactive session</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Not installed? → <code>curl -fsSL https://claude.ai/install.sh | bash</code></li>
 <li>First run asks you to <strong>log in</strong>: with a claude.ai Pro/Max account, <em>or</em> with an <strong>API key</strong> from <a href="https://console.anthropic.com">console.anthropic.com</a> (pay-as-you-go — no subscription needed).</li>
@@ -533,8 +531,8 @@ Alexander Quispe
 <section id="start-where-your-work-lives" class="slide level2">
 <h2>Start where your work lives</h2>
 <p>Claude Code sees the <strong>current directory</strong> and below. Always start it at the project root:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/GitHub/my-research-project</span>
-<span id="cb4-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/GitHub/my-research-project</span>
+<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>First prompts to try on <em>any</em> repo — no risk, read-only:</p>
 <pre class="text"><code>&gt; give me an overview of this repository
 &gt; what does scripts/clean_data.R do?
@@ -650,18 +648,18 @@ Alexander Quispe
 <section id="the-solution-claude.md" class="slide level2">
 <h2>The solution: <code>CLAUDE.md</code></h2>
 <p>A markdown file at the project root, <strong>loaded automatically at every session start</strong>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> /init</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> /init</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>/init</code> scans your repo and drafts it for you. Then <em>you edit it</em> — it is the most valuable file in the project.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu"># Project: Minimum Wage &amp; Informality (Peru)</span></span>
-<span id="cb10-2"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Commands</span></span>
-<span id="cb10-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Run full pipeline: <span class="in">`Rscript scripts/00_master.R`</span></span>
-<span id="cb10-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Compile paper: <span class="in">`tectonic main.tex`</span></span>
-<span id="cb10-6"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rules</span></span>
-<span id="cb10-8"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>NEVER modify anything in data/raw/</span>
-<span id="cb10-9"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>All regressions use <span class="in">`fixest`</span>; cluster SEs at district level</span>
-<span id="cb10-10"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Figures: ggplot2, saved to figures/ as PDF, width = 6in</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu"># Project: Minimum Wage &amp; Informality (Peru)</span></span>
+<span id="cb9-2"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Commands</span></span>
+<span id="cb9-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Run full pipeline: <span class="in">`Rscript scripts/00_master.R`</span></span>
+<span id="cb9-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Compile paper: <span class="in">`tectonic main.tex`</span></span>
+<span id="cb9-6"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rules</span></span>
+<span id="cb9-8"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>NEVER modify anything in data/raw/</span>
+<span id="cb9-9"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>All regressions use <span class="in">`fixest`</span>; cluster SEs at district level</span>
+<span id="cb9-10"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Figures: ggplot2, saved to figures/ as PDF, width = 6in</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="memory-hierarchy" class="slide level2 smaller">
 <h2>Memory hierarchy</h2>
@@ -733,7 +731,11 @@ Alexander Quispe
 </div>
 </div>
 </div>
-</section></section>
+</section>
+<section id="the-hierarchy-visually" class="slide level2">
+<h2>The hierarchy, visually</h2>
+
+<img data-src="../figures/memory-stack.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:76.0%"></section></section>
 <section>
 <section id="block-5-permission-modes-plan-mode" class="title-slide slide level1 center">
 <h1>Block 5 — Permission Modes &amp; Plan Mode</h1>
@@ -809,9 +811,11 @@ Alexander Quispe
 </ul>
 <div class="fragment">
 <p><strong>This is the single highest-leverage habit:</strong></p>
-<pre><code>Complex task  →  Plan Mode  →  read the plan critically
-              →  approve (or redirect)  →  auto-accept execution
-              →  git diff  →  commit</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/plan-workflow.svg" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </section>
 <section id="plan-mode-a-research-example" class="slide level2 smaller">
@@ -832,12 +836,8 @@ Alexander Quispe
 </section>
 <section id="the-full-safety-spectrum" class="slide level2 smaller">
 <h2>The full safety spectrum</h2>
-<pre><code>Plan Mode          Default            Auto-accept         --dangerously-
-(read-only)        (ask each time)    (edits flow)        skip-permissions
-   ▲                                                        ▲
-   │ start here for anything new                            │ containers/CI
-   └────────────── trust gradient ──────────────────────────┘</code></pre>
-<ul>
+
+<img data-src="../figures/safety-spectrum.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:88.0%"><ul>
 <li><code>/permissions</code> — allowlist specific safe commands (e.g.&nbsp;<code>Rscript</code>, <code>quarto render</code>) so Default mode asks less.</li>
 <li><code>--dangerously-skip-permissions</code>: never on your laptop with real data.</li>
 </ul>
@@ -853,7 +853,7 @@ Alexander Quispe
 <ol type="1">
 <li>Create a fresh repo and enter it:</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> qlab-demo <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> qlab-demo <span class="kw">&amp;&amp;</span> <span class="fu">git</span> init <span class="kw">&amp;&amp;</span> <span class="ex">claude</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> qlab-demo <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> qlab-demo <span class="kw">&amp;&amp;</span> <span class="fu">git</span> init <span class="kw">&amp;&amp;</span> <span class="ex">claude</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol start="2" type="1">
 <li>In <strong>default mode</strong>, ask Claude to download <code>gapminder</code> data (CSV) into <code>data/</code> and describe it.</li>
 <li>Run <code>/init</code> — read the generated <code>CLAUDE.md</code>. Add one rule of your own.</li>

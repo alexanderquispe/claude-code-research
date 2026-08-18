@@ -1,0 +1,22 @@
+<svg viewBox="0 0 960 240" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+<defs><linearGradient id="tg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0e7c86"/><stop offset="1" stop-color="#c05621"/></linearGradient></defs>
+<rect x="70" y="118" width="810" height="12" rx="6" fill="url(#tg)"/>
+<path d="M880,110 L906,124 L880,138 z" fill="#c05621"/>
+<g text-anchor="middle">
+<circle cx="120" cy="124" r="9" fill="#fff" stroke="#0e7c86" stroke-width="3"/>
+<text x="120" y="70" font-size="18" font-weight="700" fill="#0f2d52">Plan Mode</text>
+<text x="120" y="94" font-size="14" fill="#475569">read-only</text>
+<circle cx="368" cy="124" r="9" fill="#fff" stroke="#3b7f8a" stroke-width="3"/>
+<text x="368" y="70" font-size="18" font-weight="700" fill="#0f2d52">Default</text>
+<text x="368" y="94" font-size="14" fill="#475569">asks each time</text>
+<circle cx="616" cy="124" r="9" fill="#fff" stroke="#8a6a3f" stroke-width="3"/>
+<text x="616" y="70" font-size="18" font-weight="700" fill="#0f2d52">Auto-accept</text>
+<text x="616" y="94" font-size="14" fill="#475569">edits flow freely</text>
+<circle cx="840" cy="124" r="9" fill="#fff" stroke="#c05621" stroke-width="3"/>
+<text x="840" y="70" font-size="16" font-weight="700" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#c05621">--dangerously-</text>
+<text x="840" y="92" font-size="16" font-weight="700" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#c05621">skip-permissions</text>
+</g>
+<text x="90" y="172" font-size="15.5" font-weight="700" fill="#0e7c86">▲ start here for anything new</text>
+<text x="878" y="172" text-anchor="end" font-size="15.5" font-weight="700" fill="#c05621">containers / CI only ▲</text>
+<text x="480" y="215" text-anchor="middle" font-size="15" font-style="italic" fill="#94a3b8">— trust gradient —</text>
+</svg>

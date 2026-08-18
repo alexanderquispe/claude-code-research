@@ -1,0 +1,26 @@
+<svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+<line x1="480" y1="180" x2="215" y2="95" stroke="#0e7c86" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="480" y1="180" x2="745" y2="95" stroke="#0e7c86" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="480" y1="205" x2="215" y2="310" stroke="#0e7c86" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="480" y1="205" x2="745" y2="310" stroke="#0e7c86" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="480" y1="180" x2="480" y2="62" stroke="#0e7c86" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="85" y="62" width="260" height="66" rx="12" fill="#e6f6f7" stroke="#0e7c86" stroke-width="2"/>
+<text x="105" y="90" font-size="16.5" font-weight="700" fill="#0f2d52">🐙 GitHub</text>
+<text x="105" y="114" font-size="13.5" fill="#475569">issues · PRs · reviews</text>
+<rect x="615" y="62" width="260" height="66" rx="12" fill="#e6f6f7" stroke="#0e7c86" stroke-width="2"/>
+<text x="635" y="90" font-size="16.5" font-weight="700" fill="#0f2d52">🗄️ Postgres / BigQuery</text>
+<text x="635" y="114" font-size="13.5" fill="#475569">query the lab database</text>
+<rect x="85" y="278" width="260" height="66" rx="12" fill="#e6f6f7" stroke="#0e7c86" stroke-width="2"/>
+<text x="105" y="306" font-size="16.5" font-weight="700" fill="#0f2d52">📚 arXiv / paper search</text>
+<text x="105" y="330" font-size="13.5" fill="#475569">abstracts into your lit review</text>
+<rect x="615" y="278" width="260" height="66" rx="12" fill="#e6f6f7" stroke="#0e7c86" stroke-width="2"/>
+<text x="635" y="306" font-size="16.5" font-weight="700" fill="#0f2d52">🌐 Chrome / Playwright</text>
+<text x="635" y="330" font-size="13.5" fill="#475569">drive a real browser</text>
+<rect x="350" y="14" width="260" height="66" rx="12" fill="#e6f6f7" stroke="#0e7c86" stroke-width="2"/>
+<text x="370" y="42" font-size="16.5" font-weight="700" fill="#0f2d52">💬 Slack / Notion</text>
+<text x="370" y="66" font-size="13.5" fill="#475569">team knowledge &amp; alerts</text>
+<rect x="385" y="155" width="190" height="76" rx="14" fill="#0f2d52"/>
+<text x="480" y="188" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">Claude Code</text>
+<text x="480" y="215" text-anchor="middle" font-size="14" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#9fb3c8">claude mcp add …</text>
+<text x="480" y="382" text-anchor="middle" font-size="15" font-style="italic" fill="#94a3b8">MCP — one open protocol · each server adds tools Claude can call, under your permissions</text>
+</svg>

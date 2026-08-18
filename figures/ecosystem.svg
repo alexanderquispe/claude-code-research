@@ -1,0 +1,19 @@
+<svg viewBox="0 0 960 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+<defs><marker id="arT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0e7c86"/></marker></defs>
+<rect x="40" y="110" width="230" height="120" rx="14" fill="#0f2d52"/>
+<text x="155" y="160" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">Claude models</text>
+<text x="155" y="190" text-anchor="middle" fill="#9fb3c8" font-size="16">Opus · Sonnet · Haiku</text>
+<path d="M270,150 C340,115 360,80 428,72" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#arT)"/>
+<path d="M270,170 L428,170" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#arT)"/>
+<path d="M270,190 C340,225 360,260 428,268" fill="none" stroke="#0e7c86" stroke-width="2.5" marker-end="url(#arT)"/>
+<text x="349" y="152" text-anchor="middle" fill="#94a3b8" font-size="14" font-style="italic">same intelligence</text>
+<rect x="440" y="30" width="480" height="84" rx="12" fill="#e6f6f7" stroke="#0e7c86" stroke-width="2"/>
+<text x="464" y="64" font-size="19" font-weight="700" fill="#0f2d52">💬  claude.ai — the chatbot</text>
+<text x="464" y="92" font-size="15.5" fill="#475569">You bring the context to Claude · browser &amp; mobile</text>
+<rect x="440" y="128" width="480" height="84" rx="12" fill="#fdf1e7" stroke="#c05621" stroke-width="2"/>
+<text x="464" y="162" font-size="19" font-weight="700" fill="#0f2d52">🗂️  Claude Cowork — desktop agent</text>
+<text x="464" y="190" font-size="15.5" fill="#475569">Works on your files &amp; documents · paid plan only</text>
+<rect x="440" y="226" width="480" height="84" rx="12" fill="#eef2f7" stroke="#0f2d52" stroke-width="2"/>
+<text x="464" y="260" font-size="19" font-weight="700" fill="#0f2d52">⌨️  Claude Code — coding agent</text>
+<text x="464" y="288" font-size="15.5" fill="#475569">Lives where your work lives: terminal, VS Code, web</text>
+</svg>

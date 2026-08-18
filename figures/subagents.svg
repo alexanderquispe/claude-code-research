@@ -1,0 +1,21 @@
+<svg viewBox="0 0 960 370" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+<defs><marker id="arT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0e7c86"/></marker><marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker></defs>
+<rect x="40" y="125" width="280" height="120" rx="14" fill="#eef2f7" stroke="#0f2d52" stroke-width="2.5"/>
+<text x="180" y="175" text-anchor="middle" font-size="20" font-weight="700" fill="#0f2d52">Your main session</text>
+<text x="180" y="205" text-anchor="middle" font-size="15" fill="#475569">context stays clean</text>
+<rect x="600" y="28" width="320" height="88" rx="12" fill="#e6f6f7" stroke="#0e7c86" stroke-width="2"/>
+<text x="624" y="62" font-size="17" font-weight="700" fill="#0f2d52">Subagent A — own context</text>
+<text x="624" y="90" font-size="14" fill="#475569">reads 50 files in data/ · noise stays here 🗑️</text>
+<rect x="600" y="140" width="320" height="88" rx="12" fill="#e6f6f7" stroke="#0e7c86" stroke-width="2"/>
+<text x="624" y="174" font-size="17" font-weight="700" fill="#0f2d52">Subagent B — own context</text>
+<text x="624" y="202" font-size="14" fill="#475569">runs the full test suite · noise stays here 🗑️</text>
+<rect x="600" y="252" width="320" height="88" rx="12" fill="#e6f6f7" stroke="#0e7c86" stroke-width="2"/>
+<text x="624" y="286" font-size="17" font-weight="700" fill="#0f2d52">Subagent C — own context</text>
+<text x="624" y="314" font-size="14" fill="#475569">sweeps the literature · noise stays here 🗑️</text>
+<path d="M320,155 C440,120 480,80 592,70" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arG)"/>
+<path d="M320,180 L592,183" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arG)"/>
+<path d="M320,210 C440,250 480,285 592,295" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arG)"/>
+<text x="450" y="152" text-anchor="middle" font-size="14.5" fill="#94a3b8" font-style="italic">tasks →</text>
+<path d="M600,105 C480,145 420,160 328,168 M600,215 L328,195 M600,300 C480,268 420,240 328,222" stroke="none" fill="none"/>
+<text x="452" y="232" text-anchor="middle" font-size="15.5" font-weight="700" fill="#0e7c86">← conclusions only</text>
+</svg>

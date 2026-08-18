@@ -35,6 +35,10 @@ date-format: "MMMM D, YYYY"
 
 # Block 1 — The Claude Ecosystem
 
+## The ecosystem at a glance
+
+![](../figures/ecosystem.svg){width=88% fig-align="center"}
+
 ## One model family, three products
 
 Anthropic trains the **Claude models** (Opus, Sonnet, Haiku).
@@ -132,15 +136,7 @@ Rule of thumb: **heavy daily use → Pro subscription** (flat \$20/mo, includes 
 
 Claude Code is not autocomplete. It runs a **loop**:
 
-```
-┌─────────────────────────────────────────────┐
-│  1. GATHER CONTEXT   read files, search,    │
-│                      run `ls`, `git log`    │
-│  2. TAKE ACTION      edit file, run script  │
-│  3. VERIFY           run tests, check output│
-│  4. REPEAT           until the task is done │
-└─────────────────────────────────────────────┘
-```
+![](../figures/agent-loop.svg){width=66% fig-align="center"}
 
 ::: incremental
 - Every action goes through **tools**: Read, Edit, Bash, Search, Web.
@@ -311,6 +307,10 @@ The `~/.claude/` *folder* appears the first time you run `claude`, but every `CL
 Commit `CLAUDE.md` to git. Your coauthors' Claude sessions get the same rules — it becomes **lab infrastructure**.
 :::
 
+## The hierarchy, visually
+
+![](../figures/memory-stack.svg){width=76% fig-align="center"}
+
 # Block 5 — Permission Modes & Plan Mode
 
 ## Why permissions exist
@@ -357,11 +357,7 @@ Auto-accept + `git diff` afterwards is safe. Auto-accept without git is gambling
 
 **This is the single highest-leverage habit:**
 
-```
-Complex task  →  Plan Mode  →  read the plan critically
-              →  approve (or redirect)  →  auto-accept execution
-              →  git diff  →  commit
-```
+![](../figures/plan-workflow.svg){width=100% fig-align="center"}
 
 ## Plan Mode: a research example {.smaller}
 
@@ -384,13 +380,7 @@ Claude returns something like:
 
 ## The full safety spectrum {.smaller}
 
-```
-Plan Mode          Default            Auto-accept         --dangerously-
-(read-only)        (ask each time)    (edits flow)        skip-permissions
-   ▲                                                        ▲
-   │ start here for anything new                            │ containers/CI
-   └────────────── trust gradient ──────────────────────────┘
-```
+![](../figures/safety-spectrum.svg){width=88% fig-align="center"}
 
 - `/permissions` — allowlist specific safe commands (e.g. `Rscript`, `quarto render`) so Default mode asks less.
 - `--dangerously-skip-permissions`: never on your laptop with real data.
