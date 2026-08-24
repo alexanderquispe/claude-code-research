@@ -76,9 +76,9 @@ Antes de instalar nada, ubíquense: **Claude son tres cosas distintas** y es fá
 
 ## 2 · Claude Cowork — la app de escritorio {.smaller}
 
-![](../figures/screenshots/cowork-app.png){.nostretch width=88% fig-align="center"}
+![](../figures/screenshots/cowork-app.png){.nostretch width=68% fig-align="center"}
 
-**La misma cara que el chat, pero es una app instalada** — noten el botón **Cowork** activado y el selector *"Project or folder"*: el agente trabaja sobre una carpeta, **sin terminal**. Ideal para tareas de documentos — pero requiere **plan pago** ($20/mes o más).
+**Una app instalada, sin terminal** — noten abajo el botón **Select folder…** y la caja *"Describe a task"*: le señalan una carpeta y le describen la tarea, y el agente trabaja sobre esos archivos. Ideal para documentos — pero requiere **plan pago** ($20/mes o más).
 
 ## 3 · Claude Code — el del taller {.smaller}
 
