@@ -632,30 +632,53 @@ Crossref y dime cuáles tienen algún dato que no coincide.
 
 [No es un defecto de la herramienta: es que **esas puertas están cerradas para cualquiera que no esté logueado**. Y ustedes sí lo están.]{.warm}
 
-## La solución: la biblioteca PUCP {.smaller}
+## La solución: un solo login {.smaller}
 
-El proxy de la Universidad se llama **elogim**. Ustedes se loguean **una vez** en el navegador y el agente trabaja sobre esa sesión abierta:
+![](../figures/es/biblioteca-flujo.svg){.nostretch width=88% fig-align="center"}
+
+## Cómo se loguean, en 40 segundos {.your-turn .smaller}
+
+1. En el navegador, abran esta dirección **tal cual** (es JSTOR a través del proxy):
 
 ```text
-https://pucp.elogim.com/auth-meta/login.php?url=<DIRECCIÓN DE LA REVISTA>
+https://pucp.elogim.com/auth-meta/login.php?url=https://www.jstor.org
+```
+
+2. Les pedirá **usuario y contraseña del campus virtual** — los mismos de PAIDEIA/Intranet.
+3. Listo. **Dejen esa pestaña abierta**: el navegador ya quedó reconocido como PUCP.
+
+. . .
+
+**Para otra revista, cambian solo lo que va después de `url=`:**
+
+```text
+https://pucp.elogim.com/auth-meta/login.php?url=<dirección de la revista>
 ```
 
 . . .
+
+::: {.callout-important}
+No se registran en JSTOR, ni en Wiley, ni en ninguna. **Su cuenta personal de JSTOR no sirve** — con ella solo pueden *leer en pantalla*. El botón de descarga aparece únicamente bajo la sesión de la Universidad.
+:::
+
+## Y ahora sí: que él descargue {.your-turn .smaller}
+
+Con la sesión abierta en el navegador, vuelvan a Claude:
 
 ```text
 Estoy logueado en la biblioteca PUCP en el navegador. Toma el archivo
 pendientes.md y, una por una, intenta descargar esas fuentes a papers/
-usando el navegador y el proxy de la biblioteca. Actualiza pendientes.md
-marcando cuáles conseguiste; para las que no, dime dónde más buscarlas.
+usando el navegador y el proxy https://pucp.elogim.com/auth-meta/login.php?url=
+Actualiza pendientes.md marcando cuáles conseguiste; para las que no,
+dime dónde más buscarlas.
 ```
 
 . . .
 
-**Tres cosas que cuestan descubrir solas:**
+**Dos cosas que hay que saber:**
 
-1. **Su cuenta personal ≠ el acceso institucional.** Con usuario propio en JSTOR solo *leen en pantalla*; el botón de descarga aparece bajo la sesión de la Universidad.
-2. **La sesión va por cookie** → tiene que ser un navegador logueado. Si el agente intenta bajarlo "por código", falla: díganle *"usa el navegador"*.
-3. **Que la página cargue no significa que haya suscripción.** (Comprobado que **no** tenemos: Management Science/INFORMS ni Oxford — o sea, ni QJE ni ReStud por esta vía.)
+1. **Tiene que usar el navegador, no comandos.** La sesión vive en una cookie del navegador; si intenta bajarlo "por código" recibe la página de login. Si ven que falla así, díganle: *"usa el navegador, no curl"*.
+2. **Que la página cargue no significa que haya suscripción.** Hay que llegar hasta el PDF. (Comprobado que **no** tenemos: Management Science/INFORMS ni Oxford — o sea, ni QJE ni ReStud por esta vía.)
 
 ## Cuando de verdad no hay acceso {.smaller}
 
