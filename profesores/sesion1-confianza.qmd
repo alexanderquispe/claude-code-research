@@ -11,17 +11,18 @@ lang: es
 
 ## Plan de hoy (3 horas) {.smaller}
 
-| Bloque | Tema | Tiempo |
-|--------|------|--------|
-| 1 | Qué es Claude y sus tres productos | 20 min |
-| 2 | VS Code y el terminal, paso a paso | 30 min |
-| 3 | Ejercicio: diagnóstico de su computadora | 20 min |
-| 4 | Primeras conversaciones con sus archivos | 25 min |
-| ☕ | Pausa | 10 min |
-| 5 | La memoria del proyecto: `/init` | 25 min |
-| 6 | ⭐ La trampa de la cita | 30 min |
-| 7 | La biblioteca PUCP | 15 min |
-| 8 | Cierre y tarea | 5 min |
+| Hora | Bloque | Tema |
+|------|--------|------|
+| 6:00 – 6:20 | 1 | Qué es Claude y sus tres productos |
+| 6:20 – 6:50 | 2 | VS Code y el terminal, paso a paso |
+| 6:50 – 7:10 | 3 | Ejercicio: diagnóstico de su computadora |
+| 7:10 – 7:20 | ☕ | Pausa 1 |
+| 7:20 – 7:40 | 4 | Primeras conversaciones con sus archivos |
+| 7:40 – 8:05 | 5 | La memoria del proyecto: `/init` |
+| 8:05 – 8:15 | ☕ | Pausa 2 |
+| 8:15 – 8:45 | 6 | ⭐ La trampa de la cita |
+| 8:45 – 8:55 | 7 | La biblioteca PUCP |
+| 8:55 – 9:00 | 8 | Cierre y tarea |
 
 [Los asistentes del Q-LAB están en la sala: levanten la mano ante cualquier problema técnico y ellos los ayudan sin detener la clase.]{.small .muted}
 
@@ -261,6 +262,10 @@ Dentro de Claude, escriban `/model` y elijan **Opus**.
 
 [Si un día algo responde "raro", lo primero que deben revisar es `/model`: ¿qué modelo quedó seleccionado?]{.small .muted}
 
+# ☕ Pausa 1 — 10 minutos {background-color="#e6fbfc"}
+
+[Volvemos 7:20 pm]{.big}
+
 # Bloque 4 — Primeras conversaciones
 
 ## Su turno: la primera conversación {.your-turn}
@@ -282,13 +287,34 @@ de investigación.
 
 **Qué observar:** responde sobre **sus** archivos reales, citando nombres y contenidos. Eso es lo que un chat de la web no puede hacer.
 
+## El proyecto de ejemplo {.smaller}
+
+De aquí en adelante trabajamos sobre una carpeta que les entregamos:
+**`ejemplo-mineria-conflicto/`**. Es un proyecto de investigación real, a medio
+empezar y **deliberadamente desordenado**.
+
+> **La pregunta:** en los departamentos mineros del Perú, ¿la renta minera reduce
+> la conflictividad social — o solo cambia **aquello por lo que se protesta**?
+
+. . .
+
+| Carpeta | Qué hay |
+|---|---|
+| `datos/` | 10 reportes de conflictos de la Defensoría · producción y empleo minero · mesas de diálogo · 251 proyectos de ley |
+| `papers/` | 8 PDFs con nombres imposibles |
+| `bibliografia-borrador.md` | Una bibliografía hecha a las apuradas |
+| `notas/` | Apuntes sueltos del investigador |
+
+[Úsenla hoy y quédensela. Si prefieren, todos los ejercicios funcionan igual sobre una carpeta suya.]{.small .muted}
+
 ## Su turno: poner orden (con plan previo) {.your-turn .smaller}
 
-El ejercicio favorito de todos — sobre una carpeta real de PDFs acumulados:
+El ejercicio favorito de todos. Miren primero `papers/`: hay cosas como
+`descarga.pdf`, `el pasado importa - copia (2).pdf`, `articulo minería (1).pdf`.
 
 ```text
-En esta carpeta hay PDFs de artículos. Ábrelos y renómbralos con el
-formato apellido-año-palabraclave.pdf. ANTES de renombrar nada,
+En la carpeta papers/ hay PDFs de artículos. Ábrelos y renómbralos con
+el formato apellido-año-palabraclave.pdf. ANTES de renombrar nada,
 muéstrame la lista de cambios que vas a hacer.
 ```
 
@@ -298,8 +324,8 @@ muéstrame la lista de cambios que vas a hacer.
 
 1. **Pedir el plan antes de ejecutar** es el hábito de seguridad número uno.
 2. El agente **lee el contenido del PDF** — no adivina por el nombre del archivo.
-
-# ☕ Pausa — 10 minutos
+3. **Tres de esos papers no vienen al caso.** ¿Los detecta? Pregúntenle:
+   *"¿cuáles de estos no tienen que ver con minería y conflicto en el Perú?"*
 
 # Bloque 5 — La memoria del proyecto
 
@@ -367,6 +393,10 @@ Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — son **cuatro**, y se v
 
 Presionen <kbd>Shift</kbd>+<kbd>Tab</kbd> varias veces ahora mismo y miren cómo **rota la etiqueta**. Para la clase de hoy déjenlo en **auto mode on** — así los ejercicios corren de corrido, sin detenerse en cada permiso.
 
+# ☕ Pausa 2 — 10 minutos {background-color="#e6fbfc"}
+
+[Volvemos 8:15 pm]{.big}
+
 # Bloque 6 — ⭐ La trampa de la cita
 
 ## El ejercicio más importante del taller {.your-turn}
@@ -397,6 +427,29 @@ exactamente qué estaba mal.
 **Qué observar:** es muy frecuente que algo no cuadre — un número de páginas, un año, un DOI. **Y el mismo agente lo detecta cuando se le pide verificar.**
 
 . . .
+
+## Tercera parte: una bibliografía de verdad {.your-turn .smaller}
+
+Abran `bibliografia-borrador.md` del proyecto de ejemplo. Es lo que cualquiera de
+nosotros arma un domingo copiando de Google Scholar.
+
+```text
+Verifica cada cita de bibliografia-borrador.md contra Crossref.
+Para cada una dime qué dato no coincide y cuál es el correcto.
+No me digas que está bien si no la pudiste comprobar.
+```
+
+. . .
+
+**Tiene ocho errores. Todos reales.** Entre ellos:
+
+- Una cita con **un autor de más**: figura en el *working paper*, desaparece en la versión publicada.
+- Un paper citado con el **título de su versión previa** — cambió por completo al publicarse.
+- Un **DOI que sí funciona… y lleva a otro artículo**, de otros autores y otro año.
+
+. . .
+
+[Un DOI roto lo detecta cualquiera al primer clic. Uno que abre el paper equivocado sobrevive a la revisión por pares.]{.warm}
 
 ::: {.callout-important}
 ## La lección central del taller

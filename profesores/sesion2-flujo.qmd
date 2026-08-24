@@ -13,12 +13,12 @@ lang: es
 
 | Bloque | Tema | Tiempo |
 |--------|------|--------|
-| 1 | Repaso + Plan Mode con un caso real | 30 min |
+| 1 | Repaso + Plan Mode con un caso real | 25 min |
 | 2 | `/deep-research`: la revisión de literatura automática | 30 min |
-| 3 | De sus datos a un dashboard compartible | 35 min |
+| 3 | ⭐ De 10 PDFs a una base de datos — y auditarla | 50 min |
 | ☕ | Pausa | 10 min |
-| 4 | Literatura → LaTeX → presentación, sin escribir código | 35 min |
-| 5 | Whisper: sus clases y seminarios se vuelven material | 30 min |
+| 4 | Literatura → LaTeX → presentación, sin escribir código | 30 min |
+| 5 | Whisper: sus clases y seminarios se vuelven material | 25 min |
 | 6 | Cómo pedir las cosas + errores comunes | 10 min |
 
 [Hoy varias demos toman minutos en correr: las lanzamos al inicio y revisamos resultados al final de cada bloque. Así se trabaja de verdad con agentes.]{.small .muted}
@@ -125,31 +125,137 @@ organizados por tema.
 El producto no es solo el informe: es la **carpeta de PDFs organizada y citable** que queda en su proyecto, lista para las siguientes etapas.
 :::
 
-# Bloque 3 — De sus datos a un dashboard
+# Bloque 3 — ⭐ De 10 PDFs a una base de datos
 
-## La receta (en orden) {.smaller}
+## El problema, con nombre propio {.smaller}
 
-**Paso 0 — los datos ya están en la carpeta.** Descárguenlos *antes*; no dependan de que la página del INEI cargue en vivo. *(Lección aprendida: en la clase piloto la web del INEI se cayó en plena demo.)*
+La Defensoría del Pueblo publica un **reporte mensual de conflictos sociales**
+desde 2004. Van **269 reportes**. Cada uno trae, caso por caso: tipo, fecha de
+inicio, ubicación, **descripción narrativa** y los actores involucrados.
 
 . . .
 
-**Paso 1 — primero limpiar, en su propia conversación:**
+Todos en **PDF**. Ninguno en Excel.
+
+[Nadie tiene esa serie como base de datos. Nadie.]{.warm}
+
+. . .
+
+::: {.callout-note}
+## Esto es exactamente el trabajo de un asistente
+Copiar 103 casos de un PDF a un Excel toma una tarde. Por doce meses, dos semanas.
+Y hay que hacerlo otra vez el mes que viene.
+:::
+
+## Paso 1 — extraer {.your-turn .smaller}
+
+En `datos/` del proyecto de ejemplo están los 10 reportes.
 
 ```text
-En datos/ está la base cruda de la encuesta. Revísala: valores
-perdidos, etiquetas, inconsistencias. Proponme un plan de limpieza
-y, cuando lo apruebe, genera la versión limpia en datos-limpios/.
+En datos/ hay reportes de conflictos sociales de la Defensoría en PDF.
+Cada caso tiene tipo, fecha de inicio, ubicación, descripción y actores.
+Extrae todos los casos a un CSV en datos-limpios/, una fila por caso,
+con una columna que indique de qué reporte salió.
 ```
 
 . . .
 
-**Paso 2 — con la data limpia, el dashboard:**
+**Qué observar:** el ciclo completo sin intervención — abre el PDF, encuentra el
+patrón, escribe el código, lo corre, **ve que algo no cuadra y lo arregla**.
+
+. . .
+
+[Aviso: los nombres de los archivos son un desastre (`N°-259`, `n.º-258`, `n-265-VF`). Son los nombres reales de la Defensoría. Nadie limpió nada para ustedes.]{.small .muted}
+
+## Paso 2 — clasificar {.your-turn .smaller}
+
+Ahora la parte que un Excel no puede hacer: leer **de qué se trata** cada conflicto.
 
 ```text
-Con la data de datos-limpios/ y mi pregunta de investigación
-[pregunta], créame un dashboard HTML: estadísticas descriptivas,
-los gráficos clave y una breve explicación de cada uno.
+Lee la descripción de cada caso y clasifícalo según la demanda
+principal: agua, tierra y territorio, empleo local, renta y
+compensación, consulta previa, o incumplimiento de acuerdos.
+Agrega la categoría como columna y explica tu criterio.
 ```
+
+. . .
+
+En minutos tienen codificadas cientos de narrativas. **Y aquí es donde hay que
+tener cuidado.**
+
+## Paso 3 — auditar la codificación {.your-turn .smaller}
+
+> **Nadie debería publicar una codificación automática que no auditó.**
+
+. . .
+
+**Háganlo ahora, a mano:**
+
+1. Abran el CSV y elijan **20 casos al azar**.
+2. Lean la descripción y decidan **ustedes** la categoría.
+3. Comparen con la de Claude. ¿Cuántas no coinciden?
+
+. . .
+
+Esa proporción es un **dato de su investigación**, no una anécdota. Si es 15%, va
+en el paper. Si es 40%, hay que rehacer las categorías.
+
+[No es desconfianza: es exactamente lo que harían con un asistente humano nuevo.]{.warm}
+
+## Paso 4 — verificar contra la fuente {.your-turn .smaller}
+
+Lo mejor de estos reportes: **traen su propia respuesta**. El n.° 268 declara, en
+sus propias tablas, las cifras oficiales de junio de 2026:
+
+| | |
+|---|---|
+| Conflictos registrados en el mes | **197** |
+| De ellos, socioambientales | **96** |
+| De esos, de **minería** | **61** (63.5%) |
+
+```text
+Cuenta cuántos casos socioambientales y cuántos de minería salieron
+de mi extracción del reporte 268, y compáralo con esas cifras del
+propio PDF. ¿Coinciden? Si no, ¿qué se quedó afuera y por qué?
+```
+
+## Lo que van a encontrar {.smaller}
+
+[Sus números **no van a cuadrar**. Y eso es lo que había que descubrir.]{.warm}
+
+. . .
+
+El reporte **narra en detalle solo los casos que tuvieron hechos nuevos ese mes**.
+Los demás existen únicamente en las tablas agregadas.
+
+. . .
+
+Una base construida solo con el texto **sobrerrepresenta los conflictos activos y
+ruidosos**, e ignora los que llevan meses en silencio. En un paper sobre
+conflictividad, ese sesgo no es un detalle: **es la conclusión al revés**.
+
+. . .
+
+::: {.callout-important}
+## La misma lección de ayer, en otro terreno
+Con las citas: pedir verificación explícita. Con los datos: **auditar la muestra y
+contrastar con el total oficial**. Un número mal codificado hace tanto daño como
+una cita inventada — y se nota mucho menos.
+:::
+
+## Paso 5 — y ahora sí, el dashboard {.your-turn .smaller}
+
+```text
+Con el CSV de datos-limpios/ y la producción minera de datos/,
+créame un dashboard HTML: conflictos por departamento, evolución
+mensual, distribución de categorías, y un gráfico que cruce
+intensidad minera con número de conflictos.
+```
+
+. . .
+
+**Qué observar:** cómo prueba, falla y **se corrige solo** hasta que el archivo
+compila. Ese ciclo — escribir, verificar, corregir — es lo que un chat no puede hacer.
 
 ## Por qué esto cambia su semana
 
@@ -164,17 +270,20 @@ los gráficos clave y una breve explicación de cada uno.
 Si lo comparten en la nube, actíven **"cualquiera con el enlace"** — el error clásico es mandar un link que solo abre el dueño. Pruébenlo en su celular antes de enviarlo.
 :::
 
-## Su turno {.your-turn}
+## Lo que acaban de construir {.smaller}
 
-Con la base de ejemplo que les entregamos (o una suya que ya esté limpia):
+En una hora, partiendo de PDFs que nadie había tabulado:
 
-```text
-Explora la data de datos-limpios/ y créame un dashboard HTML con:
-descripción de variables, distribución de las 4 variables clave, y
-un gráfico que responda mi pregunta de investigación.
-```
+| Producto | Estado |
+|---|---|
+| Una base de datos de conflictos que **no existía** | CSV, lista para analizar |
+| Cada caso **clasificado** por tipo de demanda | con criterio explícito |
+| Una **tasa de error medida**, no supuesta | dato del paper |
+| Un dashboard compartible por link | HTML |
 
-**Qué observar:** cómo prueba, falla y **se corrige solo** hasta que el archivo compila. Ese ciclo — escribir, verificar, corregir — es lo que un chat no puede hacer.
+. . .
+
+[Y el mes que viene, cuando salga el reporte 270, repetirlo cuesta un pedido.]{.warm}
 
 # ☕ Pausa — 10 minutos
 

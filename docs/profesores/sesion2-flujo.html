@@ -162,7 +162,7 @@ Alexander Quispe
 <tr class="odd">
 <td>1</td>
 <td>Repaso + Plan Mode con un caso real</td>
-<td>30 min</td>
+<td>25 min</td>
 </tr>
 <tr class="even">
 <td>2</td>
@@ -171,8 +171,8 @@ Alexander Quispe
 </tr>
 <tr class="odd">
 <td>3</td>
-<td>De sus datos a un dashboard compartible</td>
-<td>35 min</td>
+<td>⭐ De 10 PDFs a una base de datos — y auditarla</td>
+<td>50 min</td>
 </tr>
 <tr class="even">
 <td>☕</td>
@@ -182,12 +182,12 @@ Alexander Quispe
 <tr class="odd">
 <td>4</td>
 <td>Literatura → LaTeX → presentación, sin escribir código</td>
-<td>35 min</td>
+<td>30 min</td>
 </tr>
 <tr class="even">
 <td>5</td>
 <td>Whisper: sus clases y seminarios se vuelven material</td>
-<td>30 min</td>
+<td>25 min</td>
 </tr>
 <tr class="odd">
 <td>6</td>
@@ -345,24 +345,132 @@ organizados por tema.</code></pre>
 </div>
 </section></section>
 <section>
-<section id="bloque-3-de-sus-datos-a-un-dashboard" class="title-slide slide level1 center">
-<h1>Bloque 3 — De sus datos a un dashboard</h1>
+<section id="bloque-3-de-10-pdfs-a-una-base-de-datos" class="title-slide slide level1 center">
+<h1>Bloque 3 — ⭐ De 10 PDFs a una base de datos</h1>
 
 </section>
-<section id="la-receta-en-orden" class="slide level2 smaller">
-<h2>La receta (en orden)</h2>
-<p><strong>Paso 0 — los datos ya están en la carpeta.</strong> Descárguenlos <em>antes</em>; no dependan de que la página del INEI cargue en vivo. <em>(Lección aprendida: en la clase piloto la web del INEI se cayó en plena demo.)</em></p>
+<section id="el-problema-con-nombre-propio" class="slide level2 smaller">
+<h2>El problema, con nombre propio</h2>
+<p>La Defensoría del Pueblo publica un <strong>reporte mensual de conflictos sociales</strong> desde 2004. Van <strong>269 reportes</strong>. Cada uno trae, caso por caso: tipo, fecha de inicio, ubicación, <strong>descripción narrativa</strong> y los actores involucrados.</p>
 <div class="fragment">
-<p><strong>Paso 1 — primero limpiar, en su propia conversación:</strong></p>
-<pre class="text"><code>En datos/ está la base cruda de la encuesta. Revísala: valores
-perdidos, etiquetas, inconsistencias. Proponme un plan de limpieza
-y, cuando lo apruebe, genera la versión limpia en datos-limpios/.</code></pre>
+<p>Todos en <strong>PDF</strong>. Ninguno en Excel.</p>
+<p><span class="warm">Nadie tiene esa serie como base de datos. Nadie.</span></p>
 </div>
 <div class="fragment">
-<p><strong>Paso 2 — con la data limpia, el dashboard:</strong></p>
-<pre class="text"><code>Con la data de datos-limpios/ y mi pregunta de investigación
-[pregunta], créame un dashboard HTML: estadísticas descriptivas,
-los gráficos clave y una breve explicación de cada uno.</code></pre>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Esto es exactamente el trabajo de un asistente</strong></p>
+</div>
+<div class="callout-content">
+<p>Copiar 103 casos de un PDF a un Excel toma una tarde. Por doce meses, dos semanas. Y hay que hacerlo otra vez el mes que viene.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="paso-1-extraer" class="slide level2 your-turn smaller">
+<h2>Paso 1 — extraer</h2>
+<p>En <code>datos/</code> del proyecto de ejemplo están los 10 reportes.</p>
+<pre class="text"><code>En datos/ hay reportes de conflictos sociales de la Defensoría en PDF.
+Cada caso tiene tipo, fecha de inicio, ubicación, descripción y actores.
+Extrae todos los casos a un CSV en datos-limpios/, una fila por caso,
+con una columna que indique de qué reporte salió.</code></pre>
+<div class="fragment">
+<p><strong>Qué observar:</strong> el ciclo completo sin intervención — abre el PDF, encuentra el patrón, escribe el código, lo corre, <strong>ve que algo no cuadra y lo arregla</strong>.</p>
+</div>
+<div class="fragment">
+<p><span class="small muted">Aviso: los nombres de los archivos son un desastre (<code>N°-259</code>, <code>n.º-258</code>, <code>n-265-VF</code>). Son los nombres reales de la Defensoría. Nadie limpió nada para ustedes.</span></p>
+</div>
+</section>
+<section id="paso-2-clasificar" class="slide level2 your-turn smaller">
+<h2>Paso 2 — clasificar</h2>
+<p>Ahora la parte que un Excel no puede hacer: leer <strong>de qué se trata</strong> cada conflicto.</p>
+<pre class="text"><code>Lee la descripción de cada caso y clasifícalo según la demanda
+principal: agua, tierra y territorio, empleo local, renta y
+compensación, consulta previa, o incumplimiento de acuerdos.
+Agrega la categoría como columna y explica tu criterio.</code></pre>
+<div class="fragment">
+<p>En minutos tienen codificadas cientos de narrativas. <strong>Y aquí es donde hay que tener cuidado.</strong></p>
+</div>
+</section>
+<section id="paso-3-auditar-la-codificación" class="slide level2 your-turn smaller">
+<h2>Paso 3 — auditar la codificación</h2>
+<blockquote>
+<p><strong>Nadie debería publicar una codificación automática que no auditó.</strong></p>
+</blockquote>
+<div class="fragment">
+<p><strong>Háganlo ahora, a mano:</strong></p>
+<ol type="1">
+<li>Abran el CSV y elijan <strong>20 casos al azar</strong>.</li>
+<li>Lean la descripción y decidan <strong>ustedes</strong> la categoría.</li>
+<li>Comparen con la de Claude. ¿Cuántas no coinciden?</li>
+</ol>
+</div>
+<div class="fragment">
+<p>Esa proporción es un <strong>dato de su investigación</strong>, no una anécdota. Si es 15%, va en el paper. Si es 40%, hay que rehacer las categorías.</p>
+<p><span class="warm">No es desconfianza: es exactamente lo que harían con un asistente humano nuevo.</span></p>
+</div>
+</section>
+<section id="paso-4-verificar-contra-la-fuente" class="slide level2 your-turn smaller">
+<h2>Paso 4 — verificar contra la fuente</h2>
+<p>Lo mejor de estos reportes: <strong>traen su propia respuesta</strong>. El n.° 268 declara, en sus propias tablas, las cifras oficiales de junio de 2026:</p>
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<td>Conflictos registrados en el mes</td>
+<td><strong>197</strong></td>
+</tr>
+<tr class="even">
+<td>De ellos, socioambientales</td>
+<td><strong>96</strong></td>
+</tr>
+<tr class="odd">
+<td>De esos, de <strong>minería</strong></td>
+<td><strong>61</strong> (63.5%)</td>
+</tr>
+</tbody>
+</table>
+<pre class="text"><code>Cuenta cuántos casos socioambientales y cuántos de minería salieron
+de mi extracción del reporte 268, y compáralo con esas cifras del
+propio PDF. ¿Coinciden? Si no, ¿qué se quedó afuera y por qué?</code></pre>
+</section>
+<section id="lo-que-van-a-encontrar" class="slide level2 smaller">
+<h2>Lo que van a encontrar</h2>
+<p><span class="warm">Sus números <strong>no van a cuadrar</strong>. Y eso es lo que había que descubrir.</span></p>
+<div class="fragment">
+<p>El reporte <strong>narra en detalle solo los casos que tuvieron hechos nuevos ese mes</strong>. Los demás existen únicamente en las tablas agregadas.</p>
+</div>
+<div class="fragment">
+<p>Una base construida solo con el texto <strong>sobrerrepresenta los conflictos activos y ruidosos</strong>, e ignora los que llevan meses en silencio. En un paper sobre conflictividad, ese sesgo no es un detalle: <strong>es la conclusión al revés</strong>.</p>
+</div>
+<div class="fragment">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>La misma lección de ayer, en otro terreno</strong></p>
+</div>
+<div class="callout-content">
+<p>Con las citas: pedir verificación explícita. Con los datos: <strong>auditar la muestra y contrastar con el total oficial</strong>. Un número mal codificado hace tanto daño como una cita inventada — y se nota mucho menos.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="paso-5-y-ahora-sí-el-dashboard" class="slide level2 your-turn smaller">
+<h2>Paso 5 — y ahora sí, el dashboard</h2>
+<pre class="text"><code>Con el CSV de datos-limpios/ y la producción minera de datos/,
+créame un dashboard HTML: conflictos por departamento, evolución
+mensual, distribución de categorías, y un gráfico que cruce
+intensidad minera con número de conflictos.</code></pre>
+<div class="fragment">
+<p><strong>Qué observar:</strong> cómo prueba, falla y <strong>se corrige solo</strong> hasta que el archivo compila. Ese ciclo — escribir, verificar, corregir — es lo que un chat no puede hacer.</p>
 </div>
 </section>
 <section id="por-qué-esto-cambia-su-semana" class="slide level2">
@@ -388,13 +496,42 @@ los gráficos clave y una breve explicación de cada uno.</code></pre>
 </div>
 </div>
 </section>
-<section id="su-turno" class="slide level2 your-turn">
-<h2>Su turno</h2>
-<p>Con la base de ejemplo que les entregamos (o una suya que ya esté limpia):</p>
-<pre class="text"><code>Explora la data de datos-limpios/ y créame un dashboard HTML con:
-descripción de variables, distribución de las 4 variables clave, y
-un gráfico que responda mi pregunta de investigación.</code></pre>
-<p><strong>Qué observar:</strong> cómo prueba, falla y <strong>se corrige solo</strong> hasta que el archivo compila. Ese ciclo — escribir, verificar, corregir — es lo que un chat no puede hacer.</p>
+<section id="lo-que-acaban-de-construir" class="slide level2 smaller">
+<h2>Lo que acaban de construir</h2>
+<p>En una hora, partiendo de PDFs que nadie había tabulado:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Producto</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Una base de datos de conflictos que <strong>no existía</strong></td>
+<td>CSV, lista para analizar</td>
+</tr>
+<tr class="even">
+<td>Cada caso <strong>clasificado</strong> por tipo de demanda</td>
+<td>con criterio explícito</td>
+</tr>
+<tr class="odd">
+<td>Una <strong>tasa de error medida</strong>, no supuesta</td>
+<td>dato del paper</td>
+</tr>
+<tr class="even">
+<td>Un dashboard compartible por link</td>
+<td>HTML</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><span class="warm">Y el mes que viene, cuando salga el reporte 270, repetirlo cuesta un pedido.</span></p>
+</div>
 </section></section>
 <section id="pausa-10-minutos" class="title-slide slide level1 center">
 <h1>☕ Pausa — 10 minutos</h1>

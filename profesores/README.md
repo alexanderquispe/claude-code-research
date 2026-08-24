@@ -1,12 +1,42 @@
 # Claude Code para investigación en ciencias sociales
 
-**Taller para docentes — PUCP**
-Alexander Quispe · Universidad del Pacífico
+**Taller para docentes — Facultad de Ciencias Sociales, PUCP**
+Alexander Quispe · [Q-LAB](https://qlab.pucp.edu.pe/), Laboratorio de Inteligencia
+Artificial y Métodos Computacionales en Ciencias Sociales
 
 Este documento sirve para dos cosas: como guion de la sesión y como manual al que
 volver después. Todo lo que aparece aquí fue probado en un caso real —preparar un
 curso, descargar su bibliografía desde la biblioteca PUCP y auditar sus citas—, no
 es una lista de funciones tomada de la documentación.
+
+## Material del taller
+
+| Archivo | Qué es |
+|---|---|
+| `sesion1-confianza.qmd` | Slides — Sesión 1: qué es, seguridad, terminal, `/init`, la trampa de la cita, biblioteca PUCP |
+| `sesion2-flujo.qmd` | Slides — Sesión 2: Plan Mode, `/deep-research`, de PDFs a base de datos, LaTeX, Whisper |
+| `guia-ejemplo.md` | **Guía del instructor** para el proyecto de ejemplo: solucionario y trampas |
+| `notas-clases-ra.md` | Lecciones extraídas de las clases piloto con los asistentes del Q-LAB |
+| [`../ejemplo-mineria-conflicto/`](../ejemplo-mineria-conflicto/) | **El proyecto de ejemplo** que usan los participantes |
+
+### El proyecto de ejemplo
+
+Una carpeta de ~41 MB con un proyecto de investigación real, a medio empezar y
+deliberadamente desordenado, sobre **minería y conflicto social en el Perú**.
+Existe porque los ejercicios necesitan datos de verdad, y porque un profesor de
+antropología no tiene por qué llegar con un CSV bajo el brazo.
+
+> **La pregunta:** en los departamentos mineros del Perú, ¿la renta minera reduce
+> la conflictividad social — o solo cambia aquello por lo que se protesta?
+
+Combina **datos estructurados** (producción y empleo minero del MINEM, mesas de
+diálogo y compromisos de la PCM, 251 proyectos de ley del Congreso en JSON) con
+**texto sin estructurar** (10 reportes mensuales de la Defensoría del Pueblo, con
+la descripción narrativa de cada conflicto). Todas las fuentes fueron verificadas
+con descargas reales en agosto de 2026.
+
+Los detalles —qué contiene, los ocho errores sembrados en la bibliografía, las
+trampas técnicas y el solucionario— están en **`guia-ejemplo.md`**.
 
 ---
 

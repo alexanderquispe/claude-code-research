@@ -27,9 +27,11 @@ Two 3-hour sessions for professors, taught step by step in Spanish, with no tech
 | Sesión | Deck | Temas |
 |--------|------|-------|
 | **Sesión 1** (3h) | [Confianza y verificación](profesores/sesion1-confianza.html) | qué es y qué no es · seguridad · terminal mínimo · `/init` · **la trampa de la cita** · biblioteca PUCP |
-| **Sesión 2** (3h) | [El flujo de investigación](profesores/sesion2-flujo.html) | Plan Mode · **`/deep-research`** · dashboards · LaTeX sin escribir LaTeX · **Whisper** |
+| **Sesión 2** (3h) | [El flujo de investigación](profesores/sesion2-flujo.html) | Plan Mode · **`/deep-research`** · de PDFs a base de datos · LaTeX sin escribir LaTeX · **Whisper** |
 
 The written guide (guion + manual) is in [`profesores/README.md`](https://github.com/alexanderquispe/claude-code-research/blob/main/profesores/README.md).
+
+**Example project.** Both sessions run on [`ejemplo-mineria-conflicto/`](https://github.com/alexanderquispe/claude-code-research/tree/main/ejemplo-mineria-conflicto) — a real, half-started and deliberately messy research project on **mining and social conflict in Peru**. It combines structured data (mining output and employment, dialogue-table commitments, 251 congressional bills as JSON) with unstructured text (ten monthly conflict reports from the Ombudsman's Office, each with a narrative description per case). Instructor's guide and answer key: [`profesores/guia-ejemplo.md`](https://github.com/alexanderquispe/claude-code-research/blob/main/profesores/guia-ejemplo.md).
 
 ## Before class
 
