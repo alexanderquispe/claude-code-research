@@ -944,6 +944,43 @@ Prioriza estudios cuantitativos e informes oficiales.</code></pre>
 </figure>
 </div>
 </section>
+<section id="cuántos-agentes-son-exactamente" class="slide level2 smaller">
+<h2>¿Cuántos agentes son, exactamente?</h2>
+<p>Hay que distinguir dos números que suelen confundirse:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Cuántos</th>
+<th>Qué significa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A la vez</strong></td>
+<td>hasta <strong>16</strong></td>
+<td>corriendo en paralelo en ese instante (menos si su computadora tiene pocos núcleos)</td>
+</tr>
+<tr class="even">
+<td><strong>En total, a lo largo de la corrida</strong></td>
+<td><strong>cientos</strong></td>
+<td>van entrando por fases: buscar → leer → verificar → sintetizar. El tope duro del sistema es <strong>1 000</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>Y cuántos apunta a usar depende de la configuración (<code>/config workflowSizeGuideline</code>):</p>
+<p><code>small</code> menos de 5 · <strong><code>medium</code> menos de 15 (por defecto)</strong> · <code>large</code> menos de 50</p>
+</div>
+<div class="fragment">
+<p><span class="warm">En una corrida real de este taller contamos <strong>cerca de 100 agentes en total</strong>: 6 al inicio, 26 leyendo, 75 verificando. Si pasa de 25, Claude Code avisa que es una <strong>corrida grande</strong>.</span></p>
+</div>
+</section>
 <section id="por-qué-esto-importa-para-la-verificación" class="slide level2 smaller">
 <h2>Por qué esto importa para la verificación</h2>
 <p>Un buscador les da <strong>enlaces</strong>. Este equipo les da <strong>afirmaciones ya contrastadas</strong>:</p>
