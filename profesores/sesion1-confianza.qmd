@@ -129,6 +129,27 @@ Para **leer PDFs dentro de VS Code** (sus papers, y el PDF que compile LaTeX):
 
 [Sin esto, cada PDF se abre en otro programa y pierden la gracia de "todo en una sola ventana".]{.small .muted}
 
+## Traer su proyecto a VS Code {.smaller}
+
+::: columns
+::: {.column width="55%"}
+Para el taller les enviaremos **la carpeta del proyecto** lista para descargar.
+
+1. Descárguenla y colóquenla en **Documentos** (igual en Windows que en Mac)
+2. En VS Code: menú **File → Add Folder to Workspace…**
+3. Elijan la carpeta → aparece en el **panel izquierdo**
+
+. . .
+
+Con eso VS Code ya "ve" su proyecto: desde ese panel saldrá la ruta que le daremos al terminal en el siguiente paso.
+
+[Este mismo camino sirve después para cualquier carpeta suya: tesis, cursos, papers.]{.small .muted}
+:::
+::: {.column width="45%"}
+![](../figures/screenshots/vscode-add-folder.png){.nostretch width=88% fig-align="center"}
+:::
+:::
+
 ## Abrir el terminal: un solo clic {.smaller}
 
 ![](../figures/es/vscode-terminal-menu.svg){width=80% fig-align="center"}
