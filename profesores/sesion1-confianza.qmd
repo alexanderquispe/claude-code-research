@@ -709,6 +709,29 @@ Aun así el ahorro es enorme: la parte lenta no era hacer clic, era **saber qué
 
 [Que la página cargue no significa que haya suscripción — hay que llegar hasta el PDF. Comprobado que **no** tenemos: Oxford ni Management Science/INFORMS (o sea, ni QJE ni ReStud por esta vía).]{.small .muted}
 
+## El broche: la revisión, en LaTeX y en PDF {.your-turn .smaller}
+
+Todo lo del bloque converge aquí. Pídanle:
+
+```text
+Con el informe de deep-research y los PDFs de papers/, escribe la
+sección "Revisión de la literatura" de mi paper: 3 a 4 páginas,
+organizada por temas (no paper por paper), con citas autor-año
+y su archivo referencias.bib.
+
+Créala como documento LaTeX independiente (revision-literatura.tex),
+compílala a PDF y ábreme el resultado. Si la compilación falla,
+lee el error, corrige y reintenta hasta que salga.
+```
+
+. . .
+
+**Qué observar:**
+
+1. **Ustedes no escribieron ni una línea de LaTeX** — la promesa del Bloque 1, cumplida. Si la compilación falla, él lee el error y se corrige solo: es el ciclo del agente.
+2. El PDF se abre **dentro de VS Code** — para eso instalaron vscode-pdf.
+3. [Es un **borrador para su edición**: la estructura y las citas ya están (y verificadas); la voz y el argumento los ponen ustedes.]{.warm}
+
 # Bloque 7 — Cierre
 
 ## Lo que ya saben hacer {.smaller}
