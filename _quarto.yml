@@ -5,6 +5,8 @@ project:
     - index.qmd
     - ras/day1-foundations.qmd
     - ras/day2-power-tools.qmd
+    - profesores/sesion1-confianza.qmd
+    - profesores/sesion2-flujo.qmd
 
 format:
   revealjs:

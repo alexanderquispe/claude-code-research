@@ -22,7 +22,14 @@ A 4-hour hands-on course (August 17–18, 2026), from **zero knowledge** to runn
 
 ## 👩‍🏫 For faculty — Facultad de Ciencias Sociales
 
-Two 3-hour sessions for professors, taught step by step with no technical background assumed. **Slides in preparation** — the working guide (in Spanish) is in [`profesores/`](https://github.com/alexanderquispe/claude-code-research/tree/main/profesores).
+Two 3-hour sessions for professors, taught step by step in Spanish, with no technical background assumed.
+
+| Sesión | Deck | Temas |
+|--------|------|-------|
+| **Sesión 1** (3h) | [Confianza y verificación](profesores/sesion1-confianza.html) | qué es y qué no es · seguridad · terminal mínimo · `/init` · **la trampa de la cita** · biblioteca PUCP |
+| **Sesión 2** (3h) | [El flujo de investigación](profesores/sesion2-flujo.html) | Plan Mode · **`/deep-research`** · dashboards · LaTeX sin escribir LaTeX · **Whisper** |
+
+The written guide (guion + manual) is in [`profesores/README.md`](https://github.com/alexanderquispe/claude-code-research/blob/main/profesores/README.md).
 
 ## Before class
 
