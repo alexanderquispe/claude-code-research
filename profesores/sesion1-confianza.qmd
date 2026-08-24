@@ -451,7 +451,14 @@ de investigación.
 
 ## Bonus: la respuesta puede ser una página web {.smaller}
 
-Al probar el tercer prompt en este proyecto pasó algo que no pedimos: como la explicación era "para compartir", Claude cargó uno de sus **skills** — manuales internos que activa cuando la tarea lo amerita, aquí el de diseño de páginas — y publicó la guía como una **página web con enlace propio** (un *Artifact*).
+Al probar el tercer prompt en este proyecto pasó algo que no pedimos: como la explicación era "para compartir", Claude cargó uno de sus **skills** — manuales internos que activa cuando la tarea lo amerita. En el terminal se ve así:
+
+```text
+⏺ Skill(artifact-design)
+  Successfully loaded skill
+```
+
+Con esa guía de diseño cargada, publicó la explicación como una **página web con enlace propio** (un *Artifact*).
 
 . . .
 
