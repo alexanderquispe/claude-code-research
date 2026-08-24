@@ -680,12 +680,17 @@ Es el mismo principio de siempre, y conviene que quede grabado:
 
 . . .
 
-**Por qué es así:** Claude nunca escribe contraseñas ni opera sesiones autenticadas por ustedes. No es una limitación técnica que se pueda saltar — es una regla de seguridad.
+**Por qué es así:** Claude nunca escribe contraseñas por ustedes — regla de seguridad — y, trabajando con **clave API**, tampoco puede manejar su navegador.
 
 . . .
 
+::: {.callout-note}
+## ¿Y no hay forma de que él haga hasta los clics?
+La hay: la extensión **Claude in Chrome** le permite operar su navegador ya logueado — con ella, la descarga de `pendientes.md` sí sería automática. Pero **requiere suscripción paga** (Pro, $20/mes o más); **no funciona con la clave API** con la que trabajamos hoy.
+:::
+
 ::: {.callout-tip}
-Aun con ese reparto, el ahorro es enorme: la parte lenta no era hacer clic, era **saber qué buscar, dónde está y si la cita es correcta**.
+Aun así el ahorro es enorme: la parte lenta no era hacer clic, era **saber qué buscar, dónde está y si la cita es correcta**.
 :::
 
 [Que la página cargue no significa que haya suscripción — hay que llegar hasta el PDF. Comprobado que **no** tenemos: Oxford ni Management Science/INFORMS (o sea, ni QJE ni ReStud por esta vía).]{.small .muted}
