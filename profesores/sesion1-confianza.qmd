@@ -15,7 +15,7 @@ lang: es
 |------|--------|------|
 | 6:00 – 6:20 | 1 | Qué es Claude y sus tres productos |
 | 6:20 – 6:50 | 2 | VS Code y el terminal, paso a paso |
-| 6:50 – 7:10 | 3 | Ejercicio: diagnóstico de su computadora |
+| 6:50 – 7:10 | 3 | Diagnóstico, modelo y modos de trabajo |
 | 7:10 – 7:20 | ☕ | Pausa 1 |
 | 7:20 – 7:40 | 4 | Primeras conversaciones con sus archivos |
 | 7:40 – 8:05 | 5 | La memoria del proyecto: `/init` |
@@ -208,7 +208,7 @@ Todos nos atascamos. Esto resuelve el 95 % de los líos:
 Y la herramienta universal: **tómenle captura de pantalla al problema, péguenla en Claude** (Ctrl+V / Cmd+V en el chat del terminal) y pregunten *"¿por qué me sale esto?"*. Claude se depura a sí mismo sorprendentemente bien.
 :::
 
-# Bloque 3 — Diagnóstico de su computadora
+# Bloque 3 — Diagnóstico y configuración
 
 ## Su turno: el primer ejercicio {.your-turn}
 
@@ -284,6 +284,25 @@ El *effort* es **cuánto razona el modelo antes de responder** — como la difer
 
 - **Cómo se ajusta:** dentro del menú `/model`, con las flechas <kbd>←</kbd>/<kbd>→</kbd> — la línea naranja va cambiando: *low · medium · high · xHigh…*
 - **Recomendación del taller: déjenlo en High o xHigh.** El modelo además adapta solo cuánto piensa según la dificultad de cada pedido.
+
+## Los modos de trabajo (y el freno de mano) {.smaller}
+
+Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — son **cuatro**, y se ven en la **barra de abajo** de Claude:
+
+![](../figures/es/safety-spectrum.svg){width=88% fig-align="center"}
+
+- **plan mode on** — solo lee y **propone un plan**; no toca nada. Para empezar cualquier cosa nueva. *Lo usaremos a fondo en la Sesión 2.*
+- **manual mode on** — pregunta antes de **cada** acción.
+- **accept edits on** — edita archivos sin preguntar; los comandos aún piden permiso.
+- **auto mode on** — ejecuta ediciones **y** comandos solo. **El modo que usaremos hoy**, para que los ejercicios fluyan.
+
+[Existe además una bandera de arranque que desactiva todas las protecciones (`--dangerously-skip-permissions`) — no la usen.]{.small .muted}
+
+## Así se ve en su terminal {.smaller}
+
+![](../figures/es/modes-bar.svg){.nostretch width=74% fig-align="center"}
+
+Presionen <kbd>Shift</kbd>+<kbd>Tab</kbd> varias veces ahora mismo y miren cómo **rota la etiqueta**. Déjenlo en **auto mode on**: así los ejercicios que siguen corren de corrido, sin detenerse en cada permiso.
 
 # ☕ Pausa 1 — 10 minutos {background-color="#e6fbfc"}
 
@@ -396,25 +415,6 @@ Después ustedes lo **editan como cualquier documento**: agregan reglas suyas, p
 ![](../figures/es/memory-stack.svg){width=76% fig-align="center"}
 
 [Ninguno existe por defecto: el del proyecto lo genera `/init`; el personal lo crean ustedes (o el atajo `#`); el de subcarpeta es opcional.]{.small .muted}
-
-## Los modos de trabajo (y el freno de mano) {.smaller}
-
-Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — son **cuatro**, y se ven en la **barra de abajo** de Claude:
-
-![](../figures/es/safety-spectrum.svg){width=88% fig-align="center"}
-
-- **plan mode on** — solo lee y **propone un plan**; no toca nada. Para empezar cualquier cosa nueva. *Lo usaremos a fondo en la Sesión 2.*
-- **manual mode on** — pregunta antes de **cada** acción.
-- **accept edits on** — edita archivos sin preguntar; los comandos aún piden permiso.
-- **auto mode on** — ejecuta ediciones **y** comandos solo. **El modo que usaremos hoy**, para que los ejercicios fluyan.
-
-[Existe además una bandera de arranque que desactiva todas las protecciones (`--dangerously-skip-permissions`) — no la usen.]{.small .muted}
-
-## Así se ve en su terminal {.smaller}
-
-![](../figures/es/modes-bar.svg){.nostretch width=74% fig-align="center"}
-
-Presionen <kbd>Shift</kbd>+<kbd>Tab</kbd> varias veces ahora mismo y miren cómo **rota la etiqueta**. Para la clase de hoy déjenlo en **auto mode on** — así los ejercicios corren de corrido, sin detenerse en cada permiso.
 
 # ☕ Pausa 2 — 10 minutos {background-color="#e6fbfc"}
 
