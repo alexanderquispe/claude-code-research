@@ -648,6 +648,60 @@ con Whisper, y qué tan rápido?</code></pre>
 <div class="fragment">
 <p><span class="small muted">Si un día algo responde “raro”, lo primero que deben revisar es <code>/model</code>: ¿qué modelo quedó seleccionado?</span></p>
 </div>
+</section>
+<section id="así-se-ve-el-menú-model" class="slide level2 smaller">
+<h2>Así se ve el menú <code>/model</code></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/screenshots/model-selector.png" class="quarto-figure quarto-figure-center" style="width:92.0%"></p>
+</figure>
+</div>
+<ul>
+<li>El <strong>✓ verde</strong> marca el modelo activo; se navega con las flechas ↑/↓.</li>
+<li><kbd>Enter</kbd> lo fija como <strong>default</strong> para futuras sesiones · <kbd>s</kbd> lo usa <strong>solo en esta sesión</strong> · <kbd>Esc</kbd> cancela.</li>
+<li>¿Y esa línea naranja de abajo, <strong>“High effort”</strong>? → siguiente slide.</li>
+</ul>
+</section>
+<section id="qué-significa-effort" class="slide level2 smaller">
+<h2>¿Qué significa “effort”?</h2>
+<p>El <em>effort</em> es <strong>cuánto razona el modelo antes de responder</strong> — como la diferencia entre pedirle a un asistente una respuesta al vuelo o un análisis cuidadoso.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Menos effort</th>
+<th>Más effort</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Velocidad</strong></td>
+<td>responde más rápido</td>
+<td>piensa más tiempo</td>
+</tr>
+<tr class="even">
+<td><strong>Profundidad</strong></td>
+<td>suficiente para tareas simples</td>
+<td>mejor en problemas difíciles</td>
+</tr>
+<tr class="odd">
+<td><strong>Consumo</strong></td>
+<td>gasta menos</td>
+<td>gasta más tokens</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<ul>
+<li><strong>Cómo se ajusta:</strong> dentro del menú <code>/model</code>, con las flechas <kbd>←</kbd>/<kbd>→</kbd> (la línea naranja cambia: low · medium · high · …).</li>
+<li><strong>Recomendación del taller: déjenlo en High</strong> (el default). El modelo además adapta solo cuánto piensa según la dificultad de cada pedido.</li>
+</ul>
+</div>
 </section></section>
 <section id="pausa-1-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
 <h1>☕ Pausa 1 — 10 minutos</h1>

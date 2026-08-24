@@ -262,6 +262,29 @@ Dentro de Claude, escriban `/model` y elijan **Opus**.
 
 [Si un día algo responde "raro", lo primero que deben revisar es `/model`: ¿qué modelo quedó seleccionado?]{.small .muted}
 
+## Así se ve el menú `/model` {.smaller}
+
+![](../figures/screenshots/model-selector.png){.nostretch width=92% fig-align="center"}
+
+- El **✓ verde** marca el modelo activo; se navega con las flechas ↑/↓.
+- <kbd>Enter</kbd> lo fija como **default** para futuras sesiones · <kbd>s</kbd> lo usa **solo en esta sesión** · <kbd>Esc</kbd> cancela.
+- ¿Y esa línea naranja de abajo, **"High effort"**? → siguiente slide.
+
+## ¿Qué significa "effort"? {.smaller}
+
+El *effort* es **cuánto razona el modelo antes de responder** — como la diferencia entre pedirle a un asistente una respuesta al vuelo o un análisis cuidadoso.
+
+| | Menos effort | Más effort |
+|---|---|---|
+| **Velocidad** | responde más rápido | piensa más tiempo |
+| **Profundidad** | suficiente para tareas simples | mejor en problemas difíciles |
+| **Consumo** | gasta menos | gasta más tokens |
+
+. . .
+
+- **Cómo se ajusta:** dentro del menú `/model`, con las flechas <kbd>←</kbd>/<kbd>→</kbd> (la línea naranja cambia: low · medium · high · …).
+- **Recomendación del taller: déjenlo en High** (el default). El modelo además adapta solo cuánto piensa según la dificultad de cada pedido.
+
 # ☕ Pausa 1 — 10 minutos {background-color="#e6fbfc"}
 
 [Volvemos 7:20 pm]{.big}
