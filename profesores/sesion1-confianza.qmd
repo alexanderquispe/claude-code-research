@@ -709,35 +709,6 @@ Aun así el ahorro es enorme: la parte lenta no era hacer clic, era **saber qué
 
 [Que la página cargue no significa que haya suscripción — hay que llegar hasta el PDF. Comprobado que **no** tenemos: Oxford ni Management Science/INFORMS (o sea, ni QJE ni ReStud por esta vía).]{.small .muted}
 
-## Cuando de verdad no hay acceso {.smaller}
-
-Casi siempre existe una versión abierta: **NBER · SSRN · arXiv · RePEc**, el repositorio del autor, o el enlace [PDF] a la derecha en Google Scholar.
-
-::: {.callout-warning}
-El *working paper* **no es** el artículo publicado — hay casos con distinto título y hasta distintos autores. Para **citar**, la versión publicada; para leer, cualquiera — sabiendo cuál tienen.
-:::
-
-. . .
-
-Y para libros, que es lo que más pesa en varias de sus disciplinas: la búsqueda en el **catálogo de la biblioteca** sigue siendo insustituible. Esta herramienta **complementa**, no reemplaza.
-
-## ¿Se puede acortar la espera? {.smaller}
-
-**No hay un parámetro de tiempo** — pero sí tres palancas reales:
-
-| Palanca | Cómo |
-|---|---|
-| **Menos agentes** | `/config workflowSizeGuideline=small` → apunta a menos de 5 agentes (por defecto son hasta 15) |
-| **Pregunta más estrecha** | Un periodo, un país, un tipo de fuente. Una pregunta amplia abre más frentes y tarda más |
-| **Cortarlo a mano** | `/workflows` → seleccionar la corrida → <kbd>x</kbd> detiene · <kbd>p</kbd> pausa y reanuda |
-
-. . .
-
-- En `/workflows` ven **en vivo** cuántos agentes hay, cuántos tokens llevan y el tiempo transcurrido.
-- Si una corrida se dispara (más de 25 agentes), Claude Code muestra un aviso de **corrida grande**.
-
-[La estrategia práctica es la de hoy: **lánzenlo y sigan trabajando**. No es tiempo perdido si ustedes no lo están mirando.]{.warm}
-
 # Bloque 7 — Cierre
 
 ## Lo que ya saben hacer {.smaller}
@@ -770,3 +741,34 @@ Elijan **una tarea real y pequeña** de su propia investigación:
 - Biblioteca PUCP: [biblioteca.pucp.edu.pe](https://biblioteca.pucp.edu.pe)
 
 [Estos slides fueron escritos, diagramados y compilados con Claude Code — incluyendo el análisis de las grabaciones de las clases piloto con los asistentes del Q-LAB.]{.small .muted}
+
+# Anexo — por si surge en preguntas
+
+## Cuando de verdad no hay acceso {.smaller}
+
+Casi siempre existe una versión abierta: **NBER · SSRN · arXiv · RePEc**, el repositorio del autor, o el enlace [PDF] a la derecha en Google Scholar.
+
+::: {.callout-warning}
+El *working paper* **no es** el artículo publicado — hay casos con distinto título y hasta distintos autores. Para **citar**, la versión publicada; para leer, cualquiera — sabiendo cuál tienen.
+:::
+
+. . .
+
+Y para libros, que es lo que más pesa en varias de sus disciplinas: la búsqueda en el **catálogo de la biblioteca** sigue siendo insustituible. Esta herramienta **complementa**, no reemplaza.
+
+## ¿Se puede acortar la espera? {.smaller}
+
+**No hay un parámetro de tiempo** — pero sí tres palancas reales:
+
+| Palanca | Cómo |
+|---|---|
+| **Menos agentes** | `/config workflowSizeGuideline=small` → apunta a menos de 5 agentes (por defecto son hasta 15) |
+| **Pregunta más estrecha** | Un periodo, un país, un tipo de fuente. Una pregunta amplia abre más frentes y tarda más |
+| **Cortarlo a mano** | `/workflows` → seleccionar la corrida → <kbd>x</kbd> detiene · <kbd>p</kbd> pausa y reanuda |
+
+. . .
+
+- En `/workflows` ven **en vivo** cuántos agentes hay, cuántos tokens llevan y el tiempo transcurrido.
+- Si una corrida se dispara (más de 25 agentes), Claude Code muestra un aviso de **corrida grande**.
+
+[La estrategia práctica es la de hoy: **lánzenlo y sigan trabajando**. No es tiempo perdido si ustedes no lo están mirando.]{.warm}
