@@ -605,6 +605,10 @@ Un buscador les da **enlaces**. Este equipo les da **afirmaciones ya contrastada
 
 . . .
 
+![](../figures/screenshots/workflows-deep-research.png){.nostretch width=100% fig-align="center"}
+
+[Captura de `/workflows` en una corrida real: fases Scope → Search → Fetch → **Verify** → Synthesize. Miren la fase Verify: **75 agentes** dedicados solo a comprobar lo que afirmaron los demás.]{.small}
+
 ::: {.callout-tip}
 Empiecen a leer el informe **por lo marcado como no verificado**: ahí es donde su criterio de investigador hace la diferencia.
 :::
