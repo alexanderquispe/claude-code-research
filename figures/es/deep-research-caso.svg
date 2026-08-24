@@ -1,0 +1,42 @@
+<svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+<defs><marker id="t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0e7c86"/></marker><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker></defs>
+<rect x="10" y="150" width="150" height="86" rx="12" fill="#0f2d52"/>
+<text x="85" y="180" text-anchor="middle" font-size="14" fill="#fff">su pregunta</text>
+<text x="85" y="204" text-anchor="middle" font-size="11.5" fill="#9fb3c8">“conflictos mineros</text>
+<text x="85" y="220" text-anchor="middle" font-size="11.5" fill="#9fb3c8">y protesta en Perú”</text>
+<rect x="196" y="20" width="212" height="46" rx="10" fill="#e6f6f7" stroke="#0e7c86" stroke-width="1.8"/>
+<text x="302" y="48" text-anchor="middle" font-size="12.5" fill="#0f2d52">evidencia cuantitativa Perú</text>
+<rect x="196" y="80" width="212" height="46" rx="10" fill="#e6f6f7" stroke="#0e7c86" stroke-width="1.8"/>
+<text x="302" y="108" text-anchor="middle" font-size="12.5" fill="#0f2d52">estudios de caso · Las Bambas</text>
+<rect x="196" y="140" width="212" height="46" rx="10" fill="#e6f6f7" stroke="#0e7c86" stroke-width="1.8"/>
+<text x="302" y="168" text-anchor="middle" font-size="12.5" fill="#0f2d52">literatura comparada LatAm</text>
+<rect x="196" y="200" width="212" height="46" rx="10" fill="#e6f6f7" stroke="#0e7c86" stroke-width="1.8"/>
+<text x="302" y="228" text-anchor="middle" font-size="12.5" fill="#0f2d52">informes Defensoría / ONG</text>
+<rect x="196" y="260" width="212" height="46" rx="10" fill="#e6f6f7" stroke="#0e7c86" stroke-width="1.8"/>
+<text x="302" y="288" text-anchor="middle" font-size="12.5" fill="#0f2d52">teoría: conflicto socioambiental</text>
+<g stroke="#94a3b8" stroke-width="1.6" fill="none">
+<path d="M160,180 C178,160 178,60 190,43"/><path d="M160,186 C178,175 178,110 190,103"/>
+<path d="M160,193 L190,163"/><path d="M160,200 C178,210 178,215 190,223"/>
+<path d="M160,207 C178,240 178,270 190,283"/>
+</g>
+<text x="302" y="332" text-anchor="middle" font-size="12.5" font-style="italic" fill="#94a3b8">un agente por ángulo, todos a la vez</text>
+<rect x="446" y="150" width="140" height="86" rx="12" fill="#eef2f7" stroke="#0f2d52" stroke-width="2"/>
+<text x="516" y="182" text-anchor="middle" font-size="14" font-weight="700" fill="#0f2d52">leen y extraen</text>
+<text x="516" y="206" text-anchor="middle" font-size="12" fill="#475569">papers, informes, datos</text>
+<g stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#g)">
+<path d="M408,43 C425,60 425,150 438,168"/><path d="M408,103 L438,180"/><path d="M408,163 L438,188"/>
+<path d="M408,223 L438,200"/><path d="M408,283 C425,270 425,220 438,212"/>
+</g>
+<rect x="628" y="150" width="140" height="86" rx="12" fill="#eef2f7" stroke="#0f2d52" stroke-width="2"/>
+<text x="698" y="178" text-anchor="middle" font-size="14" font-weight="700" fill="#0f2d52">se verifican</text>
+<text x="698" y="200" text-anchor="middle" font-size="12" fill="#475569">entre ellos · votan</text>
+<text x="698" y="222" text-anchor="middle" font-size="13" fill="#0e7c86">✓✓<tspan fill="#c05621">✗</tspan></text>
+<path d="M588,193 L620,193" stroke="#0e7c86" stroke-width="2.5" fill="none" marker-end="url(#t)"/>
+<rect x="810" y="140" width="140" height="106" rx="12" fill="#fdf1e7" stroke="#c05621" stroke-width="2"/>
+<text x="880" y="172" text-anchor="middle" font-size="14" font-weight="700" fill="#0f2d52">📄 informe</text>
+<text x="880" y="194" text-anchor="middle" font-size="12" fill="#475569">con cada cita</text>
+<text x="880" y="212" text-anchor="middle" font-size="12" fill="#475569">y su fuente</text>
+<text x="880" y="234" text-anchor="middle" font-size="11.5" font-style="italic" fill="#c05621">+ los PDFs</text>
+<path d="M770,193 L802,193" stroke="#0e7c86" stroke-width="2.5" fill="none" marker-end="url(#t)"/>
+<text x="480" y="376" text-anchor="middle" font-size="14" font-style="italic" fill="#94a3b8">lo que no sobrevive la verificación no llega al informe · lo que no se pudo comprobar se marca</text>
+</svg>

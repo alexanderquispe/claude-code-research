@@ -20,9 +20,8 @@ lang: es
 | 7:20 – 7:45 | 4 | Lo primero: `/init` y markdown |
 | 7:45 – 8:05 | 5 | Trabajar: conversar y ordenar |
 | 8:05 – 8:15 | ☕ | Pausa 2 |
-| 8:15 – 8:45 | 6 | ⭐ La trampa de la cita |
-| 8:45 – 8:55 | 7 | La biblioteca PUCP |
-| 8:55 – 9:00 | 8 | Cierre y tarea |
+| 8:15 – 8:55 | 6 | ⭐ Literatura: `/deep-research` y la trampa de la cita |
+| 8:55 – 9:00 | 7 | Cierre y tarea |
 
 [Los asistentes del Q-LAB están en la sala: levanten la mano ante cualquier problema técnico y ellos los ayudan sin detener la clase.]{.small .muted}
 
@@ -427,29 +426,9 @@ empezar y **deliberadamente desordenado**.
 
 [Úsenla hoy y quédensela. Si prefieren, todos los ejercicios funcionan igual sobre una carpeta suya.]{.small .muted}
 
-## Su turno 1 — la estructura del proyecto {.your-turn .smaller}
+## Su turno 1 — identificar: los nombres {.your-turn .smaller}
 
-Casi ninguna carpeta de investigación está lista para enviarse a una revista. Pídanle el plan:
-
-```text
-Quiero dejar este proyecto ordenado como un paquete de replicación
-listo para enviar a una revista: carpetas claras (datos, código,
-resultados, documento), nombres de archivo consistentes y sin
-espacios, y un README que explique cómo reproducir todo.
-
-Propónme primero el plan de reorganización — qué mueves, qué
-renombras y por qué. No cambies nada todavía.
-```
-
-. . .
-
-**Qué observar:** llega un plan concreto sobre *sus* archivos reales. Léanlo, cambien lo que no les guste, y recién entonces autoricen.
-
-[Cuando terminen, pídanle que **actualice el `CLAUDE.md`** con la nueva estructura — así la memoria del proyecto queda al día.]{.small .muted}
-
-## Su turno 2 — los nombres de los archivos {.your-turn .smaller}
-
-Ahora el detalle. Miren `papers/`: hay cosas como
+Empecemos por saber **qué es cada archivo**. Miren `papers/`: hay cosas como
 `descarga.pdf`, `el pasado importa - copia (2).pdf`, `articulo minería (1).pdf`.
 
 ```text
@@ -467,11 +446,72 @@ muéstrame la lista de cambios que vas a hacer.
 3. **Tres de esos papers no vienen al caso.** ¿Los detecta? Pregúntenle:
    *"¿cuáles de estos no tienen que ver con minería y conflicto en el Perú?"*
 
+## Su turno 2 — archivar: la estructura {.your-turn .smaller}
+
+Ya saben qué es cada cosa. Ahora **dónde va**:
+
+```text
+Quiero dejar este proyecto ordenado como un paquete de replicación
+listo para enviar a una revista: carpetas claras (datos, código,
+resultados, documento) y un README que explique cómo reproducir todo.
+
+Propónme primero el plan — qué mueves y por qué. No cambies nada
+todavía.
+```
+
+. . .
+
+**Qué observar:** llega un plan concreto sobre *sus* archivos reales. Léanlo, cambien lo que no les guste, y recién entonces autoricen.
+
+[Cuando terminen, pídanle que **actualice el `CLAUDE.md`** con la nueva estructura — así la memoria del proyecto queda al día.]{.small .muted}
+
 # ☕ Pausa 2 — 10 minutos {background-color="#e6fbfc"}
 
 [Volvemos 8:15 pm]{.big}
 
-# Bloque 6 — ⭐ La trampa de la cita
+# Bloque 6 — La literatura: buscar y verificar
+
+## Primero lo lanzamos, después conversamos {.your-turn .smaller}
+
+`/deep-research` **tarda 15–20 minutos** — así que lo echamos a andar *ahora* y seguimos la clase mientras trabaja:
+
+```text
+/deep-research ¿Qué dice la evidencia empírica desde 2015 sobre la
+relación entre actividad minera y conflictividad social en el Perú?
+Prioriza estudios cuantitativos e informes oficiales.
+```
+
+. . .
+
+Y el pedido que lo convierte en material suyo — **añádanlo al mismo mensaje**:
+
+```text
+Descarga los PDFs que cites en una carpeta papers/, agrupados por tema.
+```
+
+[Corre **en segundo plano**: la sesión les queda libre. Vuelvan a mirarlo con `/workflows`.]{.warm}
+
+## Lo que acaba de pasar por dentro {.smaller}
+
+![](../figures/es/agentes-paralelo.svg){.nostretch width=86% fig-align="center"}
+
+## No es una búsqueda: es un equipo {.smaller}
+
+![](../figures/es/deep-research-caso.svg){.nostretch width=96% fig-align="center"}
+
+## Por qué esto importa para la verificación {.smaller}
+
+Un buscador les da **enlaces**. Este equipo les da **afirmaciones ya contrastadas**:
+
+- Cada agente busca por un **ángulo distinto** — nadie depende de una sola consulta afortunada.
+- Los agentes **se revisan entre ellos**: lo que un agente afirma, otros lo verifican contra la fuente.
+- Lo que **no sobrevive** esa votación **no llega al informe**; lo que no se pudo comprobar aparece marcado como *no verificado*.
+
+. . .
+
+::: {.callout-tip}
+Empiecen a leer el informe **por lo marcado como no verificado**: ahí es donde su criterio de investigador hace la diferencia.
+:::
 
 ## El ejercicio más importante del taller {.your-turn}
 
@@ -548,47 +588,86 @@ Verifica contra el PDF que está en la carpeta papers/
 Consulta Crossref antes de darme cualquier DOI
 ```
 
-# Bloque 7 — La biblioteca PUCP
+## De vuelta al informe {.your-turn .smaller}
 
-## El proxy de la biblioteca: elogim {.smaller}
-
-La PUCP tiene acceso institucional a bases suscritas. El punto de entrada:
+Ya debe haber terminado. Ábranlo y hagan con él lo mismo que acaban de aprender:
 
 ```text
-https://pucp.elogim.com/auth-meta/login.php?url=<URL DEL EDITOR>
-```
-
-Pegan cualquier dirección de una revista después de `url=` y, si hay suscripción, entra con acceso institucional. Ejemplo para un artículo de JSTOR:
-
-```text
-https://pucp.elogim.com/auth-meta/login.php?url=https://www.jstor.org/stable/2171832
+De la bibliografía que armaste, verifica cada referencia contra
+Crossref y dime cuáles tienen algún dato que no coincide.
 ```
 
 . . .
 
-**El patrón de trabajo** — Claude **nunca escribe contraseñas** (es una restricción sin excepciones): ustedes se loguean una vez en el navegador y él trabaja sobre esa sesión:
+**Qué observar:** el informe trae la fuente de cada afirmación — y aun así, la verificación encuentra cosas. **Esa doble pasada es el método.**
 
-```text
-Estoy logueado en la biblioteca PUCP. Busca este artículo [DOI] y
-descárgalo a la carpeta papers/. Si no tenemos acceso, dime dónde
-más se puede conseguir.
-```
+## El límite: qué puede y qué no puede descargar {.smaller}
 
-## Tres cosas que cuestan descubrir solo {.smaller}
-
-1. **Su cuenta personal no es el acceso institucional.** Con usuario propio en JSTOR solo *leen en pantalla*; el botón de descarga aparece bajo la sesión de la Universidad. Es el error más común.
-2. **La sesión va por cookie** — tiene que ser un navegador logueado. Si el agente intenta descargar "por código" va a fallar: díganle *"usa el navegador"*.
-3. **Que la página cargue no significa que haya suscripción.** Hay que llegar hasta el PDF. (Comprobado que **no** tenemos: Management Science/INFORMS ni Oxford — o sea, ni QJE ni ReStud por esta vía.)
+| Tipo de fuente | ¿Lo consigue solo? |
+|---|---|
+| Working papers (NBER, SSRN, RePEc), preprints (arXiv) | ✅ Sí |
+| Informes oficiales, tesis, repositorios institucionales | ✅ Sí |
+| **Artículos publicados en revistas de suscripción** | ❌ **No** — llega al resumen, no al PDF |
+| **Libros** | ❌ No — y en Ciencias Sociales muchas veces el libro *es* la fuente |
 
 . . .
 
-**Cuando no hay acceso**, casi siempre existe versión abierta: NBER, SSRN, arXiv, repositorios de los autores, Google Scholar.
+[No es un defecto de la herramienta: es que **esas puertas están cerradas para cualquiera que no esté logueado**. Y ustedes sí lo están.]{.warm}
+
+## La solución: la biblioteca PUCP {.smaller}
+
+El proxy de la Universidad se llama **elogim**. Ustedes se loguean **una vez** en el navegador y el agente trabaja sobre esa sesión abierta:
+
+```text
+https://pucp.elogim.com/auth-meta/login.php?url=<DIRECCIÓN DE LA REVISTA>
+```
+
+. . .
+
+```text
+Estoy logueado en la biblioteca PUCP en el navegador. De la lista de
+referencias, descarga a papers/ las que estén en revistas suscritas.
+Si alguna no tiene acceso, dime dónde más se puede conseguir.
+```
+
+. . .
+
+**Tres cosas que cuestan descubrir solas:**
+
+1. **Su cuenta personal ≠ el acceso institucional.** Con usuario propio en JSTOR solo *leen en pantalla*; el botón de descarga aparece bajo la sesión de la Universidad.
+2. **La sesión va por cookie** → tiene que ser un navegador logueado. Si el agente intenta bajarlo "por código", falla: díganle *"usa el navegador"*.
+3. **Que la página cargue no significa que haya suscripción.** (Comprobado que **no** tenemos: Management Science/INFORMS ni Oxford — o sea, ni QJE ni ReStud por esta vía.)
+
+## Cuando de verdad no hay acceso {.smaller}
+
+Casi siempre existe una versión abierta: **NBER · SSRN · arXiv · RePEc**, el repositorio del autor, o el enlace [PDF] a la derecha en Google Scholar.
 
 ::: {.callout-warning}
-El *working paper* no es el artículo publicado — hay casos con distinto título y hasta distintos autores. Para **citar**, la versión publicada; para leer, cualquiera — sabiendo cuál tienen.
+El *working paper* **no es** el artículo publicado — hay casos con distinto título y hasta distintos autores. Para **citar**, la versión publicada; para leer, cualquiera — sabiendo cuál tienen.
 :::
 
-# Bloque 8 — Cierre
+. . .
+
+Y para libros, que es lo que más pesa en varias de sus disciplinas: la búsqueda en el **catálogo de la biblioteca** sigue siendo insustituible. Esta herramienta **complementa**, no reemplaza.
+
+## ¿Se puede acortar la espera? {.smaller}
+
+**No hay un parámetro de tiempo** — pero sí tres palancas reales:
+
+| Palanca | Cómo |
+|---|---|
+| **Menos agentes** | `/config workflowSizeGuideline=small` → apunta a menos de 5 agentes (por defecto son hasta 15) |
+| **Pregunta más estrecha** | Un periodo, un país, un tipo de fuente. Una pregunta amplia abre más frentes y tarda más |
+| **Cortarlo a mano** | `/workflows` → seleccionar la corrida → <kbd>x</kbd> detiene · <kbd>p</kbd> pausa y reanuda |
+
+. . .
+
+- En `/workflows` ven **en vivo** cuántos agentes hay, cuántos tokens llevan y el tiempo transcurrido.
+- Si una corrida se dispara (más de 25 agentes), Claude Code muestra un aviso de **corrida grande**.
+
+[La estrategia práctica es la de hoy: **lánzenlo y sigan trabajando**. No es tiempo perdido si ustedes no lo están mirando.]{.warm}
+
+# Bloque 7 — Cierre
 
 ## Lo que ya saben hacer {.smaller}
 
