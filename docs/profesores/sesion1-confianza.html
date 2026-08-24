@@ -918,14 +918,63 @@ todavía.</code></pre>
 </section>
 <section id="primero-lo-lanzamos-después-conversamos" class="slide level2 your-turn smaller">
 <h2>Primero lo lanzamos, después conversamos</h2>
-<p><code>/deep-research</code> <strong>tarda 15–20 minutos</strong> — así que lo echamos a andar <em>ahora</em> y seguimos la clase mientras trabaja:</p>
+<p><code>/deep-research</code> <strong>tarda 15–20 minutos</strong> — lo echamos a andar <em>ahora</em> y seguimos la clase mientras trabaja. Copien este prompt completo:</p>
 <pre class="text"><code>/deep-research ¿Qué dice la evidencia empírica desde 2015 sobre la
 relación entre actividad minera y conflictividad social en el Perú?
-Prioriza estudios cuantitativos e informes oficiales.</code></pre>
+Prioriza estudios cuantitativos, revisiones sistemáticas e informes
+oficiales.
+
+Además del informe, hazme estas tres cosas:
+
+1. Descarga a la carpeta papers/ todos los documentos de acceso
+   abierto que cites (working papers, preprints, informes, tesis),
+   nombrados apellido-año-tema.pdf y agrupados por subtema.
+
+2. Crea un archivo pendientes.md con las fuentes relevantes que NO
+   pudiste descargar — artículos en revistas por suscripción, libros
+   y capítulos de libro. Para cada una incluye: cita completa en APA,
+   DOI o ISBN, enlace al editor, y el motivo (suscripción, libro
+   impreso, sin versión abierta disponible).
+
+3. En el informe cita esas fuentes igual que las demás, pero
+   márcalas como [pendiente de descarga].</code></pre>
+<p><span class="warm">Corre <strong>en segundo plano</strong>: la sesión les queda libre. Mírenlo con <code>/workflows</code>.</span></p>
+</section>
+<section id="por-qué-pedir-también-lo-que-no-pudo-bajar" class="slide level2 smaller">
+<h2>¿Por qué pedir también lo que <em>no</em> pudo bajar?</h2>
+<p>Porque en Ciencias Sociales <strong>lo que queda fuera suele ser lo más citado</strong>: el libro clásico de la disciplina, el artículo en una revista indexada de suscripción.</p>
 <div class="fragment">
-<p>Y el pedido que lo convierte en material suyo — <strong>añádanlo al mismo mensaje</strong>:</p>
-<pre class="text"><code>Descarga los PDFs que cites en una carpeta papers/, agrupados por tema.</code></pre>
-<p><span class="warm">Corre <strong>en segundo plano</strong>: la sesión les queda libre. Vuelvan a mirarlo con <code>/workflows</code>.</span></p>
+<p>Si solo pidieran “descarga lo que encuentres”, esas fuentes <strong>desaparecerían silenciosamente</strong> de su revisión — y una revisión de literatura con un hueco invisible es peor que una corta.</p>
+</div>
+<div class="fragment">
+<p>Con este prompt obtienen dos productos:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Archivo</th>
+<th>Qué contiene</th>
+<th>Para qué</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>papers/</code></td>
+<td>Los PDFs que sí consiguió</td>
+<td>Leer y citar hoy mismo</td>
+</tr>
+<tr class="even">
+<td><code>pendientes.md</code></td>
+<td>Cita completa, DOI/ISBN, enlace y motivo</td>
+<td><strong>La lista de tareas</strong> para la biblioteca PUCP</td>
+</tr>
+</tbody>
+</table>
+<p><span class="warm">Volveremos a <code>pendientes.md</code> al final del bloque: es exactamente lo que el proxy de la biblioteca va a resolver.</span></p>
 </div>
 </section>
 <section id="lo-que-acaba-de-pasar-por-dentro" class="slide level2 smaller">
@@ -1005,28 +1054,9 @@ Prioriza estudios cuantitativos e informes oficiales.</code></pre>
 </div>
 </div>
 </section>
-<section id="el-ejercicio-más-importante-del-taller" class="slide level2 your-turn">
-<h2>El ejercicio más importante del taller</h2>
-<p><strong>Primera parte</strong> — pídanle esto, tal cual:</p>
-<pre class="text"><code>Dame la cita completa, en APA, del paper de Noy y Zhang sobre los
-efectos de ChatGPT en la productividad. Incluye volumen, número,
-páginas y DOI.</code></pre>
-<div class="fragment">
-<p>Obtendrán una cita hermosa, con todos sus datos, en segundos.</p>
-<p><span class="warm"><strong>No la usen todavía.</strong></span></p>
-</div>
-</section>
-<section id="segunda-parte-ahora-verifica" class="slide level2 your-turn">
-<h2>Segunda parte: ahora verifica</h2>
-<pre class="text"><code>Ahora verifica cada dato de esa cita contra Crossref y dime
-exactamente qué estaba mal.</code></pre>
-<div class="fragment">
-<p><strong>Qué observar:</strong> es muy frecuente que algo no cuadre — un número de páginas, un año, un DOI. <strong>Y el mismo agente lo detecta cuando se le pide verificar.</strong></p>
-</div>
-</section>
-<section id="tercera-parte-una-bibliografía-de-verdad" class="slide level2 your-turn smaller">
-<h2>Tercera parte: una bibliografía de verdad</h2>
-<p>Abran <code>bibliografia-borrador.md</code> del proyecto de ejemplo. Es lo que cualquiera de nosotros arma un domingo copiando de Google Scholar.</p>
+<section id="la-trampa-de-la-cita" class="slide level2 your-turn smaller">
+<h2>⭐ La trampa de la cita</h2>
+<p>Mientras el informe se cocina, veamos el otro lado. Abran <code>bibliografia-borrador.md</code> del proyecto de ejemplo: es lo que cualquiera de nosotros arma un domingo copiando de Google Scholar.</p>
 <pre class="text"><code>Verifica cada cita de bibliografia-borrador.md contra Crossref.
 Para cada una dime qué dato no coincide y cuál es el correcto.
 No me digas que está bien si no la pudiste comprobar.</code></pre>
@@ -1135,9 +1165,10 @@ Crossref y dime cuáles tienen algún dato que no coincide.</code></pre>
 <p>El proxy de la Universidad se llama <strong>elogim</strong>. Ustedes se loguean <strong>una vez</strong> en el navegador y el agente trabaja sobre esa sesión abierta:</p>
 <pre class="text"><code>https://pucp.elogim.com/auth-meta/login.php?url=&lt;DIRECCIÓN DE LA REVISTA&gt;</code></pre>
 <div class="fragment">
-<pre class="text"><code>Estoy logueado en la biblioteca PUCP en el navegador. De la lista de
-referencias, descarga a papers/ las que estén en revistas suscritas.
-Si alguna no tiene acceso, dime dónde más se puede conseguir.</code></pre>
+<pre class="text"><code>Estoy logueado en la biblioteca PUCP en el navegador. Toma el archivo
+pendientes.md y, una por una, intenta descargar esas fuentes a papers/
+usando el navegador y el proxy de la biblioteca. Actualiza pendientes.md
+marcando cuáles conseguiste; para las que no, dime dónde más buscarlas.</code></pre>
 </div>
 <div class="fragment">
 <p><strong>Tres cosas que cuestan descubrir solas:</strong></p>

@@ -473,23 +473,50 @@ todavía.
 
 ## Primero lo lanzamos, después conversamos {.your-turn .smaller}
 
-`/deep-research` **tarda 15–20 minutos** — así que lo echamos a andar *ahora* y seguimos la clase mientras trabaja:
+`/deep-research` **tarda 15–20 minutos** — lo echamos a andar *ahora* y seguimos la clase mientras trabaja. Copien este prompt completo:
 
 ```text
 /deep-research ¿Qué dice la evidencia empírica desde 2015 sobre la
 relación entre actividad minera y conflictividad social en el Perú?
-Prioriza estudios cuantitativos e informes oficiales.
+Prioriza estudios cuantitativos, revisiones sistemáticas e informes
+oficiales.
+
+Además del informe, hazme estas tres cosas:
+
+1. Descarga a la carpeta papers/ todos los documentos de acceso
+   abierto que cites (working papers, preprints, informes, tesis),
+   nombrados apellido-año-tema.pdf y agrupados por subtema.
+
+2. Crea un archivo pendientes.md con las fuentes relevantes que NO
+   pudiste descargar — artículos en revistas por suscripción, libros
+   y capítulos de libro. Para cada una incluye: cita completa en APA,
+   DOI o ISBN, enlace al editor, y el motivo (suscripción, libro
+   impreso, sin versión abierta disponible).
+
+3. En el informe cita esas fuentes igual que las demás, pero
+   márcalas como [pendiente de descarga].
 ```
+
+[Corre **en segundo plano**: la sesión les queda libre. Mírenlo con `/workflows`.]{.warm}
+
+## ¿Por qué pedir también lo que *no* pudo bajar? {.smaller}
+
+Porque en Ciencias Sociales **lo que queda fuera suele ser lo más citado**: el libro clásico de la disciplina, el artículo en una revista indexada de suscripción.
 
 . . .
 
-Y el pedido que lo convierte en material suyo — **añádanlo al mismo mensaje**:
+Si solo pidieran "descarga lo que encuentres", esas fuentes **desaparecerían silenciosamente** de su revisión — y una revisión de literatura con un hueco invisible es peor que una corta.
 
-```text
-Descarga los PDFs que cites en una carpeta papers/, agrupados por tema.
-```
+. . .
 
-[Corre **en segundo plano**: la sesión les queda libre. Vuelvan a mirarlo con `/workflows`.]{.warm}
+Con este prompt obtienen dos productos:
+
+| Archivo | Qué contiene | Para qué |
+|---|---|---|
+| `papers/` | Los PDFs que sí consiguió | Leer y citar hoy mismo |
+| `pendientes.md` | Cita completa, DOI/ISBN, enlace y motivo | **La lista de tareas** para la biblioteca PUCP |
+
+[Volveremos a `pendientes.md` al final del bloque: es exactamente lo que el proxy de la biblioteca va a resolver.]{.warm}
 
 ## Lo que acaba de pasar por dentro {.smaller}
 
@@ -532,39 +559,11 @@ Un buscador les da **enlaces**. Este equipo les da **afirmaciones ya contrastada
 Empiecen a leer el informe **por lo marcado como no verificado**: ahí es donde su criterio de investigador hace la diferencia.
 :::
 
-## El ejercicio más importante del taller {.your-turn}
+## ⭐ La trampa de la cita {.your-turn .smaller}
 
-**Primera parte** — pídanle esto, tal cual:
-
-```text
-Dame la cita completa, en APA, del paper de Noy y Zhang sobre los
-efectos de ChatGPT en la productividad. Incluye volumen, número,
-páginas y DOI.
-```
-
-. . .
-
-Obtendrán una cita hermosa, con todos sus datos, en segundos.
-
-[**No la usen todavía.**]{.warm}
-
-## Segunda parte: ahora verifica {.your-turn}
-
-```text
-Ahora verifica cada dato de esa cita contra Crossref y dime
-exactamente qué estaba mal.
-```
-
-. . .
-
-**Qué observar:** es muy frecuente que algo no cuadre — un número de páginas, un año, un DOI. **Y el mismo agente lo detecta cuando se le pide verificar.**
-
-. . .
-
-## Tercera parte: una bibliografía de verdad {.your-turn .smaller}
-
-Abran `bibliografia-borrador.md` del proyecto de ejemplo. Es lo que cualquiera de
-nosotros arma un domingo copiando de Google Scholar.
+Mientras el informe se cocina, veamos el otro lado. Abran `bibliografia-borrador.md`
+del proyecto de ejemplo: es lo que cualquiera de nosotros arma un domingo copiando
+de Google Scholar.
 
 ```text
 Verifica cada cita de bibliografia-borrador.md contra Crossref.
@@ -644,9 +643,10 @@ https://pucp.elogim.com/auth-meta/login.php?url=<DIRECCIÓN DE LA REVISTA>
 . . .
 
 ```text
-Estoy logueado en la biblioteca PUCP en el navegador. De la lista de
-referencias, descarga a papers/ las que estén en revistas suscritas.
-Si alguna no tiene acceso, dime dónde más se puede conseguir.
+Estoy logueado en la biblioteca PUCP en el navegador. Toma el archivo
+pendientes.md y, una por una, intenta descargar esas fuentes a papers/
+usando el navegador y el proxy de la biblioteca. Actualiza pendientes.md
+marcando cuáles conseguiste; para las que no, dime dónde más buscarlas.
 ```
 
 . . .
