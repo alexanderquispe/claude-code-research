@@ -20,7 +20,7 @@ lang: es
 | 7:20 – 7:45 | 4 | Lo primero: `/init` y markdown |
 | 7:45 – 8:05 | 5 | Trabajar: conversar y ordenar |
 | 8:05 – 8:15 | ☕ | Pausa 2 |
-| 8:15 – 8:55 | 6 | ⭐ Literatura: `/deep-research` y la trampa de la cita |
+| 8:15 – 8:55 | 6 | ⭐ Literatura: buscar, verificar y descargar |
 | 8:55 – 9:00 | 7 | Cierre y tarea |
 
 [Los asistentes del Q-LAB están en la sala: levanten la mano ante cualquier problema técnico y ellos los ayudan sin detener la clase.]{.small .muted}
@@ -586,65 +586,27 @@ Un buscador les da **enlaces**. Este equipo les da **afirmaciones ya contrastada
 Empiecen a leer el informe **por lo marcado como no verificado**: ahí es donde su criterio de investigador hace la diferencia.
 :::
 
-## ⭐ La trampa de la cita {.your-turn .smaller}
+## ⭐ De vuelta al informe: verifiquen {.your-turn .smaller}
 
-Mientras el informe se cocina, veamos el otro lado. Abran `bibliografia-borrador.md`
-del proyecto de ejemplo: es lo que cualquiera de nosotros arma un domingo copiando
-de Google Scholar.
+Ya debe haber terminado. Ábranlo… y **antes de usar una sola cita**, pídanle esto:
 
 ```text
-Verifica cada cita de bibliografia-borrador.md contra Crossref.
-Para cada una dime qué dato no coincide y cuál es el correcto.
+De la bibliografía que armaste, verifica cada referencia contra
+Crossref: autores, año, título, volumen, páginas y DOI. Dime cuáles
+tienen algún dato que no coincide y cuál es el correcto.
 No me digas que está bien si no la pudiste comprobar.
 ```
 
 . . .
 
-**Tiene ocho errores. Todos reales.** Entre ellos:
-
-- Una cita con **un autor de más**: figura en el *working paper*, desaparece en la versión publicada.
-- Un paper citado con el **título de su versión previa** — cambió por completo al publicarse.
-- Un **DOI que sí funciona… y lleva a otro artículo**, de otros autores y otro año.
+**Qué observar:** el informe ya venía con la fuente de cada afirmación — **y la verificación igual encuentra cosas**. Un DOI roto lo detecta cualquiera al primer clic; uno que abre el paper equivocado sobrevive a la revisión por pares.
 
 . . .
-
-[Un DOI roto lo detecta cualquiera al primer clic. Uno que abre el paper equivocado sobrevive a la revisión por pares.]{.warm}
 
 ::: {.callout-important}
 ## La lección central del taller
-No es que "mienta": es que **recordar** y **verificar** son dos modos distintos de trabajo, y el segundo **hay que pedirlo explícitamente**. Todo lo que vaya a una publicación de ustedes pasa por el modo verificar.
+**Recordar** y **verificar** son dos modos distintos de trabajo, y el segundo **hay que pedirlo explícitamente**. Todo lo que vaya a una publicación de ustedes pasa por el modo verificar.
 :::
-
-## La regla, para llevarse a casa
-
-| Origen de la información | Confianza |
-|---|---|
-| La produjo **de memoria** (una cita, una fecha, un número) | ⚠️ Verificar siempre |
-| La **verificó contra una fuente** con el enlace a la vista (Crossref, el PDF, la página oficial) | ✅ Sólida |
-
-. . .
-
-Por eso los mejores prompts incluyen **dónde está la verdad**:
-
-```text
-Verifica contra el PDF que está en la carpeta papers/
-```
-```text
-Consulta Crossref antes de darme cualquier DOI
-```
-
-## De vuelta al informe {.your-turn .smaller}
-
-Ya debe haber terminado. Ábranlo y hagan con él lo mismo que acaban de aprender:
-
-```text
-De la bibliografía que armaste, verifica cada referencia contra
-Crossref y dime cuáles tienen algún dato que no coincide.
-```
-
-. . .
-
-**Qué observar:** el informe trae la fuente de cada afirmación — y aun así, la verificación encuentra cosas. **Esa doble pasada es el método.**
 
 ## El límite: qué puede y qué no puede descargar {.smaller}
 
