@@ -449,6 +449,26 @@ de investigación.
 
 **Qué observar:** responde sobre **sus** archivos reales, citando nombres y contenidos. Eso es lo que un chat de la web no puede hacer.
 
+## Bonus: la respuesta puede ser una página web {.smaller}
+
+Al probar el tercer prompt en este proyecto pasó algo que no pedimos: como la explicación era "para compartir", Claude cargó uno de sus **skills** — manuales internos que activa cuando la tarea lo amerita, aquí el de diseño de páginas — y publicó la guía como una **página web con enlace propio** (un *Artifact*).
+
+. . .
+
+Para pedirlo a propósito, basta agregarlo al final:
+
+```text
+Explícale la estructura de esta carpeta a un nuevo asistente de
+investigación, y publícala como una página para poder compartirla.
+```
+
+. . .
+
+- El enlace vive en claude.ai y es **privado hasta que ustedes decidan compartirlo**.
+- Úsenlo para lo que antes era un Word adjunto: la guía de un proyecto para el nuevo asistente, el resumen para un coautor, el material de una clase.
+
+[Del terminal salió una página lista para enviar — sin tocar Word ni PowerPoint.]{.warm}
+
 ## El proyecto de ejemplo {.smaller}
 
 De aquí en adelante trabajamos sobre una carpeta que les entregamos:
