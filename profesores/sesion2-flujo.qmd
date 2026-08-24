@@ -80,7 +80,7 @@ proponme un plan de actualización. No cambies nada todavía.
 **Qué observar:** el plan llega con preguntas de vuelta — *¿actualizo esto?, ¿conservo aquello?* Ese ida y vuelta **es** el modo de trabajo: ustedes deciden, él ejecuta.
 
 ::: {.callout-note}
-Cuando aprueben el plan, cambien a modo normal o auto-accept y déjenlo trabajar. Al final pidan: *"resúmeme todo lo que cambiaste"*.
+Cuando aprueben el plan, cambien a modo normal o **auto mode** (accept edits) y déjenlo trabajar. Al final pidan: *"resúmeme todo lo que cambiaste"*.
 :::
 
 # Bloque 2 — La revisión de literatura automática

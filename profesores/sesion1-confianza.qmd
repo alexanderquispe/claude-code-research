@@ -356,7 +356,7 @@ Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — mírenlo en la **barra
 
 - **Plan Mode** (solo lee y propone): para empezar cualquier cosa nueva — les presenta un plan y ustedes aprueban. *Lo usaremos a fondo en la Sesión 2.*
 - **Normal**: pregunta antes de cada cambio. El modo de esta sesión.
-- **Auto-accept**: ejecuta sin preguntar. Solo cuando ya confían y el trabajo es rutinario.
+- **Auto mode on** (en la barra: *accept edits on*): ejecuta sin preguntar. Solo cuando ya confían y el trabajo es rutinario.
 - El cuarto modo existe, pero **no lo usen**: desactiva todas las protecciones.
 
 # Bloque 6 — ⭐ La trampa de la cita

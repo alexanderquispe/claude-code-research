@@ -10,7 +10,7 @@
 <text x="368" y="70" font-size="18" font-weight="700" fill="#0f2d52">Normal</text>
 <text x="368" y="94" font-size="14" fill="#475569">pregunta cada vez</text>
 <circle cx="616" cy="124" r="9" fill="#fff" stroke="#8a6a3f" stroke-width="3"/>
-<text x="616" y="70" font-size="18" font-weight="700" fill="#0f2d52">Auto-accept</text>
+<text x="616" y="70" font-size="18" font-weight="700" fill="#0f2d52">Auto mode on</text>
 <text x="616" y="94" font-size="14" fill="#475569">edita sin preguntar</text>
 <circle cx="840" cy="124" r="9" fill="#fff" stroke="#c05621" stroke-width="3"/>
 <text x="840" y="70" font-size="16" font-weight="700" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#c05621">--dangerously-</text>
