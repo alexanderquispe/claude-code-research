@@ -660,12 +660,12 @@ claude</code></pre>
 <p>Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — son <strong>cuatro</strong>, y se ven en la <strong>barra de abajo</strong> de Claude:</p>
 
 <img data-src="../figures/es/safety-spectrum.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:88.0%"><ul>
-<li><strong>plan mode on</strong> — solo lee y <strong>propone un plan</strong>; no toca nada. Para empezar cualquier cosa nueva. <em>Lo usaremos a fondo en la Sesión 2.</em></li>
+<li><strong>plan mode on</strong> — solo lee y <strong>propone un plan</strong>; no toca nada. <em>A fondo en la Sesión 2.</em></li>
 <li><strong>manual mode on</strong> — pregunta antes de <strong>cada</strong> acción.</li>
-<li><strong>accept edits on</strong> — edita archivos sin preguntar; los comandos aún piden permiso.</li>
-<li><strong>auto mode on</strong> — ejecuta ediciones <strong>y</strong> comandos solo. <strong>El modo que usaremos hoy</strong>, para que los ejercicios fluyan.</li>
+<li><strong>accept edits on</strong> — edita sin preguntar; los comandos aún piden permiso.</li>
+<li><strong>auto mode on</strong> — ejecuta ediciones <strong>y</strong> comandos. <strong>El modo de hoy.</strong></li>
 </ul>
-<p><span class="small muted">Existe además una bandera de arranque que desactiva todas las protecciones (<code>--dangerously-skip-permissions</code>) — no la usen.</span></p>
+<p><span class="small muted">Existe una bandera que desactiva todas las protecciones (<code>--dangerously-skip-permissions</code>) — no la usen.</span></p>
 </section>
 <section id="así-se-ve-en-su-terminal" class="slide level2 smaller">
 <h2>Así se ve en su terminal</h2>
@@ -783,14 +783,23 @@ con Whisper, y qué tan rápido?</code></pre>
 <p><strong>Por qué importa para ustedes:</strong> es el formato en el que Claude guarda <em>todo</em> lo que quiere recordar — la memoria del proyecto, las notas de una reunión, un resumen de literatura. A diferencia de Word, es <strong>legible tanto por ustedes como por la máquina</strong>, y se puede versionar y comparar.</p>
 </div>
 </section>
-<section id="cómo-se-lee-un-.md-en-vs-code" class="slide level2 smaller">
-<h2>Cómo se lee un <code>.md</code> en VS Code</h2>
+<section id="un-.md-abierto-en-vs-code" class="slide level2 smaller">
+<h2>Un <code>.md</code> abierto en VS Code</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/markdown-preview.svg" class="quarto-figure quarto-figure-center" style="width:78.0%"></p>
+<p><img data-src="../figures/screenshots/vscode-md-raw.png" class="quarto-figure quarto-figure-center" style="width:64.0%"></p>
 </figure>
 </div>
-<p>Abran el archivo y hagan clic en el <strong>icono de vista previa</strong> (arriba a la derecha): a la izquierda queda el texto con sus marcas, a la derecha <strong>el documento ya formateado</strong>.</p>
+<p>Así se ve <strong>por dentro</strong>: los <code>#</code>, <code>**</code> y <code>|</code> a la vista. <span class="warm">▸ Clic en el <strong>icono de la lupa</strong> (arriba a la derecha) y VS Code lo lee por ustedes.</span></p>
+</section>
+<section id="y-así-lo-muestra-vs-code" class="slide level2 smaller">
+<h2>…y así lo muestra VS Code</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/screenshots/vscode-md-preview.png" class="quarto-figure quarto-figure-center" style="width:74.0%"></p>
+</figure>
+</div>
+<p>El mismo archivo, dos vistas: a la izquierda las marcas, a la derecha <strong>el documento formateado</strong>. Por eso markdown funciona tan bien con un agente — <strong>él lo escribe, ustedes lo leen cómodo</strong>.</p>
 </section>
 <section id="su-turno-init-en-su-proyecto" class="slide level2 your-turn smaller">
 <h2>Su turno: <code>/init</code> en su proyecto</h2>

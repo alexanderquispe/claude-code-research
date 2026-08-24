@@ -253,12 +253,12 @@ Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — son **cuatro**, y se v
 
 ![](../figures/es/safety-spectrum.svg){width=88% fig-align="center"}
 
-- **plan mode on** — solo lee y **propone un plan**; no toca nada. Para empezar cualquier cosa nueva. *Lo usaremos a fondo en la Sesión 2.*
+- **plan mode on** — solo lee y **propone un plan**; no toca nada. *A fondo en la Sesión 2.*
 - **manual mode on** — pregunta antes de **cada** acción.
-- **accept edits on** — edita archivos sin preguntar; los comandos aún piden permiso.
-- **auto mode on** — ejecuta ediciones **y** comandos solo. **El modo que usaremos hoy**, para que los ejercicios fluyan.
+- **accept edits on** — edita sin preguntar; los comandos aún piden permiso.
+- **auto mode on** — ejecuta ediciones **y** comandos. **El modo de hoy.**
 
-[Existe además una bandera de arranque que desactiva todas las protecciones (`--dangerously-skip-permissions`) — no la usen.]{.small .muted}
+[Existe una bandera que desactiva todas las protecciones (`--dangerously-skip-permissions`) — no la usen.]{.small .muted}
 
 ## Así se ve en su terminal {.smaller}
 
@@ -344,11 +344,17 @@ Es **texto simple con marcas de formato** — se abre con cualquier editor, pesa
 
 **Por qué importa para ustedes:** es el formato en el que Claude guarda *todo* lo que quiere recordar — la memoria del proyecto, las notas de una reunión, un resumen de literatura. A diferencia de Word, es **legible tanto por ustedes como por la máquina**, y se puede versionar y comparar.
 
-## Cómo se lee un `.md` en VS Code {.smaller}
+## Un `.md` abierto en VS Code {.smaller}
 
-![](../figures/es/markdown-preview.svg){.nostretch width=78% fig-align="center"}
+![](../figures/screenshots/vscode-md-raw.png){.nostretch width=64% fig-align="center"}
 
-Abran el archivo y hagan clic en el **icono de vista previa** (arriba a la derecha): a la izquierda queda el texto con sus marcas, a la derecha **el documento ya formateado**.
+Así se ve **por dentro**: los `#`, `**` y `|` a la vista. [▸ Clic en el **icono de la lupa** (arriba a la derecha) y VS Code lo lee por ustedes.]{.warm}
+
+## …y así lo muestra VS Code {.smaller}
+
+![](../figures/screenshots/vscode-md-preview.png){.nostretch width=74% fig-align="center"}
+
+El mismo archivo, dos vistas: a la izquierda las marcas, a la derecha **el documento formateado**. Por eso markdown funciona tan bien con un agente — **él lo escribe, ustedes lo leen cómodo**.
 
 ## Su turno: `/init` en su proyecto {.your-turn .smaller}
 
