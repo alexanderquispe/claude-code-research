@@ -355,9 +355,9 @@ Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — son **cuatro**, y se v
 ![](../figures/es/safety-spectrum.svg){width=88% fig-align="center"}
 
 - **plan mode on** — solo lee y **propone un plan**; no toca nada. Para empezar cualquier cosa nueva. *Lo usaremos a fondo en la Sesión 2.*
-- **manual mode on** — pregunta antes de **cada** acción. El modo de esta sesión.
+- **manual mode on** — pregunta antes de **cada** acción.
 - **accept edits on** — edita archivos sin preguntar; los comandos aún piden permiso.
-- **auto mode on** — ejecuta ediciones **y** comandos solo. Únicamente en trabajo rutinario donde ya confían.
+- **auto mode on** — ejecuta ediciones **y** comandos solo. **El modo que usaremos hoy**, para que los ejercicios fluyan.
 
 [Existe además una bandera de arranque que desactiva todas las protecciones (`--dangerously-skip-permissions`) — no la usen.]{.small .muted}
 
@@ -365,7 +365,7 @@ Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — son **cuatro**, y se v
 
 ![](../figures/es/modes-bar.svg){.nostretch width=74% fig-align="center"}
 
-Presionen <kbd>Shift</kbd>+<kbd>Tab</kbd> varias veces ahora mismo y miren cómo **rota la etiqueta**. Déjenlo en **manual mode on** por hoy.
+Presionen <kbd>Shift</kbd>+<kbd>Tab</kbd> varias veces ahora mismo y miren cómo **rota la etiqueta**. Para la clase de hoy déjenlo en **auto mode on** — así los ejercicios corren de corrido, sin detenerse en cada permiso.
 
 # Bloque 6 — ⭐ La trampa de la cita
 
