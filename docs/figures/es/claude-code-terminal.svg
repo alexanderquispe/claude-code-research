@@ -1,0 +1,17 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" font-family="'SF Mono',Menlo,Consolas,monospace">
+<rect x="0" y="0" width="960" height="540" rx="14" fill="#1e1e1e" stroke="#000" stroke-width="2"/>
+<rect x="0" y="0" width="960" height="42" rx="14" fill="#2d2d2d"/>
+<rect x="0" y="22" width="960" height="20" fill="#2d2d2d"/>
+<circle cx="26" cy="21" r="6.5" fill="#ff5f57"/><circle cx="48" cy="21" r="6.5" fill="#febc2e"/><circle cx="70" cy="21" r="6.5" fill="#28c840"/>
+<text x="480" y="27" text-anchor="middle" font-size="13.5" fill="#9a9a9a" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">terminal — mi-investigacion</text>
+<text x="30" y="80" font-size="16" fill="#e8e6e3"><tspan fill="#28c840">$</tspan> cd ~/Documents/mi-investigacion</text>
+<text x="30" y="112" font-size="16" fill="#e8e6e3"><tspan fill="#28c840">$</tspan> claude</text>
+<rect x="30" y="136" width="900" height="130" rx="10" fill="none" stroke="#D97757" stroke-width="2"/>
+<text x="56" y="180" font-size="19" fill="#D97757">✻  <tspan fill="#e8e6e3" font-weight="700">Welcome to Claude Code!</tspan></text>
+<text x="56" y="214" font-size="14.5" fill="#9a9a9a">/help para ayuda · /model para elegir modelo</text>
+<text x="56" y="244" font-size="14.5" fill="#9a9a9a">cwd: ~/Documents/mi-investigacion</text>
+<rect x="30" y="300" width="900" height="56" rx="10" fill="#252525" stroke="#4a4a4a" stroke-width="1.5"/>
+<text x="52" y="335" font-size="16" fill="#e8e6e3">&gt; Dame un resumen de esta carpeta<tspan fill="#D97757">▌</tspan></text>
+<text x="34" y="392" font-size="13.5" fill="#7a7a7a">⏵ shift+tab para cambiar de modo · esc para interrumpir</text>
+<text x="480" y="505" text-anchor="middle" font-size="13.5" font-style="italic" fill="#9a9a9a" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">Un agente en el terminal: ve tus archivos, ejecuta y verifica · funciona con suscripción o solo API</text>
+</svg>

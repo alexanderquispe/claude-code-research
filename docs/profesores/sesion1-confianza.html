@@ -227,23 +227,23 @@ Alexander Quispe
 <tbody>
 <tr class="odd">
 <td>1</td>
-<td>Qué es y qué no es — el caso real</td>
-<td>25 min</td>
+<td>Qué es Claude y sus tres productos</td>
+<td>20 min</td>
 </tr>
 <tr class="even">
 <td>2</td>
-<td>Las reglas de seguridad</td>
-<td>20 min</td>
+<td>VS Code y el terminal, paso a paso</td>
+<td>30 min</td>
 </tr>
 <tr class="odd">
 <td>3</td>
 <td>Ejercicio: diagnóstico de su computadora</td>
-<td>25 min</td>
+<td>20 min</td>
 </tr>
 <tr class="even">
 <td>4</td>
-<td>El terminal mínimo + primera conversación</td>
-<td>30 min</td>
+<td>Primeras conversaciones con sus archivos</td>
+<td>25 min</td>
 </tr>
 <tr class="odd">
 <td>☕</td>
@@ -253,7 +253,7 @@ Alexander Quispe
 <tr class="even">
 <td>5</td>
 <td>La memoria del proyecto: <code>/init</code></td>
-<td>20 min</td>
+<td>25 min</td>
 </tr>
 <tr class="odd">
 <td>6</td>
@@ -275,8 +275,8 @@ Alexander Quispe
 <p><span class="small muted">Los asistentes del Q-LAB están en la sala: levanten la mano ante cualquier problema técnico y ellos los ayudan sin detener la clase.</span></p>
 </section>
 <section>
-<section id="bloque-1-qué-es-y-qué-no-es" class="title-slide slide level1 center">
-<h1>Bloque 1 — Qué es y qué no es</h1>
+<section id="bloque-1-qué-es-claude" class="title-slide slide level1 center">
+<h1>Bloque 1 — Qué es Claude</h1>
 
 </section>
 <section id="claude-code-en-una-frase" class="slide level2">
@@ -310,14 +310,15 @@ Alexander Quispe
 </table>
 </div>
 </section>
-<section id="lo-que-hizo-en-un-caso-real" class="slide level2 smaller">
-<h2>Lo que hizo en un caso real</h2>
-<p>En una sesión de trabajo real, sobre un curso de teoría económica:</p>
+<section id="para-qué-les-sirve-concretamente" class="slide level2 smaller">
+<h2>¿Para qué les sirve, concretamente?</h2>
+<p>En su semana de investigación y docencia, Claude Code puede:</p>
 <ul>
-<li>Leyó el sílabo y verificó <strong>cada cita</strong> contra Crossref, NBER y arXiv. Encontró <strong>cuatro citas equivocadas</strong> — incluida una donde el título del paper no existía y otra donde faltaba un coautor.</li>
-<li>Descargó <strong>28 papers</strong>, varios a través del proxy de la biblioteca PUCP.</li>
-<li>Escribió el sílabo en LaTeX, lo <strong>compiló</strong> y revisó el PDF resultante.</li>
-<li>Armó la <strong>página web del curso</strong> y la publicó.</li>
+<li><strong>Verificar la bibliografía</strong> de un artículo, cita por cita, contra Crossref</li>
+<li><strong>Ordenar y renombrar</strong> esa carpeta de PDFs acumulados de años</li>
+<li><strong>Extraer una tabla</strong> de un PDF a Excel — o de 40 PDFs a una sola tabla</li>
+<li><strong>Escribir y compilar</strong> documentos y slides en LaTeX, sin que ustedes sepan LaTeX</li>
+<li><strong>Explorar una base de datos</strong> y devolver estadísticas y gráficos</li>
 </ul>
 <div class="fragment">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -335,26 +336,44 @@ Alexander Quispe
 </div>
 </div>
 </section>
-<section id="la-idea-central-del-taller" class="slide level2 smaller">
-<h2>La idea central del taller</h2>
-<blockquote>
-<p><strong>Lo más valioso que hizo el agente no fue escribir: fue encontrar errores. Y también los cometió.</strong></p>
-</blockquote>
+<section id="un-mismo-cerebro-tres-productos" class="slide level2">
+<h2>Un mismo cerebro, tres productos</h2>
+<p>Antes de instalar nada, ubíquense: <strong>Claude son tres cosas distintas</strong> y es fácil confundirlas. Veámoslas una por una.</p>
 <div class="fragment">
-<ul>
-<li><strong>Encontró errores reales:</strong> un paper citado con otro título, un coautor que no figuraba, una muestra de 5 346 observaciones citada como 5 838. Nadie lo había notado.</li>
-<li><strong>Cometió errores:</strong> anotó un DOI inventado. Se descubrió al intentar descargarlo — la página daba error.</li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>La regla que gobierna todo lo demás:</strong></p>
-<p><span class="warm">Lo que produce <strong>de memoria</strong> → hay que verificarlo. Lo que verifica <strong>contra una fuente, con el enlace a la vista</strong> → es sólido.</span></p>
+<ol type="1">
+<li><strong>claude.ai</strong> — el chat en el navegador <em>(este seguro ya lo conocen)</em></li>
+<li><strong>Claude Cowork</strong> — una app de escritorio para trabajar sobre carpetas</li>
+<li><strong>Claude Code</strong> — el agente en el terminal <em>(el de este taller)</em></li>
+</ol>
 </div>
 </section>
-<section id="una-familia-de-productos-no-se-confundan" class="slide level2">
-<h2>Una familia de productos — no se confundan</h2>
-
-<img data-src="../figures/es/ecosystem.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:88.0%"></section>
+<section id="claude.ai-el-chat" class="slide level2 smaller">
+<h2>1 · claude.ai — el chat</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/es/claude-ai-mock.svg" class="quarto-figure quarto-figure-center" style="width:64.0%"></p>
+</figure>
+</div>
+<p>Como ChatGPT: ustedes <strong>pegan</strong> texto y él responde. Excelente tutor de conceptos — pero <strong>no ve sus archivos</strong>.</p>
+</section>
+<section id="claude-cowork-la-app-de-escritorio" class="slide level2 smaller">
+<h2>2 · Claude Cowork — la app de escritorio</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/es/cowork-mock.svg" class="quarto-figure quarto-figure-center" style="width:64.0%"></p>
+</figure>
+</div>
+<p>El agente trabaja sobre una carpeta, <strong>sin terminal</strong>. Ideal para tareas de documentos — pero requiere <strong>plan pago</strong> ($20/mes o más).</p>
+</section>
+<section id="claude-code-el-del-taller" class="slide level2 smaller">
+<h2>3 · Claude Code — el del taller</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/es/claude-code-terminal.svg" class="quarto-figure quarto-figure-center" style="width:64.0%"></p>
+</figure>
+</div>
+<p>El mismo agente, en el <strong>terminal</strong>: ve sus archivos, ejecuta, verifica. Funciona con suscripción <strong>o solo con una clave API</strong> (paga por uso).</p>
+</section>
 <section id="cuál-necesito-yo-cuánto-cuesta" class="slide level2 smaller">
 <h2>¿Cuál necesito yo? ¿Cuánto cuesta?</h2>
 <table class="caption-top">
@@ -406,116 +425,19 @@ Alexander Quispe
 </ul>
 </section></section>
 <section>
-<section id="bloque-2-las-reglas-de-seguridad" class="title-slide slide level1 center">
-<h1>Bloque 2 — Las reglas de seguridad</h1>
+<section id="bloque-2-vs-code-y-el-terminal" class="title-slide slide level1 center">
+<h1>Bloque 2 — VS Code y el terminal</h1>
 
 </section>
-<section id="nunca-va-a-escribir-su-contraseña" class="slide level2">
-<h2>Nunca va a escribir su contraseña</h2>
-<p><strong>Claude Code no ingresa contraseñas en formularios. Nunca.</strong> Ni la suya, ni ninguna. No importa que se la den o que insistan: es una restricción <strong>sin excepciones</strong>.</p>
-<div class="fragment">
-<p>Tampoco: crea cuentas · ingresa datos de tarjetas · resuelve CAPTCHAs.</p>
-</div>
-<div class="fragment">
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>No es un obstáculo: es un reparto de tareas</strong></p>
-</div>
-<div class="callout-content">
-<ol type="1">
-<li><strong>Usted</strong> se loguea en el navegador, una sola vez.</li>
-<li><strong>El agente</strong> trabaja sobre esa sesión ya abierta.</li>
-</ol>
-<p>Así se descargaron los papers de la biblioteca en el caso real: el profesor se logueó, el agente hizo el resto.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="antes-de-estas-acciones-siempre-pregunta" class="slide level2 smaller">
-<h2>Antes de estas acciones, siempre pregunta</h2>
-<ul>
-<li>Descargar archivos</li>
-<li>Aceptar términos y condiciones</li>
-<li>Enviar correos o mensajes</li>
-<li>Publicar contenido</li>
-<li>Borrar o sobrescribir cosas</li>
-</ul>
-<div class="fragment">
-<p><strong>Es sano.</strong> Cuando pregunte, <strong>lean qué está por hacer</strong> antes de decir que sí.</p>
-</div>
-<div class="fragment">
-<p><span class="warm">Si algo parece “trabado” y no avanza, casi siempre es que les está haciendo una pregunta y espera respuesta. Miren la pantalla.</span></p>
-</div>
-</section></section>
-<section>
-<section id="bloque-3-diagnóstico-de-su-computadora" class="title-slide slide level1 center">
-<h1>Bloque 3 — Diagnóstico de su computadora</h1>
+<section id="por-qué-trabajamos-en-visual-studio-code" class="slide level2 smaller">
+<h2>¿Por qué trabajamos en Visual Studio Code?</h2>
 
+<img data-src="../figures/es/vscode-ui.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:76.0%"><p><strong>Todo en una sola ventana</strong>: sus archivos a la izquierda, el documento al centro, y abajo el terminal donde vive Claude. Además es <strong>gratis</strong>, funciona igual en Windows y Mac, y abre PDFs, datos y texto sin cambiar de programa.</p>
 </section>
-<section id="su-turno-el-primer-ejercicio" class="slide level2 your-turn">
-<h2>Su turno: el primer ejercicio</h2>
-<p>Abran una terminal (los asistentes ayudan), escriban <code>claude</code>, presionen Enter, y pídanle <strong>literalmente esto</strong>:</p>
-<pre class="text"><code>Revisa mi entorno: dime qué versión tengo de git, python y latex,
-si tengo credenciales de GitHub configuradas, y qué me falta instalar.</code></pre>
-<div class="fragment">
-<p><strong>Qué observar:</strong> el agente <strong>ejecuta comandos y les muestra qué hace</strong>. No les contesta de memoria: está mirando <em>su</em> máquina.</p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Nota</strong></p>
-</div>
-<div class="callout-content">
-<p>Este ejercicio es a la vez el diagnóstico: si algo falta, el propio agente les dice cómo instalarlo. Es la primera lección de actitud — <strong>cuando tengan una duda técnica, pregúntenle a Claude</strong>.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="elegir-el-modelo-una-sola-vez" class="slide level2 smaller">
-<h2>Elegir el modelo (una sola vez)</h2>
-<p>Dentro de Claude, escriban <code>/model</code> y elijan <strong>Opus</strong>.</p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 44%">
-<col style="width: 55%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Modelo</th>
-<th>¿Cuándo?</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Opus</strong></td>
-<td>✅ Todo el trabajo del día a día: datos, tablas, LaTeX, organización</td>
-</tr>
-<tr class="even">
-<td><strong>Fable</strong></td>
-<td>Solo redacción fina de un paper — es caro y el límite se agota en horas</td>
-</tr>
-<tr class="odd">
-<td>Sonnet, Haiku</td>
-<td>No los necesitan por ahora</td>
-</tr>
-</tbody>
-</table>
-<div class="fragment">
-<p><span class="small muted">Si un día algo responde “raro”, lo primero que deben revisar es <code>/model</code>: ¿qué modelo quedó seleccionado?</span></p>
-</div>
-</section></section>
-<section>
-<section id="bloque-4-el-terminal-mínimo" class="title-slide slide level1 center">
-<h1>Bloque 4 — El terminal mínimo</h1>
+<section id="abrir-el-terminal-un-solo-clic" class="slide level2 smaller">
+<h2>Abrir el terminal: un solo clic</h2>
 
+<img data-src="../figures/es/vscode-terminal-menu.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p>Menú <strong>Terminal → Nuevo terminal</strong>. <span class="small">Tip: si la ventanita de abajo les parece chica, repitan el menú y elijan <em>Nueva ventana de terminal</em> para tenerla grande y aparte.</span></p>
 </section>
 <section id="qué-es-el-terminal-sin-miedo" class="slide level2">
 <h2>¿Qué es “el terminal”? (sin miedo)</h2>
@@ -598,6 +520,71 @@ claude</code></pre>
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="bloque-3-diagnóstico-de-su-computadora" class="title-slide slide level1 center">
+<h1>Bloque 3 — Diagnóstico de su computadora</h1>
+
+</section>
+<section id="su-turno-el-primer-ejercicio" class="slide level2 your-turn">
+<h2>Su turno: el primer ejercicio</h2>
+<p>Ya están dentro de Claude, en su carpeta. Pídanle <strong>literalmente esto</strong>:</p>
+<pre class="text"><code>Revisa mi entorno: dime qué versión tengo de git, python y latex,
+si tengo credenciales de GitHub configuradas, y qué me falta instalar.</code></pre>
+<div class="fragment">
+<p><strong>Qué observar:</strong> el agente <strong>ejecuta comandos y les muestra qué hace</strong>. No les contesta de memoria: está mirando <em>su</em> máquina.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Este ejercicio es a la vez el diagnóstico: si algo falta, el propio agente les dice cómo instalarlo. Es la primera lección de actitud — <strong>cuando tengan una duda técnica, pregúntenle a Claude</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="elegir-el-modelo-una-sola-vez" class="slide level2 smaller">
+<h2>Elegir el modelo (una sola vez)</h2>
+<p>Dentro de Claude, escriban <code>/model</code> y elijan <strong>Opus</strong>.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 44%">
+<col style="width: 55%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>¿Cuándo?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Opus</strong></td>
+<td>✅ Todo el trabajo del día a día: datos, tablas, LaTeX, organización</td>
+</tr>
+<tr class="even">
+<td><strong>Fable</strong></td>
+<td>Solo redacción fina de un paper — es caro y el límite se agota en horas</td>
+</tr>
+<tr class="odd">
+<td>Sonnet, Haiku</td>
+<td>No los necesitan por ahora</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><span class="small muted">Si un día algo responde “raro”, lo primero que deben revisar es <code>/model</code>: ¿qué modelo quedó seleccionado?</span></p>
+</div>
+</section></section>
+<section>
+<section id="bloque-4-primeras-conversaciones" class="title-slide slide level1 center">
+<h1>Bloque 4 — Primeras conversaciones</h1>
+
 </section>
 <section id="su-turno-la-primera-conversación" class="slide level2 your-turn">
 <h2>Su turno: la primera conversación</h2>
@@ -770,7 +757,7 @@ exactamente qué estaba mal.</code></pre>
 <p>Pegan cualquier dirección de una revista después de <code>url=</code> y, si hay suscripción, entra con acceso institucional. Ejemplo para un artículo de JSTOR:</p>
 <pre class="text"><code>https://pucp.elogim.com/auth-meta/login.php?url=https://www.jstor.org/stable/2171832</code></pre>
 <div class="fragment">
-<p><strong>El patrón de trabajo</strong> (el reparto de tareas del Bloque 2):</p>
+<p><strong>El patrón de trabajo</strong> — Claude <strong>nunca escribe contraseñas</strong> (es una restricción sin excepciones): ustedes se loguean una vez en el navegador y él trabaja sobre esa sesión:</p>
 <pre class="text"><code>Estoy logueado en la biblioteca PUCP. Busca este artículo [DOI] y
 descárgalo a la carpeta papers/. Si no tenemos acceso, dime dónde
 más se puede conseguir.</code></pre>
@@ -809,7 +796,7 @@ más se puede conseguir.</code></pre>
 <h2>Lo que ya saben hacer</h2>
 <ul>
 <li>Distinguir el chat, Cowork y <strong>Claude Code</strong> — y qué cuesta cada uno.</li>
-<li>Las reglas de seguridad: contraseñas nunca; <strong>ustedes se loguean, él trabaja</strong>.</li>
+<li>Moverse en VS Code y abrir el terminal con un clic.</li>
 <li>Abrir Claude en su carpeta con el único comando necesario (<code>cd</code>).</li>
 <li>El kit de rescate: <kbd>Esc</kbd>, <kbd>Ctrl</kbd>+<kbd>C</kbd> ×2, <code>claude --resume</code>.</li>
 <li>Darle memoria al proyecto con <code>/init</code> + <code>CLAUDE.md</code>.</li>

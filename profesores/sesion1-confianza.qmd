@@ -13,19 +13,19 @@ lang: es
 
 | Bloque | Tema | Tiempo |
 |--------|------|--------|
-| 1 | Qué es y qué no es — el caso real | 25 min |
-| 2 | Las reglas de seguridad | 20 min |
-| 3 | Ejercicio: diagnóstico de su computadora | 25 min |
-| 4 | El terminal mínimo + primera conversación | 30 min |
+| 1 | Qué es Claude y sus tres productos | 20 min |
+| 2 | VS Code y el terminal, paso a paso | 30 min |
+| 3 | Ejercicio: diagnóstico de su computadora | 20 min |
+| 4 | Primeras conversaciones con sus archivos | 25 min |
 | ☕ | Pausa | 10 min |
-| 5 | La memoria del proyecto: `/init` | 20 min |
+| 5 | La memoria del proyecto: `/init` | 25 min |
 | 6 | ⭐ La trampa de la cita | 30 min |
 | 7 | La biblioteca PUCP | 15 min |
 | 8 | Cierre y tarea | 5 min |
 
 [Los asistentes del Q-LAB están en la sala: levanten la mano ante cualquier problema técnico y ellos los ayudan sin detener la clase.]{.small .muted}
 
-# Bloque 1 — Qué es y qué no es
+# Bloque 1 — Qué es Claude
 
 ## Claude Code, en una frase
 
@@ -41,15 +41,15 @@ No es un chat al que le pegan texto. La diferencia práctica:
 | "Resúmeme este paper" *(y usted pega el texto)* | "Lee los **40 PDF de esta carpeta**, dime cuáles usan datos de panel y arma una tabla" |
 | Usted copia la respuesta a Word | Él **crea y edita los archivos** directamente |
 
-## Lo que hizo en un caso real {.smaller}
+## ¿Para qué les sirve, concretamente? {.smaller}
 
-En una sesión de trabajo real, sobre un curso de teoría económica:
+En su semana de investigación y docencia, Claude Code puede:
 
-- Leyó el sílabo y verificó **cada cita** contra Crossref, NBER y arXiv.
-  Encontró **cuatro citas equivocadas** — incluida una donde el título del paper no existía y otra donde faltaba un coautor.
-- Descargó **28 papers**, varios a través del proxy de la biblioteca PUCP.
-- Escribió el sílabo en LaTeX, lo **compiló** y revisó el PDF resultante.
-- Armó la **página web del curso** y la publicó.
+- **Verificar la bibliografía** de un artículo, cita por cita, contra Crossref
+- **Ordenar y renombrar** esa carpeta de PDFs acumulados de años
+- **Extraer una tabla** de un PDF a Excel — o de 40 PDFs a una sola tabla
+- **Escribir y compilar** documentos y slides en LaTeX, sin que ustedes sepan LaTeX
+- **Explorar una base de datos** y devolver estadísticas y gráficos
 
 . . .
 
@@ -58,25 +58,33 @@ En una sesión de trabajo real, sobre un curso de teoría económica:
 Sí requiere saber **qué pedirle y cómo verificarlo** — de eso trata este taller.
 :::
 
-## La idea central del taller {.smaller}
+## Un mismo cerebro, tres productos
 
-> **Lo más valioso que hizo el agente no fue escribir: fue encontrar errores.
-> Y también los cometió.**
-
-. . .
-
-- **Encontró errores reales:** un paper citado con otro título, un coautor que no figuraba, una muestra de 5 346 observaciones citada como 5 838. Nadie lo había notado.
-- **Cometió errores:** anotó un DOI inventado. Se descubrió al intentar descargarlo — la página daba error.
+Antes de instalar nada, ubíquense: **Claude son tres cosas distintas** y es fácil confundirlas. Veámoslas una por una.
 
 . . .
 
-**La regla que gobierna todo lo demás:**
+1. **claude.ai** — el chat en el navegador *(este seguro ya lo conocen)*
+2. **Claude Cowork** — una app de escritorio para trabajar sobre carpetas
+3. **Claude Code** — el agente en el terminal *(el de este taller)*
 
-[Lo que produce **de memoria** → hay que verificarlo. Lo que verifica **contra una fuente, con el enlace a la vista** → es sólido.]{.warm}
+## 1 · claude.ai — el chat {.smaller}
 
-## Una familia de productos — no se confundan
+![](../figures/es/claude-ai-mock.svg){.nostretch width=64% fig-align="center"}
 
-![](../figures/es/ecosystem.svg){width=88% fig-align="center"}
+Como ChatGPT: ustedes **pegan** texto y él responde. Excelente tutor de conceptos — pero **no ve sus archivos**.
+
+## 2 · Claude Cowork — la app de escritorio {.smaller}
+
+![](../figures/es/cowork-mock.svg){.nostretch width=64% fig-align="center"}
+
+El agente trabaja sobre una carpeta, **sin terminal**. Ideal para tareas de documentos — pero requiere **plan pago** ($20/mes o más).
+
+## 3 · Claude Code — el del taller {.smaller}
+
+![](../figures/es/claude-code-terminal.svg){.nostretch width=64% fig-align="center"}
+
+El mismo agente, en el **terminal**: ve sus archivos, ejecuta, verifica. Funciona con suscripción **o solo con una clave API** (paga por uso).
 
 ## ¿Cuál necesito yo? ¿Cuánto cuesta? {.smaller}
 
@@ -101,77 +109,19 @@ Sí requiere saber **qué pedirle y cómo verificarlo** — de eso trata este ta
 - Cada acción riesgosa **pide su aprobación** primero.
 - Usted es quien dirige la investigación; Claude es un asistente muy rápido.
 
-# Bloque 2 — Las reglas de seguridad
+# Bloque 2 — VS Code y el terminal
 
-## Nunca va a escribir su contraseña
+## ¿Por qué trabajamos en Visual Studio Code? {.smaller}
 
-**Claude Code no ingresa contraseñas en formularios. Nunca.**
-Ni la suya, ni ninguna. No importa que se la den o que insistan: es una restricción **sin excepciones**.
+![](../figures/es/vscode-ui.svg){width=76% fig-align="center"}
 
-. . .
+**Todo en una sola ventana**: sus archivos a la izquierda, el documento al centro, y abajo el terminal donde vive Claude. Además es **gratis**, funciona igual en Windows y Mac, y abre PDFs, datos y texto sin cambiar de programa.
 
-Tampoco: crea cuentas · ingresa datos de tarjetas · resuelve CAPTCHAs.
+## Abrir el terminal: un solo clic {.smaller}
 
-. . .
+![](../figures/es/vscode-terminal-menu.svg){width=80% fig-align="center"}
 
-::: {.callout-tip}
-## No es un obstáculo: es un reparto de tareas
-1. **Usted** se loguea en el navegador, una sola vez.
-2. **El agente** trabaja sobre esa sesión ya abierta.
-
-Así se descargaron los papers de la biblioteca en el caso real: el profesor se logueó, el agente hizo el resto.
-:::
-
-## Antes de estas acciones, siempre pregunta {.smaller}
-
-- Descargar archivos
-- Aceptar términos y condiciones
-- Enviar correos o mensajes
-- Publicar contenido
-- Borrar o sobrescribir cosas
-
-. . .
-
-**Es sano.** Cuando pregunte, **lean qué está por hacer** antes de decir que sí.
-
-. . .
-
-[Si algo parece "trabado" y no avanza, casi siempre es que les está haciendo una pregunta y espera respuesta. Miren la pantalla.]{.warm}
-
-# Bloque 3 — Diagnóstico de su computadora
-
-## Su turno: el primer ejercicio {.your-turn}
-
-Abran una terminal (los asistentes ayudan), escriban `claude`, presionen Enter, y pídanle **literalmente esto**:
-
-```text
-Revisa mi entorno: dime qué versión tengo de git, python y latex,
-si tengo credenciales de GitHub configuradas, y qué me falta instalar.
-```
-
-. . .
-
-**Qué observar:** el agente **ejecuta comandos y les muestra qué hace**. No les contesta de memoria: está mirando *su* máquina.
-
-::: {.callout-note}
-Este ejercicio es a la vez el diagnóstico: si algo falta, el propio agente les dice cómo instalarlo. Es la primera lección de actitud — **cuando tengan una duda técnica, pregúntenle a Claude**.
-:::
-
-## Elegir el modelo (una sola vez) {.smaller}
-
-Dentro de Claude, escriban `/model` y elijan **Opus**.
-
-| Modelo | ¿Cuándo? |
-|--------|----------|
-| **Opus** | ✅ Todo el trabajo del día a día: datos, tablas, LaTeX, organización |
-| **Fable** | Solo redacción fina de un paper — es caro y el límite se agota en horas |
-| Sonnet, Haiku | No los necesitan por ahora |
-
-. . .
-
-[Si un día algo responde "raro", lo primero que deben revisar es `/model`: ¿qué modelo quedó seleccionado?]{.small .muted}
-
-# Bloque 4 — El terminal mínimo
+Menú **Terminal → Nuevo terminal**. [Tip: si la ventanita de abajo les parece chica, repitan el menú y elijan *Nueva ventana de terminal* para tenerla grande y aparte.]{.small}
 
 ## ¿Qué es "el terminal"? (sin miedo)
 
@@ -223,6 +173,41 @@ Todos nos atascamos. Esto resuelve el 95 % de los líos:
 ::: {.callout-tip}
 Y la herramienta universal: **tómenle captura de pantalla al problema, péguenla en Claude** (Ctrl+V / Cmd+V en el chat del terminal) y pregunten *"¿por qué me sale esto?"*. Claude se depura a sí mismo sorprendentemente bien.
 :::
+
+# Bloque 3 — Diagnóstico de su computadora
+
+## Su turno: el primer ejercicio {.your-turn}
+
+Ya están dentro de Claude, en su carpeta. Pídanle **literalmente esto**:
+
+```text
+Revisa mi entorno: dime qué versión tengo de git, python y latex,
+si tengo credenciales de GitHub configuradas, y qué me falta instalar.
+```
+
+. . .
+
+**Qué observar:** el agente **ejecuta comandos y les muestra qué hace**. No les contesta de memoria: está mirando *su* máquina.
+
+::: {.callout-note}
+Este ejercicio es a la vez el diagnóstico: si algo falta, el propio agente les dice cómo instalarlo. Es la primera lección de actitud — **cuando tengan una duda técnica, pregúntenle a Claude**.
+:::
+
+## Elegir el modelo (una sola vez) {.smaller}
+
+Dentro de Claude, escriban `/model` y elijan **Opus**.
+
+| Modelo | ¿Cuándo? |
+|--------|----------|
+| **Opus** | ✅ Todo el trabajo del día a día: datos, tablas, LaTeX, organización |
+| **Fable** | Solo redacción fina de un paper — es caro y el límite se agota en horas |
+| Sonnet, Haiku | No los necesitan por ahora |
+
+. . .
+
+[Si un día algo responde "raro", lo primero que deben revisar es `/model`: ¿qué modelo quedó seleccionado?]{.small .muted}
+
+# Bloque 4 — Primeras conversaciones
 
 ## Su turno: la primera conversación {.your-turn}
 
@@ -392,7 +377,7 @@ https://pucp.elogim.com/auth-meta/login.php?url=https://www.jstor.org/stable/217
 
 . . .
 
-**El patrón de trabajo** (el reparto de tareas del Bloque 2):
+**El patrón de trabajo** — Claude **nunca escribe contraseñas** (es una restricción sin excepciones): ustedes se loguean una vez en el navegador y él trabaja sobre esa sesión:
 
 ```text
 Estoy logueado en la biblioteca PUCP. Busca este artículo [DOI] y
@@ -419,7 +404,7 @@ El *working paper* no es el artículo publicado — hay casos con distinto títu
 ## Lo que ya saben hacer {.smaller}
 
 - Distinguir el chat, Cowork y **Claude Code** — y qué cuesta cada uno.
-- Las reglas de seguridad: contraseñas nunca; **ustedes se loguean, él trabaja**.
+- Moverse en VS Code y abrir el terminal con un clic.
 - Abrir Claude en su carpeta con el único comando necesario (`cd`).
 - El kit de rescate: <kbd>Esc</kbd>, <kbd>Ctrl</kbd>+<kbd>C</kbd> ×2, `claude --resume`.
 - Darle memoria al proyecto con `/init` + `CLAUDE.md`.
