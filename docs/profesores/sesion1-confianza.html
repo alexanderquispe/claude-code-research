@@ -892,29 +892,11 @@ con Whisper, y qué tan rápido?</code></pre>
 <p>Ya dentro de su carpeta real, prueben estas preguntas — <strong>ninguna modifica nada</strong>, solo leen:</p>
 <pre class="text"><code>Dame un resumen de esta carpeta: ¿qué archivos hay y de qué trata?</code></pre>
 <pre class="text"><code>¿Qué archivos parecen versiones duplicadas o viejas?</code></pre>
-<pre class="text"><code>Explícale la estructura de esta carpeta a un nuevo asistente
-de investigación.</code></pre>
-<div class="fragment">
-<p><strong>Qué observar:</strong> responde sobre <strong>sus</strong> archivos reales, citando nombres y contenidos. Eso es lo que un chat de la web no puede hacer.</p>
-</div>
-</section>
-<section id="bonus-la-respuesta-puede-ser-una-página-web" class="slide level2 smaller">
-<h2>Bonus: la respuesta puede ser una página web</h2>
-<p>Al probar el tercer prompt en este proyecto pasó algo que no pedimos: como la explicación era “para compartir”, Claude cargó uno de sus <strong>skills</strong> — manuales internos que activa cuando la tarea lo amerita. En el terminal se ve así:</p>
-<pre class="text"><code>⏺ Skill(artifact-design)
-  Successfully loaded skill</code></pre>
-<p>Con esa guía de diseño cargada, publicó la explicación como una <strong>página web con enlace propio</strong> (un <em>Artifact</em>).</p>
-<div class="fragment">
-<p>Para pedirlo a propósito, basta agregarlo al final:</p>
 <pre class="text"><code>Explícale la estructura de esta carpeta a un nuevo asistente de
 investigación, y publícala como una página para poder compartirla.</code></pre>
-</div>
 <div class="fragment">
-<ul>
-<li>El enlace vive en claude.ai y es <strong>privado hasta que ustedes decidan compartirlo</strong>.</li>
-<li>Úsenlo para lo que antes era un Word adjunto: la guía de un proyecto para el nuevo asistente, el resumen para un coautor, el material de una clase.</li>
-</ul>
-<p><span class="warm">Del terminal salió una página lista para enviar — sin tocar Word ni PowerPoint.</span></p>
+<p><strong>Qué observar:</strong> responde sobre <strong>sus</strong> archivos reales, citando nombres y contenidos — eso un chat de la web no puede hacerlo. Y el tercer prompt trae bonus: al ver “para compartirla”, Claude carga uno de sus <strong>skills</strong> (manuales internos que activa cuando la tarea lo amerita — verán <code>⏺ Skill(artifact-design)</code> en el terminal) y publica la explicación como una <strong>página web</strong> (<em>Artifact</em>): enlace en claude.ai, <strong>privado hasta que ustedes lo compartan</strong>.</p>
+<p><span class="warm">Lo que antes era un Word adjunto para el nuevo asistente, ahora sale del terminal listo para enviar.</span></p>
 </div>
 </section>
 <section id="el-proyecto-de-ejemplo" class="slide level2 smaller">

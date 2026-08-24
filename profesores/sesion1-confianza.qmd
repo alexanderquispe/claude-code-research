@@ -441,40 +441,15 @@ Dame un resumen de esta carpeta: ¿qué archivos hay y de qué trata?
 ¿Qué archivos parecen versiones duplicadas o viejas?
 ```
 ```text
-Explícale la estructura de esta carpeta a un nuevo asistente
-de investigación.
-```
-
-. . .
-
-**Qué observar:** responde sobre **sus** archivos reales, citando nombres y contenidos. Eso es lo que un chat de la web no puede hacer.
-
-## Bonus: la respuesta puede ser una página web {.smaller}
-
-Al probar el tercer prompt en este proyecto pasó algo que no pedimos: como la explicación era "para compartir", Claude cargó uno de sus **skills** — manuales internos que activa cuando la tarea lo amerita. En el terminal se ve así:
-
-```text
-⏺ Skill(artifact-design)
-  Successfully loaded skill
-```
-
-Con esa guía de diseño cargada, publicó la explicación como una **página web con enlace propio** (un *Artifact*).
-
-. . .
-
-Para pedirlo a propósito, basta agregarlo al final:
-
-```text
 Explícale la estructura de esta carpeta a un nuevo asistente de
 investigación, y publícala como una página para poder compartirla.
 ```
 
 . . .
 
-- El enlace vive en claude.ai y es **privado hasta que ustedes decidan compartirlo**.
-- Úsenlo para lo que antes era un Word adjunto: la guía de un proyecto para el nuevo asistente, el resumen para un coautor, el material de una clase.
+**Qué observar:** responde sobre **sus** archivos reales, citando nombres y contenidos — eso un chat de la web no puede hacerlo. Y el tercer prompt trae bonus: al ver "para compartirla", Claude carga uno de sus **skills** (manuales internos que activa cuando la tarea lo amerita — verán `⏺ Skill(artifact-design)` en el terminal) y publica la explicación como una **página web** (*Artifact*): enlace en claude.ai, **privado hasta que ustedes lo compartan**.
 
-[Del terminal salió una página lista para enviar — sin tocar Word ni PowerPoint.]{.warm}
+[Lo que antes era un Word adjunto para el nuevo asistente, ahora sale del terminal listo para enviar.]{.warm}
 
 ## El proyecto de ejemplo {.smaller}
 
