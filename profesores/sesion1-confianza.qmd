@@ -15,10 +15,10 @@ lang: es
 |------|--------|------|
 | 6:00 – 6:20 | 1 | Qué es Claude y sus tres productos |
 | 6:20 – 6:50 | 2 | VS Code y el terminal, paso a paso |
-| 6:50 – 7:10 | 3 | Configuración: modelo, effort y modos + diagnóstico |
+| 6:50 – 7:10 | 3 | Configuración: modelo, effort, modos |
 | 7:10 – 7:20 | ☕ | Pausa 1 |
-| 7:20 – 7:40 | 4 | Primeras conversaciones con sus archivos |
-| 7:40 – 8:05 | 5 | La memoria del proyecto: `/init` |
+| 7:20 – 7:45 | 4 | Lo primero: `/init` y markdown |
+| 7:45 – 8:05 | 5 | Trabajar: conversar y ordenar |
 | 8:05 – 8:15 | ☕ | Pausa 2 |
 | 8:15 – 8:45 | 6 | ⭐ La trampa de la cita |
 | 8:45 – 8:55 | 7 | La biblioteca PUCP |
@@ -308,7 +308,79 @@ Guarden esa respuesta: en la **Sesión 2** vamos a transcribir una clase grabada
 
 [Volvemos 7:20 pm]{.big}
 
-# Bloque 4 — Primeras conversaciones
+# Bloque 4 — Lo primero: `/init`
+
+## Antes de pedirle nada: denle contexto {.smaller}
+
+Podrían empezar a conversar de inmediato… pero Claude no sabe **nada** de su proyecto: qué contiene, cómo se organiza, qué reglas tiene.
+
+. . .
+
+Por eso el **primer comando de todo proyecto nuevo** es:
+
+```text
+/init
+```
+
+. . .
+
+Claude **explora toda la carpeta** — lee sus documentos, sus datos, sus PDFs — y redacta un archivo llamado **`CLAUDE.md`** con lo que encontró: de qué trata el proyecto, cómo está organizado, qué convenciones sigue.
+
+[Ese archivo se vuelve la **memoria del proyecto**: Claude lo lee automáticamente cada vez que inicien sesión ahí. Nunca más tendrán que volver a explicar de qué va su investigación.]{.warm}
+
+## ¿Qué es un archivo markdown (`.md`)? {.smaller}
+
+Es **texto simple con marcas de formato** — se abre con cualquier editor, pesa nada, y se lee igual dentro de 20 años.
+
+| Lo que escriben | Lo que significa |
+|---|---|
+| `# Título` | encabezado |
+| `## Subtítulo` | encabezado menor |
+| `- punto` | viñeta |
+| `**palabra**` | negrita |
+| `` `código` `` | resaltar un comando o ruta |
+
+. . .
+
+**Por qué importa para ustedes:** es el formato en el que Claude guarda *todo* lo que quiere recordar — la memoria del proyecto, las notas de una reunión, un resumen de literatura. A diferencia de Word, es **legible tanto por ustedes como por la máquina**, y se puede versionar y comparar.
+
+## Cómo se lee un `.md` en VS Code {.smaller}
+
+![](../figures/es/markdown-preview.svg){.nostretch width=78% fig-align="center"}
+
+Abran el archivo y hagan clic en el **icono de vista previa** (arriba a la derecha): a la izquierda queda el texto con sus marcas, a la derecha **el documento ya formateado**.
+
+## Su turno: `/init` en su proyecto {.your-turn .smaller}
+
+```text
+/init
+```
+
+Déjenlo trabajar (puede tomar un par de minutos: está leyendo todo).
+
+. . .
+
+Cuando termine, **ábranlo y léanlo**: `CLAUDE.md` aparece en el panel izquierdo de VS Code.
+
+. . .
+
+Después edítenlo como cualquier documento — agréguenle sus propias reglas:
+
+```markdown
+- Nunca modifiques los archivos de datos-originales/
+- Las citas siempre en formato APA 7
+- Respóndeme siempre en español
+```
+
+[**Qué observar:** entendió de qué trata su investigación sin que ustedes se lo dijeran.]{.warm}
+
+## La memoria tiene niveles
+
+![](../figures/es/memory-stack.svg){width=76% fig-align="center"}
+
+[Ninguno existe por defecto: el del proyecto lo genera `/init`; el personal lo crean ustedes (o el atajo `#`); el de subcarpeta es opcional.]{.small .muted}
+
+# Bloque 5 — Ahora sí: trabajar
 
 ## Su turno: la primera conversación {.your-turn}
 
@@ -349,9 +421,29 @@ empezar y **deliberadamente desordenado**.
 
 [Úsenla hoy y quédensela. Si prefieren, todos los ejercicios funcionan igual sobre una carpeta suya.]{.small .muted}
 
-## Su turno: poner orden (con plan previo) {.your-turn .smaller}
+## Su turno 1 — la estructura del proyecto {.your-turn .smaller}
 
-El ejercicio favorito de todos. Miren primero `papers/`: hay cosas como
+Casi ninguna carpeta de investigación está lista para enviarse a una revista. Pídanle el plan:
+
+```text
+Quiero dejar este proyecto ordenado como un paquete de replicación
+listo para enviar a una revista: carpetas claras (datos, código,
+resultados, documento), nombres de archivo consistentes y sin
+espacios, y un README que explique cómo reproducir todo.
+
+Propónme primero el plan de reorganización — qué mueves, qué
+renombras y por qué. No cambies nada todavía.
+```
+
+. . .
+
+**Qué observar:** llega un plan concreto sobre *sus* archivos reales. Léanlo, cambien lo que no les guste, y recién entonces autoricen.
+
+[Cuando terminen, pídanle que **actualice el `CLAUDE.md`** con la nueva estructura — así la memoria del proyecto queda al día.]{.small .muted}
+
+## Su turno 2 — los nombres de los archivos {.your-turn .smaller}
+
+Ahora el detalle. Miren `papers/`: hay cosas como
 `descarga.pdf`, `el pasado importa - copia (2).pdf`, `articulo minería (1).pdf`.
 
 ```text
@@ -368,53 +460,6 @@ muéstrame la lista de cambios que vas a hacer.
 2. El agente **lee el contenido del PDF** — no adivina por el nombre del archivo.
 3. **Tres de esos papers no vienen al caso.** ¿Los detecta? Pregúntenle:
    *"¿cuáles de estos no tienen que ver con minería y conflicto en el Perú?"*
-
-# Bloque 5 — La memoria del proyecto
-
-## El problema: cada sesión empieza de cero {.smaller}
-
-Mañana abren Claude y ya no recuerda:
-
-- que su proyecto usa datos de la ENAHO y no se tocan los originales,
-- que ustedes escriben en español y citan en APA,
-- de qué trata la investigación.
-
-. . .
-
-**La solución:** un archivo llamado `CLAUDE.md` en la carpeta del proyecto, que Claude **lee automáticamente al iniciar**.
-
-::: {.callout-note}
-## ¿"`.md`"? — su primer archivo markdown
-Markdown es solo **texto simple con formato ligero** (títulos con `#`, listas con `-`). Se abre con cualquier editor. No hay que aprenderlo: Claude lo escribe; ustedes lo leen y corrigen.
-:::
-
-## `/init`: que él lo escriba
-
-Dentro de Claude, escriban:
-
-```text
-/init
-```
-
-. . .
-
-Claude **explora toda la carpeta** — lee sus documentos, sus datos, sus PDFs — y redacta el `CLAUDE.md` por ustedes: de qué trata el proyecto, cómo está organizado, qué convenciones sigue.
-
-. . .
-
-Después ustedes lo **editan como cualquier documento**: agregan reglas suyas, por ejemplo:
-
-```markdown
-- Nunca modifiques los archivos de la carpeta datos-originales/
-- Las citas siempre en formato APA 7
-- Respóndeme siempre en español
-```
-
-## La memoria tiene niveles
-
-![](../figures/es/memory-stack.svg){width=76% fig-align="center"}
-
-[Ninguno existe por defecto: el del proyecto lo genera `/init`; el personal lo crean ustedes (o el atajo `#`); el de subcarpeta es opcional.]{.small .muted}
 
 # ☕ Pausa 2 — 10 minutos {background-color="#e6fbfc"}
 

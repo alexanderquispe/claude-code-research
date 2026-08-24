@@ -1,0 +1,173 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{fontspec}
+\usepackage{amssymb}
+\usepackage{needspace}
+\usepackage[spanish,es-noquoting]{babel}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=azul]{hyperref}
+\usepackage{titlesec}
+
+\definecolor{azul}{HTML}{1F4E79}
+\definecolor{gris}{HTML}{5A5A5A}
+
+\titleformat{\section}{\large\bfseries\color{azul}}{\thesection.}{0.5em}{}
+\titlespacing{\section}{0pt}{1.4em}{0.6em}
+\setlist{itemsep=2pt, topsep=4pt}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+\newcommand{\pendiente}{\textcolor{gris}{$\square$}}
+\newcommand{\hecho}{\textcolor{azul}{$\blacksquare$}}
+
+\title{\vspace{-1.5cm}\textbf{Canon minero y conflictividad social en el Perú}\\[0.3em]
+\large\normalfont Estado del proyecto}
+\author{}
+\date{Agosto de 2026}
+
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\hrule
+\vspace{1em}
+
+\section{La pregunta}
+
+\textbf{En los departamentos mineros del Perú, ¿la renta minera reduce la
+conflictividad social, o solo cambia aquello por lo que se protesta?}
+
+La pregunta tiene dos mitades que se responden con evidencia distinta. La
+primera —\emph{¿hay menos conflicto donde hay más renta?}— se contesta contando:
+producción minera, empleo, número de conflictos por departamento y por mes. La
+segunda —\emph{¿de qué se pelea la gente?}— no se puede contestar contando. Hay
+que leer.
+
+Esa es la apuesta del proyecto: que el interés no está en cuántos conflictos hay,
+sino en qué cambia el contenido de las demandas según cuánta renta minera llega
+al territorio.
+
+\section{Por qué importa}
+
+La literatura peruana está genuinamente dividida, y las cuatro disciplinas
+sociales llegaron a conclusiones distintas mirando los mismos casos.
+
+\begin{itemize}
+  \item Los trabajos econométricos sobre Yanacocha encuentran \textbf{efectos
+  locales positivos} de la actividad minera sobre el bienestar; otros, mirando un
+  horizonte más largo, encuentran que esos efectos \textbf{se desvanecen}.
+  \item Los estudios sobre el canon sostienen lo contrario: que descentralizar
+  rentas hacia municipios sin capacidad de gestión \textbf{multiplica las
+  disputas} por el reparto.
+  \item La antropología y la ecología política vienen diciendo, desde hace años,
+  que el conflicto \textbf{no es distributivo}: se trata de agua, de territorio y
+  de relaciones con el paisaje que no se compensan con dinero.
+\end{itemize}
+
+Si la tercera posición es correcta, entonces medir solo transferencias y contar
+protestas es mirar el problema con el instrumento equivocado. Este proyecto
+intenta poner ambas evidencias en la misma mesa.
+
+\section{Los datos}
+
+Todo está descargado en \texttt{datos/}. Ninguna fuente requiere credenciales.
+
+\Needspace{12\baselineskip}
+\begin{longtable}{@{}p{5.1cm}p{6.4cm}p{3.3cm}@{}}
+\toprule
+\textbf{Fuente} & \textbf{Qué aporta} & \textbf{Formato} \\
+\midrule
+\endhead
+Defensoría del Pueblo &
+Reportes mensuales de conflictos: tipo, ubicación, actores y \textbf{descripción
+narrativa} de cada caso &
+10 PDF (ago 2025 -- jul 2026) \\
+\addlinespace
+MINEM &
+Producción minera y empleo minero por departamento &
+ZIP con hojas de cálculo, XLSX \\
+\addlinespace
+PCM --- Secretaría de Gestión Social &
+Mesas de diálogo y 506 compromisos del Estado, con su estado de cumplimiento &
+CSV con distrito y coordenadas \\
+\addlinespace
+Congreso de la República &
+251 proyectos de ley sobre minería y canon, con fecha y estado &
+JSON \\
+\bottomrule
+\end{longtable}
+
+El corpus central es el de la Defensoría, porque es el único que dice
+\emph{de qué} trata cada conflicto. Lo demás sirve para situarlo.
+
+\section{Qué se ha avanzado}
+
+\begin{itemize}[label=\hecho]
+  \item \textbf{Fuentes identificadas y descargadas.} Todas verificadas: se
+  comprobó que los archivos abren y contienen lo que dicen contener.
+  \item \textbf{Reproducibilidad resuelta.} El script
+  \texttt{descargar-datos.sh} rehace la descarga completa y documenta las
+  particularidades de cada portal.
+  \item \textbf{Bibliografía preliminar reunida} en
+  \texttt{bibliografia-borrador.md}, con las referencias centrales de las cuatro
+  disciplinas.
+\end{itemize}
+
+\section{Qué falta}
+
+\begin{itemize}[label=\pendiente]
+  \item \textbf{Convertir los reportes a una base de datos.} Son PDF. No existe
+  ninguna versión tabular de esta serie, ni oficial ni de terceros. Hay que
+  extraer los casos, uno por uno, a un archivo con el que se pueda trabajar.
+  \item \textbf{Clasificar las demandas.} Categorías de partida: agua, tierra y
+  territorio, empleo local, renta y compensación, consulta previa,
+  incumplimiento de acuerdos anteriores. Habrá que ajustarlas leyendo.
+  \item \textbf{Medir el error de esa clasificación.} Ninguna codificación
+  —hecha a mano o asistida— sirve si no se sabe cuánto se equivoca. Hay que
+  revisar una muestra y contrastar los totales contra las cifras que los propios
+  reportes publican.
+  \item \textbf{Revisar la bibliografía.} Está armada a las apuradas, copiando de
+  buscadores. Hay al menos un año que no cuadra con el volumen citado. Antes de
+  que entre a cualquier texto, hay que verificar cada referencia contra una
+  fuente primaria.
+  \item \textbf{El análisis.} Todavía no hay ninguno.
+\end{itemize}
+
+\section{Una decisión metodológica que hay que declarar}
+
+La variable ideal sería el \textbf{canon minero transferido por distrito}. El
+Ministerio de Economía lo publica, pero en una aplicación web antigua que no
+permite exportar: hay que consultarla a mano, pantalla por pantalla.
+
+Se optó por usar \textbf{producción y empleo minero como aproximación}. Es
+defendible, porque el canon corresponde a la mitad del impuesto a la renta que
+pagan las empresas mineras y se distribuye a las zonas productoras. Pero es
+imperfecto: los precios internacionales introducen ruido, y entre la producción y
+la transferencia efectiva hay un rezago de un año o más.
+
+Esto no es un detalle a esconder en una nota al pie. La investigación real está
+llena de sustituciones como esta, y lo que distingue a un trabajo serio no es
+evitarlas sino \textbf{declararlas y discutir sus límites}.
+
+\vspace{1.5em}
+\hrule
+\vspace{0.8em}
+
+{\small\color{gris}
+\textbf{Cómo está organizada la carpeta.}
+\texttt{datos/} contiene las fuentes tal como se descargaron, sin modificar.
+\texttt{papers/} reúne la literatura acumulada, con los nombres de archivo con
+que llegó cada PDF. \texttt{notas/} son apuntes de trabajo.
+\texttt{bibliografia-borrador.md} es la bibliografía pendiente de revisión.
+
+\textbf{Una advertencia sobre las fuentes.} Los portales del Estado peruano
+cambian de estructura sin aviso y varios rechazan las descargas automatizadas.
+Las particularidades encontradas están anotadas como comentarios dentro de
+\texttt{descargar-datos.sh}.
+}
+
+\end{document}

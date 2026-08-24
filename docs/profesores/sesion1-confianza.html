@@ -217,11 +217,6 @@ Alexander Quispe
 <section id="plan-de-hoy-3-horas" class="slide level2 smaller">
 <h2>Plan de hoy (3 horas)</h2>
 <table class="caption-top">
-<colgroup>
-<col style="width: 30%">
-<col style="width: 40%">
-<col style="width: 30%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Hora</th>
@@ -243,7 +238,7 @@ Alexander Quispe
 <tr class="odd">
 <td>6:50 – 7:10</td>
 <td>3</td>
-<td>Configuración: modelo, effort y modos + diagnóstico</td>
+<td>Configuración: modelo, effort, modos</td>
 </tr>
 <tr class="even">
 <td>7:10 – 7:20</td>
@@ -251,14 +246,14 @@ Alexander Quispe
 <td>Pausa 1</td>
 </tr>
 <tr class="odd">
-<td>7:20 – 7:40</td>
+<td>7:20 – 7:45</td>
 <td>4</td>
-<td>Primeras conversaciones con sus archivos</td>
+<td>Lo primero: <code>/init</code> y markdown</td>
 </tr>
 <tr class="even">
-<td>7:40 – 8:05</td>
+<td>7:45 – 8:05</td>
 <td>5</td>
-<td>La memoria del proyecto: <code>/init</code></td>
+<td>Trabajar: conversar y ordenar</td>
 </tr>
 <tr class="odd">
 <td>8:05 – 8:15</td>
@@ -735,8 +730,91 @@ con Whisper, y qué tan rápido?</code></pre>
 </section>
 
 <section>
-<section id="bloque-4-primeras-conversaciones" class="title-slide slide level1 center">
-<h1>Bloque 4 — Primeras conversaciones</h1>
+<section id="bloque-4-lo-primero-init" class="title-slide slide level1 center">
+<h1>Bloque 4 — Lo primero: <code>/init</code></h1>
+
+</section>
+<section id="antes-de-pedirle-nada-denle-contexto" class="slide level2 smaller">
+<h2>Antes de pedirle nada: denle contexto</h2>
+<p>Podrían empezar a conversar de inmediato… pero Claude no sabe <strong>nada</strong> de su proyecto: qué contiene, cómo se organiza, qué reglas tiene.</p>
+<div class="fragment">
+<p>Por eso el <strong>primer comando de todo proyecto nuevo</strong> es:</p>
+<pre class="text"><code>/init</code></pre>
+</div>
+<div class="fragment">
+<p>Claude <strong>explora toda la carpeta</strong> — lee sus documentos, sus datos, sus PDFs — y redacta un archivo llamado <strong><code>CLAUDE.md</code></strong> con lo que encontró: de qué trata el proyecto, cómo está organizado, qué convenciones sigue.</p>
+<p><span class="warm">Ese archivo se vuelve la <strong>memoria del proyecto</strong>: Claude lo lee automáticamente cada vez que inicien sesión ahí. Nunca más tendrán que volver a explicar de qué va su investigación.</span></p>
+</div>
+</section>
+<section id="qué-es-un-archivo-markdown-.md" class="slide level2 smaller">
+<h2>¿Qué es un archivo markdown (<code>.md</code>)?</h2>
+<p>Es <strong>texto simple con marcas de formato</strong> — se abre con cualquier editor, pesa nada, y se lee igual dentro de 20 años.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Lo que escriben</th>
+<th>Lo que significa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code># Título</code></td>
+<td>encabezado</td>
+</tr>
+<tr class="even">
+<td><code>## Subtítulo</code></td>
+<td>encabezado menor</td>
+</tr>
+<tr class="odd">
+<td><code>- punto</code></td>
+<td>viñeta</td>
+</tr>
+<tr class="even">
+<td><code>**palabra**</code></td>
+<td>negrita</td>
+</tr>
+<tr class="odd">
+<td><code>`código`</code></td>
+<td>resaltar un comando o ruta</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><strong>Por qué importa para ustedes:</strong> es el formato en el que Claude guarda <em>todo</em> lo que quiere recordar — la memoria del proyecto, las notas de una reunión, un resumen de literatura. A diferencia de Word, es <strong>legible tanto por ustedes como por la máquina</strong>, y se puede versionar y comparar.</p>
+</div>
+</section>
+<section id="cómo-se-lee-un-.md-en-vs-code" class="slide level2 smaller">
+<h2>Cómo se lee un <code>.md</code> en VS Code</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/es/markdown-preview.svg" class="quarto-figure quarto-figure-center" style="width:78.0%"></p>
+</figure>
+</div>
+<p>Abran el archivo y hagan clic en el <strong>icono de vista previa</strong> (arriba a la derecha): a la izquierda queda el texto con sus marcas, a la derecha <strong>el documento ya formateado</strong>.</p>
+</section>
+<section id="su-turno-init-en-su-proyecto" class="slide level2 your-turn smaller">
+<h2>Su turno: <code>/init</code> en su proyecto</h2>
+<pre class="text"><code>/init</code></pre>
+<p>Déjenlo trabajar (puede tomar un par de minutos: está leyendo todo).</p>
+<div class="fragment">
+<p>Cuando termine, <strong>ábranlo y léanlo</strong>: <code>CLAUDE.md</code> aparece en el panel izquierdo de VS Code.</p>
+</div>
+<div class="fragment">
+<p>Después edítenlo como cualquier documento — agréguenle sus propias reglas:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Nunca modifiques los archivos de datos-originales/</span>
+<span id="cb6-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Las citas siempre en formato APA 7</span>
+<span id="cb6-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Respóndeme siempre en español</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span class="warm"><strong>Qué observar:</strong> entendió de qué trata su investigación sin que ustedes se lo dijeran.</span></p>
+</div>
+</section>
+<section id="la-memoria-tiene-niveles" class="slide level2">
+<h2>La memoria tiene niveles</h2>
+
+<img data-src="../figures/es/memory-stack.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:76.0%"><p><span class="small muted">Ninguno existe por defecto: el del proyecto lo genera <code>/init</code>; el personal lo crean ustedes (o el atajo <code>#</code>); el de subcarpeta es opcional.</span></p>
+</section></section>
+<section>
+<section id="bloque-5-ahora-sí-trabajar" class="title-slide slide level1 center">
+<h1>Bloque 5 — Ahora sí: trabajar</h1>
 
 </section>
 <section id="su-turno-la-primera-conversación" class="slide level2 your-turn">
@@ -790,9 +868,24 @@ de investigación.</code></pre>
 <p><span class="small muted">Úsenla hoy y quédensela. Si prefieren, todos los ejercicios funcionan igual sobre una carpeta suya.</span></p>
 </div>
 </section>
-<section id="su-turno-poner-orden-con-plan-previo" class="slide level2 your-turn smaller">
-<h2>Su turno: poner orden (con plan previo)</h2>
-<p>El ejercicio favorito de todos. Miren primero <code>papers/</code>: hay cosas como <code>descarga.pdf</code>, <code>el pasado importa - copia (2).pdf</code>, <code>articulo minería (1).pdf</code>.</p>
+<section id="su-turno-1-la-estructura-del-proyecto" class="slide level2 your-turn smaller">
+<h2>Su turno 1 — la estructura del proyecto</h2>
+<p>Casi ninguna carpeta de investigación está lista para enviarse a una revista. Pídanle el plan:</p>
+<pre class="text"><code>Quiero dejar este proyecto ordenado como un paquete de replicación
+listo para enviar a una revista: carpetas claras (datos, código,
+resultados, documento), nombres de archivo consistentes y sin
+espacios, y un README que explique cómo reproducir todo.
+
+Propónme primero el plan de reorganización — qué mueves, qué
+renombras y por qué. No cambies nada todavía.</code></pre>
+<div class="fragment">
+<p><strong>Qué observar:</strong> llega un plan concreto sobre <em>sus</em> archivos reales. Léanlo, cambien lo que no les guste, y recién entonces autoricen.</p>
+<p><span class="small muted">Cuando terminen, pídanle que <strong>actualice el <code>CLAUDE.md</code></strong> con la nueva estructura — así la memoria del proyecto queda al día.</span></p>
+</div>
+</section>
+<section id="su-turno-2-los-nombres-de-los-archivos" class="slide level2 your-turn smaller">
+<h2>Su turno 2 — los nombres de los archivos</h2>
+<p>Ahora el detalle. Miren <code>papers/</code>: hay cosas como <code>descarga.pdf</code>, <code>el pasado importa - copia (2).pdf</code>, <code>articulo minería (1).pdf</code>.</p>
 <pre class="text"><code>En la carpeta papers/ hay PDFs de artículos. Ábrelos y renómbralos con
 el formato apellido-año-palabraclave.pdf. ANTES de renombrar nada,
 muéstrame la lista de cambios que vas a hacer.</code></pre>
@@ -804,55 +897,6 @@ muéstrame la lista de cambios que vas a hacer.</code></pre>
 <li><strong>Tres de esos papers no vienen al caso.</strong> ¿Los detecta? Pregúntenle: <em>“¿cuáles de estos no tienen que ver con minería y conflicto en el Perú?”</em></li>
 </ol>
 </div>
-</section></section>
-<section>
-<section id="bloque-5-la-memoria-del-proyecto" class="title-slide slide level1 center">
-<h1>Bloque 5 — La memoria del proyecto</h1>
-
-</section>
-<section id="el-problema-cada-sesión-empieza-de-cero" class="slide level2 smaller">
-<h2>El problema: cada sesión empieza de cero</h2>
-<p>Mañana abren Claude y ya no recuerda:</p>
-<ul>
-<li>que su proyecto usa datos de la ENAHO y no se tocan los originales,</li>
-<li>que ustedes escriben en español y citan en APA,</li>
-<li>de qué trata la investigación.</li>
-</ul>
-<div class="fragment">
-<p><strong>La solución:</strong> un archivo llamado <code>CLAUDE.md</code> en la carpeta del proyecto, que Claude <strong>lee automáticamente al iniciar</strong>.</p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>¿“<code>.md</code>”? — su primer archivo markdown</strong></p>
-</div>
-<div class="callout-content">
-<p>Markdown es solo <strong>texto simple con formato ligero</strong> (títulos con <code>#</code>, listas con <code>-</code>). Se abre con cualquier editor. No hay que aprenderlo: Claude lo escribe; ustedes lo leen y corrigen.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="init-que-él-lo-escriba" class="slide level2">
-<h2><code>/init</code>: que él lo escriba</h2>
-<p>Dentro de Claude, escriban:</p>
-<pre class="text"><code>/init</code></pre>
-<div class="fragment">
-<p>Claude <strong>explora toda la carpeta</strong> — lee sus documentos, sus datos, sus PDFs — y redacta el <code>CLAUDE.md</code> por ustedes: de qué trata el proyecto, cómo está organizado, qué convenciones sigue.</p>
-</div>
-<div class="fragment">
-<p>Después ustedes lo <strong>editan como cualquier documento</strong>: agregan reglas suyas, por ejemplo:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Nunca modifiques los archivos de la carpeta datos-originales/</span>
-<span id="cb9-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Las citas siempre en formato APA 7</span>
-<span id="cb9-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Respóndeme siempre en español</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="la-memoria-tiene-niveles" class="slide level2">
-<h2>La memoria tiene niveles</h2>
-
-<img data-src="../figures/es/memory-stack.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:76.0%"><p><span class="small muted">Ninguno existe por defecto: el del proyecto lo genera <code>/init</code>; el personal lo crean ustedes (o el atajo <code>#</code>); el de subcarpeta es opcional.</span></p>
 </section></section>
 <section id="pausa-2-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
 <h1>☕ Pausa 2 — 10 minutos</h1>

@@ -1,0 +1,64 @@
+<svg viewBox="0 0 960 480" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+<rect x="0" y="0" width="960" height="480" rx="12" fill="#1e1e1e" stroke="#000" stroke-width="2"/>
+<rect x="0" y="0" width="960" height="34" rx="12" fill="#3c3c3c"/>
+<rect x="0" y="18" width="960" height="16" fill="#3c3c3c"/>
+<circle cx="24" cy="17" r="6" fill="#ff5f57"/><circle cx="44" cy="17" r="6" fill="#febc2e"/><circle cx="64" cy="17" r="6" fill="#28c840"/>
+
+<!-- pestañas -->
+<rect x="0" y="34" width="960" height="30" fill="#252526"/>
+<rect x="0" y="34" width="150" height="30" fill="#1e1e1e"/>
+<text x="20" y="54" font-size="13" fill="#ffffff">📄 CLAUDE.md</text>
+<rect x="500" y="34" width="230" height="30" fill="#1e1e1e"/>
+<text x="518" y="54" font-size="13" fill="#cccccc">👁 Vista previa: CLAUDE.md</text>
+<!-- botón de preview -->
+<rect x="898" y="38" width="46" height="22" rx="5" fill="#0e7c86"/>
+<text x="921" y="54" text-anchor="middle" font-size="14" fill="#ffffff">👁⇄</text>
+
+<!-- panel izquierdo: fuente markdown -->
+<rect x="0" y="64" width="480" height="416" fill="#1e1e1e"/>
+<g font-family="'SF Mono',Menlo,Consolas,monospace" font-size="13.5">
+<text x="20" y="94" fill="#569cd6"># Proyecto: Conflictos mineros</text>
+<text x="20" y="126" fill="#569cd6">## Comandos</text>
+<text x="20" y="152" fill="#ce9178">- Limpiar datos: `python 01_limpieza.py`</text>
+<text x="20" y="176" fill="#ce9178">- Compilar paper: `tectonic paper.tex`</text>
+<text x="20" y="212" fill="#569cd6">## Reglas</text>
+<text x="20" y="238" fill="#ce9178">- **Nunca** modificar `datos-originales/`</text>
+<text x="20" y="262" fill="#ce9178">- Citas en formato **APA 7**</text>
+<text x="20" y="286" fill="#ce9178">- Respóndeme siempre en español</text>
+<text x="20" y="322" fill="#569cd6">## Estructura</text>
+<text x="20" y="348" fill="#ce9178">| Carpeta | Contiene |</text>
+<text x="20" y="370" fill="#ce9178">|---------|----------|</text>
+<text x="20" y="392" fill="#ce9178">| datos/  | ENAHO 2025 |</text>
+<text x="20" y="414" fill="#ce9178">| papers/ | 23 PDFs |</text>
+</g>
+<text x="20" y="458" font-size="12" fill="#6a6a6a" font-family="'SF Mono',Menlo,Consolas,monospace">— lo que está escrito —</text>
+
+<!-- divisor -->
+<rect x="480" y="64" width="2" height="416" fill="#3c3c3c"/>
+
+<!-- panel derecho: vista renderizada -->
+<rect x="482" y="64" width="478" height="416" fill="#ffffff"/>
+<text x="506" y="102" font-size="21" font-weight="700" fill="#111">Proyecto: Conflictos mineros</text>
+<line x1="506" y1="112" x2="930" y2="112" stroke="#e0e0e0" stroke-width="1.5"/>
+<text x="506" y="140" font-size="16.5" font-weight="700" fill="#111">Comandos</text>
+<text x="512" y="166" font-size="14" fill="#333">•  Limpiar datos: <tspan font-family="'SF Mono',Menlo,Consolas,monospace" font-size="12.5" fill="#b83280">python 01_limpieza.py</tspan></text>
+<text x="512" y="190" font-size="14" fill="#333">•  Compilar paper: <tspan font-family="'SF Mono',Menlo,Consolas,monospace" font-size="12.5" fill="#b83280">tectonic paper.tex</tspan></text>
+<text x="506" y="224" font-size="16.5" font-weight="700" fill="#111">Reglas</text>
+<text x="512" y="250" font-size="14" fill="#333">•  <tspan font-weight="700">Nunca</tspan> modificar <tspan font-family="'SF Mono',Menlo,Consolas,monospace" font-size="12.5" fill="#b83280">datos-originales/</tspan></text>
+<text x="512" y="274" font-size="14" fill="#333">•  Citas en formato <tspan font-weight="700">APA 7</tspan></text>
+<text x="512" y="298" font-size="14" fill="#333">•  Respóndeme siempre en español</text>
+<text x="506" y="332" font-size="16.5" font-weight="700" fill="#111">Estructura</text>
+<rect x="506" y="344" width="424" height="26" fill="#0f2d52"/>
+<text x="522" y="362" font-size="13" font-weight="700" fill="#fff">Carpeta</text>
+<text x="700" y="362" font-size="13" font-weight="700" fill="#fff">Contiene</text>
+<rect x="506" y="370" width="424" height="26" fill="#f1f5f9"/>
+<text x="522" y="388" font-size="13" fill="#333">datos/</text><text x="700" y="388" font-size="13" fill="#333">ENAHO 2025</text>
+<rect x="506" y="396" width="424" height="26" fill="#ffffff"/>
+<text x="522" y="414" font-size="13" fill="#333">papers/</text><text x="700" y="414" font-size="13" fill="#333">23 PDFs</text>
+<text x="506" y="458" font-size="12" fill="#999">— cómo se lee —</text>
+
+<!-- flecha al botón -->
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c05621"/></marker></defs>
+<path d="M770,52 C830,52 880,50 900,46" stroke="#c05621" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+<text x="762" y="57" text-anchor="end" font-size="13" font-weight="700" fill="#c05621">clic aquí ▸</text>
+</svg>
