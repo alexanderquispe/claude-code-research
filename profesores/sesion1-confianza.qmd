@@ -265,6 +265,33 @@ Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — son **cuatro**, y se v
 
 Presionen <kbd>Shift</kbd>+<kbd>Tab</kbd> varias veces ahora mismo y miren cómo **rota la etiqueta**. Déjenlo en **auto mode on**: así los ejercicios que siguen corren de corrido, sin detenerse en cada permiso.
 
+## Último paso: la llave de la biblioteca {.your-turn .smaller}
+
+Lo dejamos listo ahora para no perder tiempo después. En el navegador, abran esta dirección **tal cual** (es JSTOR a través del proxy):
+
+```text
+https://pucp.elogim.com/auth-meta/login.php?url=https://www.jstor.org
+```
+
+. . .
+
+Les pedirá **usuario y contraseña del campus virtual** — los mismos de PAIDEIA/Intranet.
+Y listo: **dejen esa pestaña abierta** el resto de la clase. El navegador quedó reconocido como PUCP.
+
+. . .
+
+**Para otra revista, cambian solo lo que va después de `url=`:**
+
+```text
+https://pucp.elogim.com/auth-meta/login.php?url=<dirección de la revista>
+```
+
+. . .
+
+::: {.callout-important}
+No se registran en JSTOR, ni en Wiley, ni en ninguna. **Su cuenta personal de JSTOR no sirve** — con ella solo pueden *leer en pantalla*. El botón de descarga aparece únicamente bajo la sesión de la Universidad.
+:::
+
 ## Su turno: ¿qué me falta instalar? {.your-turn}
 
 Con todo ya configurado, pídanle **literalmente esto**:
@@ -636,30 +663,24 @@ Crossref y dime cuáles tienen algún dato que no coincide.
 
 ![](../figures/es/biblioteca-flujo.svg){.nostretch width=88% fig-align="center"}
 
-## Cómo se loguean, en 40 segundos {.your-turn .smaller}
+## ¿Y por qué `/deep-research` no usó esa sesión? {.smaller}
 
-1. En el navegador, abran esta dirección **tal cual** (es JSTOR a través del proxy):
-
-```text
-https://pucp.elogim.com/auth-meta/login.php?url=https://www.jstor.org
-```
-
-2. Les pedirá **usuario y contraseña del campus virtual** — los mismos de PAIDEIA/Intranet.
-3. Listo. **Dejen esa pestaña abierta**: el navegador ya quedó reconocido como PUCP.
-
-. . .
-
-**Para otra revista, cambian solo lo que va después de `url=`:**
-
-```text
-https://pucp.elogim.com/auth-meta/login.php?url=<dirección de la revista>
-```
-
-. . .
+Ustedes se loguearon al inicio de la clase… y aun así el informe dejó pendientes. No es un error:
 
 ::: {.callout-important}
-No se registran en JSTOR, ni en Wiley, ni en ninguna. **Su cuenta personal de JSTOR no sirve** — con ella solo pueden *leer en pantalla*. El botón de descarga aparece únicamente bajo la sesión de la Universidad.
+Los agentes de `/deep-research` **no navegan desde su computadora**: buscan y leen desde los servidores de Anthropic. Por eso **no ven la cookie de su navegador** — para ellos, esas revistas siguen cerradas.
 :::
+
+. . .
+
+De ahí el reparto de tareas que ya conocen, ahora con nombre técnico:
+
+| Quién | Qué hace | Con qué |
+|---|---|---|
+| **Los agentes** | Encuentran todo y bajan lo abierto; listan el resto | Búsqueda web, sin sesión |
+| **Su navegador** | Descarga lo suscrito | La sesión PUCP que abrieron |
+
+[Por eso `pendientes.md` no es un consuelo: es **el puente** entre las dos mitades.]{.warm}
 
 ## Y ahora sí: que él descargue {.your-turn .smaller}
 
