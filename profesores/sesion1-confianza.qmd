@@ -15,7 +15,7 @@ lang: es
 |------|--------|------|
 | 6:00 – 6:20 | 1 | Qué es Claude y sus tres productos |
 | 6:20 – 6:50 | 2 | VS Code y el terminal, paso a paso |
-| 6:50 – 7:10 | 3 | Diagnóstico, modelo y modos de trabajo |
+| 6:50 – 7:10 | 3 | Configuración: modelo, effort y modos + diagnóstico |
 | 7:10 – 7:20 | ☕ | Pausa 1 |
 | 7:20 – 7:40 | 4 | Primeras conversaciones con sus archivos |
 | 7:40 – 8:05 | 5 | La memoria del proyecto: `/init` |
@@ -208,45 +208,7 @@ Todos nos atascamos. Esto resuelve el 95 % de los líos:
 Y la herramienta universal: **tómenle captura de pantalla al problema, péguenla en Claude** (Ctrl+V / Cmd+V en el chat del terminal) y pregunten *"¿por qué me sale esto?"*. Claude se depura a sí mismo sorprendentemente bien.
 :::
 
-# Bloque 3 — Diagnóstico y configuración
-
-## Su turno: el primer ejercicio {.your-turn}
-
-Ya están dentro de Claude, en su carpeta. Pídanle **literalmente esto**:
-
-```text
-Revisa mi entorno: dime qué versión tengo de Python y de LaTeX,
-qué me falta instalar para trabajar con datos, PDFs y documentos
-en este taller, y cómo instalarlo.
-```
-
-. . .
-
-**Qué observar:** el agente **ejecuta comandos y les muestra qué hace**. No les contesta de memoria: está mirando *su* máquina.
-
-::: {.callout-note}
-Este ejercicio es a la vez el diagnóstico: si algo falta, el propio agente les dice cómo instalarlo — y puede instalarlo por ustedes. Es la primera lección de actitud: **cuando tengan una duda técnica, pregúntenle a Claude**.
-:::
-
-## Su turno: conozcan su computadora {.your-turn .smaller}
-
-La mayoría no sabe qué máquina tiene — y a veces tiene más poder del que cree. Pregúntenle:
-
-```text
-¿Qué computadora tengo? Dime mi procesador (CPU), si tengo GPU o
-aceleración para inteligencia artificial, y cuánta memoria RAM.
-Con esas características, ¿qué herramientas de IA podría correr
-localmente? Por ejemplo, ¿podría transcribir audio de mis clases
-con Whisper, y qué tan rápido?
-```
-
-. . .
-
-**Qué observar:** la respuesta es **distinta para cada persona** — Claude mira su hardware real y adapta la recomendación.
-
-::: {.callout-tip}
-Guarden esa respuesta: en la **Sesión 2** vamos a transcribir una clase grabada con Whisper, y la velocidad dependerá exactamente de esto (con GPU o chip moderno: minutos; solo CPU: más lento, pero funciona igual).
-:::
+# Bloque 3 — Configuración y diagnóstico
 
 ## Elegir el modelo (una sola vez) {.smaller}
 
@@ -303,6 +265,44 @@ Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — son **cuatro**, y se v
 ![](../figures/es/modes-bar.svg){.nostretch width=74% fig-align="center"}
 
 Presionen <kbd>Shift</kbd>+<kbd>Tab</kbd> varias veces ahora mismo y miren cómo **rota la etiqueta**. Déjenlo en **auto mode on**: así los ejercicios que siguen corren de corrido, sin detenerse en cada permiso.
+
+## Su turno: ¿qué me falta instalar? {.your-turn}
+
+Con todo ya configurado, pídanle **literalmente esto**:
+
+```text
+Revisa mi entorno: dime qué versión tengo de Python y de LaTeX,
+qué me falta instalar para trabajar con datos, PDFs y documentos
+en este taller, y cómo instalarlo.
+```
+
+. . .
+
+**Qué observar:** el agente **ejecuta comandos y les muestra qué hace**. No les contesta de memoria: está mirando *su* máquina.
+
+::: {.callout-note}
+Este ejercicio es a la vez el diagnóstico: si algo falta, el propio agente les dice cómo instalarlo — y puede instalarlo por ustedes. Es la primera lección de actitud: **cuando tengan una duda técnica, pregúntenle a Claude**.
+:::
+
+## Su turno: conozcan su computadora {.your-turn .smaller}
+
+La mayoría no sabe qué máquina tiene — y a veces tiene más poder del que cree. Pregúntenle:
+
+```text
+¿Qué computadora tengo? Dime mi procesador (CPU), si tengo GPU o
+aceleración para inteligencia artificial, y cuánta memoria RAM.
+Con esas características, ¿qué herramientas de IA podría correr
+localmente? Por ejemplo, ¿podría transcribir audio de mis clases
+con Whisper, y qué tan rápido?
+```
+
+. . .
+
+**Qué observar:** la respuesta es **distinta para cada persona** — Claude mira su hardware real y adapta la recomendación.
+
+::: {.callout-tip}
+Guarden esa respuesta: en la **Sesión 2** vamos a transcribir una clase grabada con Whisper, y la velocidad dependerá exactamente de esto (con GPU o chip moderno: minutos; solo CPU: más lento, pero funciona igual).
+:::
 
 # ☕ Pausa 1 — 10 minutos {background-color="#e6fbfc"}
 
