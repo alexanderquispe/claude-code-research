@@ -209,6 +209,22 @@ Y la herramienta universal: **tómenle captura de pantalla al problema, péguenl
 
 # Bloque 3 — Configuración y diagnóstico
 
+## Antes de configurar: producto ≠ modelo {.smaller}
+
+En el Bloque 1 eligieron el **producto**: Claude Code. Lo primero que van a configurar es el **modelo** — y es fácil confundirlos:
+
+| | El producto | El modelo |
+|---|---|---|
+| **Qué es** | La puerta de entrada — *dónde* usan Claude | El cerebro que razona — *quién* les responde |
+| **Los nombres** | claude.ai · Cowork · **Claude Code** | **Opus** · Fable · Sonnet · Haiku |
+| **La analogía** | el vehículo | el motor |
+
+. . .
+
+Un mismo producto puede montar distintos motores — por eso dentro de Claude Code existe el menú `/model` para cambiar de cerebro.
+
+[Así que no, "¿Opus es lo mismo que Claude Code?" — Claude Code es *desde dónde* trabajan; Opus es *quién* piensa.]{.warm}
+
 ## Elegir el modelo (una sola vez) {.smaller}
 
 Dentro de Claude, escriban `/model` y elijan **Opus**.
@@ -448,7 +464,6 @@ empezar y **deliberadamente desordenado**.
 |---|---|
 | `datos/` | 10 reportes de conflictos de la Defensoría · producción y empleo minero · mesas de diálogo · 251 proyectos de ley |
 | `papers/` | 8 PDFs con nombres imposibles |
-| `bibliografia-borrador.md` | Una bibliografía hecha a las apuradas |
 | `notas/` | Apuntes sueltos del investigador |
 
 [Úsenla hoy y quédensela. Si prefieren, todos los ejercicios funcionan igual sobre una carpeta suya.]{.small .muted}
@@ -496,7 +511,7 @@ todavía.
 
 [Volvemos 8:15 pm]{.big}
 
-# Bloque 6 — La literatura: buscar y verificar
+# Bloque 6 — La literatura: buscar, verificar y descargar
 
 ## Primero lo lanzamos, después conversamos {.your-turn .smaller}
 
@@ -547,11 +562,15 @@ Con este prompt obtienen dos productos:
 
 ## Lo que acaba de pasar por dentro {.smaller}
 
-![](../figures/es/agentes-paralelo.svg){.nostretch width=86% fig-align="center"}
+![](../figures/es/agentes-paralelo.svg){.nostretch width=80% fig-align="center"}
+
+Una revisión que a un asistente le tomaría **dos o tres semanas**, un equipo de agentes en paralelo la entrega **en lo que dura este bloque**. No es magia: es que son **muchos, a la vez** — y mientras trabajan, ustedes siguen con lo suyo.
 
 ## No es una búsqueda: es un equipo {.smaller}
 
-![](../figures/es/deep-research-caso.svg){.nostretch width=96% fig-align="center"}
+![](../figures/es/deep-research-caso.svg){.nostretch width=88% fig-align="center"}
+
+Su pregunta se repartió en **cinco ángulos**; cada agente busca por el suyo, leen y extraen, y **se verifican entre ellos** antes de escribir el informe. Es la estructura de un seminario de investigación, no la de un buscador.
 
 ## ¿Cuántos agentes son, exactamente? {.smaller}
 
@@ -623,7 +642,9 @@ No me digas que está bien si no la pudiste comprobar.
 
 ## La solución: un solo login {.smaller}
 
-![](../figures/es/biblioteca-flujo.svg){.nostretch width=88% fig-align="center"}
+![](../figures/es/biblioteca-flujo.svg){.nostretch width=84% fig-align="center"}
+
+**Un** login — el del proxy de la biblioteca, con sus credenciales del campus virtual — y el navegador queda reconocido como PUCP: **todas** las revistas suscritas abren sin ingresar nada más. Ya lo hicieron al inicio de la clase; esa pestaña abierta es la llave.
 
 ## ¿Y por qué `/deep-research` no usó esa sesión? {.smaller}
 

@@ -563,6 +563,45 @@ claude</code></pre>
 <h1>Bloque 3 — Configuración y diagnóstico</h1>
 
 </section>
+<section id="antes-de-configurar-producto-modelo" class="slide level2 smaller">
+<h2>Antes de configurar: producto ≠ modelo</h2>
+<p>En el Bloque 1 eligieron el <strong>producto</strong>: Claude Code. Lo primero que van a configurar es el <strong>modelo</strong> — y es fácil confundirlos:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>El producto</th>
+<th>El modelo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Qué es</strong></td>
+<td>La puerta de entrada — <em>dónde</em> usan Claude</td>
+<td>El cerebro que razona — <em>quién</em> les responde</td>
+</tr>
+<tr class="even">
+<td><strong>Los nombres</strong></td>
+<td>claude.ai · Cowork · <strong>Claude Code</strong></td>
+<td><strong>Opus</strong> · Fable · Sonnet · Haiku</td>
+</tr>
+<tr class="odd">
+<td><strong>La analogía</strong></td>
+<td>el vehículo</td>
+<td>el motor</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>Un mismo producto puede montar distintos motores — por eso dentro de Claude Code existe el menú <code>/model</code> para cambiar de cerebro.</p>
+<p><span class="warm">Así que no, “¿Opus es lo mismo que Claude Code?” — Claude Code es <em>desde dónde</em> trabajan; Opus es <em>quién</em> piensa.</span></p>
+</div>
+</section>
 <section id="elegir-el-modelo-una-sola-vez" class="slide level2 smaller">
 <h2>Elegir el modelo (una sola vez)</h2>
 <p>Dentro de Claude, escriban <code>/model</code> y elijan <strong>Opus</strong>.</p>
@@ -887,10 +926,6 @@ de investigación.</code></pre>
 <td>8 PDFs con nombres imposibles</td>
 </tr>
 <tr class="odd">
-<td><code>bibliografia-borrador.md</code></td>
-<td>Una bibliografía hecha a las apuradas</td>
-</tr>
-<tr class="even">
 <td><code>notas/</code></td>
 <td>Apuntes sueltos del investigador</td>
 </tr>
@@ -934,8 +969,8 @@ todavía.</code></pre>
 </section>
 
 <section>
-<section id="bloque-6-la-literatura-buscar-y-verificar" class="title-slide slide level1 center">
-<h1>Bloque 6 — La literatura: buscar y verificar</h1>
+<section id="bloque-6-la-literatura-buscar-verificar-y-descargar" class="title-slide slide level1 center">
+<h1>Bloque 6 — La literatura: buscar, verificar y descargar</h1>
 
 </section>
 <section id="primero-lo-lanzamos-después-conversamos" class="slide level2 your-turn smaller">
@@ -1003,17 +1038,19 @@ Además del informe, hazme estas tres cosas:
 <h2>Lo que acaba de pasar por dentro</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/agentes-paralelo.svg" class="quarto-figure quarto-figure-center" style="width:86.0%"></p>
+<p><img data-src="../figures/es/agentes-paralelo.svg" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
 </figure>
 </div>
+<p>Una revisión que a un asistente le tomaría <strong>dos o tres semanas</strong>, un equipo de agentes en paralelo la entrega <strong>en lo que dura este bloque</strong>. No es magia: es que son <strong>muchos, a la vez</strong> — y mientras trabajan, ustedes siguen con lo suyo.</p>
 </section>
 <section id="no-es-una-búsqueda-es-un-equipo" class="slide level2 smaller">
 <h2>No es una búsqueda: es un equipo</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/deep-research-caso.svg" class="quarto-figure quarto-figure-center" style="width:96.0%"></p>
+<p><img data-src="../figures/es/deep-research-caso.svg" class="quarto-figure quarto-figure-center" style="width:88.0%"></p>
 </figure>
 </div>
+<p>Su pregunta se repartió en <strong>cinco ángulos</strong>; cada agente busca por el suyo, leen y extraen, y <strong>se verifican entre ellos</strong> antes de escribir el informe. Es la estructura de un seminario de investigación, no la de un buscador.</p>
 </section>
 <section id="cuántos-agentes-son-exactamente" class="slide level2 smaller">
 <h2>¿Cuántos agentes son, exactamente?</h2>
@@ -1142,9 +1179,10 @@ No me digas que está bien si no la pudiste comprobar.</code></pre>
 <h2>La solución: un solo login</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/biblioteca-flujo.svg" class="quarto-figure quarto-figure-center" style="width:88.0%"></p>
+<p><img data-src="../figures/es/biblioteca-flujo.svg" class="quarto-figure quarto-figure-center" style="width:84.0%"></p>
 </figure>
 </div>
+<p><strong>Un</strong> login — el del proxy de la biblioteca, con sus credenciales del campus virtual — y el navegador queda reconocido como PUCP: <strong>todas</strong> las revistas suscritas abren sin ingresar nada más. Ya lo hicieron al inicio de la clase; esa pestaña abierta es la llave.</p>
 </section>
 <section id="y-por-qué-deep-research-no-usó-esa-sesión" class="slide level2 smaller">
 <h2>¿Y por qué <code>/deep-research</code> no usó esa sesión?</h2>
