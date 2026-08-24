@@ -682,24 +682,51 @@ De ahí el reparto de tareas que ya conocen, ahora con nombre técnico:
 
 [Por eso `pendientes.md` no es un consuelo: es **el puente** entre las dos mitades.]{.warm}
 
-## Y ahora sí: que él descargue {.your-turn .smaller}
+## Que él prepare, ustedes hagan clic {.your-turn .smaller}
 
-Con la sesión abierta en el navegador, vuelvan a Claude:
+Claude **no puede descargar de la biblioteca por ustedes** — no tiene su sesión. Pero sí puede dejarles el trabajo servido:
 
 ```text
-Estoy logueado en la biblioteca PUCP en el navegador. Toma el archivo
-pendientes.md y, una por una, intenta descargar esas fuentes a papers/
-usando el navegador y el proxy https://pucp.elogim.com/auth-meta/login.php?url=
-Actualiza pendientes.md marcando cuáles conseguiste; para las que no,
-dime dónde más buscarlas.
+Toma pendientes.md y arma una lista donde cada fuente tenga su enlace
+de descarga ya armado con el proxy de la biblioteca, con este formato:
+https://pucp.elogim.com/auth-meta/login.php?url=<enlace al artículo>
+
+Ordénalas de más a menos citada y guárdala como descargar.md.
 ```
 
 . . .
 
-**Dos cosas que hay que saber:**
+Entonces ustedes: **clic en cada enlace → descargar → todo a `papers/`**. Con la sesión ya abierta, son segundos por artículo.
 
-1. **Tiene que usar el navegador, no comandos.** La sesión vive en una cookie del navegador; si intenta bajarlo "por código" recibe la página de login. Si ven que falla así, díganle: *"usa el navegador, no curl"*.
-2. **Que la página cargue no significa que haya suscripción.** Hay que llegar hasta el PDF. (Comprobado que **no** tenemos: Management Science/INFORMS ni Oxford — o sea, ni QJE ni ReStud por esta vía.)
+. . .
+
+Y al terminar, se lo devuelven:
+
+```text
+Ya descargué los PDFs a papers/. Renómbralos con el formato
+apellido-año-tema.pdf, verifica que cada uno corresponda a su cita,
+y actualiza pendientes.md con los que siguen faltando.
+```
+
+## El reparto de tareas, otra vez {.smaller}
+
+Es el mismo principio de siempre, y conviene que quede grabado:
+
+| Ustedes | Claude |
+|---|---|
+| Se loguean · hacen clic · descargan | Busca · arma los enlaces · organiza · renombra · verifica |
+
+. . .
+
+**Por qué es así:** Claude nunca escribe contraseñas ni opera sesiones autenticadas por ustedes. No es una limitación técnica que se pueda saltar — es una regla de seguridad.
+
+. . .
+
+::: {.callout-tip}
+Aun con ese reparto, el ahorro es enorme: la parte lenta no era hacer clic, era **saber qué buscar, dónde está y si la cita es correcta**.
+:::
+
+[Que la página cargue no significa que haya suscripción — hay que llegar hasta el PDF. Comprobado que **no** tenemos: Oxford ni Management Science/INFORMS (o sea, ni QJE ni ReStud por esta vía).]{.small .muted}
 
 ## Cuando de verdad no hay acceso {.smaller}
 

@@ -1242,20 +1242,63 @@ Crossref y dime cuáles tienen algún dato que no coincide.</code></pre>
 <p><span class="warm">Por eso <code>pendientes.md</code> no es un consuelo: es <strong>el puente</strong> entre las dos mitades.</span></p>
 </div>
 </section>
-<section id="y-ahora-sí-que-él-descargue" class="slide level2 your-turn smaller">
-<h2>Y ahora sí: que él descargue</h2>
-<p>Con la sesión abierta en el navegador, vuelvan a Claude:</p>
-<pre class="text"><code>Estoy logueado en la biblioteca PUCP en el navegador. Toma el archivo
-pendientes.md y, una por una, intenta descargar esas fuentes a papers/
-usando el navegador y el proxy https://pucp.elogim.com/auth-meta/login.php?url=
-Actualiza pendientes.md marcando cuáles conseguiste; para las que no,
-dime dónde más buscarlas.</code></pre>
+<section id="que-él-prepare-ustedes-hagan-clic" class="slide level2 your-turn smaller">
+<h2>Que él prepare, ustedes hagan clic</h2>
+<p>Claude <strong>no puede descargar de la biblioteca por ustedes</strong> — no tiene su sesión. Pero sí puede dejarles el trabajo servido:</p>
+<pre class="text"><code>Toma pendientes.md y arma una lista donde cada fuente tenga su enlace
+de descarga ya armado con el proxy de la biblioteca, con este formato:
+https://pucp.elogim.com/auth-meta/login.php?url=&lt;enlace al artículo&gt;
+
+Ordénalas de más a menos citada y guárdala como descargar.md.</code></pre>
 <div class="fragment">
-<p><strong>Dos cosas que hay que saber:</strong></p>
-<ol type="1">
-<li><strong>Tiene que usar el navegador, no comandos.</strong> La sesión vive en una cookie del navegador; si intenta bajarlo “por código” recibe la página de login. Si ven que falla así, díganle: <em>“usa el navegador, no curl”</em>.</li>
-<li><strong>Que la página cargue no significa que haya suscripción.</strong> Hay que llegar hasta el PDF. (Comprobado que <strong>no</strong> tenemos: Management Science/INFORMS ni Oxford — o sea, ni QJE ni ReStud por esta vía.)</li>
-</ol>
+<p>Entonces ustedes: <strong>clic en cada enlace → descargar → todo a <code>papers/</code></strong>. Con la sesión ya abierta, son segundos por artículo.</p>
+</div>
+<div class="fragment">
+<p>Y al terminar, se lo devuelven:</p>
+<pre class="text"><code>Ya descargué los PDFs a papers/. Renómbralos con el formato
+apellido-año-tema.pdf, verifica que cada uno corresponda a su cita,
+y actualiza pendientes.md con los que siguen faltando.</code></pre>
+</div>
+</section>
+<section id="el-reparto-de-tareas-otra-vez" class="slide level2 smaller">
+<h2>El reparto de tareas, otra vez</h2>
+<p>Es el mismo principio de siempre, y conviene que quede grabado:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ustedes</th>
+<th>Claude</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Se loguean · hacen clic · descargan</td>
+<td>Busca · arma los enlaces · organiza · renombra · verifica</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><strong>Por qué es así:</strong> Claude nunca escribe contraseñas ni opera sesiones autenticadas por ustedes. No es una limitación técnica que se pueda saltar — es una regla de seguridad.</p>
+</div>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Aun con ese reparto, el ahorro es enorme: la parte lenta no era hacer clic, era <strong>saber qué buscar, dónde está y si la cita es correcta</strong>.</p>
+</div>
+</div>
+</div>
+<p><span class="small muted">Que la página cargue no significa que haya suscripción — hay que llegar hasta el PDF. Comprobado que <strong>no</strong> tenemos: Oxford ni Management Science/INFORMS (o sea, ni QJE ni ReStud por esta vía).</span></p>
 </div>
 </section>
 <section id="cuando-de-verdad-no-hay-acceso" class="slide level2 smaller">
