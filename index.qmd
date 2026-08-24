@@ -9,14 +9,20 @@ format:
     toc: false
 ---
 
-Agentic AI tools are changing how empirical research gets done. This short course takes you from **zero knowledge** to running real research tasks with [Claude Code](https://code.claude.com/docs) — safely, reproducibly, and as a lab.
+Agentic AI tools are changing how empirical research gets done. This site hosts the Q-LAB teaching material for [Claude Code](https://code.claude.com/docs), organized by audience.
 
-## Slides
+## 🎓 For Q-LAB research assistants
+
+A 4-hour hands-on course (August 17–18, 2026), from **zero knowledge** to running real research tasks.
 
 | Session | Deck | Topics |
 |---------|------|--------|
-| **Day 1** (Aug 17, 2h) | [Foundations](slides/day1-foundations.html) | claude.ai vs. Cowork vs. Claude Code · the agent loop · `/init` & `CLAUDE.md` · permission modes · **Plan Mode** |
-| **Day 2** (Aug 18, 2h) | [Power Tools](slides/day2-power-tools.html) | custom commands & subagents · **MCP** servers · dashboards · **Whisper** for paper discussions · the Sant'Anna academic workflow |
+| **Day 1** (2h) | [Foundations](ras/day1-foundations.html) | claude.ai vs. Cowork vs. Claude Code · the agent loop · `/init` & `CLAUDE.md` · permission modes · **Plan Mode** |
+| **Day 2** (2h) | [Power Tools](ras/day2-power-tools.html) | custom commands & subagents · **MCP** servers · dashboards · **`/deep-research`** · **Whisper** for paper discussions · the Sant'Anna academic workflow |
+
+## 👩‍🏫 For faculty — Facultad de Ciencias Sociales
+
+Two 3-hour sessions for professors, taught step by step with no technical background assumed. **Slides in preparation** — the working guide (in Spanish) is in [`profesores/`](https://github.com/alexanderquispe/claude-code-research/tree/main/profesores).
 
 ## Before class
 

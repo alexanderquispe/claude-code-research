@@ -3,8 +3,8 @@ project:
   output-dir: docs
   render:
     - index.qmd
-    - slides/day1-foundations.qmd
-    - slides/day2-power-tools.qmd
+    - ras/day1-foundations.qmd
+    - ras/day2-power-tools.qmd
 
 format:
   revealjs:

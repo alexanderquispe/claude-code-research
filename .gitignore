@@ -1,4 +1,6 @@
 /.quarto/
 .DS_Store
+recordings/
+transcripts/
 
 **/*.quarto_ipynb

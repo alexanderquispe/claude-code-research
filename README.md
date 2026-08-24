@@ -4,14 +4,16 @@ A 4-hour hands-on course (2 sessions × 2 hours) introducing agentic AI workflow
 
 **Instructor:** Alexander Quispe · [Q-LAB](https://qlab.pucp.edu.pe/) — Laboratorio de Inteligencia Artificial y Métodos Computacionales en Ciencias Sociales, PUCP · August 2026
 
-## Slides
+## Structure — two audiences
 
-Built with [Quarto](https://quarto.org) + reveal.js. Source in `slides/`, rendered HTML in `docs/`.
+Built with [Quarto](https://quarto.org) + reveal.js. Rendered HTML in `docs/` (GitHub Pages).
 
-| Session | Source | Topics |
-|---------|--------|--------|
-| Day 1 — Foundations | `slides/day1-foundations.qmd` | claude.ai vs. Cowork vs. Claude Code · agent loop · `/init` & `CLAUDE.md` · permission modes · Plan Mode |
-| Day 2 — Power Tools | `slides/day2-power-tools.qmd` | custom commands & subagents · MCP · dashboards · Whisper for paper discussions · Sant'Anna academic workflow |
+| Folder | Audience | Content |
+|--------|----------|---------|
+| `ras/` | Q-LAB research assistants | 4-hour hands-on course (2 decks, English): foundations · power tools |
+| `profesores/` | Faculty, Facultad de Ciencias Sociales PUCP | Two 3-hour step-by-step sessions (Spanish, no technical background assumed). `README.md` is the working workshop guide; slides in preparation |
+| `figures/`, `styles/` | shared | SVG diagrams and the reveal.js theme |
+| `recordings/`, `transcripts/` | local only (gitignored) | class recordings and their Whisper transcriptions, used to improve the faculty material |
 
 ## Build
 
