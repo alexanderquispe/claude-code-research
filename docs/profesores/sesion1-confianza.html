@@ -566,8 +566,9 @@ claude</code></pre>
 <section id="su-turno-el-primer-ejercicio" class="slide level2 your-turn">
 <h2>Su turno: el primer ejercicio</h2>
 <p>Ya están dentro de Claude, en su carpeta. Pídanle <strong>literalmente esto</strong>:</p>
-<pre class="text"><code>Revisa mi entorno: dime qué versión tengo de git, python y latex,
-si tengo credenciales de GitHub configuradas, y qué me falta instalar.</code></pre>
+<pre class="text"><code>Revisa mi entorno: dime qué versión tengo de Python y de LaTeX,
+qué me falta instalar para trabajar con datos, PDFs y documentos
+en este taller, y cómo instalarlo.</code></pre>
 <div class="fragment">
 <p><strong>Qué observar:</strong> el agente <strong>ejecuta comandos y les muestra qué hace</strong>. No les contesta de memoria: está mirando <em>su</em> máquina.</p>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -579,7 +580,32 @@ si tengo credenciales de GitHub configuradas, y qué me falta instalar.</code></
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p>Este ejercicio es a la vez el diagnóstico: si algo falta, el propio agente les dice cómo instalarlo. Es la primera lección de actitud — <strong>cuando tengan una duda técnica, pregúntenle a Claude</strong>.</p>
+<p>Este ejercicio es a la vez el diagnóstico: si algo falta, el propio agente les dice cómo instalarlo — y puede instalarlo por ustedes. Es la primera lección de actitud: <strong>cuando tengan una duda técnica, pregúntenle a Claude</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="su-turno-conozcan-su-computadora" class="slide level2 your-turn smaller">
+<h2>Su turno: conozcan su computadora</h2>
+<p>La mayoría no sabe qué máquina tiene — y a veces tiene más poder del que cree. Pregúntenle:</p>
+<pre class="text"><code>¿Qué computadora tengo? Dime mi procesador (CPU), si tengo GPU o
+aceleración para inteligencia artificial, y cuánta memoria RAM.
+Con esas características, ¿qué herramientas de IA podría correr
+localmente? Por ejemplo, ¿podría transcribir audio de mis clases
+con Whisper, y qué tan rápido?</code></pre>
+<div class="fragment">
+<p><strong>Qué observar:</strong> la respuesta es <strong>distinta para cada persona</strong> — Claude mira su hardware real y adapta la recomendación.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Guarden esa respuesta: en la <strong>Sesión 2</strong> vamos a transcribir una clase grabada con Whisper, y la velocidad dependerá exactamente de esto (con GPU o chip moderno: minutos; solo CPU: más lento, pero funciona igual).</p>
 </div>
 </div>
 </div>
@@ -692,9 +718,9 @@ muéstrame la lista de cambios que vas a hacer.</code></pre>
 </div>
 <div class="fragment">
 <p>Después ustedes lo <strong>editan como cualquier documento</strong>: agregan reglas suyas, por ejemplo:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Nunca modifiques los archivos de la carpeta datos-originales/</span>
-<span id="cb8-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Las citas siempre en formato APA 7</span>
-<span id="cb8-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Respóndeme siempre en español</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Nunca modifiques los archivos de la carpeta datos-originales/</span>
+<span id="cb9-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Las citas siempre en formato APA 7</span>
+<span id="cb9-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Respóndeme siempre en español</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="la-memoria-tiene-niveles" class="slide level2">

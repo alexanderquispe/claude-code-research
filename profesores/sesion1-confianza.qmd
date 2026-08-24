@@ -214,8 +214,9 @@ Y la herramienta universal: **tómenle captura de pantalla al problema, péguenl
 Ya están dentro de Claude, en su carpeta. Pídanle **literalmente esto**:
 
 ```text
-Revisa mi entorno: dime qué versión tengo de git, python y latex,
-si tengo credenciales de GitHub configuradas, y qué me falta instalar.
+Revisa mi entorno: dime qué versión tengo de Python y de LaTeX,
+qué me falta instalar para trabajar con datos, PDFs y documentos
+en este taller, y cómo instalarlo.
 ```
 
 . . .
@@ -223,7 +224,27 @@ si tengo credenciales de GitHub configuradas, y qué me falta instalar.
 **Qué observar:** el agente **ejecuta comandos y les muestra qué hace**. No les contesta de memoria: está mirando *su* máquina.
 
 ::: {.callout-note}
-Este ejercicio es a la vez el diagnóstico: si algo falta, el propio agente les dice cómo instalarlo. Es la primera lección de actitud — **cuando tengan una duda técnica, pregúntenle a Claude**.
+Este ejercicio es a la vez el diagnóstico: si algo falta, el propio agente les dice cómo instalarlo — y puede instalarlo por ustedes. Es la primera lección de actitud: **cuando tengan una duda técnica, pregúntenle a Claude**.
+:::
+
+## Su turno: conozcan su computadora {.your-turn .smaller}
+
+La mayoría no sabe qué máquina tiene — y a veces tiene más poder del que cree. Pregúntenle:
+
+```text
+¿Qué computadora tengo? Dime mi procesador (CPU), si tengo GPU o
+aceleración para inteligencia artificial, y cuánta memoria RAM.
+Con esas características, ¿qué herramientas de IA podría correr
+localmente? Por ejemplo, ¿podría transcribir audio de mis clases
+con Whisper, y qué tan rápido?
+```
+
+. . .
+
+**Qué observar:** la respuesta es **distinta para cada persona** — Claude mira su hardware real y adapta la recomendación.
+
+::: {.callout-tip}
+Guarden esa respuesta: en la **Sesión 2** vamos a transcribir una clase grabada con Whisper, y la velocidad dependerá exactamente de esto (con GPU o chip moderno: minutos; solo CPU: más lento, pero funciona igual).
 :::
 
 ## Elegir el modelo (una sola vez) {.smaller}
