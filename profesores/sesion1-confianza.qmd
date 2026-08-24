@@ -117,6 +117,18 @@ El mismo agente, en el **terminal**: ve sus archivos, ejecuta, verifica. Funcion
 
 **Todo en una sola ventana**: sus archivos a la izquierda, el documento al centro, y abajo el terminal donde vive Claude. Además es **gratis**, funciona igual en Windows y Mac, y abre PDFs, datos y texto sin cambiar de programa.
 
+## Un plugin que necesitarán: vscode-pdf {.smaller}
+
+![](../figures/screenshots/vscode-pdf-ext.png){.nostretch width=72% fig-align="center"}
+
+Para **leer PDFs dentro de VS Code** (sus papers, y el PDF que compile LaTeX):
+
+1. Clic en el icono de **Extensiones** 🧩 de la barra izquierda
+2. Buscar `pdf`
+3. Instalar **vscode-pdf** (de *tomoki1207*) — un clic y listo
+
+[Sin esto, cada PDF se abre en otro programa y pierden la gracia de "todo en una sola ventana".]{.small .muted}
+
 ## Abrir el terminal: un solo clic {.smaller}
 
 ![](../figures/es/vscode-terminal-menu.svg){width=80% fig-align="center"}
