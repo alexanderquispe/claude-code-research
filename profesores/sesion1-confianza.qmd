@@ -350,14 +350,22 @@ Después ustedes lo **editan como cualquier documento**: agregan reglas suyas, p
 
 ## Los modos de trabajo (y el freno de mano) {.smaller}
 
-Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — mírenlo en la **barra de abajo** de Claude:
+Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — son **cuatro**, y se ven en la **barra de abajo** de Claude:
 
 ![](../figures/es/safety-spectrum.svg){width=88% fig-align="center"}
 
-- **Plan Mode** (solo lee y propone): para empezar cualquier cosa nueva — les presenta un plan y ustedes aprueban. *Lo usaremos a fondo en la Sesión 2.*
-- **Normal**: pregunta antes de cada cambio. El modo de esta sesión.
-- **Auto mode on** (en la barra: *accept edits on*): ejecuta sin preguntar. Solo cuando ya confían y el trabajo es rutinario.
-- El cuarto modo existe, pero **no lo usen**: desactiva todas las protecciones.
+- **plan mode on** — solo lee y **propone un plan**; no toca nada. Para empezar cualquier cosa nueva. *Lo usaremos a fondo en la Sesión 2.*
+- **manual mode on** — pregunta antes de **cada** acción. El modo de esta sesión.
+- **accept edits on** — edita archivos sin preguntar; los comandos aún piden permiso.
+- **auto mode on** — ejecuta ediciones **y** comandos solo. Únicamente en trabajo rutinario donde ya confían.
+
+[Existe además una bandera de arranque que desactiva todas las protecciones (`--dangerously-skip-permissions`) — no la usen.]{.small .muted}
+
+## Así se ve en su terminal {.smaller}
+
+![](../figures/es/modes-bar.svg){.nostretch width=74% fig-align="center"}
+
+Presionen <kbd>Shift</kbd>+<kbd>Tab</kbd> varias veces ahora mismo y miren cómo **rota la etiqueta**. Déjenlo en **manual mode on** por hoy.
 
 # Bloque 6 — ⭐ La trampa de la cita
 
