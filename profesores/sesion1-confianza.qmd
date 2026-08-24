@@ -266,9 +266,9 @@ Dentro de Claude, escriban `/model` y elijan **Opus**.
 
 ![](../figures/screenshots/model-selector.png){.nostretch width=92% fig-align="center"}
 
-- El **✓ verde** marca el modelo activo; se navega con las flechas ↑/↓.
+- Naveguen con ↑/↓ hasta **Opus (1M context)** y déjenlo con el **✓ verde**, como en la imagen. *Ese es el modelo del taller.*
 - <kbd>Enter</kbd> lo fija como **default** para futuras sesiones · <kbd>s</kbd> lo usa **solo en esta sesión** · <kbd>Esc</kbd> cancela.
-- ¿Y esa línea naranja de abajo, **"High effort"**? → siguiente slide.
+- ¿Y esa línea naranja de abajo, **"xHigh effort"**? → siguiente slide.
 
 ## ¿Qué significa "effort"? {.smaller}
 
@@ -282,8 +282,8 @@ El *effort* es **cuánto razona el modelo antes de responder** — como la difer
 
 . . .
 
-- **Cómo se ajusta:** dentro del menú `/model`, con las flechas <kbd>←</kbd>/<kbd>→</kbd> (la línea naranja cambia: low · medium · high · …).
-- **Recomendación del taller: déjenlo en High** (el default). El modelo además adapta solo cuánto piensa según la dificultad de cada pedido.
+- **Cómo se ajusta:** dentro del menú `/model`, con las flechas <kbd>←</kbd>/<kbd>→</kbd> — la línea naranja va cambiando: *low · medium · high · xHigh…*
+- **Recomendación del taller: déjenlo en High o xHigh.** El modelo además adapta solo cuánto piensa según la dificultad de cada pedido.
 
 # ☕ Pausa 1 — 10 minutos {background-color="#e6fbfc"}
 
