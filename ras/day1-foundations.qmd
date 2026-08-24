@@ -257,7 +257,7 @@ Every `/clear` starts from zero. Claude forgets:
 
 You do not want to repeat this every session.
 
-## The solution: `CLAUDE.md`
+## The solution: `CLAUDE.md` {.smaller}
 
 A markdown file at the project root, **loaded automatically at every session start**.
 

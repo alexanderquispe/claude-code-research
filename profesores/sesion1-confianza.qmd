@@ -517,6 +517,7 @@ todavía.
 
 `/deep-research` **tarda 15–20 minutos** — lo echamos a andar *ahora* y seguimos la clase mientras trabaja. Copien este prompt completo:
 
+::: {.compact-code}
 ```text
 /deep-research ¿Qué dice la evidencia empírica desde 2015 sobre la
 relación entre actividad minera y conflictividad social en el Perú?
@@ -538,6 +539,7 @@ Además del informe, hazme estas tres cosas:
 3. En el informe cita esas fuentes igual que las demás, pero
    márcalas como [pendiente de descarga].
 ```
+:::
 
 [Corre **en segundo plano**: la sesión les queda libre. Mírenlo con `/workflows`.]{.warm}
 

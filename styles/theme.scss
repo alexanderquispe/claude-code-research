@@ -55,13 +55,24 @@ $code-color: #b83280;
   color: $accent;
 }
 
-// Code blocks: slightly smaller, roomy
+// Code blocks: big enough to read from the back of the room, full slide width
+.reveal pre {
+  font-size: 0.72em; // Quarto's default is 0.55em — prompts are meant to be read and copied
+  width: 100%;
+}
+
 .reveal pre code {
-  font-size: 0.82em;
-  line-height: 1.45;
+  font-size: 0.92em;
+  line-height: 1.5;
   padding: 0.7em 0.9em;
   border-radius: 8px;
-  max-height: 520px;
+  max-height: 620px;
+}
+
+// For slides whose prompt is too long for the full-size treatment:
+// wrap the block in ::: {.compact-code}
+.reveal .compact-code pre {
+  font-size: 0.6em;
 }
 
 .reveal code {
