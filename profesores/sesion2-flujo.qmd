@@ -65,7 +65,7 @@ Cada sesión con **una tarea clara y acotada**. Ustedes supervisan, corrigen y d
 
 [Revisar un plan cuesta 2 minutos. Revisar 40 archivos modificados cuesta una tarde.]{.warm}
 
-## Su turno: Plan Mode con material propio {.your-turn}
+## Su turno: Plan Mode con material propio {.your-turn .smaller}
 
 Sobre la carpeta de un curso o proyecto que tengan a la mano:
 
@@ -94,11 +94,11 @@ Escriban el comando **con la barra `/` al inicio** (sin la barra no funciona —
   aumenta la adopción de billeteras digitales en el Perú?
 ```
 
-. . .
+## Lo que pasa detrás {.smaller}
 
-Lo que pasa detrás — un **equipo completo de asistentes** trabajando en paralelo:
+Un **equipo completo de asistentes** trabajando en paralelo:
 
-![](../figures/es/deep-research-pipeline.svg){width=92% fig-align="center"}
+![](../figures/es/deep-research-pipeline.svg){.nostretch width=88% fig-align="center"}
 
 ## Cómo se usa bien {.smaller}
 

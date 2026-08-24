@@ -57,7 +57,7 @@ $code-color: #b83280;
 
 // Code blocks: big enough to read from the back of the room, full slide width
 .reveal pre {
-  font-size: 0.72em; // Quarto's default is 0.55em — prompts are meant to be read and copied
+  font-size: 0.95em; // Quarto's default is 0.55em — prompts are meant to be read and copied
   width: 100%;
 }
 
@@ -72,7 +72,7 @@ $code-color: #b83280;
 // For slides whose prompt is too long for the full-size treatment:
 // wrap the block in ::: {.compact-code}
 .reveal .compact-code pre {
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 
 .reveal code {

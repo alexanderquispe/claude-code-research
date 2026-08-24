@@ -102,7 +102,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="day2-power-tools_files/libs/revealjs/dist/theme/quarto-35c8da4df2ae197918e3b09b0a8d2403.css">
+  <link rel="stylesheet" href="day2-power-tools_files/libs/revealjs/dist/theme/quarto-1797efdf6b484f464b1119979ddf5c8f.css">
   <link href="day2-power-tools_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="day2-power-tools_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="day2-power-tools_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -312,7 +312,7 @@ Alexander Quispe
 <h1>Block 2 — Make It Yours</h1>
 
 </section>
-<section id="custom-slash-commands" class="slide level2">
+<section id="custom-slash-commands" class="slide level2 smaller">
 <h2>Custom slash commands</h2>
 <p>Any prompt you type twice deserves a file. Create <code>.claude/commands/</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- .claude/commands/regression-check.md --&gt;</span></span>
@@ -350,7 +350,7 @@ Alexander Quispe
 <h2>Subagents, visually</h2>
 
 <img data-src="../figures/subagents.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:84.0%"></section>
-<section id="headless-mode-claude-in-scripts" class="slide level2">
+<section id="headless-mode-claude-in-scripts" class="slide level2 smaller">
 <h2>Headless mode: Claude in scripts</h2>
 <p><code>claude -p "prompt"</code> runs one task and exits — Claude Code as a <strong>building block</strong>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># nightly reproducibility check (cron / GitHub Actions)</span></span>
@@ -364,7 +364,7 @@ Alexander Quispe
 <h1>Block 3 — MCP: Connecting the Outside World</h1>
 
 </section>
-<section id="what-is-mcp" class="slide level2">
+<section id="what-is-mcp" class="slide level2 smaller">
 <h2>What is MCP?</h2>
 <p><strong>Model Context Protocol</strong> — an open standard: <em>“USB-C for AI tools.”</em></p>
 <ul>
@@ -450,7 +450,7 @@ Alexander Quispe
 <h1>Block 4 — Dashboards in Minutes</h1>
 
 </section>
-<section id="from-csv-to-dashboard" class="slide level2">
+<section id="from-csv-to-dashboard" class="slide level2 smaller">
 <h2>From CSV to dashboard</h2>
 <p>Quarto (which renders these slides) also does <strong>dashboards</strong>. Watch:</p>
 <pre class="text"><code>[plan mode] &gt; I have data/enaho_sample.csv (household survey).
@@ -574,7 +574,7 @@ Alexander Quispe
 <li class="fragment">Now your paper discussion is <em>searchable, quotable, and versioned</em>.</li>
 </ul>
 </section>
-<section id="step-1-transcribe-with-whisper" class="slide level2">
+<section id="step-1-transcribe-with-whisper" class="slide level2 smaller">
 <h2>Step 1 — Transcribe with Whisper</h2>
 <p><a href="https://github.com/openai/whisper">Whisper</a>: OpenAI’s open-source speech-to-text. Runs <strong>locally</strong> — recordings never leave your machine.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-U</span> openai-whisper          <span class="co"># needs ffmpeg installed</span></span>
@@ -590,7 +590,7 @@ Alexander Quispe
 <li>Handles Spanish (<code>--language es</code>) and code-switching seminars well</li>
 </ul>
 </section>
-<section id="step-2-structure-it-with-claude-code" class="slide level2">
+<section id="step-2-structure-it-with-claude-code" class="slide level2 smaller">
 <h2>Step 2 — Structure it with Claude Code</h2>
 <p>Drop the transcript in the repo, then:</p>
 <pre class="text"><code>&gt; read transcripts/seminar_2026-08-12.txt — it's a discussion

@@ -40,7 +40,7 @@ Quick check: *who ran `/init` on a real project last night? What did it get wron
 
 # Block 2 — Make It Yours
 
-## Custom slash commands
+## Custom slash commands {.smaller}
 
 Any prompt you type twice deserves a file. Create `.claude/commands/`:
 
@@ -92,7 +92,7 @@ Manage them with `/agents`. Pedro's framework ships **18** of these.
 
 ![](../figures/subagents.svg){width=84% fig-align="center"}
 
-## Headless mode: Claude in scripts
+## Headless mode: Claude in scripts {.smaller}
 
 `claude -p "prompt"` runs one task and exits — Claude Code as a **building block**:
 
@@ -107,7 +107,7 @@ This is how you go from "AI assistant" to "AI **infrastructure**".
 
 # Block 3 — MCP: Connecting the Outside World
 
-## What is MCP?
+## What is MCP? {.smaller}
 
 **Model Context Protocol** — an open standard: *"USB-C for AI tools."*
 
@@ -167,7 +167,7 @@ The pattern: **conversation in the terminal, actions on GitHub** — no tab-swit
 
 # Block 4 — Dashboards in Minutes
 
-## From CSV to dashboard
+## From CSV to dashboard {.smaller}
 
 Quarto (which renders these slides) also does **dashboards**. Watch:
 
@@ -258,7 +258,7 @@ Research conversations are **spoken**: seminars, coauthor calls, referee worksho
 - Now your paper discussion is *searchable, quotable, and versioned*.
 :::
 
-## Step 1 — Transcribe with Whisper
+## Step 1 — Transcribe with Whisper {.smaller}
 
 [Whisper](https://github.com/openai/whisper): OpenAI's open-source speech-to-text. Runs **locally** — recordings never leave your machine.
 
@@ -276,7 +276,7 @@ whisper audio.wav --model medium --language en \
 - `--model small` fast / `medium` good default / `large-v3` best
 - Handles Spanish (`--language es`) and code-switching seminars well
 
-## Step 2 — Structure it with Claude Code
+## Step 2 — Structure it with Claude Code {.smaller}
 
 Drop the transcript in the repo, then:
 

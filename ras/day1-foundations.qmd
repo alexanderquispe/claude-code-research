@@ -79,7 +79,7 @@ You can reach the *same intelligence* through different products:
 
 Think of it as: *"Claude Code for people who never open a terminal."*
 
-## Claude Code — the research workhorse
+## Claude Code — the research workhorse {.smaller}
 
 An **agentic coding tool** that lives in your terminal (and VS Code):
 
@@ -181,7 +181,7 @@ First prompts to try on *any* repo — no risk, read-only:
 > explain the folder structure to a new coauthor
 ```
 
-## Prompting: be specific, be verifiable
+## Prompting: be specific, be verifiable {.smaller}
 
 ::: columns
 ::: {.column width="50%"}

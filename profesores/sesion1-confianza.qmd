@@ -308,7 +308,7 @@ https://pucp.elogim.com/auth-meta/login.php?url=<dirección de la revista>
 No se registran en JSTOR, ni en Wiley, ni en ninguna. **Su cuenta personal de JSTOR no sirve** — con ella solo pueden *leer en pantalla*. El botón de descarga aparece únicamente bajo la sesión de la Universidad.
 :::
 
-## Su turno: ¿qué me falta instalar? {.your-turn}
+## Su turno: ¿qué me falta instalar? {.your-turn .smaller}
 
 Con todo ya configurado, pídanle **literalmente esto**:
 
@@ -430,7 +430,7 @@ Después edítenlo como cualquier documento — agréguenle sus propias reglas:
 
 # Bloque 5 — Ahora sí: trabajar
 
-## Su turno: la primera conversación {.your-turn}
+## Su turno: la primera conversación {.your-turn .smaller}
 
 Ya dentro de su carpeta real, prueben estas preguntas — **ninguna modifica nada**, solo leen:
 
