@@ -388,13 +388,13 @@ Es **texto simple con marcas de formato** — se abre con cualquier editor, pesa
 
 ## Un `.md` abierto en VS Code {.smaller}
 
-![](../figures/screenshots/vscode-md-raw.png){.nostretch width=64% fig-align="center"}
+![](../figures/screenshots/vscode-md-raw.png){.nostretch width=86% fig-align="center"}
 
-Así se ve **por dentro**: los `#`, `**` y `|` a la vista. [▸ Clic en el **icono de la lupa** (arriba a la derecha) y VS Code lo lee por ustedes.]{.warm}
+Así se ve **por dentro** — y no es un ejemplo inventado: es el `CLAUDE.md` del proyecto de hoy. Los `#`, `**` y las viñetas, a la vista. [▸ Clic en el **icono de la lupa** (arriba a la derecha, en el círculo) y VS Code lo lee por ustedes.]{.warm}
 
 ## …y así lo muestra VS Code {.smaller}
 
-![](../figures/screenshots/vscode-md-preview.png){.nostretch width=74% fig-align="center"}
+![](../figures/screenshots/vscode-md-preview.png){.nostretch width=86% fig-align="center"}
 
 El mismo archivo, dos vistas: a la izquierda las marcas, a la derecha **el documento formateado**. Por eso markdown funciona tan bien con un agente — **él lo escribe, ustedes lo leen cómodo**.
 
