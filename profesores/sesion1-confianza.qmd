@@ -70,21 +70,21 @@ Antes de instalar nada, ubíquense: **Claude son tres cosas distintas** y es fá
 
 ## 1 · claude.ai — el chat {.smaller}
 
-![](../figures/es/claude-ai-mock.svg){.nostretch width=64% fig-align="center"}
+![](../figures/screenshots/claude-ai-chrome.png){.nostretch width=76% fig-align="center"}
 
-Como ChatGPT: ustedes **pegan** texto y él responde. Excelente tutor de conceptos — pero **no ve sus archivos**.
+**Vive en el navegador** (miren la dirección: `claude.ai`). Como ChatGPT: ustedes **pegan** texto y él responde. Excelente tutor de conceptos — pero **no ve sus archivos**.
 
 ## 2 · Claude Cowork — la app de escritorio {.smaller}
 
-![](../figures/es/cowork-mock.svg){.nostretch width=64% fig-align="center"}
+![](../figures/screenshots/cowork-app.png){.nostretch width=88% fig-align="center"}
 
-El agente trabaja sobre una carpeta, **sin terminal**. Ideal para tareas de documentos — pero requiere **plan pago** ($20/mes o más).
+**La misma cara que el chat, pero es una app instalada** — noten el botón **Cowork** activado y el selector *"Project or folder"*: el agente trabaja sobre una carpeta, **sin terminal**. Ideal para tareas de documentos — pero requiere **plan pago** ($20/mes o más).
 
 ## 3 · Claude Code — el del taller {.smaller}
 
-![](../figures/es/claude-code-terminal.svg){.nostretch width=64% fig-align="center"}
+![](../figures/screenshots/claude-code-vscode.png){.nostretch width=90% fig-align="center"}
 
-El mismo agente, en el **terminal**: ve sus archivos, ejecuta, verifica. Funciona con suscripción **o solo con una clave API** (paga por uso).
+El mismo agente, en el **terminal de VS Code** — así lo verán hoy: la caja de bienvenida arriba, y abajo donde ustedes escriben. Ve sus archivos, ejecuta, verifica. Funciona con suscripción **o solo con una clave API** (paga por uso).
 
 ## ¿Cuál necesito yo? ¿Cuánto cuesta? {.smaller}
 
