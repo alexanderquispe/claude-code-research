@@ -572,28 +572,13 @@ Una revisión que a un asistente le tomaría **dos o tres semanas**, un equipo d
 
 ## No es una búsqueda: es un equipo {.smaller}
 
-![](../figures/es/deep-research-caso.svg){.nostretch width=88% fig-align="center"}
+![](../figures/es/deep-research-caso.svg){.nostretch width=70% fig-align="center"}
 
 Su pregunta se repartió en **cinco ángulos**; cada agente busca por el suyo, leen y extraen, y **se verifican entre ellos** antes de escribir el informe. Es la estructura de un seminario de investigación, no la de un buscador.
 
-## ¿Cuántos agentes son, exactamente? {.smaller}
-
-Hay que distinguir dos números que suelen confundirse:
-
-| | Cuántos | Qué significa |
-|---|---|---|
-| **A la vez** | hasta **16** | corriendo en paralelo en ese instante (menos si su computadora tiene pocos núcleos) |
-| **En total, a lo largo de la corrida** | **cientos** | van entrando por fases: buscar → leer → verificar → sintetizar. El tope duro del sistema es **1 000** |
-
 . . .
 
-Y cuántos apunta a usar depende de la configuración (`/config workflowSizeGuideline`):
-
-`small` menos de 5 · **`medium` menos de 15 (por defecto)** · `large` menos de 50
-
-. . .
-
-[En una corrida real de este taller contamos **cerca de 100 agentes en total**: 6 al inicio, 26 leyendo, 75 verificando. Si pasa de 25, Claude Code avisa que es una **corrida grande**.]{.warm}
+**¿Y cuántos son?** Dos números que no hay que confundir: **a la vez** corren hasta **16 en paralelo**; **en total**, a lo largo de la corrida, entran **cientos** por fases — en una corrida real de este taller, cerca de **100**. [El tamaño se regula con `/config workflowSizeGuideline`: `small` <5 · **`medium` <15 (por defecto)** · `large` <50.]{.small .muted}
 
 ## Por qué esto importa para la verificación {.smaller}
 
