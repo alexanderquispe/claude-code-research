@@ -604,6 +604,78 @@ con una columna que indique de qué reporte salió.</code></pre>
 <p><span class="small muted">Además, Claude Code usa por dentro modelos pequeños y baratos (Haiku) para tareas de apoyo: resúmenes, títulos, búsquedas internas.</span></p>
 </div>
 </section>
+<section id="y-si-el-pdf-es-una-foto-paddleocr" class="slide level2 smaller">
+<h2>¿Y si el PDF es una foto? PaddleOCR</h2>
+<p>Los reportes recientes traen texto nativo. Pero los de <strong>2004–2015</strong> — como casi todo archivo histórico — son <strong>escaneados</strong>: el PDF es una imagen, y pdfplumber devuelve… nada.</p>
+<div class="fragment">
+<p>Para eso existe <strong>PaddleOCR</strong>: un kit de OCR <strong>gratuito y open source</strong> (Apache 2.0) que corre <strong>en su computadora</strong> y convierte el escaneo en texto.</p>
+<ul>
+<li>Versión actual <strong>PP-OCRv6</strong> (2026): un solo modelo lee <strong>50 idiomas</strong> — español incluido — y entiende tablas y estructura, no solo texto corrido.</li>
+<li>Se pide igual que todo en este taller:</li>
+</ul>
+<pre class="text"><code>En datos/antiguos/ hay reportes escaneados (sin texto). Instala
+PaddleOCR y conviértelos a texto en datos-limpios/ocr/, un archivo
+por reporte. Muéstrame una página de muestra para validar la
+calidad antes de correr todo.</code></pre>
+<p><span class="warm">Descarga y documentación: <strong>github.com/PaddlePaddle/PaddleOCR</strong></span></p>
+</div>
+</section>
+<section id="cuánto-cuesta-leer-100-páginas-escaneadas" class="slide level2 smaller">
+<h2>¿Cuánto cuesta leer 100 páginas escaneadas?</h2>
+<p>Las APIs de visión también pueden “leer” un escaneo — mandándole cada página como imagen. La diferencia está en la factura:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Herramienta</th>
+<th>Tarifa (entrada · salida, por millón de tokens)</th>
+<th>PDF de 100 págs.</th>
+<th>El archivo entero (~31 500 págs.)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>PaddleOCR, local</strong></td>
+<td><strong>no cobra</strong></td>
+<td><strong>$0</strong></td>
+<td><strong>$0</strong></td>
+</tr>
+<tr class="even">
+<td>DeepSeek V4 (vision)</td>
+<td>~$0.44 · $1.32</td>
+<td>~$0.20</td>
+<td>~$60</td>
+</tr>
+<tr class="odd">
+<td>Claude Haiku 4.5</td>
+<td>$1 · $5</td>
+<td>~$0.60</td>
+<td>~$190</td>
+</tr>
+<tr class="even">
+<td>OpenAI GPT-5.6</td>
+<td>$2 · $12</td>
+<td>~$1.40</td>
+<td>~$430</td>
+</tr>
+<tr class="odd">
+<td>Claude Opus</td>
+<td>$5 · $25</td>
+<td>~$3.00</td>
+<td>~$950</td>
+</tr>
+</tbody>
+</table>
+<p><span class="small muted">Estimado con ~2 000 tokens de imagen + 800 de texto por página; precios de agosto 2026. “El archivo entero”: los 269 reportes de la Defensoría desde 2004.</span></p>
+<div class="fragment">
+<p><strong>La jugada inteligente no es elegir bando:</strong> PaddleOCR extrae el texto <strong>gratis</strong>, y el modelo razona sobre ese texto — que cuesta centavos, no dólares. <span class="small">Excepción honesta: manuscritos y tablas muy dañadas — ahí los modelos de visión sí ganan.</span></p>
+</div>
+</section>
 <section id="paso-2-clasificar" class="slide level2 your-turn smaller">
 <h2>Paso 2 — clasificar</h2>
 <p>Ahora la parte que un Excel no puede hacer: leer <strong>de qué se trata</strong> cada conflicto.</p>

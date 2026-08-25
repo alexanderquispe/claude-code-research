@@ -279,6 +279,44 @@ patrón, escribe el código, lo corre, **ve que algo no cuadra y lo arregla**.
 
 [Además, Claude Code usa por dentro modelos pequeños y baratos (Haiku) para tareas de apoyo: resúmenes, títulos, búsquedas internas.]{.small .muted}
 
+## ¿Y si el PDF es una foto? PaddleOCR {.smaller}
+
+Los reportes recientes traen texto nativo. Pero los de **2004–2015** — como casi todo archivo histórico — son **escaneados**: el PDF es una imagen, y pdfplumber devuelve… nada.
+
+. . .
+
+Para eso existe **PaddleOCR**: un kit de OCR **gratuito y open source** (Apache 2.0) que corre **en su computadora** y convierte el escaneo en texto.
+
+- Versión actual **PP-OCRv6** (2026): un solo modelo lee **50 idiomas** — español incluido — y entiende tablas y estructura, no solo texto corrido.
+- Se pide igual que todo en este taller:
+
+```text
+En datos/antiguos/ hay reportes escaneados (sin texto). Instala
+PaddleOCR y conviértelos a texto en datos-limpios/ocr/, un archivo
+por reporte. Muéstrame una página de muestra para validar la
+calidad antes de correr todo.
+```
+
+[Descarga y documentación: **github.com/PaddlePaddle/PaddleOCR**]{.warm}
+
+## ¿Cuánto cuesta leer 100 páginas escaneadas? {.smaller}
+
+Las APIs de visión también pueden "leer" un escaneo — mandándole cada página como imagen. La diferencia está en la factura:
+
+| Herramienta | Tarifa (entrada · salida, por millón de tokens) | PDF de 100 págs. | El archivo entero (~31 500 págs.) |
+|---|---|---|---|
+| **PaddleOCR, local** | **no cobra** | **$0** | **$0** |
+| DeepSeek V4 (vision) | ~$0.44 · $1.32 | ~$0.20 | ~$60 |
+| Claude Haiku 4.5 | $1 · $5 | ~$0.60 | ~$190 |
+| OpenAI GPT-5.6 | $2 · $12 | ~$1.40 | ~$430 |
+| Claude Opus | $5 · $25 | ~$3.00 | ~$950 |
+
+[Estimado con ~2 000 tokens de imagen + 800 de texto por página; precios de agosto 2026. "El archivo entero": los 269 reportes de la Defensoría desde 2004.]{.small .muted}
+
+. . .
+
+**La jugada inteligente no es elegir bando:** PaddleOCR extrae el texto **gratis**, y el modelo razona sobre ese texto — que cuesta centavos, no dólares. [Excepción honesta: manuscritos y tablas muy dañadas — ahí los modelos de visión sí ganan.]{.small}
+
 ## Paso 2 — clasificar {.your-turn .smaller}
 
 Ahora la parte que un Excel no puede hacer: leer **de qué se trata** cada conflicto.
