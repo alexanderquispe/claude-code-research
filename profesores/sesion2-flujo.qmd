@@ -363,13 +363,11 @@ marca de agua de la biblioteca encima.
 
 ## La idea
 
-Sus conversaciones académicas más valiosas son **habladas**: clases, seminarios, asesorías de tesis, sus propias presentaciones. Y normalmente… **se evaporan**.
+Sus conversaciones más valiosas son **habladas** — clases, seminarios, asesorías — y normalmente **se evaporan**.
 
-![](../figures/es/whisper-pipeline.svg){width=82% fig-align="center"}
+![](../figures/es/whisper-pipeline.svg){.nostretch width=94% fig-align="center"}
 
-Whisper es un transcriptor **gratuito y local** — el audio nunca sale de su computadora. Con las computadoras actuales, ~2 horas de clase se transcriben **en minutos**.
-
-[Y aquí sí manda el chip: en Mac, mlx-whisper **usa la GPU** — los 12 minutos del video del ejercicio se transcriben en **9 segundos**, unas 80 veces más rápido que escucharlo. Misma máquina en la que PaddleOCR va a CPU: **no todas las librerías aprovechan su hardware, y conviene preguntar cuál sí**.]{.small .muted}
+**Whisper**: transcriptor **gratuito y local** — el audio nunca sale de su máquina. [En Mac, mlx-whisper usa la GPU: los 12 minutos del video del ejercicio, transcritos en **9 segundos**.]{.small .muted}
 
 ## La receta, conversando con Claude {.smaller}
 
