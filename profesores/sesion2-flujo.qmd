@@ -375,10 +375,11 @@ versión de Whisper me conviene instalar. Instálala.
 **Paso 2 — transcribir y pedir algo útil:**
 
 ```text
-En Descargas está clase-martes.mp4. Transcríbelo a texto con
-marcas de tiempo y guárdalo en transcripciones/. Después léelo y
-dame: los temas donde los estudiantes hicieron más preguntas, y
-tres sugerencias concretas para mejorar la clase.
+En data/raw/ está videoplayback.mp4: un video de ~12 minutos
+sobre conflictos sociales. Transcríbelo con marcas de tiempo y
+guarda el texto en transcripciones/. Después léelo y dime:
+qué actores aparecen, qué demandas plantean, y con qué casos de
+los reportes de la Defensoría podría conectarse lo que narra.
 ```
 
 ## Esto no es teoría: lo hice con este taller {.smaller}
