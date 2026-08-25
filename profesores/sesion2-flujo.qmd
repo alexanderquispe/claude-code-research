@@ -317,6 +317,10 @@ Las APIs de visión también pueden "leer" un escaneo — mandándole cada pági
 
 **La jugada inteligente no es elegir bando:** PaddleOCR extrae el texto **gratis**, y el modelo razona sobre ese texto — que cuesta centavos, no dólares. [Excepción honesta: manuscritos y tablas muy dañadas — ahí los modelos de visión sí ganan.]{.small}
 
+## El pipeline, ahora con fotos {.smaller}
+
+![](../figures/es/pipeline-ocr.svg){.nostretch width=90% fig-align="center"}
+
 ## Paso 2 — clasificar {.your-turn .smaller}
 
 Ahora la parte que un Excel no puede hacer: leer **de qué se trata** cada conflicto.
