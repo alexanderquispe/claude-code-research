@@ -133,6 +133,28 @@ patrón, escribe el código, lo corre, **ve que algo no cuadra y lo arregla**.
 
 [Aviso: los nombres de los archivos son un desastre (`N°-259`, `n.º-258`, `n-265-VF`). Son los nombres reales de la Defensoría. Nadie limpió nada para ustedes.]{.small .muted}
 
+## Lo que hizo por detrás, paso a paso {.smaller}
+
+![](../figures/es/pipeline-extraccion.svg){.nostretch width=84% fig-align="center"}
+
+## ¿Quién hace qué? (y qué viaja a dónde) {.smaller}
+
+| Pieza | Dónde vive | Qué hace en este ejercicio |
+|---|---|---|
+| **Opus** — el modelo que eligieron en `/model` | Servidores de Anthropic | Razona: entiende el pedido, **escribe el código**, interpreta los errores, decide cuándo está listo |
+| **pdfplumber** — librería de Python, gratuita | **Su computadora** | El trabajo pesado: abre las ~1 200 páginas y extrae el texto. El modelo nunca "lee" todo eso |
+| Las herramientas (`Read`, `Write`, `Bash`) | Su computadora | Las manos: conectan al modelo con sus archivos y su Python |
+
+. . .
+
+**Qué viaja a Anthropic:** su pedido, las 2–3 páginas de muestra que hojea, y los errores del script. **Qué no viaja:** los 10 PDF completos — esos los procesa el script, en local.
+
+. . .
+
+[Ojo: en el **Paso 2** (clasificar) la división se invierte — ahí sí es **el modelo** quien lee cada narrativa y decide la categoría. Eso es trabajo de cerebro, no de obrero; por eso ese paso sí consume tokens en serio.]{.warm}
+
+[Además, Claude Code usa por dentro modelos pequeños y baratos (Haiku) para tareas de apoyo: resúmenes, títulos, búsquedas internas.]{.small .muted}
+
 ## Paso 2 — clasificar {.your-turn .smaller}
 
 Ahora la parte que un Excel no puede hacer: leer **de qué se trata** cada conflicto.

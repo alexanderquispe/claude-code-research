@@ -354,6 +354,55 @@ con una columna que indique de qué reporte salió.</code></pre>
 <p><span class="small muted">Aviso: los nombres de los archivos son un desastre (<code>N°-259</code>, <code>n.º-258</code>, <code>n-265-VF</code>). Son los nombres reales de la Defensoría. Nadie limpió nada para ustedes.</span></p>
 </div>
 </section>
+<section id="lo-que-hizo-por-detrás-paso-a-paso" class="slide level2 smaller">
+<h2>Lo que hizo por detrás, paso a paso</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/es/pipeline-extraccion.svg" class="quarto-figure quarto-figure-center" style="width:84.0%"></p>
+</figure>
+</div>
+</section>
+<section id="quién-hace-qué-y-qué-viaja-a-dónde" class="slide level2 smaller">
+<h2>¿Quién hace qué? (y qué viaja a dónde)</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pieza</th>
+<th>Dónde vive</th>
+<th>Qué hace en este ejercicio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Opus</strong> — el modelo que eligieron en <code>/model</code></td>
+<td>Servidores de Anthropic</td>
+<td>Razona: entiende el pedido, <strong>escribe el código</strong>, interpreta los errores, decide cuándo está listo</td>
+</tr>
+<tr class="even">
+<td><strong>pdfplumber</strong> — librería de Python, gratuita</td>
+<td><strong>Su computadora</strong></td>
+<td>El trabajo pesado: abre las ~1 200 páginas y extrae el texto. El modelo nunca “lee” todo eso</td>
+</tr>
+<tr class="odd">
+<td>Las herramientas (<code>Read</code>, <code>Write</code>, <code>Bash</code>)</td>
+<td>Su computadora</td>
+<td>Las manos: conectan al modelo con sus archivos y su Python</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><strong>Qué viaja a Anthropic:</strong> su pedido, las 2–3 páginas de muestra que hojea, y los errores del script. <strong>Qué no viaja:</strong> los 10 PDF completos — esos los procesa el script, en local.</p>
+</div>
+<div class="fragment">
+<p><span class="warm">Ojo: en el <strong>Paso 2</strong> (clasificar) la división se invierte — ahí sí es <strong>el modelo</strong> quien lee cada narrativa y decide la categoría. Eso es trabajo de cerebro, no de obrero; por eso ese paso sí consume tokens en serio.</span></p>
+<p><span class="small muted">Además, Claude Code usa por dentro modelos pequeños y baratos (Haiku) para tareas de apoyo: resúmenes, títulos, búsquedas internas.</span></p>
+</div>
+</section>
 <section id="paso-2-clasificar" class="slide level2 your-turn smaller">
 <h2>Paso 2 — clasificar</h2>
 <p>Ahora la parte que un Excel no puede hacer: leer <strong>de qué se trata</strong> cada conflicto.</p>
