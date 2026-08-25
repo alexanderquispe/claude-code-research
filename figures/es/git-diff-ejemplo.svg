@@ -1,0 +1,32 @@
+<svg viewBox="0 0 1000 372" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <!-- ventana terminal -->
+  <rect x="10" y="8" width="980" height="318" rx="12" fill="#1a202c"/>
+  <circle cx="38" cy="34" r="7" fill="#ff5f57"/>
+  <circle cx="62" cy="34" r="7" fill="#febc2e"/>
+  <circle cx="86" cy="34" r="7" fill="#28c840"/>
+
+  <g font-family="Menlo, Consolas, monospace" font-size="15">
+    <text x="40" y="76" fill="#8b949e">&gt; ¿Qué cambió en el proyecto desde "punto de partida"?</text>
+
+    <text x="40" y="112" fill="#79b8ff" font-weight="700">bibliografia-borrador.md</text>
+
+    <text x="40" y="142" fill="#8b949e">   ## Canon, descentralización y conflicto</text>
+
+    <rect x="30" y="152" width="940" height="26" fill="#4b1e1e"/>
+    <text x="40" y="171" fill="#ffb4ab">-  Arellano-Yanguas, J. (2011). A Thoroughly Modern Resource Curse?</text>
+
+    <rect x="30" y="180" width="940" height="26" fill="#173a24"/>
+    <text x="40" y="199" fill="#7ee2a1">+  Arellano-Yanguas, J. (2019). A Thoroughly Modern Resource Curse?</text>
+
+    <text x="40" y="227" fill="#8b949e">   > **La referencia central de mi argumento.** El canon, al…</text>
+
+    <text x="40" y="261" fill="#8b949e">   ## Antropología y ecología política</text>
+
+    <rect x="30" y="271" width="940" height="26" fill="#4b1e1e"/>
+    <text x="40" y="290" fill="#ffb4ab">-  > La dimensión ontológica: las montañas como seres con los que…</text>
+
+    <text x="40" y="316" fill="#8b949e">   Salas Carreño, G. (2016). Mining and the living materiality…</text>
+  </g>
+
+  <text x="500" y="356" font-size="15" text-anchor="middle" fill="#556"><tspan fill="#b3261e" font-weight="700">rojo</tspan> — como estaba · <tspan fill="#1b7f4b" font-weight="700">verde</tspan> — como quedó · gris — contexto que no cambió</text>
+</svg>

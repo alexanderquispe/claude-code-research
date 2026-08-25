@@ -90,107 +90,26 @@ Cuando aprueben el plan, cambien con <kbd>Shift</kbd>+<kbd>Tab</kbd> a **accept 
 
 ## "¿Cómo estaba mi archivo antes?" {.smaller}
 
-La pregunta llegó de uno de ustedes tras la primera sesión:
+La pregunta llegó de uno de ustedes tras la primera sesión: *"cada vez que Claude modifica un archivo, tengo que preguntarle cómo estaba antes — por si acaso"*.
 
-> *"Cada vez que Claude modifica un archivo, tengo que preguntarle cómo estaba antes — por si acaso."*
+![](../figures/es/git-memoria-vs-disco.svg){.nostretch width=74% fig-align="center"}
 
-. . .
+[Ese programa que guarda las versiones se llama **Git**: gratuito, vive en su computadora, y Claude lo maneja por ustedes.]{.warm}
 
-Es la pregunta correcta… dirigida al lugar equivocado. **La conversación con Claude no es un archivo de versiones**: se resume, se borra, se cierra. Y el archivo sobrescrito no guarda su propio pasado.
+## Qué es: fotos de su carpeta, con fecha y mensaje {.smaller}
 
-. . .
+![](../figures/es/git-linea-tiempo.svg){.nostretch width=78% fig-align="center"}
 
-[La respuesta correcta es un programa que lleva 20 años resolviendo exactamente esto — y que Claude Code sabe usar por ustedes: **Git**.]{.warm}
+**Todo el vocabulario que necesitan:** el **repositorio** es la carpeta vigilada · una **versión** (*commit*) es una foto completa, con fecha y mensaje · el **diff** es la comparación entre dos fotos. [Y adiós a `paper_final_v2_AHORA_SI(3).docx`: un solo archivo, toda la historia.]{.muted}
 
-## Qué es Git {.smaller}
+## ⚡ Su turno ① — enciendan la máquina del tiempo {.your-turn .smaller}
 
-Un programa **gratuito** que vive en su computadora y hace una sola cosa:
-
-> Guardar **fotos completas de su carpeta** cada vez que uno se lo pide — con fecha y un mensaje que dice qué cambió.
-
-. . .
-
-- Como el **control de cambios de Word**, pero para la carpeta *entera* del proyecto: el documento, los datos, el código, las notas.
-- Es **el** estándar: lo usa todo el software del mundo — y por eso Claude Code lo domina a la perfección.
-- Todo pasa **en su disco**. Nada se sube a ningún lado.
-
-## Lo que hacemos hoy sin Git {.smaller}
-
-| Sin Git | Con Git |
-|---|---|
-| `paper_final_v2.docx` · `paper_final_v2_AHORA_SI.docx` · `paper_v3 (copia).docx` | **Un solo archivo**, con toda su historia guardada aparte |
-| "¿Cuál era la buena?" — nadie sabe | Cada versión tiene **fecha y mensaje**: "introducción reescrita" |
-| Comparar versiones: abrir dos Word, leer a ojo | *"¿Qué cambió?"* → la lista exacta, línea por línea |
-| Volver atrás: rezar para que exista la copia | *"Vuelve a la versión del martes"* → hecho |
-
-. . .
-
-[El desorden de `_v2_FINAL(3)` no es un defecto de ustedes: es lo que pasa cuando no hay sistema. Git **es** el sistema.]{.warm}
-
-## Tres palabras, y ya hablaron Git {.smaller}
-
-| Palabra | Qué es | En español de a pie |
-|---|---|---|
-| **Repositorio** | La carpeta vigilada por Git | "mi proyecto, con historia" |
-| **Versión** (*commit*) | Una foto completa de la carpeta, con fecha y mensaje | "guarda cómo está todo ahora" |
-| **Diff** | La comparación exacta entre dos fotos | "¿qué cambió entre ayer y hoy?" |
-
-. . .
-
-No hay más vocabulario que aprender hoy. [Existen más conceptos (ramas, la nube de GitHub) — ninguno hace falta para lo que ustedes necesitan.]{.small .muted}
-
-## La línea de tiempo de su proyecto {.smaller}
-
-![](../figures/es/git-linea-tiempo.svg){.nostretch width=84% fig-align="center"}
-
-Su carpeta siempre muestra **HOY** — pero cualquier foto anterior se puede **consultar** (el diff) o **restaurar** (volver atrás), sin perder nada.
-
-## Ustedes no escriben comandos: piden {.smaller}
-
-Git tiene fama de difícil por sus comandos. **Ustedes no van a escribir ninguno** — se pide en español, como todo en este taller:
-
-```text
-Guarda una versión de todo el proyecto con el mensaje
-"antes de rehacer las tablas".
-```
-
-```text
-¿Qué cambió en bibliografia.md desde la última versión guardada?
-```
-
-```text
-Vuelve la introducción del documento a como estaba
-en la versión del lunes.
-```
-
-. . .
-
-[Claude traduce cada pedido al comando de Git correcto, lo ejecuta y les muestra el resultado.]{.warm}
-
-## Por qué esto cambia cómo trabajan con Claude {.smaller}
-
-![](../figures/es/git-memoria-vs-disco.svg){.nostretch width=80% fig-align="center"}
-
-## La red de seguridad completa {.smaller}
-
-Con Git en la carpeta, cambian tres cosas de fondo:
-
-1. **Todo es reversible.** Pueden dejar a Claude trabajar en auto mode con tranquilidad: si algo sale mal, *"vuelve a la versión anterior"* y listo.
-2. **Las respuestas sobre cambios son exactas.** *"¿Qué modificaste?"* ya no depende de la memoria de nadie: es el diff, línea por línea.
-3. **La historia sobrevive.** Cierren la sesión, apaguen la computadora, vuelvan en un mes: las versiones siguen ahí.
-
-. . .
-
-::: {.callout-tip}
-Esta es la respuesta de fondo a la pregunta del inicio: no hay que *preguntarle* a Claude cómo estaba el archivo — hay que **guardarlo en Git y pedirle que consulte**.
-:::
-
-## Su turno 1: instalar y estrenar {.your-turn .smaller}
+En la carpeta del proyecto de ejemplo, pidan **literalmente esto**:
 
 ```text
 ¿Tengo Git instalado? Si no, instálalo. Luego convierte esta
 carpeta en un repositorio y guarda la primera versión de todo
-con el mensaje "punto de partida".
+el proyecto con el mensaje "punto de partida".
 ```
 
 . . .
@@ -198,62 +117,64 @@ con el mensaje "punto de partida".
 **Qué observar:**
 
 1. En Mac, Git suele venir instalado; en Windows, Claude lo instala en un minuto.
-2. Aparece una carpeta oculta **`.git`** — la caja donde vivirán todas las fotos. **No se toca.**
-3. Nada más cambió: sus archivos siguen idénticos. Git observa, no estorba.
+2. Aparece una carpeta oculta **`.git`** — la caja donde vivirán todas las fotos. No se toca.
+3. Sus archivos siguen **idénticos**. Git observa; no estorba.
 
-## Su turno 2: romper y volver {.your-turn .smaller}
+## ⚡ Su turno ② — rompan, comparen, vuelvan {.your-turn .smaller}
 
-Prueben la máquina del tiempo completa, en tres pedidos:
+Tres pedidos, en orden, sobre la bibliografía del proyecto:
 
 ```text
-Reescribe el primer párrafo de notas/ideas-sueltas.md
-en tono más formal.
+1. En bibliografia-borrador.md cambia el año de Arellano-Yanguas
+   de 2011 a 2019, y borra la nota que sigue a Salas Carreño.
 ```
 
 ```text
-¿Qué cambió exactamente? Muéstrame el antes y el después.
+2. ¿Qué cambió en el proyecto desde "punto de partida"?
+   Muéstramelo línea por línea.
 ```
 
 ```text
-No me convence: vuelve el archivo a como estaba.
+3. Uy, no — vuelve TODO a como estaba en "punto de partida".
 ```
 
 . . .
 
-**Qué observar:** el diff marca lo viejo y lo nuevo línea por línea, y la reversión es **instantánea y total**. Acaban de perderle el miedo a que Claude toque sus archivos.
+[Fíjense en lo que eligieron romper: **la referencia central del argumento** ahora cita un año falso — a ojo, nadie lo notaría jamás.]{.warm}
 
-## El hábito — y cómo hacerlo automático {.smaller}
+## Lo que les va a mostrar el pedido 2 {.smaller}
 
-**Cuándo guardar una versión:** al empezar la jornada, antes de cualquier cambio grande, y al terminar — con un mensaje que su yo del futuro entienda.
+![](../figures/es/git-diff-ejemplo.svg){.nostretch width=80% fig-align="center"}
 
-. . .
+El diff **lo canta en un segundo**: el año adulterado y la nota borrada, línea por línea. Y el pedido 3 restaura todo, **instantáneo y total**. [Acaban de perderle el miedo a que Claude toque sus archivos.]{.warm}
 
-Y la parte elegante: **no hace falta acordarse**. Agréguenle una línea al `CLAUDE.md` del proyecto:
+## Que se guarde solo: dos líneas en `CLAUDE.md` {.smaller}
+
+No hace falta acordarse de guardar versiones. Agréguenle esto al `CLAUDE.md` del proyecto (la memoria de ayer):
 
 ```markdown
+## Versiones
 - Antes de modificar cualquier archivo, guarda una versión en Git.
-- Al final de cada sesión de trabajo, guarda una versión con un
-  mensaje que resuma qué se logró.
+- Al terminar cada sesión, guarda una versión con un mensaje que
+  resuma qué se logró.
 ```
 
 . . .
 
-[La memoria del proyecto (ayer) + la máquina del tiempo (hoy): Claude guarda versiones **solo**, sin que ustedes lo pidan.]{.warm}
+Desde ese momento, **Claude guarda versiones solo** — ustedes solo piden volver cuando haga falta.
 
-## Los límites honestos {.smaller}
+. . .
 
-- **No es un respaldo.** Las fotos viven en el mismo disco que la carpeta: si la laptop muere, mueren juntas. La copia en la nube existe (GitHub) — **otro día**; por ahora, respalden como siempre.
-- **Brilla con texto:** `.md`, `.tex`, `.csv`, código — ahí el diff es línea por línea. Con Word o PDF guarda las versiones igual, pero compara peor. [Otra razón por la que este taller prefiere markdown y LaTeX.]{.small}
-- **Los datos crudos pesados** (los ZIP del MINEM, videos) mejor quedan fuera de las fotos — Claude sabe configurarlo si se lo piden.
+[Límites honestos: Git **no es respaldo** (vive en el mismo disco — la nube, otro día) y brilla con texto (`.md`, `.tex`, `.csv`); los ZIP pesados mejor quedan fuera.]{.small .muted}
 
-## Lo que se llevan de este bloque {.smaller}
+## Lo que cambia desde hoy {.smaller}
 
 | Antes | Ahora |
 |---|---|
 | "¿Cómo estaba ayer?" → preguntarle a Claude, cruzar los dedos | → preguntarle **al repositorio**: respuesta exacta |
 | Miedo a que Claude rompa algo | Todo cambio es **reversible** |
 | `paper_v2_FINAL(3).docx` | Una carpeta limpia, con **toda su historia** |
-| Guardar versiones: un hábito más que mantener | Una línea en `CLAUDE.md` y **se guarda solo** |
+| Guardar versiones: un hábito más que mantener | Dos líneas en `CLAUDE.md` y **se guarda solo** |
 
 # Bloque 3 — ⭐ De 10 PDFs a una base de datos
 
