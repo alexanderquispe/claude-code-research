@@ -107,6 +107,12 @@ Copiar 103 casos de un PDF a un Excel toma una tarde. Por doce meses, dos semana
 Y hay que hacerlo otra vez el mes que viene.
 :::
 
+## Así se ve la "base de datos" hoy {.smaller}
+
+![](../figures/screenshots/defensoria-raw.png){.nostretch width=72% fig-align="center"}
+
+La página 54 del reporte n.º 268, **tal cual**: cada caso trae `Tipo`, fecha de ingreso, `Caso` (la narrativa), `Ubicación` y `Actores` — texto corrido, caso tras caso, por **122 páginas**. [Todo lo que necesitamos ya está aquí. Solo que en el peor formato posible para analizarlo.]{.warm}
+
 ## Paso 1 — extraer {.your-turn .smaller}
 
 En `datos/` del proyecto de ejemplo están los 10 reportes.
