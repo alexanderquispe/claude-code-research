@@ -256,12 +256,17 @@ Alexander Quispe
 <td>Pausa 2</td>
 </tr>
 <tr class="odd">
-<td>8:30 – 8:50</td>
+<td>8:30 – 8:45</td>
 <td>4</td>
 <td>Whisper: sus clases se vuelven material</td>
 </tr>
 <tr class="even">
-<td>8:50 – 9:00</td>
+<td>8:45 – 8:55</td>
+<td>5</td>
+<td>MCPs: conectar Claude con su correo, Drive y más</td>
+</tr>
+<tr class="odd">
+<td>8:55 – 9:00</td>
 <td>—</td>
 <td>Háblenle, no le tipeen + cierre</td>
 </tr>
@@ -760,7 +765,7 @@ de la Defensoría podría conectarse lo que narra.</code></pre>
 </section>
 <section id="esto-no-es-teoría-lo-hice-con-este-taller" class="slide level2 smaller">
 <h2>Esto no es teoría: lo hice con este taller</h2>
-<p>Transcribí la grabación de mi clase piloto con los asistentes del Q-LAB (97 minutos → 90 segundos de procesamiento) y le pedí feedback. Me respondió, entre otras cosas:</p>
+<p>Transcribí mi clase piloto con los asistentes del Q-LAB (97 min → <strong>90 segundos</strong>) y le pedí feedback:</p>
 <blockquote>
 <p><em>“El material del día se agotó en 59 minutos; los 38 restantes fueron improvisados. La clase no estaba calibrada en tiempo.”</em></p>
 </blockquote>
@@ -774,8 +779,95 @@ de la Defensoría podría conectarse lo que narra.</code></pre>
 <p>Tenía razón en las tres. <strong>Esta sesión que están viendo fue rediseñada con ese feedback.</strong></p>
 </div>
 <div class="fragment">
-<p><span class="small muted"><strong>Y la transcripción también se verifica:</strong> de los 491 fragmentos del video del ejercicio, <strong>195 son solo “Música” y 263 están vacíos</strong> — apenas 33 son habla. Además escribe <em>“Anacocha”</em> donde se dice <strong>Yanacocha</strong>. Revisen <strong>cobertura</strong> y <strong>nombres propios</strong> antes de citar.</span></p>
-<p><span class="warm">Usos inmediatos: mejorar sus cursos, actas automáticas de asesorías de tesis, procesar entrevistas de campo (con consentimiento), no perder nunca los comentarios que reciben al presentar un paper.</span></p>
+<p><span class="small muted"><strong>La transcripción también se verifica:</strong> del video del ejercicio, solo 33 de 491 fragmentos son habla — y escribe <em>“Anacocha”</em> por <strong>Yanacocha</strong>. Revisen cobertura y nombres propios antes de citar.</span></p>
+<p><span class="warm">Usos inmediatos: mejorar sus cursos, actas de asesorías, entrevistas de campo (con consentimiento), y los comentarios que reciben al presentar.</span></p>
+</div>
+</section></section>
+<section>
+<section id="bloque-5-mcps-conectar-claude-con-sus-otras-apps" class="title-slide slide level1 center">
+<h1>Bloque 5 — MCPs: conectar Claude con sus otras apps</h1>
+
+</section>
+<section id="qué-es-un-mcp" class="slide level2 smaller">
+<h2>Qué es un MCP</h2>
+<p>Hasta ahora Claude ve <strong>su carpeta</strong>. Pero su vida académica también vive en el correo, el calendario, el Drive…</p>
+<div class="fragment">
+<p>Un <strong>MCP</strong> (<em>Model Context Protocol</em>) es un <strong>enchufe estándar</strong> que le da a Claude acceso — <strong>con su permiso</strong> — a otra aplicación. Piénsenlo como el USB de las apps: un conector universal.</p>
+<ul>
+<li>Se conecta <strong>una sola vez</strong>, con su login normal (el de Google, por ejemplo), guiados por el propio Claude: <em>“conéctame Gmail por MCP”</em>.</li>
+<li>Desde entonces, se pide <strong>en español</strong>, como todo lo de este taller.</li>
+<li>Es un estándar abierto — lo creó Anthropic y hoy lo usa toda la industria.</li>
+</ul>
+</div>
+</section>
+<section id="los-que-más-les-van-a-servir" class="slide level2 smaller">
+<h2>Los que más les van a servir</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>MCP</th>
+<th>Qué le permite a Claude</th>
+<th>Un pedido real</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Gmail</strong></td>
+<td>Leer y buscar su correo; preparar borradores</td>
+<td><em>“Busca los correos del editor de la revista y dime en qué quedó la revisión”</em></td>
+</tr>
+<tr class="even">
+<td><strong>Google Calendar</strong></td>
+<td>Ver y crear eventos</td>
+<td><em>“Encuentra un hueco de 2 horas esta semana para el paper y resérvalo”</em></td>
+</tr>
+<tr class="odd">
+<td><strong>Google Drive</strong></td>
+<td>Leer sus documentos compartidos</td>
+<td><em>“Lee los comentarios de mi coautora en el Drive y aplícalos al documento”</em></td>
+</tr>
+<tr class="even">
+<td><strong>GitHub</strong></td>
+<td>Traer paquetes de replicación publicados</td>
+<td><em>“El paquete de replicación de ese paper está en GitHub: descárgalo y explícamelo”</em></td>
+</tr>
+<tr class="odd">
+<td><strong>Zotero</strong> <em>(comunidad)</em></td>
+<td>Su biblioteca de referencias</td>
+<td><em>“Agrega a mi Zotero los papers de papers/, con metadatos completos”</em></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><span class="small muted">Con <code>/mcp</code> dentro de Claude Code ven cuáles tienen conectados. Hay cientos más — el criterio: ¿dónde vive información que hoy le copian a mano?</span></p>
+</div>
+</section>
+<section id="la-letra-chica-importa" class="slide level2 smaller">
+<h2>La letra chica (importa)</h2>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Conectar el correo es abrir la puerta de su correo</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Cada acción sensible (enviar, borrar, crear) <strong>pide su permiso</strong> — leer, no siempre. Conecten solo lo que necesitan.</li>
+<li>Solo en <strong>su</strong> computadora. Nunca conecten sus cuentas en una máquina compartida o del aula.</li>
+<li>Claude <strong>nunca envía un correo sin mostrarles el borrador</strong> — y si un MCP les pide la contraseña <em>en el chat</em>, algo anda mal: el login siempre ocurre en el navegador, en la página oficial.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>El patrón de siempre, una vez más:</strong> ustedes se loguean (el navegador, la página oficial); él opera con el acceso que ustedes le dieron — igual que con la biblioteca PUCP en la Sesión 1.</p>
 </div>
 </section>
 <section id="el-último-consejo-háblenle-no-le-tipeen" class="slide level2 smaller">
