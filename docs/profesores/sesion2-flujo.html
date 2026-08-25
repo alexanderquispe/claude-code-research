@@ -228,7 +228,7 @@ Alexander Quispe
 <tr class="odd">
 <td>6:00 – 6:20</td>
 <td>1</td>
-<td>Repaso y Plan Mode con material propio</td>
+<td>Repaso y Plan Mode</td>
 </tr>
 <tr class="even">
 <td>6:20 – 6:55</td>
@@ -340,29 +340,6 @@ Alexander Quispe
 <p>¿Cuándo? <strong>Siempre que empiecen algo nuevo o no sepan por dónde ir.</strong> Claude explora, les presenta un plan numerado, ustedes lo leen, cambian lo que quieran, y recién entonces se ejecuta.</p>
 <p><span class="warm">Revisar un plan cuesta 2 minutos. Revisar 40 archivos modificados cuesta una tarde.</span></p>
 </div>
-</section>
-<section id="su-turno-plan-mode-con-material-propio" class="slide level2 your-turn smaller">
-<h2>Su turno: Plan Mode con material propio</h2>
-<p>Sobre la carpeta de un curso o proyecto que tengan a la mano:</p>
-<pre class="text"><code>Este material lo preparé hace tiempo. Quiero modernizarlo: revisa
-los documentos, dime qué está desactualizado o inconsistente, y
-proponme un plan de actualización. No cambies nada todavía.</code></pre>
-<div class="fragment">
-<p><strong>Qué observar:</strong> el plan llega con preguntas de vuelta — <em>¿actualizo esto?, ¿conservo aquello?</em> Ese ida y vuelta <strong>es</strong> el modo de trabajo: ustedes deciden, él ejecuta.</p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Nota</strong></p>
-</div>
-<div class="callout-content">
-<p>Cuando aprueben el plan, cambien con <kbd>Shift</kbd>+<kbd>Tab</kbd> a <strong>accept edits on</strong> (o <strong>auto mode on</strong>) y déjenlo trabajar. Al final pidan: <em>“resúmeme todo lo que cambiaste”</em>.</p>
-</div>
-</div>
-</div>
-</div>
 </section></section>
 <section>
 <section id="bloque-2-git-la-máquina-del-tiempo-de-su-carpeta" class="title-slide slide level1 center">
@@ -450,10 +427,10 @@ el proyecto con el mensaje "punto de partida".</code></pre>
 <section id="que-se-guarde-solo-dos-líneas-en-claude.md" class="slide level2 smaller">
 <h2>Que se guarde solo: dos líneas en <code>CLAUDE.md</code></h2>
 <p>No hace falta acordarse de guardar versiones. Agréguenle esto al <code>CLAUDE.md</code> del proyecto (la memoria de ayer):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Versiones</span></span>
-<span id="cb9-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Antes de modificar cualquier archivo, guarda una versión en Git.</span>
-<span id="cb9-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Al terminar cada sesión, guarda una versión con un mensaje que</span>
-<span id="cb9-4"><a href="" aria-hidden="true" tabindex="-1"></a>  resuma qué se logró.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Versiones</span></span>
+<span id="cb8-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Antes de modificar cualquier archivo, guarda una versión en Git.</span>
+<span id="cb8-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Al terminar cada sesión, guarda una versión con un mensaje que</span>
+<span id="cb8-4"><a href="" aria-hidden="true" tabindex="-1"></a>  resuma qué se logró.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="fragment">
 <p>Desde ese momento, <strong>Claude guarda versiones solo</strong> — ustedes solo piden volver cuando haga falta.</p>
 </div>
@@ -575,9 +552,9 @@ con una columna que indique de qué reporte salió.</code></pre>
 <td>Razona: entiende el pedido, <strong>escribe el código</strong>, interpreta los errores, decide cuándo está listo</td>
 </tr>
 <tr class="even">
-<td><strong>pdfplumber</strong> — librería de Python, gratuita</td>
+<td><strong>PyMuPDF</strong> — librería de Python, gratuita</td>
 <td><strong>Su computadora</strong></td>
-<td>El trabajo pesado: abre las ~1 200 páginas y extrae el texto. El modelo nunca “lee” todo eso</td>
+<td>El trabajo pesado: abre las ~1 200 páginas y extrae el texto <strong>con sus coordenadas</strong>. El modelo nunca “lee” todo eso</td>
 </tr>
 <tr class="odd">
 <td>Las herramientas (<code>Read</code>, <code>Write</code>, <code>Bash</code>)</td>
@@ -593,6 +570,44 @@ con una columna que indique de qué reporte salió.</code></pre>
 <p><span class="warm">Ojo: cuando el trabajo sea <strong>leer y juzgar</strong> cada narrativa — clasificar demandas, resumir casos — la división se invierte: eso es trabajo de cerebro, no de obrero, y sí consume tokens en serio.</span></p>
 <p><span class="small muted">Además, Claude Code usa por dentro modelos pequeños y baratos (Haiku) para tareas de apoyo: resúmenes, títulos, búsquedas internas.</span></p>
 </div>
+</section>
+<section id="el-momento-en-que-la-extracción-no-cuadra" class="slide level2 smaller">
+<h2>⚠️ El momento en que la extracción no cuadra</h2>
+<p>Corrí este ejercicio sobre el reporte n.º 269 y salieron <strong>tres números distintos</strong> para la misma pregunta — <em>¿cuántos casos hay?</em></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Cifra</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Conflictos que el propio reporte declara en su página 2</td>
+<td><strong>191</strong></td>
+</tr>
+<tr class="even">
+<td>Veces que aparece la palabra <code>Caso:</code> en el PDF</td>
+<td><strong>103</strong></td>
+</tr>
+<tr class="odd">
+<td>Casos con ficha completa: descripción <strong>y</strong> actores</td>
+<td><strong>64</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>Tres razones, todas verificables abriendo el PDF:</p>
+<ol type="1">
+<li><code>Caso:</code> no marca un tipo de registro sino <strong>tres</strong> — fichas de mediación, mesas de diálogo y conflictos.</li>
+<li>El reporte <strong>narra en detalle solo los casos con hechos nuevos del mes</strong>; los demás aparecen únicamente en tablas resumidas.</li>
+<li>El formato <strong>cambia entre reportes</strong>: solo el n.º 269 numera los casos con <code>Código:</code>.</li>
+</ol>
+</div>
+<div class="fragment">
+<p><span class="warm">Quien no valida se lleva una base que cubre <strong>la mitad del universo</strong> y sobrerrepresenta los conflictos ruidosos — sin saberlo. En un paper, eso es fatal.</span></p>
+<p><span class="small muted">La regla de la sesión pasada, mudada de las citas a los datos: <strong>cada reporte publica sus propios totales — úsenlos</strong>.</span></p>
+</div>
 </section></section>
 <section>
 <section id="pausa-1-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
@@ -601,17 +616,29 @@ con una columna que indique de qué reporte salió.</code></pre>
 </section>
 <section id="y-si-el-pdf-es-una-foto-paddleocr" class="slide level2 smaller">
 <h2>¿Y si el PDF es una foto? PaddleOCR</h2>
-<p>Los reportes recientes traen texto nativo. Pero los de <strong>2004–2015</strong> — como casi todo archivo histórico — son <strong>escaneados</strong>: el PDF es una imagen, y pdfplumber devuelve… nada.</p>
+<p>Los reportes recientes traen texto nativo. Pero el archivo histórico —lo que está en bibliotecas— es <strong>escaneado</strong>: el PDF es una foto, y PyMuPDF devuelve… nada.</p>
+<p>En <code>datos/antiguos/</code> les dejé un caso real: la revista <strong>QUEHACER n.º 173</strong>, 132 páginas escaneadas con la marca de agua de la biblioteca de San Marcos encima.</p>
 <div class="fragment">
-<p>Para eso existe <strong>PaddleOCR</strong>: un kit de OCR <strong>gratuito y open source</strong> (Apache 2.0) que corre <strong>en su computadora</strong> y convierte el escaneo en texto.</p>
+<p>Para eso existe <strong>PaddleOCR</strong>: un kit de OCR <strong>gratuito y open source</strong> (Apache 2.0) que corre <strong>en su computadora</strong>.</p>
 <ul>
-<li>Versión actual <strong>PP-OCRv6</strong> (2026): un solo modelo lee <strong>50 idiomas</strong> — español incluido — y entiende tablas y estructura, no solo texto corrido.</li>
-<li>Se pide igual que todo en este taller:</li>
+<li>Versión <strong>PP-OCRv6</strong> (2026): un solo modelo lee <strong>50 idiomas</strong> — español incluido — y entiende tablas y estructura, no solo texto corrido.</li>
+<li>Lo corrí sobre esas 132 páginas: <strong>6 min 32 s</strong>, confianza media <strong>0,993</strong>.</li>
 </ul>
-<pre class="text"><code>En datos/antiguos/ hay reportes escaneados (sin texto). Instala
-PaddleOCR y conviértelos a texto en datos-limpios/ocr/, un archivo
-por reporte. Muéstrame una página de muestra para validar la
-calidad antes de correr todo.</code></pre>
+</div>
+<div class="fragment">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Si trabajan en Mac, sépanlo antes de la clase</strong></p>
+</div>
+<div class="callout-content">
+<p>PaddleOCR <strong>no usa la GPU en Mac</strong>: la versión para Apple Silicon se compila sin CUDA y pedirle GPU falla con un error explícito. Corre en CPU. La velocidad no viene del chip sino de <strong>procesar varias páginas a la vez</strong>: de 10 s por página a <strong>3 s</strong>.</p>
+</div>
+</div>
+</div>
 <p><span class="warm">Descarga y documentación: <strong>github.com/PaddlePaddle/PaddleOCR</strong></span></p>
 </div>
 </section>
@@ -641,7 +668,7 @@ calidad antes de correr todo.</code></pre>
 <td><strong>$0</strong></td>
 </tr>
 <tr class="even">
-<td>DeepSeek V4 (vision)</td>
+<td>DeepSeek V4 (vision) — el más barato</td>
 <td>~$0.44 · $1.32</td>
 <td>~$0.20</td>
 <td>~$60</td>
@@ -653,20 +680,14 @@ calidad antes de correr todo.</code></pre>
 <td>~$190</td>
 </tr>
 <tr class="even">
-<td>OpenAI GPT-5.6</td>
-<td>$2 · $12</td>
-<td>~$1.40</td>
-<td>~$430</td>
-</tr>
-<tr class="odd">
-<td>Claude Opus</td>
+<td>Claude Opus — el más caro</td>
 <td>$5 · $25</td>
 <td>~$3.00</td>
 <td>~$950</td>
 </tr>
 </tbody>
 </table>
-<p><span class="small muted">Estimado con ~2 000 tokens de imagen + 800 de texto por página; precios de agosto 2026. “El archivo entero”: los 269 reportes de la Defensoría desde 2004.</span></p>
+<p><span class="small muted">Estimado con ~2 000 tokens de imagen + 800 de texto por página; precios de agosto 2026. “El archivo entero”: los 269 reportes de la Defensoría desde 2004. Las demás APIs de visión caen dentro de ese rango.</span></p>
 <div class="fragment">
 <p><strong>La jugada inteligente no es elegir bando:</strong> PaddleOCR extrae el texto <strong>gratis</strong>, y el modelo razona sobre ese texto — que cuesta centavos, no dólares. <span class="small">Excepción honesta: manuscritos y tablas muy dañadas — ahí los modelos de visión sí ganan.</span></p>
 </div>
@@ -681,18 +702,21 @@ calidad antes de correr todo.</code></pre>
 </section>
 <section id="paso-2-paddleocr-sobre-los-escaneados" class="slide level2 your-turn smaller">
 <h2>⚡ Paso 2 — PaddleOCR sobre los escaneados</h2>
-<p>En <code>datos/antiguos/</code> están los reportes viejos. El pedido, <strong>listo para copiar</strong>:</p>
-<pre class="text"><code>En datos/antiguos/ hay reportes escaneados: cada página es una
-imagen, sin texto seleccionable.
+<p>En <code>datos/antiguos/</code> está la revista escaneada. El pedido, <strong>listo para copiar</strong>:</p>
+<pre class="text"><code>En datos/antiguos/ hay un PDF escaneado de 132 páginas, con la
+marca de agua de la biblioteca encima.
 1. Instala PaddleOCR con sus dependencias y dime qué instalaste.
-2. Convierte SOLO la primera página del reporte más antiguo y
-   muéstrame el texto: quiero validar antes de seguir.
-3. Si apruebo, convierte todos los PDFs a datos-limpios/ocr/,
-   un .txt por reporte, marcando el número de página.
-4. Al final: páginas procesadas, tiempo total, y cuáles quedaron
-   ilegibles para revisarlas a mano.</code></pre>
+2. Convierte SOLO la página 20 y muéstrame el texto: quiero
+   validar la calidad antes de seguir.
+3. Si apruebo, convierte el documento entero a datos-limpios/ocr/,
+   un .txt por página y otro con todo junto.
+4. Al final: páginas procesadas, tiempo total, confianza media y
+   qué páginas quedaron dudosas para revisarlas a mano.</code></pre>
 <div class="fragment">
-<p><strong>Qué observar:</strong> el punto 2 es la disciplina de siempre — <strong>una muestra antes de correr todo</strong>; la conversión corre <strong>en su máquina, sin tokens</strong>; y la lista de ilegibles del punto 4 es la tasa de error del OCR: <strong>también se mide, no se supone</strong>.</p>
+<p><strong>Qué observar:</strong> el punto 2 es la disciplina de siempre — <strong>una muestra antes de correr todo</strong>; la conversión corre <strong>en su máquina, sin tokens</strong>; y la confianza del punto 4 es la tasa de error del OCR: <strong>se mide, no se supone</strong>.</p>
+</div>
+<div class="fragment">
+<p><span class="small muted">Dos cosas que aparecen solas si miran el resultado: el PDF <strong>ya traía</strong> una capa de texto —del escáner, pésima: <em>co11trola11do</em>, <em>Sl!GURA</em>— y el OCR nuevo la corrige; y la marca de agua <strong>desaparece</strong> si se trabaja sobre la imagen escaneada en vez de sobre la página completa.</span></p>
 </div>
 </section></section>
 <section id="pausa-2-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
@@ -710,6 +734,7 @@ imagen, sin texto seleccionable.
 <p>Sus conversaciones académicas más valiosas son <strong>habladas</strong>: clases, seminarios, asesorías de tesis, sus propias presentaciones. Y normalmente… <strong>se evaporan</strong>.</p>
 
 <img data-src="../figures/es/whisper-pipeline.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:82.0%"><p>Whisper es un transcriptor <strong>gratuito y local</strong> — el audio nunca sale de su computadora. Con las computadoras actuales, ~2 horas de clase se transcriben <strong>en minutos</strong>.</p>
+<p><span class="small muted">Y aquí sí manda el chip: en Mac, mlx-whisper <strong>usa la GPU</strong> — los 12 minutos del video del ejercicio se transcriben en <strong>9 segundos</strong>, unas 80 veces más rápido que escucharlo. Misma máquina en la que PaddleOCR va a CPU: <strong>no todas las librerías aprovechan su hardware, y conviene preguntar cuál sí</strong>.</span></p>
 </section>
 <section id="la-receta-conversando-con-claude" class="slide level2 smaller">
 <h2>La receta, conversando con Claude</h2>
@@ -720,11 +745,12 @@ versión de Whisper me conviene instalar. Instálala.</code></pre>
 <p><span class="small">Claude detecta si su equipo puede usar la versión rápida (Mac: mlx-whisper · Windows: faster-whisper) y la deja lista.</span></p>
 <div class="fragment">
 <p><strong>Paso 2 — transcribir y pedir algo útil:</strong></p>
-<pre class="text"><code>En data/raw/ está videoplayback.mp4: un video de ~12 minutos
-sobre conflictos sociales. Transcríbelo con marcas de tiempo y
-guarda el texto en transcripciones/. Después léelo y dime:
-qué actores aparecen, qué demandas plantean, y con qué casos de
-los reportes de la Defensoría podría conectarse lo que narra.</code></pre>
+<pre class="text"><code>En datos/ está videoplayback.mp4: un video de ~12 minutos sobre
+conflictos sociales. Transcríbelo con marcas de tiempo y guarda
+el texto en transcripciones/. Después léelo y dime: qué actores
+aparecen, qué demandas plantean, y con qué casos de los reportes
+de la Defensoría podría conectarse lo que narra.</code></pre>
+<p><span class="small muted">Si les falla con <code>FileNotFoundError: 'ffmpeg'</code>, no está roto: mlx-whisper trae su propio ffmpeg dentro y solo hay que dejárselo a la vista. Díganle <em>“no encuentra ffmpeg, arréglalo”</em> y lo resuelve.</span></p>
 </div>
 </section>
 <section id="esto-no-es-teoría-lo-hice-con-este-taller" class="slide level2 smaller">
@@ -743,6 +769,7 @@ los reportes de la Defensoría podría conectarse lo que narra.</code></pre>
 <p>Tenía razón en las tres. <strong>Esta sesión que están viendo fue rediseñada con ese feedback.</strong></p>
 </div>
 <div class="fragment">
+<p><span class="small muted"><strong>Y la transcripción también se verifica:</strong> de los 491 fragmentos del video del ejercicio, <strong>195 son solo “Música” y 263 están vacíos</strong> — apenas 33 son habla. Además escribe <em>“Anacocha”</em> donde se dice <strong>Yanacocha</strong>. Revisen <strong>cobertura</strong> y <strong>nombres propios</strong> antes de citar.</span></p>
 <p><span class="warm">Usos inmediatos: mejorar sus cursos, actas automáticas de asesorías de tesis, procesar entrevistas de campo (con consentimiento), no perder nunca los comentarios que reciben al presentar un paper.</span></p>
 </div>
 </section>
