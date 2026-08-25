@@ -11,21 +11,22 @@ lang: es
 
 ## Plan de hoy (3 horas) {.smaller}
 
-| Bloque | Tema | Tiempo |
-|--------|------|--------|
-| 1 | Repaso + Plan Mode con un caso real | 25 min |
-| 2 | `/deep-research`: la revisión de literatura automática | 30 min |
-| 3 | ⭐ De 10 PDFs a una base de datos — y auditarla | 50 min |
-| ☕ | Pausa | 10 min |
-| 4 | Literatura → LaTeX → presentación, sin escribir código | 30 min |
-| 5 | Whisper: sus clases y seminarios se vuelven material | 25 min |
-| 6 | Cómo pedir las cosas + errores comunes | 10 min |
+| Hora | Bloque | Tema |
+|------|--------|------|
+| 6:00 – 6:25 | 1 | Repaso y Plan Mode con material propio |
+| 6:25 – 7:15 | 2 | ⭐ De 10 PDFs a una base de datos: extraer y clasificar |
+| 7:15 – 7:25 | ☕ | Pausa 1 |
+| 7:25 – 8:00 | 2 | ⭐ Auditar, verificar contra la fuente y el dashboard |
+| 8:00 – 8:25 | 3 | La presentación en Beamer, con lo ya trabajado |
+| 8:25 – 8:35 | ☕ | Pausa 2 |
+| 8:35 – 8:55 | 4 | Whisper: sus clases se vuelven material |
+| 8:55 – 9:00 | 5 | Cómo pedir las cosas + cierre |
 
 [Hoy varias demos toman minutos en correr: las lanzamos al inicio y revisamos resultados al final de cada bloque. Así se trabaja de verdad con agentes.]{.small .muted}
 
 # Bloque 1 — Repaso y Plan Mode
 
-## La sesión pasada, en 5 movimientos {.smaller}
+## La sesión pasada, en 6 movimientos {.smaller}
 
 | Movimiento | Cómo |
 |------------|------|
@@ -34,6 +35,7 @@ lang: es
 | Memoria del proyecto | `/init` genera el `CLAUDE.md`; ustedes lo corrigen |
 | Elegir modelo | `/model` → **Opus** para todo |
 | La regla de oro | Lo que recuerda se **verifica**; lo que comprueba contra fuente, es sólido |
+| **La literatura, completa** | `/deep-research` → verificar contra Crossref → biblioteca (un solo login) → revisión en LaTeX compilada |
 
 . . .
 
@@ -45,7 +47,7 @@ La forma correcta de trabajar con Claude Code no es una conversación eterna: so
 
 . . .
 
-- Sesión 1 → *"encárgate de la revisión de literatura"*
+- Sesión 1 → *"extrae los casos de estos PDF a una base"*
 - Sesión 2 → *"explora y describe esta base de datos"*
 - Sesión 3 → *"arma la presentación con lo que ya está listo"*
 
@@ -83,49 +85,7 @@ proponme un plan de actualización. No cambies nada todavía.
 Cuando aprueben el plan, cambien con <kbd>Shift</kbd>+<kbd>Tab</kbd> a **accept edits on** (o **auto mode on**) y déjenlo trabajar. Al final pidan: *"resúmeme todo lo que cambiaste"*.
 :::
 
-# Bloque 2 — La revisión de literatura automática
-
-## `/deep-research` — el comando estrella
-
-Escriban el comando **con la barra `/` al inicio** (sin la barra no funciona — es un comando, no una frase) y su pregunta de investigación:
-
-```text
-/deep-research ¿Cruzar el umbral de elegibilidad de Pensión 65
-  aumenta la adopción de billeteras digitales en el Perú?
-```
-
-## Lo que pasa detrás {.smaller}
-
-Un **equipo completo de asistentes** trabajando en paralelo:
-
-![](../figures/es/deep-research-pipeline.svg){.nostretch width=88% fig-align="center"}
-
-## Cómo se usa bien {.smaller}
-
-1. **Pregunta específica**, como se la darían a un asistente: población, periodo, qué cuenta como respuesta. *"Busca sobre pensiones"* ❌ · *"¿Qué dice la evidencia desde 2019 sobre transferencias a adultos mayores y adopción de pagos digitales en América Latina?"* ✅
-2. **Demora 15–20 minutos** y corre en segundo plano — lancémoslo ahora y sigamos la clase; al final del bloque revisamos. Así se trabaja con agentes: no se les mira, se les asigna.
-3. Al terminar, pidan el paso que lo convierte en material suyo:
-
-```text
-Descarga los papers que citaste en una carpeta papers/,
-organizados por tema.
-```
-
-4. **Léanlo como referís:** el informe marca lo que no pudo comprobar como *"no verificado"* — empiecen por ahí, y verifiquen las citas antes de que entren a un texto suyo.
-
-## Límites honestos (importan en Ciencias Sociales) {.smaller}
-
-- **Baja sobre todo versiones abiertas** (working papers de NBER, SSRN, arXiv, informes). Para la versión **publicada** en revista: el proxy de la **biblioteca PUCP** que vimos en la Sesión 1 — ustedes se loguean, él descarga.
-- **Con libros ayuda poco.** Para antropología, sociología o historia, donde el libro es central, esta herramienta complementa — no reemplaza — la búsqueda en biblioteca.
-- **No es un buscador mágico de verdad:** es un equipo de asistentes rápidos que leen lo que está en la web. La curaduría final — qué entra a su marco teórico — sigue siendo de ustedes.
-
-. . .
-
-::: {.callout-tip}
-El producto no es solo el informe: es la **carpeta de PDFs organizada y citable** que queda en su proyecto, lista para las siguientes etapas.
-:::
-
-# Bloque 3 — ⭐ De 10 PDFs a una base de datos
+# Bloque 2 — ⭐ De 10 PDFs a una base de datos
 
 ## El problema, con nombre propio {.smaller}
 
@@ -182,6 +142,10 @@ Agrega la categoría como columna y explica tu criterio.
 
 En minutos tienen codificadas cientos de narrativas. **Y aquí es donde hay que
 tener cuidado.**
+
+# ☕ Pausa 1 — 10 minutos {background-color="#e6fbfc"}
+
+[Volvemos 7:25 pm]{.big}
 
 ## Paso 3 — auditar la codificación {.your-turn .smaller}
 
@@ -285,9 +249,7 @@ En una hora, partiendo de PDFs que nadie había tabulado:
 
 [Y el mes que viene, cuando salga el reporte 270, repetirlo cuesta un pedido.]{.warm}
 
-# ☕ Pausa — 10 minutos
-
-# Bloque 4 — LaTeX sin escribir LaTeX
+# Bloque 3 — La presentación, sin escribir LaTeX
 
 ## Por qué LaTeX y no PowerPoint
 
@@ -306,32 +268,9 @@ Y la consecuencia práctica para ustedes:
 
 [Requisito de instalación (estaba en el correo previo): MiKTeX en Windows, MacTeX o Tectonic en Mac. Los asistentes ayudan a quien le falte.]{.small .muted}
 
-## De la carpeta de papers al documento {.smaller}
-
-Con la carpeta `papers/` que dejó `/deep-research` en el Bloque 2:
-
-```text
-Con los papers de la carpeta papers/, escríbeme la sección de
-revisión de literatura de mi paper en LaTeX, con sus referencias
-en BibTeX. Luego compílala y muéstrame el PDF.
-```
-
-. . .
-
-Y el hábito que ya conocen, ahora aplicado en serio:
-
-```text
-Revisa dos veces que cada cita del texto exista en la bibliografía
-y que cada dato citado corresponda al paper real. Dime qué corregiste.
-```
-
-. . .
-
-[En la clase piloto, la segunda pasada **encontró y corrigió** un error de citado real. La doble verificación no es paranoia: es método.]{.warm}
-
 ## Y la presentación, con lo ya trabajado {.your-turn .smaller}
 
-Cuando el proyecto ya tiene literatura, gráficos y resultados, la presentación es un solo pedido:
+Ayer el proyecto ganó su revisión de literatura en LaTeX; hoy, la base de datos y el dashboard. Con todo eso ya en la carpeta, la presentación es un solo pedido:
 
 ```text
 Necesito presentar un avance de esta investigación: problema,
@@ -347,7 +286,11 @@ con los gráficos que ya están en figuras/. Crea el LaTeX y compílalo.
 El resultado es un **primer borrador amigable**: ustedes se sientan a darle su voz, su énfasis y su criterio. Eso no se delega.
 :::
 
-# Bloque 5 — Whisper: sus clases se vuelven material
+# ☕ Pausa 2 — 10 minutos {background-color="#e6fbfc"}
+
+[Volvemos 8:35 pm]{.big}
+
+# Bloque 4 — Whisper: sus clases se vuelven material
 
 ## La idea
 
@@ -398,7 +341,7 @@ Tenía razón en las tres. **Esta sesión que están viendo fue rediseñada con 
 
 [Usos inmediatos: mejorar sus cursos, actas automáticas de asesorías de tesis, procesar entrevistas de campo (con consentimiento), no perder nunca los comentarios que reciben al presentar un paper.]{.warm}
 
-# Bloque 6 — Cómo pedir las cosas
+# Bloque 5 — Cómo pedir las cosas
 
 ## Cuatro hábitos que hacen casi toda la diferencia {.smaller}
 

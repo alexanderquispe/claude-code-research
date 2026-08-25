@@ -151,48 +151,58 @@ Alexander Quispe
 <section id="plan-de-hoy-3-horas" class="slide level2 smaller">
 <h2>Plan de hoy (3 horas)</h2>
 <table class="caption-top">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 40%">
+<col style="width: 30%">
+</colgroup>
 <thead>
 <tr class="header">
+<th>Hora</th>
 <th>Bloque</th>
 <th>Tema</th>
-<th>Tiempo</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td>6:00 – 6:25</td>
 <td>1</td>
-<td>Repaso + Plan Mode con un caso real</td>
-<td>25 min</td>
+<td>Repaso y Plan Mode con material propio</td>
 </tr>
 <tr class="even">
+<td>6:25 – 7:15</td>
 <td>2</td>
-<td><code>/deep-research</code>: la revisión de literatura automática</td>
-<td>30 min</td>
+<td>⭐ De 10 PDFs a una base de datos: extraer y clasificar</td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>⭐ De 10 PDFs a una base de datos — y auditarla</td>
-<td>50 min</td>
-</tr>
-<tr class="even">
+<td>7:15 – 7:25</td>
 <td>☕</td>
-<td>Pausa</td>
-<td>10 min</td>
-</tr>
-<tr class="odd">
-<td>4</td>
-<td>Literatura → LaTeX → presentación, sin escribir código</td>
-<td>30 min</td>
+<td>Pausa 1</td>
 </tr>
 <tr class="even">
-<td>5</td>
-<td>Whisper: sus clases y seminarios se vuelven material</td>
-<td>25 min</td>
+<td>7:25 – 8:00</td>
+<td>2</td>
+<td>⭐ Auditar, verificar contra la fuente y el dashboard</td>
 </tr>
 <tr class="odd">
-<td>6</td>
-<td>Cómo pedir las cosas + errores comunes</td>
-<td>10 min</td>
+<td>8:00 – 8:25</td>
+<td>3</td>
+<td>La presentación en Beamer, con lo ya trabajado</td>
+</tr>
+<tr class="even">
+<td>8:25 – 8:35</td>
+<td>☕</td>
+<td>Pausa 2</td>
+</tr>
+<tr class="odd">
+<td>8:35 – 8:55</td>
+<td>4</td>
+<td>Whisper: sus clases se vuelven material</td>
+</tr>
+<tr class="even">
+<td>8:55 – 9:00</td>
+<td>5</td>
+<td>Cómo pedir las cosas + cierre</td>
 </tr>
 </tbody>
 </table>
@@ -203,8 +213,8 @@ Alexander Quispe
 <h1>Bloque 1 — Repaso y Plan Mode</h1>
 
 </section>
-<section id="la-sesión-pasada-en-5-movimientos" class="slide level2 smaller">
-<h2>La sesión pasada, en 5 movimientos</h2>
+<section id="la-sesión-pasada-en-6-movimientos" class="slide level2 smaller">
+<h2>La sesión pasada, en 6 movimientos</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 66%">
@@ -237,6 +247,10 @@ Alexander Quispe
 <td>La regla de oro</td>
 <td>Lo que recuerda se <strong>verifica</strong>; lo que comprueba contra fuente, es sólido</td>
 </tr>
+<tr class="even">
+<td><strong>La literatura, completa</strong></td>
+<td><code>/deep-research</code> → verificar contra Crossref → biblioteca (un solo login) → revisión en LaTeX compilada</td>
+</tr>
 </tbody>
 </table>
 <div class="fragment">
@@ -248,7 +262,7 @@ Alexander Quispe
 <p>La forma correcta de trabajar con Claude Code no es una conversación eterna: son <strong>varias sesiones en paralelo, como asistentes con tareas asignadas</strong>.</p>
 <div class="fragment">
 <ul>
-<li>Sesión 1 → <em>“encárgate de la revisión de literatura”</em></li>
+<li>Sesión 1 → <em>“extrae los casos de estos PDF a una base”</em></li>
 <li>Sesión 2 → <em>“explora y describe esta base de datos”</em></li>
 <li>Sesión 3 → <em>“arma la presentación con lo que ya está listo”</em></li>
 </ul>
@@ -290,64 +304,8 @@ proponme un plan de actualización. No cambies nada todavía.</code></pre>
 </div>
 </section></section>
 <section>
-<section id="bloque-2-la-revisión-de-literatura-automática" class="title-slide slide level1 center">
-<h1>Bloque 2 — La revisión de literatura automática</h1>
-
-</section>
-<section id="deep-research-el-comando-estrella" class="slide level2">
-<h2><code>/deep-research</code> — el comando estrella</h2>
-<p>Escriban el comando <strong>con la barra <code>/</code> al inicio</strong> (sin la barra no funciona — es un comando, no una frase) y su pregunta de investigación:</p>
-<pre class="text"><code>/deep-research ¿Cruzar el umbral de elegibilidad de Pensión 65
-  aumenta la adopción de billeteras digitales en el Perú?</code></pre>
-</section>
-<section id="lo-que-pasa-detrás" class="slide level2 smaller">
-<h2>Lo que pasa detrás</h2>
-<p>Un <strong>equipo completo de asistentes</strong> trabajando en paralelo:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../figures/es/deep-research-pipeline.svg" class="quarto-figure quarto-figure-center" style="width:88.0%"></p>
-</figure>
-</div>
-</section>
-<section id="cómo-se-usa-bien" class="slide level2 smaller">
-<h2>Cómo se usa bien</h2>
-<ol type="1">
-<li><strong>Pregunta específica</strong>, como se la darían a un asistente: población, periodo, qué cuenta como respuesta. <em>“Busca sobre pensiones”</em> ❌ · <em>“¿Qué dice la evidencia desde 2019 sobre transferencias a adultos mayores y adopción de pagos digitales en América Latina?”</em> ✅</li>
-<li><strong>Demora 15–20 minutos</strong> y corre en segundo plano — lancémoslo ahora y sigamos la clase; al final del bloque revisamos. Así se trabaja con agentes: no se les mira, se les asigna.</li>
-<li>Al terminar, pidan el paso que lo convierte en material suyo:</li>
-</ol>
-<pre class="text"><code>Descarga los papers que citaste en una carpeta papers/,
-organizados por tema.</code></pre>
-<ol start="4" type="1">
-<li><strong>Léanlo como referís:</strong> el informe marca lo que no pudo comprobar como <em>“no verificado”</em> — empiecen por ahí, y verifiquen las citas antes de que entren a un texto suyo.</li>
-</ol>
-</section>
-<section id="límites-honestos-importan-en-ciencias-sociales" class="slide level2 smaller">
-<h2>Límites honestos (importan en Ciencias Sociales)</h2>
-<ul>
-<li><strong>Baja sobre todo versiones abiertas</strong> (working papers de NBER, SSRN, arXiv, informes). Para la versión <strong>publicada</strong> en revista: el proxy de la <strong>biblioteca PUCP</strong> que vimos en la Sesión 1 — ustedes se loguean, él descarga.</li>
-<li><strong>Con libros ayuda poco.</strong> Para antropología, sociología o historia, donde el libro es central, esta herramienta complementa — no reemplaza — la búsqueda en biblioteca.</li>
-<li><strong>No es un buscador mágico de verdad:</strong> es un equipo de asistentes rápidos que leen lo que está en la web. La curaduría final — qué entra a su marco teórico — sigue siendo de ustedes.</li>
-</ul>
-<div class="fragment">
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>El producto no es solo el informe: es la <strong>carpeta de PDFs organizada y citable</strong> que queda en su proyecto, lista para las siguientes etapas.</p>
-</div>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="bloque-3-de-10-pdfs-a-una-base-de-datos" class="title-slide slide level1 center">
-<h1>Bloque 3 — ⭐ De 10 PDFs a una base de datos</h1>
+<section id="bloque-2-de-10-pdfs-a-una-base-de-datos" class="title-slide slide level1 center">
+<h1>Bloque 2 — ⭐ De 10 PDFs a una base de datos</h1>
 
 </section>
 <section id="el-problema-con-nombre-propio" class="slide level2 smaller">
@@ -397,6 +355,11 @@ Agrega la categoría como columna y explica tu criterio.</code></pre>
 <div class="fragment">
 <p>En minutos tienen codificadas cientos de narrativas. <strong>Y aquí es donde hay que tener cuidado.</strong></p>
 </div>
+</section></section>
+<section>
+<section id="pausa-1-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
+<h1>☕ Pausa 1 — 10 minutos</h1>
+<p><span class="big">Volvemos 7:25 pm</span></p>
 </section>
 <section id="paso-3-auditar-la-codificación" class="slide level2 your-turn smaller">
 <h2>Paso 3 — auditar la codificación</h2>
@@ -534,14 +497,9 @@ intensidad minera con número de conflictos.</code></pre>
 <p><span class="warm">Y el mes que viene, cuando salga el reporte 270, repetirlo cuesta un pedido.</span></p>
 </div>
 </section></section>
-<section id="pausa-10-minutos" class="title-slide slide level1 center">
-<h1>☕ Pausa — 10 minutos</h1>
-
-</section>
-
 <section>
-<section id="bloque-4-latex-sin-escribir-latex" class="title-slide slide level1 center">
-<h1>Bloque 4 — LaTeX sin escribir LaTeX</h1>
+<section id="bloque-3-la-presentación-sin-escribir-latex" class="title-slide slide level1 center">
+<h1>Bloque 3 — La presentación, sin escribir LaTeX</h1>
 
 </section>
 <section id="por-qué-latex-y-no-powerpoint" class="slide level2">
@@ -561,24 +519,9 @@ intensidad minera con número de conflictos.</code></pre>
 <p><span class="small muted">Requisito de instalación (estaba en el correo previo): MiKTeX en Windows, MacTeX o Tectonic en Mac. Los asistentes ayudan a quien le falte.</span></p>
 </div>
 </section>
-<section id="de-la-carpeta-de-papers-al-documento" class="slide level2 smaller">
-<h2>De la carpeta de papers al documento</h2>
-<p>Con la carpeta <code>papers/</code> que dejó <code>/deep-research</code> en el Bloque 2:</p>
-<pre class="text"><code>Con los papers de la carpeta papers/, escríbeme la sección de
-revisión de literatura de mi paper en LaTeX, con sus referencias
-en BibTeX. Luego compílala y muéstrame el PDF.</code></pre>
-<div class="fragment">
-<p>Y el hábito que ya conocen, ahora aplicado en serio:</p>
-<pre class="text"><code>Revisa dos veces que cada cita del texto exista en la bibliografía
-y que cada dato citado corresponda al paper real. Dime qué corregiste.</code></pre>
-</div>
-<div class="fragment">
-<p><span class="warm">En la clase piloto, la segunda pasada <strong>encontró y corrigió</strong> un error de citado real. La doble verificación no es paranoia: es método.</span></p>
-</div>
-</section>
 <section id="y-la-presentación-con-lo-ya-trabajado" class="slide level2 your-turn smaller">
 <h2>Y la presentación, con lo ya trabajado</h2>
-<p>Cuando el proyecto ya tiene literatura, gráficos y resultados, la presentación es un solo pedido:</p>
+<p>Ayer el proyecto ganó su revisión de literatura en LaTeX; hoy, la base de datos y el dashboard. Con todo eso ya en la carpeta, la presentación es un solo pedido:</p>
 <pre class="text"><code>Necesito presentar un avance de esta investigación: problema,
 revisión de literatura y datos. Usa Beamer, máximo 15 slides,
 con los gráficos que ya están en figuras/. Crea el LaTeX y compílalo.</code></pre>
@@ -599,9 +542,14 @@ con los gráficos que ya están en figuras/. Crea el LaTeX y compílalo.</code><
 </div>
 </div>
 </section></section>
+<section id="pausa-2-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
+<h1>☕ Pausa 2 — 10 minutos</h1>
+<p><span class="big">Volvemos 8:35 pm</span></p>
+</section>
+
 <section>
-<section id="bloque-5-whisper-sus-clases-se-vuelven-material" class="title-slide slide level1 center">
-<h1>Bloque 5 — Whisper: sus clases se vuelven material</h1>
+<section id="bloque-4-whisper-sus-clases-se-vuelven-material" class="title-slide slide level1 center">
+<h1>Bloque 4 — Whisper: sus clases se vuelven material</h1>
 
 </section>
 <section id="la-idea" class="slide level2">
@@ -645,8 +593,8 @@ tres sugerencias concretas para mejorar la clase.</code></pre>
 </div>
 </section></section>
 <section>
-<section id="bloque-6-cómo-pedir-las-cosas" class="title-slide slide level1 center">
-<h1>Bloque 6 — Cómo pedir las cosas</h1>
+<section id="bloque-5-cómo-pedir-las-cosas" class="title-slide slide level1 center">
+<h1>Bloque 5 — Cómo pedir las cosas</h1>
 
 </section>
 <section id="cuatro-hábitos-que-hacen-casi-toda-la-diferencia" class="slide level2 smaller">
