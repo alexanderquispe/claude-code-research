@@ -20,7 +20,7 @@ lang: es
 | 7:40 – 8:20 | 3 | ⭐ OCR: los escaneados también entran a la base |
 | 8:20 – 8:30 | ☕ | Pausa 2 |
 | 8:30 – 8:52 | 4 | Whisper: sus clases se vuelven material |
-| 8:52 – 9:00 | 5 | Cómo pedir las cosas + cierre |
+| 8:52 – 9:00 | — | Cierre y despedida |
 
 [Hoy varias demos toman minutos en correr: las lanzamos al inicio y revisamos resultados al final de cada bloque. Así se trabaja de verdad con agentes.]{.small .muted}
 
@@ -399,37 +399,6 @@ Tenía razón en las tres. **Esta sesión que están viendo fue rediseñada con 
 . . .
 
 [Usos inmediatos: mejorar sus cursos, actas automáticas de asesorías de tesis, procesar entrevistas de campo (con consentimiento), no perder nunca los comentarios que reciben al presentar un paper.]{.warm}
-
-# Bloque 5 — Cómo pedir las cosas
-
-## Cuatro hábitos que hacen casi toda la diferencia {.smaller}
-
-1. **Pidan el plan antes de la acción.** *"Antes de hacer nada, dime qué vas a hacer."* Sobre todo si va a modificar o borrar archivos.
-2. **Digan dónde está la verdad.** *"Verifica contra el PDF de esta carpeta"*, *"consulta Crossref"*. Un agente con fuente asignada es mucho más confiable que uno respondiendo de memoria.
-3. **Pidan que muestre el trabajo.** *"Muéstrame de dónde sacaste ese dato."* Verificable es mejor que correcto.
-4. **Cuando se equivoque, díganselo directo.** *"Eso está mal, el año es 2025"* es la corrección más eficiente. No hay que ser diplomático.
-
-## Errores comunes de las primeras semanas {.smaller}
-
-- **Tratarlo como buscador** — *"¿qué opinas de la teoría X?"* desperdicia la herramienta (para eso, el chat). Sirve para trabajar sobre **sus** archivos y **sus** datos.
-- **Aceptar la primera respuesta sin mirar** — sobre todo números, citas y fechas.
-- **Pedir demasiado de golpe** — *"reorganiza todo mi proyecto"* sale mal; *"renombra estos 12 PDFs con este criterio"* sale bien. Tareas acotadas, verificables una a una.
-- **Trabajar sobre la única copia** — antes de una sesión de cambios grandes, copien la carpeta (o pidan a los asistentes que les configuren respaldo).
-- **Insistir con la contraseña** — no va a pasar. Loguéense ustedes.
-
-## Para empezar esta semana {.your-turn}
-
-Una tarea real y pequeña — estas funcionan muy bien de entrada:
-
-- Ordenar y renombrar esa carpeta de PDFs acumulados
-- Verificar la bibliografía de un artículo en preparación
-- Extraer una tabla de un PDF a Excel/CSV
-- Convertir apuntes sueltos en un documento con formato
-- Transcribir la última clase y pedirle sugerencias
-
-. . .
-
-Lo que **no** conviene de entrada: que reescriba un capítulo entero, o que analice datos cuya limpieza no pueden verificar.
 
 ## Cierre {.smaller}
 
