@@ -19,8 +19,8 @@ lang: es
 | 7:30 – 7:40 | ☕ | Pausa 1 |
 | 7:40 – 8:20 | 3 | ⭐ OCR: los escaneados también entran a la base |
 | 8:20 – 8:30 | ☕ | Pausa 2 |
-| 8:30 – 8:52 | 4 | Whisper: sus clases se vuelven material |
-| 8:52 – 9:00 | — | Cierre y despedida |
+| 8:30 – 8:50 | 4 | Whisper: sus clases se vuelven material |
+| 8:50 – 9:00 | — | Háblenle, no le tipeen + cierre |
 
 [Hoy varias demos toman minutos en correr: las lanzamos al inicio y revisamos resultados al final de cada bloque. Así se trabaja de verdad con agentes.]{.small .muted}
 
@@ -288,6 +288,8 @@ Tres razones, todas verificables abriendo el PDF:
 
 [Volvemos 7:40 pm]{.big}
 
+[¿La extracción del Paso 1 no les salió? Es el momento de llamar a un asistente del Q-LAB — al volver la necesitamos lista.]{.small .muted}
+
 ## ¿Y si el PDF es una foto? PaddleOCR {.smaller}
 
 Los reportes recientes traen texto nativo. Pero el archivo histórico —lo que está en bibliotecas— es **escaneado**: el PDF es una foto, y PyMuPDF devuelve… nada.
@@ -357,7 +359,9 @@ marca de agua de la biblioteca encima.
 
 # ☕ Pausa 2 — 10 minutos {background-color="#e6fbfc"}
 
-[Volvemos 8:40 pm]{.big}
+[Volvemos 8:30 pm]{.big}
+
+[El OCR del Paso 2 puede seguir corriendo solo mientras tanto — así se trabaja con agentes: no se les mira, se les asigna.]{.small .muted}
 
 # Bloque 4 — Whisper: sus clases se vuelven material
 
