@@ -243,7 +243,7 @@ Alexander Quispe
 <tr class="odd">
 <td>6:50 – 7:30</td>
 <td>3</td>
-<td>⭐ De 10 PDFs a una base de datos: extraer y clasificar</td>
+<td>⭐ De 10 PDFs a una base de datos: extraer — y OCR para los escaneados</td>
 </tr>
 <tr class="even">
 <td>7:30 – 7:40</td>
@@ -251,28 +251,23 @@ Alexander Quispe
 <td>Pausa 1</td>
 </tr>
 <tr class="odd">
-<td>7:40 – 8:10</td>
+<td>7:40 – 8:25</td>
 <td>3</td>
 <td>⭐ Auditar, verificar contra la fuente y el dashboard</td>
 </tr>
 <tr class="even">
-<td>8:10 – 8:30</td>
-<td>4</td>
-<td>La presentación en Beamer, con lo ya trabajado</td>
-</tr>
-<tr class="odd">
-<td>8:30 – 8:40</td>
+<td>8:25 – 8:35</td>
 <td>☕</td>
 <td>Pausa 2</td>
 </tr>
-<tr class="even">
-<td>8:40 – 8:55</td>
-<td>5</td>
+<tr class="odd">
+<td>8:35 – 8:52</td>
+<td>4</td>
 <td>Whisper: sus clases se vuelven material</td>
 </tr>
-<tr class="odd">
-<td>8:55 – 9:00</td>
-<td>6</td>
+<tr class="even">
+<td>8:52 – 9:00</td>
+<td>5</td>
 <td>Cómo pedir las cosas + cierre</td>
 </tr>
 </tbody>
@@ -600,7 +595,7 @@ con una columna que indique de qué reporte salió.</code></pre>
 <p><strong>Qué viaja a Anthropic:</strong> su pedido, las 2–3 páginas de muestra que hojea, y los errores del script. <strong>Qué no viaja:</strong> los 10 PDF completos — esos los procesa el script, en local.</p>
 </div>
 <div class="fragment">
-<p><span class="warm">Ojo: en el <strong>Paso 2</strong> (clasificar) la división se invierte — ahí sí es <strong>el modelo</strong> quien lee cada narrativa y decide la categoría. Eso es trabajo de cerebro, no de obrero; por eso ese paso sí consume tokens en serio.</span></p>
+<p><span class="warm">Ojo: cuando el trabajo sea <strong>leer y juzgar</strong> cada narrativa — clasificar demandas, resumir casos — la división se invierte: eso es trabajo de cerebro, no de obrero, y sí consume tokens en serio.</span></p>
 <p><span class="small muted">Además, Claude Code usa por dentro modelos pequeños y baratos (Haiku) para tareas de apoyo: resúmenes, títulos, búsquedas internas.</span></p>
 </div>
 </section>
@@ -684,15 +679,20 @@ calidad antes de correr todo.</code></pre>
 </figure>
 </div>
 </section>
-<section id="paso-2-clasificar" class="slide level2 your-turn smaller">
-<h2>Paso 2 — clasificar</h2>
-<p>Ahora la parte que un Excel no puede hacer: leer <strong>de qué se trata</strong> cada conflicto.</p>
-<pre class="text"><code>Lee la descripción de cada caso y clasifícalo según la demanda
-principal: agua, tierra y territorio, empleo local, renta y
-compensación, consulta previa, o incumplimiento de acuerdos.
-Agrega la categoría como columna y explica tu criterio.</code></pre>
+<section id="paso-2-paddleocr-sobre-los-escaneados" class="slide level2 your-turn smaller">
+<h2>⚡ Paso 2 — PaddleOCR sobre los escaneados</h2>
+<p>En <code>datos/antiguos/</code> están los reportes viejos. El pedido, <strong>listo para copiar</strong>:</p>
+<pre class="text"><code>En datos/antiguos/ hay reportes escaneados: cada página es una
+imagen, sin texto seleccionable.
+1. Instala PaddleOCR con sus dependencias y dime qué instalaste.
+2. Convierte SOLO la primera página del reporte más antiguo y
+   muéstrame el texto: quiero validar antes de seguir.
+3. Si apruebo, convierte todos los PDFs a datos-limpios/ocr/,
+   un .txt por reporte, marcando el número de página.
+4. Al final: páginas procesadas, tiempo total, y cuáles quedaron
+   ilegibles para revisarlas a mano.</code></pre>
 <div class="fragment">
-<p>En minutos tienen codificadas cientos de narrativas. <strong>Y aquí es donde hay que tener cuidado.</strong></p>
+<p><strong>Qué observar:</strong> el punto 2 es la disciplina de siempre — <strong>una muestra antes de correr todo</strong>; la conversión corre <strong>en su máquina, sin tokens</strong>; y la lista de ilegibles del punto 4 es la tasa de error del OCR: <strong>también se mide, no se supone</strong>.</p>
 </div>
 </section></section>
 <section>
@@ -700,21 +700,21 @@ Agrega la categoría como columna y explica tu criterio.</code></pre>
 <h1>☕ Pausa 1 — 10 minutos</h1>
 <p><span class="big">Volvemos 7:40 pm</span></p>
 </section>
-<section id="paso-3-auditar-la-codificación" class="slide level2 your-turn smaller">
-<h2>Paso 3 — auditar la codificación</h2>
+<section id="paso-3-auditar-lo-extraído" class="slide level2 your-turn smaller">
+<h2>Paso 3 — auditar lo extraído</h2>
 <blockquote>
-<p><strong>Nadie debería publicar una codificación automática que no auditó.</strong></p>
+<p><strong>Nadie debería publicar una extracción automática que no auditó.</strong></p>
 </blockquote>
 <div class="fragment">
 <p><strong>Háganlo ahora, a mano:</strong></p>
 <ol type="1">
 <li>Abran el CSV y elijan <strong>20 casos al azar</strong>.</li>
-<li>Lean la descripción y decidan <strong>ustedes</strong> la categoría.</li>
-<li>Comparen con la de Claude. ¿Cuántas no coinciden?</li>
+<li>Búsquenlos en el PDF original y comparen campo por campo: tipo, fecha, ubicación, actores.</li>
+<li>¿Cuántos tienen algún error?</li>
 </ol>
 </div>
 <div class="fragment">
-<p>Esa proporción es un <strong>dato de su investigación</strong>, no una anécdota. Si es 15%, va en el paper. Si es 40%, hay que rehacer las categorías.</p>
+<p>Esa proporción es un <strong>dato de su investigación</strong>, no una anécdota. Si es 2%, va en el paper. Si es 20%, hay que arreglar la extracción antes de seguir.</p>
 <p><span class="warm">No es desconfianza: es exactamente lo que harían con un asistente humano nuevo.</span></p>
 </div>
 </section>
@@ -770,7 +770,7 @@ propio PDF. ¿Coinciden? Si no, ¿qué se quedó afuera y por qué?</code></pre>
 <h2>Paso 5 — y ahora sí, el dashboard</h2>
 <pre class="text"><code>Con el CSV de datos-limpios/ y la producción minera de datos/,
 créame un dashboard HTML: conflictos por departamento, evolución
-mensual, distribución de categorías, y un gráfico que cruce
+mensual, distribución por tipo de conflicto, y un gráfico que cruce
 intensidad minera con número de conflictos.</code></pre>
 <div class="fragment">
 <p><strong>Qué observar:</strong> cómo prueba, falla y <strong>se corrige solo</strong> hasta que el archivo compila. Ese ciclo — escribir, verificar, corregir — es lo que un chat no puede hacer.</p>
@@ -819,8 +819,8 @@ intensidad minera con número de conflictos.</code></pre>
 <td>CSV, lista para analizar</td>
 </tr>
 <tr class="even">
-<td>Cada caso <strong>clasificado</strong> por tipo de demanda</td>
-<td>con criterio explícito</td>
+<td>Los reportes escaneados, <strong>convertidos a texto</strong></td>
+<td>con PaddleOCR — gratis, en local</td>
 </tr>
 <tr class="odd">
 <td>Una <strong>tasa de error medida</strong>, no supuesta</td>
@@ -836,59 +836,14 @@ intensidad minera con número de conflictos.</code></pre>
 <p><span class="warm">Y el mes que viene, cuando salga el reporte 270, repetirlo cuesta un pedido.</span></p>
 </div>
 </section></section>
-<section>
-<section id="bloque-4-la-presentación-sin-escribir-latex" class="title-slide slide level1 center">
-<h1>Bloque 4 — La presentación, sin escribir LaTeX</h1>
-
-</section>
-<section id="por-qué-latex-y-no-powerpoint" class="slide level2">
-<h2>Por qué LaTeX y no PowerPoint</h2>
-<blockquote>
-<p><strong>PowerPoint es un programa. LaTeX es código.</strong></p>
-</blockquote>
-<div class="fragment">
-<ul>
-<li>A un <strong>programa</strong>, Claude no puede meterle mano con precisión.</li>
-<li>Al <strong>código</strong>, sí: lo escribe, lo compila, ve el error, lo corrige y les entrega el <strong>PDF terminado</strong>.</li>
-</ul>
-</div>
-<div class="fragment">
-<p>Y la consecuencia práctica para ustedes:</p>
-<p><span class="warm">Ya no necesitan <em>saber</em> LaTeX para tener documentos y slides con calidad de journal. Necesitan saber <strong>pedirlos y revisarlos</strong>.</span></p>
-<p><span class="small muted">Requisito de instalación (estaba en el correo previo): MiKTeX en Windows, MacTeX o Tectonic en Mac. Los asistentes ayudan a quien le falte.</span></p>
-</div>
-</section>
-<section id="y-la-presentación-con-lo-ya-trabajado" class="slide level2 your-turn smaller">
-<h2>Y la presentación, con lo ya trabajado</h2>
-<p>Ayer el proyecto ganó su revisión de literatura en LaTeX; hoy, la base de datos y el dashboard. Con todo eso ya en la carpeta, la presentación es un solo pedido:</p>
-<pre class="text"><code>Necesito presentar un avance de esta investigación: problema,
-revisión de literatura y datos. Usa Beamer, máximo 15 slides,
-con los gráficos que ya están en figuras/. Crea el LaTeX y compílalo.</code></pre>
-<div class="fragment">
-<p><strong>Qué observar:</strong> no están copiando y pegando nada a PowerPoint. Todo lo que el proyecto ya produjo — figuras, referencias, tablas — <strong>se reutiliza automáticamente</strong>.</p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Nota</strong></p>
-</div>
-<div class="callout-content">
-<p>El resultado es un <strong>primer borrador amigable</strong>: ustedes se sientan a darle su voz, su énfasis y su criterio. Eso no se delega.</p>
-</div>
-</div>
-</div>
-</div>
-</section></section>
 <section id="pausa-2-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
 <h1>☕ Pausa 2 — 10 minutos</h1>
 <p><span class="big">Volvemos 8:40 pm</span></p>
 </section>
 
 <section>
-<section id="bloque-5-whisper-sus-clases-se-vuelven-material" class="title-slide slide level1 center">
-<h1>Bloque 5 — Whisper: sus clases se vuelven material</h1>
+<section id="bloque-4-whisper-sus-clases-se-vuelven-material" class="title-slide slide level1 center">
+<h1>Bloque 4 — Whisper: sus clases se vuelven material</h1>
 
 </section>
 <section id="la-idea" class="slide level2">
@@ -932,8 +887,8 @@ tres sugerencias concretas para mejorar la clase.</code></pre>
 </div>
 </section></section>
 <section>
-<section id="bloque-6-cómo-pedir-las-cosas" class="title-slide slide level1 center">
-<h1>Bloque 6 — Cómo pedir las cosas</h1>
+<section id="bloque-5-cómo-pedir-las-cosas" class="title-slide slide level1 center">
+<h1>Bloque 5 — Cómo pedir las cosas</h1>
 
 </section>
 <section id="cuatro-hábitos-que-hacen-casi-toda-la-diferencia" class="slide level2 smaller">

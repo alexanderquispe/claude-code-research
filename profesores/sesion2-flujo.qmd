@@ -15,13 +15,12 @@ lang: es
 |------|--------|------|
 | 6:00 – 6:20 | 1 | Repaso y Plan Mode con material propio |
 | 6:20 – 6:50 | 2 | Git: la máquina del tiempo de su carpeta |
-| 6:50 – 7:30 | 3 | ⭐ De 10 PDFs a una base de datos: extraer y clasificar |
+| 6:50 – 7:30 | 3 | ⭐ De 10 PDFs a una base de datos: extraer — y OCR para los escaneados |
 | 7:30 – 7:40 | ☕ | Pausa 1 |
-| 7:40 – 8:10 | 3 | ⭐ Auditar, verificar contra la fuente y el dashboard |
-| 8:10 – 8:30 | 4 | La presentación en Beamer, con lo ya trabajado |
-| 8:30 – 8:40 | ☕ | Pausa 2 |
-| 8:40 – 8:55 | 5 | Whisper: sus clases se vuelven material |
-| 8:55 – 9:00 | 6 | Cómo pedir las cosas + cierre |
+| 7:40 – 8:25 | 3 | ⭐ Auditar, verificar contra la fuente y el dashboard |
+| 8:25 – 8:35 | ☕ | Pausa 2 |
+| 8:35 – 8:52 | 4 | Whisper: sus clases se vuelven material |
+| 8:52 – 9:00 | 5 | Cómo pedir las cosas + cierre |
 
 [Hoy varias demos toman minutos en correr: las lanzamos al inicio y revisamos resultados al final de cada bloque. Así se trabaja de verdad con agentes.]{.small .muted}
 
@@ -275,7 +274,7 @@ patrón, escribe el código, lo corre, **ve que algo no cuadra y lo arregla**.
 
 . . .
 
-[Ojo: en el **Paso 2** (clasificar) la división se invierte — ahí sí es **el modelo** quien lee cada narrativa y decide la categoría. Eso es trabajo de cerebro, no de obrero; por eso ese paso sí consume tokens en serio.]{.warm}
+[Ojo: cuando el trabajo sea **leer y juzgar** cada narrativa — clasificar demandas, resumir casos — la división se invierte: eso es trabajo de cerebro, no de obrero, y sí consume tokens en serio.]{.warm}
 
 [Además, Claude Code usa por dentro modelos pequeños y baratos (Haiku) para tareas de apoyo: resúmenes, títulos, búsquedas internas.]{.small .muted}
 
@@ -321,42 +320,46 @@ Las APIs de visión también pueden "leer" un escaneo — mandándole cada pági
 
 ![](../figures/es/pipeline-ocr.svg){.nostretch width=90% fig-align="center"}
 
-## Paso 2 — clasificar {.your-turn .smaller}
+## ⚡ Paso 2 — PaddleOCR sobre los escaneados {.your-turn .smaller}
 
-Ahora la parte que un Excel no puede hacer: leer **de qué se trata** cada conflicto.
+En `datos/antiguos/` están los reportes viejos. El pedido, **listo para copiar**:
 
 ```text
-Lee la descripción de cada caso y clasifícalo según la demanda
-principal: agua, tierra y territorio, empleo local, renta y
-compensación, consulta previa, o incumplimiento de acuerdos.
-Agrega la categoría como columna y explica tu criterio.
+En datos/antiguos/ hay reportes escaneados: cada página es una
+imagen, sin texto seleccionable.
+1. Instala PaddleOCR con sus dependencias y dime qué instalaste.
+2. Convierte SOLO la primera página del reporte más antiguo y
+   muéstrame el texto: quiero validar antes de seguir.
+3. Si apruebo, convierte todos los PDFs a datos-limpios/ocr/,
+   un .txt por reporte, marcando el número de página.
+4. Al final: páginas procesadas, tiempo total, y cuáles quedaron
+   ilegibles para revisarlas a mano.
 ```
 
 . . .
 
-En minutos tienen codificadas cientos de narrativas. **Y aquí es donde hay que
-tener cuidado.**
+**Qué observar:** el punto 2 es la disciplina de siempre — **una muestra antes de correr todo**; la conversión corre **en su máquina, sin tokens**; y la lista de ilegibles del punto 4 es la tasa de error del OCR: **también se mide, no se supone**.
 
 # ☕ Pausa 1 — 10 minutos {background-color="#e6fbfc"}
 
 [Volvemos 7:40 pm]{.big}
 
-## Paso 3 — auditar la codificación {.your-turn .smaller}
+## Paso 3 — auditar lo extraído {.your-turn .smaller}
 
-> **Nadie debería publicar una codificación automática que no auditó.**
+> **Nadie debería publicar una extracción automática que no auditó.**
 
 . . .
 
 **Háganlo ahora, a mano:**
 
 1. Abran el CSV y elijan **20 casos al azar**.
-2. Lean la descripción y decidan **ustedes** la categoría.
-3. Comparen con la de Claude. ¿Cuántas no coinciden?
+2. Búsquenlos en el PDF original y comparen campo por campo: tipo, fecha, ubicación, actores.
+3. ¿Cuántos tienen algún error?
 
 . . .
 
-Esa proporción es un **dato de su investigación**, no una anécdota. Si es 15%, va
-en el paper. Si es 40%, hay que rehacer las categorías.
+Esa proporción es un **dato de su investigación**, no una anécdota. Si es 2%, va
+en el paper. Si es 20%, hay que arreglar la extracción antes de seguir.
 
 [No es desconfianza: es exactamente lo que harían con un asistente humano nuevo.]{.warm}
 
@@ -406,7 +409,7 @@ una cita inventada — y se nota mucho menos.
 ```text
 Con el CSV de datos-limpios/ y la producción minera de datos/,
 créame un dashboard HTML: conflictos por departamento, evolución
-mensual, distribución de categorías, y un gráfico que cruce
+mensual, distribución por tipo de conflicto, y un gráfico que cruce
 intensidad minera con número de conflictos.
 ```
 
@@ -435,7 +438,7 @@ En una hora, partiendo de PDFs que nadie había tabulado:
 | Producto | Estado |
 |---|---|
 | Una base de datos de conflictos que **no existía** | CSV, lista para analizar |
-| Cada caso **clasificado** por tipo de demanda | con criterio explícito |
+| Los reportes escaneados, **convertidos a texto** | con PaddleOCR — gratis, en local |
 | Una **tasa de error medida**, no supuesta | dato del paper |
 | Un dashboard compartible por link | HTML |
 
@@ -443,48 +446,11 @@ En una hora, partiendo de PDFs que nadie había tabulado:
 
 [Y el mes que viene, cuando salga el reporte 270, repetirlo cuesta un pedido.]{.warm}
 
-# Bloque 4 — La presentación, sin escribir LaTeX
-
-## Por qué LaTeX y no PowerPoint
-
-> **PowerPoint es un programa. LaTeX es código.**
-
-. . .
-
-- A un **programa**, Claude no puede meterle mano con precisión.
-- Al **código**, sí: lo escribe, lo compila, ve el error, lo corrige y les entrega el **PDF terminado**.
-
-. . .
-
-Y la consecuencia práctica para ustedes:
-
-[Ya no necesitan *saber* LaTeX para tener documentos y slides con calidad de journal. Necesitan saber **pedirlos y revisarlos**.]{.warm}
-
-[Requisito de instalación (estaba en el correo previo): MiKTeX en Windows, MacTeX o Tectonic en Mac. Los asistentes ayudan a quien le falte.]{.small .muted}
-
-## Y la presentación, con lo ya trabajado {.your-turn .smaller}
-
-Ayer el proyecto ganó su revisión de literatura en LaTeX; hoy, la base de datos y el dashboard. Con todo eso ya en la carpeta, la presentación es un solo pedido:
-
-```text
-Necesito presentar un avance de esta investigación: problema,
-revisión de literatura y datos. Usa Beamer, máximo 15 slides,
-con los gráficos que ya están en figuras/. Crea el LaTeX y compílalo.
-```
-
-. . .
-
-**Qué observar:** no están copiando y pegando nada a PowerPoint. Todo lo que el proyecto ya produjo — figuras, referencias, tablas — **se reutiliza automáticamente**.
-
-::: {.callout-note}
-El resultado es un **primer borrador amigable**: ustedes se sientan a darle su voz, su énfasis y su criterio. Eso no se delega.
-:::
-
 # ☕ Pausa 2 — 10 minutos {background-color="#e6fbfc"}
 
 [Volvemos 8:40 pm]{.big}
 
-# Bloque 5 — Whisper: sus clases se vuelven material
+# Bloque 4 — Whisper: sus clases se vuelven material
 
 ## La idea
 
@@ -535,7 +501,7 @@ Tenía razón en las tres. **Esta sesión que están viendo fue rediseñada con 
 
 [Usos inmediatos: mejorar sus cursos, actas automáticas de asesorías de tesis, procesar entrevistas de campo (con consentimiento), no perder nunca los comentarios que reciben al presentar un paper.]{.warm}
 
-# Bloque 6 — Cómo pedir las cosas
+# Bloque 5 — Cómo pedir las cosas
 
 ## Cuatro hábitos que hacen casi toda la diferencia {.smaller}
 
