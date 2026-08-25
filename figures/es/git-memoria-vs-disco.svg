@@ -1,0 +1,31 @@
+<svg viewBox="0 0 1000 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <!-- pregunta central -->
+  <rect x="330" y="20" width="340" height="52" rx="26" fill="#0f2d52"/>
+  <text x="500" y="53" font-size="17" text-anchor="middle" fill="#ffffff" font-weight="700">"¿Cómo estaba mi archivo antes?"</text>
+
+  <!-- opción izquierda: la conversación -->
+  <g opacity="0.92">
+    <rect x="40" y="120" width="420" height="200" rx="14" fill="#f7f7f9" stroke="#b9bec9" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="70" y="156" font-size="17" font-weight="700" fill="#8a8f9c">❌ Preguntárselo a la conversación</text>
+    <text x="70" y="192" font-size="15" fill="#666c7a">La memoria del chat <tspan font-weight="700">se resume y se borra</tspan></text>
+    <text x="70" y="216" font-size="15" fill="#666c7a">cuando la sesión crece o se cierra.</text>
+    <text x="70" y="248" font-size="15" fill="#666c7a">Y el archivo sobrescrito <tspan font-weight="700">no guarda</tspan></text>
+    <text x="70" y="272" font-size="15" fill="#666c7a">su propio pasado.</text>
+    <text x="70" y="304" font-size="14" fill="#8a8f9c" font-style="italic">Claude puede recordarlo… hasta que ya no.</text>
+  </g>
+
+  <!-- opción derecha: git -->
+  <rect x="540" y="120" width="420" height="200" rx="14" fill="#e8f6f5" stroke="#0e7c86" stroke-width="2.5"/>
+  <text x="570" y="156" font-size="17" font-weight="700" fill="#0e7c86">✓ Preguntárselo al repositorio</text>
+  <text x="570" y="192" font-size="15" fill="#334">Cada versión guardada vive <tspan font-weight="700">en su disco</tspan>,</text>
+  <text x="570" y="216" font-size="15" fill="#334">en la carpeta oculta <tspan font-weight="700" font-family="Menlo, monospace" font-size="14">.git</tspan> — completa,</text>
+  <text x="570" y="240" font-size="15" fill="#334">con fecha y mensaje, <tspan font-weight="700">para siempre</tspan>.</text>
+  <text x="570" y="276" font-size="15" fill="#334">Claude no recuerda: <tspan font-weight="700" fill="#0e7c86">consulta y restaura</tspan>.</text>
+  <text x="570" y="304" font-size="14" fill="#556" font-style="italic">Sobrevive a la conversación, al reinicio y al olvido.</text>
+
+  <!-- flechas desde la pregunta -->
+  <path d="M420,72 C350,90 300,100 260,118" stroke="#b9bec9" stroke-width="2.5" fill="none" stroke-dasharray="7 5"/>
+  <path d="M580,72 C650,90 700,100 740,118" stroke="#0e7c86" stroke-width="3" fill="none"/>
+
+  <text x="500" y="362" font-size="15" text-anchor="middle" fill="#556">La regla: <tspan font-weight="700" fill="#c05621">las versiones no se le preguntan a la memoria de Claude — se guardan en Git y se consultan</tspan></text>
+</svg>

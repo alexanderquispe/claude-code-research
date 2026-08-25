@@ -34,6 +34,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="sesion2-flujo_files/libs/revealjs/dist/theme/quarto-1797efdf6b484f464b1119979ddf5c8f.css">
   <link href="sesion2-flujo_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -165,43 +231,48 @@ Alexander Quispe
 </thead>
 <tbody>
 <tr class="odd">
-<td>6:00 – 6:25</td>
+<td>6:00 – 6:20</td>
 <td>1</td>
 <td>Repaso y Plan Mode con material propio</td>
 </tr>
 <tr class="even">
-<td>6:25 – 7:15</td>
+<td>6:20 – 6:50</td>
 <td>2</td>
-<td>⭐ De 10 PDFs a una base de datos: extraer y clasificar</td>
+<td>Git: la máquina del tiempo de su carpeta</td>
 </tr>
 <tr class="odd">
-<td>7:15 – 7:25</td>
+<td>6:50 – 7:30</td>
+<td>3</td>
+<td>⭐ De 10 PDFs a una base de datos: extraer y clasificar</td>
+</tr>
+<tr class="even">
+<td>7:30 – 7:40</td>
 <td>☕</td>
 <td>Pausa 1</td>
 </tr>
-<tr class="even">
-<td>7:25 – 8:00</td>
-<td>2</td>
+<tr class="odd">
+<td>7:40 – 8:10</td>
+<td>3</td>
 <td>⭐ Auditar, verificar contra la fuente y el dashboard</td>
 </tr>
-<tr class="odd">
-<td>8:00 – 8:25</td>
-<td>3</td>
+<tr class="even">
+<td>8:10 – 8:30</td>
+<td>4</td>
 <td>La presentación en Beamer, con lo ya trabajado</td>
 </tr>
-<tr class="even">
-<td>8:25 – 8:35</td>
+<tr class="odd">
+<td>8:30 – 8:40</td>
 <td>☕</td>
 <td>Pausa 2</td>
 </tr>
-<tr class="odd">
-<td>8:35 – 8:55</td>
-<td>4</td>
+<tr class="even">
+<td>8:40 – 8:55</td>
+<td>5</td>
 <td>Whisper: sus clases se vuelven material</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>8:55 – 9:00</td>
-<td>5</td>
+<td>6</td>
 <td>Cómo pedir las cosas + cierre</td>
 </tr>
 </tbody>
@@ -304,8 +375,245 @@ proponme un plan de actualización. No cambies nada todavía.</code></pre>
 </div>
 </section></section>
 <section>
-<section id="bloque-2-de-10-pdfs-a-una-base-de-datos" class="title-slide slide level1 center">
-<h1>Bloque 2 — ⭐ De 10 PDFs a una base de datos</h1>
+<section id="bloque-2-git-la-máquina-del-tiempo-de-su-carpeta" class="title-slide slide level1 center">
+<h1>Bloque 2 — Git: la máquina del tiempo de su carpeta</h1>
+
+</section>
+<section id="cómo-estaba-mi-archivo-antes" class="slide level2 smaller">
+<h2>“¿Cómo estaba mi archivo antes?”</h2>
+<p>La pregunta llegó de uno de ustedes tras la primera sesión:</p>
+<blockquote>
+<p><em>“Cada vez que Claude modifica un archivo, tengo que preguntarle cómo estaba antes — por si acaso.”</em></p>
+</blockquote>
+<div class="fragment">
+<p>Es la pregunta correcta… dirigida al lugar equivocado. <strong>La conversación con Claude no es un archivo de versiones</strong>: se resume, se borra, se cierra. Y el archivo sobrescrito no guarda su propio pasado.</p>
+</div>
+<div class="fragment">
+<p><span class="warm">La respuesta correcta es un programa que lleva 20 años resolviendo exactamente esto — y que Claude Code sabe usar por ustedes: <strong>Git</strong>.</span></p>
+</div>
+</section>
+<section id="qué-es-git" class="slide level2 smaller">
+<h2>Qué es Git</h2>
+<p>Un programa <strong>gratuito</strong> que vive en su computadora y hace una sola cosa:</p>
+<blockquote>
+<p>Guardar <strong>fotos completas de su carpeta</strong> cada vez que uno se lo pide — con fecha y un mensaje que dice qué cambió.</p>
+</blockquote>
+<div class="fragment">
+<ul>
+<li>Como el <strong>control de cambios de Word</strong>, pero para la carpeta <em>entera</em> del proyecto: el documento, los datos, el código, las notas.</li>
+<li>Es <strong>el</strong> estándar: lo usa todo el software del mundo — y por eso Claude Code lo domina a la perfección.</li>
+<li>Todo pasa <strong>en su disco</strong>. Nada se sube a ningún lado.</li>
+</ul>
+</div>
+</section>
+<section id="lo-que-hacemos-hoy-sin-git" class="slide level2 smaller">
+<h2>Lo que hacemos hoy sin Git</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sin Git</th>
+<th>Con Git</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>paper_final_v2.docx</code> · <code>paper_final_v2_AHORA_SI.docx</code> · <code>paper_v3 (copia).docx</code></td>
+<td><strong>Un solo archivo</strong>, con toda su historia guardada aparte</td>
+</tr>
+<tr class="even">
+<td>“¿Cuál era la buena?” — nadie sabe</td>
+<td>Cada versión tiene <strong>fecha y mensaje</strong>: “introducción reescrita”</td>
+</tr>
+<tr class="odd">
+<td>Comparar versiones: abrir dos Word, leer a ojo</td>
+<td><em>“¿Qué cambió?”</em> → la lista exacta, línea por línea</td>
+</tr>
+<tr class="even">
+<td>Volver atrás: rezar para que exista la copia</td>
+<td><em>“Vuelve a la versión del martes”</em> → hecho</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><span class="warm">El desorden de <code>_v2_FINAL(3)</code> no es un defecto de ustedes: es lo que pasa cuando no hay sistema. Git <strong>es</strong> el sistema.</span></p>
+</div>
+</section>
+<section id="tres-palabras-y-ya-hablaron-git" class="slide level2 smaller">
+<h2>Tres palabras, y ya hablaron Git</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Palabra</th>
+<th>Qué es</th>
+<th>En español de a pie</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Repositorio</strong></td>
+<td>La carpeta vigilada por Git</td>
+<td>“mi proyecto, con historia”</td>
+</tr>
+<tr class="even">
+<td><strong>Versión</strong> (<em>commit</em>)</td>
+<td>Una foto completa de la carpeta, con fecha y mensaje</td>
+<td>“guarda cómo está todo ahora”</td>
+</tr>
+<tr class="odd">
+<td><strong>Diff</strong></td>
+<td>La comparación exacta entre dos fotos</td>
+<td>“¿qué cambió entre ayer y hoy?”</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>No hay más vocabulario que aprender hoy. <span class="small muted">Existen más conceptos (ramas, la nube de GitHub) — ninguno hace falta para lo que ustedes necesitan.</span></p>
+</div>
+</section>
+<section id="la-línea-de-tiempo-de-su-proyecto" class="slide level2 smaller">
+<h2>La línea de tiempo de su proyecto</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/es/git-linea-tiempo.svg" class="quarto-figure quarto-figure-center" style="width:84.0%"></p>
+</figure>
+</div>
+<p>Su carpeta siempre muestra <strong>HOY</strong> — pero cualquier foto anterior se puede <strong>consultar</strong> (el diff) o <strong>restaurar</strong> (volver atrás), sin perder nada.</p>
+</section>
+<section id="ustedes-no-escriben-comandos-piden" class="slide level2 smaller">
+<h2>Ustedes no escriben comandos: piden</h2>
+<p>Git tiene fama de difícil por sus comandos. <strong>Ustedes no van a escribir ninguno</strong> — se pide en español, como todo en este taller:</p>
+<pre class="text"><code>Guarda una versión de todo el proyecto con el mensaje
+"antes de rehacer las tablas".</code></pre>
+<pre class="text"><code>¿Qué cambió en bibliografia.md desde la última versión guardada?</code></pre>
+<pre class="text"><code>Vuelve la introducción del documento a como estaba
+en la versión del lunes.</code></pre>
+<div class="fragment">
+<p><span class="warm">Claude traduce cada pedido al comando de Git correcto, lo ejecuta y les muestra el resultado.</span></p>
+</div>
+</section>
+<section id="por-qué-esto-cambia-cómo-trabajan-con-claude" class="slide level2 smaller">
+<h2>Por qué esto cambia cómo trabajan con Claude</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/es/git-memoria-vs-disco.svg" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+</section>
+<section id="la-red-de-seguridad-completa" class="slide level2 smaller">
+<h2>La red de seguridad completa</h2>
+<p>Con Git en la carpeta, cambian tres cosas de fondo:</p>
+<ol type="1">
+<li><strong>Todo es reversible.</strong> Pueden dejar a Claude trabajar en auto mode con tranquilidad: si algo sale mal, <em>“vuelve a la versión anterior”</em> y listo.</li>
+<li><strong>Las respuestas sobre cambios son exactas.</strong> <em>“¿Qué modificaste?”</em> ya no depende de la memoria de nadie: es el diff, línea por línea.</li>
+<li><strong>La historia sobrevive.</strong> Cierren la sesión, apaguen la computadora, vuelvan en un mes: las versiones siguen ahí.</li>
+</ol>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Esta es la respuesta de fondo a la pregunta del inicio: no hay que <em>preguntarle</em> a Claude cómo estaba el archivo — hay que <strong>guardarlo en Git y pedirle que consulte</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="su-turno-1-instalar-y-estrenar" class="slide level2 your-turn smaller">
+<h2>Su turno 1: instalar y estrenar</h2>
+<pre class="text"><code>¿Tengo Git instalado? Si no, instálalo. Luego convierte esta
+carpeta en un repositorio y guarda la primera versión de todo
+con el mensaje "punto de partida".</code></pre>
+<div class="fragment">
+<p><strong>Qué observar:</strong></p>
+<ol type="1">
+<li>En Mac, Git suele venir instalado; en Windows, Claude lo instala en un minuto.</li>
+<li>Aparece una carpeta oculta <strong><code>.git</code></strong> — la caja donde vivirán todas las fotos. <strong>No se toca.</strong></li>
+<li>Nada más cambió: sus archivos siguen idénticos. Git observa, no estorba.</li>
+</ol>
+</div>
+</section>
+<section id="su-turno-2-romper-y-volver" class="slide level2 your-turn smaller">
+<h2>Su turno 2: romper y volver</h2>
+<p>Prueben la máquina del tiempo completa, en tres pedidos:</p>
+<pre class="text"><code>Reescribe el primer párrafo de notas/ideas-sueltas.md
+en tono más formal.</code></pre>
+<pre class="text"><code>¿Qué cambió exactamente? Muéstrame el antes y el después.</code></pre>
+<pre class="text"><code>No me convence: vuelve el archivo a como estaba.</code></pre>
+<div class="fragment">
+<p><strong>Qué observar:</strong> el diff marca lo viejo y lo nuevo línea por línea, y la reversión es <strong>instantánea y total</strong>. Acaban de perderle el miedo a que Claude toque sus archivos.</p>
+</div>
+</section>
+<section id="el-hábito-y-cómo-hacerlo-automático" class="slide level2 smaller">
+<h2>El hábito — y cómo hacerlo automático</h2>
+<p><strong>Cuándo guardar una versión:</strong> al empezar la jornada, antes de cualquier cambio grande, y al terminar — con un mensaje que su yo del futuro entienda.</p>
+<div class="fragment">
+<p>Y la parte elegante: <strong>no hace falta acordarse</strong>. Agréguenle una línea al <code>CLAUDE.md</code> del proyecto:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Antes de modificar cualquier archivo, guarda una versión en Git.</span>
+<span id="cb9-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Al final de cada sesión de trabajo, guarda una versión con un</span>
+<span id="cb9-3"><a href="" aria-hidden="true" tabindex="-1"></a>  mensaje que resuma qué se logró.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><span class="warm">La memoria del proyecto (ayer) + la máquina del tiempo (hoy): Claude guarda versiones <strong>solo</strong>, sin que ustedes lo pidan.</span></p>
+</div>
+</section>
+<section id="los-límites-honestos" class="slide level2 smaller">
+<h2>Los límites honestos</h2>
+<ul>
+<li><strong>No es un respaldo.</strong> Las fotos viven en el mismo disco que la carpeta: si la laptop muere, mueren juntas. La copia en la nube existe (GitHub) — <strong>otro día</strong>; por ahora, respalden como siempre.</li>
+<li><strong>Brilla con texto:</strong> <code>.md</code>, <code>.tex</code>, <code>.csv</code>, código — ahí el diff es línea por línea. Con Word o PDF guarda las versiones igual, pero compara peor. <span class="small">Otra razón por la que este taller prefiere markdown y LaTeX.</span></li>
+<li><strong>Los datos crudos pesados</strong> (los ZIP del MINEM, videos) mejor quedan fuera de las fotos — Claude sabe configurarlo si se lo piden.</li>
+</ul>
+</section>
+<section id="lo-que-se-llevan-de-este-bloque" class="slide level2 smaller">
+<h2>Lo que se llevan de este bloque</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Antes</th>
+<th>Ahora</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“¿Cómo estaba ayer?” → preguntarle a Claude, cruzar los dedos</td>
+<td>→ preguntarle <strong>al repositorio</strong>: respuesta exacta</td>
+</tr>
+<tr class="even">
+<td>Miedo a que Claude rompa algo</td>
+<td>Todo cambio es <strong>reversible</strong></td>
+</tr>
+<tr class="odd">
+<td><code>paper_v2_FINAL(3).docx</code></td>
+<td>Una carpeta limpia, con <strong>toda su historia</strong></td>
+</tr>
+<tr class="even">
+<td>Guardar versiones: un hábito más que mantener</td>
+<td>Una línea en <code>CLAUDE.md</code> y <strong>se guarda solo</strong></td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="bloque-3-de-10-pdfs-a-una-base-de-datos" class="title-slide slide level1 center">
+<h1>Bloque 3 — ⭐ De 10 PDFs a una base de datos</h1>
 
 </section>
 <section id="el-problema-con-nombre-propio" class="slide level2 smaller">
@@ -417,7 +725,7 @@ Agrega la categoría como columna y explica tu criterio.</code></pre>
 <section>
 <section id="pausa-1-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
 <h1>☕ Pausa 1 — 10 minutos</h1>
-<p><span class="big">Volvemos 7:25 pm</span></p>
+<p><span class="big">Volvemos 7:40 pm</span></p>
 </section>
 <section id="paso-3-auditar-la-codificación" class="slide level2 your-turn smaller">
 <h2>Paso 3 — auditar la codificación</h2>
@@ -556,8 +864,8 @@ intensidad minera con número de conflictos.</code></pre>
 </div>
 </section></section>
 <section>
-<section id="bloque-3-la-presentación-sin-escribir-latex" class="title-slide slide level1 center">
-<h1>Bloque 3 — La presentación, sin escribir LaTeX</h1>
+<section id="bloque-4-la-presentación-sin-escribir-latex" class="title-slide slide level1 center">
+<h1>Bloque 4 — La presentación, sin escribir LaTeX</h1>
 
 </section>
 <section id="por-qué-latex-y-no-powerpoint" class="slide level2">
@@ -602,12 +910,12 @@ con los gráficos que ya están en figuras/. Crea el LaTeX y compílalo.</code><
 </section></section>
 <section id="pausa-2-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
 <h1>☕ Pausa 2 — 10 minutos</h1>
-<p><span class="big">Volvemos 8:35 pm</span></p>
+<p><span class="big">Volvemos 8:40 pm</span></p>
 </section>
 
 <section>
-<section id="bloque-4-whisper-sus-clases-se-vuelven-material" class="title-slide slide level1 center">
-<h1>Bloque 4 — Whisper: sus clases se vuelven material</h1>
+<section id="bloque-5-whisper-sus-clases-se-vuelven-material" class="title-slide slide level1 center">
+<h1>Bloque 5 — Whisper: sus clases se vuelven material</h1>
 
 </section>
 <section id="la-idea" class="slide level2">
@@ -651,8 +959,8 @@ tres sugerencias concretas para mejorar la clase.</code></pre>
 </div>
 </section></section>
 <section>
-<section id="bloque-5-cómo-pedir-las-cosas" class="title-slide slide level1 center">
-<h1>Bloque 5 — Cómo pedir las cosas</h1>
+<section id="bloque-6-cómo-pedir-las-cosas" class="title-slide slide level1 center">
+<h1>Bloque 6 — Cómo pedir las cosas</h1>
 
 </section>
 <section id="cuatro-hábitos-que-hacen-casi-toda-la-diferencia" class="slide level2 smaller">
@@ -723,6 +1031,10 @@ tres sugerencias concretas para mejorar la clase.</code></pre>
 <td>PDF y Beamer compilados, sin escribir código</td>
 </tr>
 <tr class="even">
+<td>“¿Cómo estaba este archivo antes?”</td>
+<td>Git guarda cada versión; todo es reversible</td>
+</tr>
+<tr class="odd">
 <td>Las clases se evaporaban</td>
 <td>Transcritas, analizadas y con feedback</td>
 </tr>
