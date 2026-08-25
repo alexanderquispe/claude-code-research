@@ -259,7 +259,7 @@ patrón, escribe el código, lo corre, **ve que algo no cuadra y lo arregla**.
 
 ## Lo que hizo por detrás, paso a paso {.smaller}
 
-![](../figures/es/pipeline-extraccion.svg){.nostretch width=84% fig-align="center"}
+![](../figures/es/pipeline-extraccion.svg){.nostretch width=92% fig-align="center"}
 
 ## ¿Quién hace qué? (y qué viaja a dónde) {.smaller}
 
