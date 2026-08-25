@@ -100,7 +100,34 @@ La pregunta llegó de uno de ustedes tras la primera sesión: *"cada vez que Cla
 
 ![](../figures/es/git-linea-tiempo.svg){.nostretch width=78% fig-align="center"}
 
-**Todo el vocabulario que necesitan:** el **repositorio** es la carpeta vigilada · una **versión** (*commit*) es una foto completa, con fecha y mensaje · el **diff** es la comparación entre dos fotos. [Y adiós a `paper_final_v2_AHORA_SI(3).docx`: un solo archivo, toda la historia.]{.muted}
+Cada punto de la línea es una **foto completa** de la carpeta, que se puede consultar o restaurar cuando haga falta. [Y adiós a `paper_final_v2_AHORA_SI(3).docx`: un solo archivo, toda la historia.]{.muted}
+
+## Tres palabras, tres pedidos {.smaller}
+
+Todo el vocabulario de hoy — y el pedido exacto para cada etapa, **listo para copiar**:
+
+**Repositorio** — la carpeta vigilada por Git (*"mi proyecto, con historia"*). Para setearlo:
+
+```text
+Convierte esta carpeta en un repositorio de Git y confírmame
+que quedó listo.
+```
+
+**Versión** (*commit*) — una foto completa de la carpeta, con fecha y mensaje. Para tomarla:
+
+```text
+Guarda una versión de todo el proyecto con el mensaje
+"avance de hoy: bibliografía revisada".
+```
+
+**Diff** — la comparación exacta entre dos fotos. Para pedirla:
+
+```text
+¿Qué cambió en el proyecto desde la última versión guardada?
+Muéstramelo línea por línea.
+```
+
+[Y para ver la línea de tiempo entera: *"muéstrame la lista de versiones guardadas, con fecha y mensaje"*. No hay más vocabulario que aprender hoy.]{.small .muted}
 
 ## ⚡ Su turno ① — enciendan la máquina del tiempo {.your-turn .smaller}
 
