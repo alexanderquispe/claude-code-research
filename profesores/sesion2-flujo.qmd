@@ -96,11 +96,17 @@ La pregunta llegó de uno de ustedes tras la primera sesión: *"cada vez que Cla
 
 [Ese programa que guarda las versiones se llama **Git**: gratuito, vive en su computadora, y Claude lo maneja por ustedes.]{.warm}
 
+## El problema que todos conocemos {.smaller}
+
+![](../figures/es/versiones-caos.svg){.nostretch width=76% fig-align="center"}
+
+Ese desorden no es un defecto suyo: es **control de versiones a mano** — y falla justo cuando importa. [Git resuelve las tres preguntas con una sola idea →]{.warm}
+
 ## Qué es: fotos de su carpeta, con fecha y mensaje {.smaller}
 
 ![](../figures/es/git-linea-tiempo.svg){.nostretch width=78% fig-align="center"}
 
-Cada punto de la línea es una **foto completa** de la carpeta, que se puede consultar o restaurar cuando haga falta. [Y adiós a `paper_final_v2_AHORA_SI(3).docx`: un solo archivo, toda la historia.]{.muted}
+Cada punto de la línea es una **foto completa** de la carpeta, que se puede consultar o restaurar cuando haga falta. [Un solo archivo, toda la historia — las tres preguntas del slide anterior, respondidas.]{.muted}
 
 ## Tres palabras, tres pedidos {.smaller}
 
