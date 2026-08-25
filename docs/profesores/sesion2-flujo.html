@@ -217,11 +217,6 @@ Alexander Quispe
 <section id="plan-de-hoy-3-horas" class="slide level2 smaller">
 <h2>Plan de hoy (3 horas)</h2>
 <table class="caption-top">
-<colgroup>
-<col style="width: 30%">
-<col style="width: 40%">
-<col style="width: 30%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Hora</th>
@@ -236,14 +231,14 @@ Alexander Quispe
 <td>Repaso y Plan Mode con material propio</td>
 </tr>
 <tr class="even">
-<td>6:20 – 6:50</td>
+<td>6:20 – 6:55</td>
 <td>2</td>
 <td>Git: la máquina del tiempo de su carpeta</td>
 </tr>
 <tr class="odd">
-<td>6:50 – 7:30</td>
+<td>6:55 – 7:30</td>
 <td>3</td>
-<td>⭐ De 10 PDFs a una base de datos: extraer — y OCR para los escaneados</td>
+<td>⭐ De 10 PDFs a una base de datos: extraer</td>
 </tr>
 <tr class="even">
 <td>7:30 – 7:40</td>
@@ -251,17 +246,17 @@ Alexander Quispe
 <td>Pausa 1</td>
 </tr>
 <tr class="odd">
-<td>7:40 – 8:25</td>
+<td>7:40 – 8:20</td>
 <td>3</td>
-<td>⭐ Auditar, verificar contra la fuente y el dashboard</td>
+<td>⭐ OCR: los escaneados también entran a la base</td>
 </tr>
 <tr class="even">
-<td>8:25 – 8:35</td>
+<td>8:20 – 8:30</td>
 <td>☕</td>
 <td>Pausa 2</td>
 </tr>
 <tr class="odd">
-<td>8:35 – 8:52</td>
+<td>8:30 – 8:52</td>
 <td>4</td>
 <td>Whisper: sus clases se vuelven material</td>
 </tr>
@@ -598,6 +593,11 @@ con una columna que indique de qué reporte salió.</code></pre>
 <p><span class="warm">Ojo: cuando el trabajo sea <strong>leer y juzgar</strong> cada narrativa — clasificar demandas, resumir casos — la división se invierte: eso es trabajo de cerebro, no de obrero, y sí consume tokens en serio.</span></p>
 <p><span class="small muted">Además, Claude Code usa por dentro modelos pequeños y baratos (Haiku) para tareas de apoyo: resúmenes, títulos, búsquedas internas.</span></p>
 </div>
+</section></section>
+<section>
+<section id="pausa-1-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
+<h1>☕ Pausa 1 — 10 minutos</h1>
+<p><span class="big">Volvemos 7:40 pm</span></p>
 </section>
 <section id="y-si-el-pdf-es-una-foto-paddleocr" class="slide level2 smaller">
 <h2>¿Y si el PDF es una foto? PaddleOCR</h2>
@@ -693,147 +693,6 @@ imagen, sin texto seleccionable.
    ilegibles para revisarlas a mano.</code></pre>
 <div class="fragment">
 <p><strong>Qué observar:</strong> el punto 2 es la disciplina de siempre — <strong>una muestra antes de correr todo</strong>; la conversión corre <strong>en su máquina, sin tokens</strong>; y la lista de ilegibles del punto 4 es la tasa de error del OCR: <strong>también se mide, no se supone</strong>.</p>
-</div>
-</section></section>
-<section>
-<section id="pausa-1-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
-<h1>☕ Pausa 1 — 10 minutos</h1>
-<p><span class="big">Volvemos 7:40 pm</span></p>
-</section>
-<section id="paso-3-auditar-lo-extraído" class="slide level2 your-turn smaller">
-<h2>Paso 3 — auditar lo extraído</h2>
-<blockquote>
-<p><strong>Nadie debería publicar una extracción automática que no auditó.</strong></p>
-</blockquote>
-<div class="fragment">
-<p><strong>Háganlo ahora, a mano:</strong></p>
-<ol type="1">
-<li>Abran el CSV y elijan <strong>20 casos al azar</strong>.</li>
-<li>Búsquenlos en el PDF original y comparen campo por campo: tipo, fecha, ubicación, actores.</li>
-<li>¿Cuántos tienen algún error?</li>
-</ol>
-</div>
-<div class="fragment">
-<p>Esa proporción es un <strong>dato de su investigación</strong>, no una anécdota. Si es 2%, va en el paper. Si es 20%, hay que arreglar la extracción antes de seguir.</p>
-<p><span class="warm">No es desconfianza: es exactamente lo que harían con un asistente humano nuevo.</span></p>
-</div>
-</section>
-<section id="paso-4-verificar-contra-la-fuente" class="slide level2 your-turn smaller">
-<h2>Paso 4 — verificar contra la fuente</h2>
-<p>Lo mejor de estos reportes: <strong>traen su propia respuesta</strong>. El n.° 268 declara, en sus propias tablas, las cifras oficiales de junio de 2026:</p>
-<table class="caption-top">
-<tbody>
-<tr class="odd">
-<td>Conflictos registrados en el mes</td>
-<td><strong>197</strong></td>
-</tr>
-<tr class="even">
-<td>De ellos, socioambientales</td>
-<td><strong>96</strong></td>
-</tr>
-<tr class="odd">
-<td>De esos, de <strong>minería</strong></td>
-<td><strong>61</strong> (63.5%)</td>
-</tr>
-</tbody>
-</table>
-<pre class="text"><code>Cuenta cuántos casos socioambientales y cuántos de minería salieron
-de mi extracción del reporte 268, y compáralo con esas cifras del
-propio PDF. ¿Coinciden? Si no, ¿qué se quedó afuera y por qué?</code></pre>
-</section>
-<section id="lo-que-van-a-encontrar" class="slide level2 smaller">
-<h2>Lo que van a encontrar</h2>
-<p><span class="warm">Sus números <strong>no van a cuadrar</strong>. Y eso es lo que había que descubrir.</span></p>
-<div class="fragment">
-<p>El reporte <strong>narra en detalle solo los casos que tuvieron hechos nuevos ese mes</strong>. Los demás existen únicamente en las tablas agregadas.</p>
-</div>
-<div class="fragment">
-<p>Una base construida solo con el texto <strong>sobrerrepresenta los conflictos activos y ruidosos</strong>, e ignora los que llevan meses en silencio. En un paper sobre conflictividad, ese sesgo no es un detalle: <strong>es la conclusión al revés</strong>.</p>
-</div>
-<div class="fragment">
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>La misma lección de ayer, en otro terreno</strong></p>
-</div>
-<div class="callout-content">
-<p>Con las citas: pedir verificación explícita. Con los datos: <strong>auditar la muestra y contrastar con el total oficial</strong>. Un número mal codificado hace tanto daño como una cita inventada — y se nota mucho menos.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="paso-5-y-ahora-sí-el-dashboard" class="slide level2 your-turn smaller">
-<h2>Paso 5 — y ahora sí, el dashboard</h2>
-<pre class="text"><code>Con el CSV de datos-limpios/ y la producción minera de datos/,
-créame un dashboard HTML: conflictos por departamento, evolución
-mensual, distribución por tipo de conflicto, y un gráfico que cruce
-intensidad minera con número de conflictos.</code></pre>
-<div class="fragment">
-<p><strong>Qué observar:</strong> cómo prueba, falla y <strong>se corrige solo</strong> hasta que el archivo compila. Ese ciclo — escribir, verificar, corregir — es lo que un chat no puede hacer.</p>
-</div>
-</section>
-<section id="por-qué-esto-cambia-su-semana" class="slide level2">
-<h2>Por qué esto cambia su semana</h2>
-<ul>
-<li><strong>Exploración en minutos:</strong> cada base de datos nueva recibe un panorama navegable el mismo día.</li>
-<li><strong>Comunicación:</strong> a su coautor o tesista le mandan <strong>un link</strong>, no 14 imágenes pegadas en Word.</li>
-<li>Claude corre el ciclo completo solo: escribe el código del dashboard, lo prueba, <strong>lee sus propios errores y los corrige</strong>.</li>
-</ul>
-<div class="fragment">
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Antes de mandar el link</strong></p>
-</div>
-<div class="callout-content">
-<p>Si lo comparten en la nube, actíven <strong>“cualquiera con el enlace”</strong> — el error clásico es mandar un link que solo abre el dueño. Pruébenlo en su celular antes de enviarlo.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="lo-que-acaban-de-construir" class="slide level2 smaller">
-<h2>Lo que acaban de construir</h2>
-<p>En una hora, partiendo de PDFs que nadie había tabulado:</p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Producto</th>
-<th>Estado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Una base de datos de conflictos que <strong>no existía</strong></td>
-<td>CSV, lista para analizar</td>
-</tr>
-<tr class="even">
-<td>Los reportes escaneados, <strong>convertidos a texto</strong></td>
-<td>con PaddleOCR — gratis, en local</td>
-</tr>
-<tr class="odd">
-<td>Una <strong>tasa de error medida</strong>, no supuesta</td>
-<td>dato del paper</td>
-</tr>
-<tr class="even">
-<td>Un dashboard compartible por link</td>
-<td>HTML</td>
-</tr>
-</tbody>
-</table>
-<div class="fragment">
-<p><span class="warm">Y el mes que viene, cuando salga el reporte 270, repetirlo cuesta un pedido.</span></p>
 </div>
 </section></section>
 <section id="pausa-2-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
@@ -951,18 +810,14 @@ tres sugerencias concretas para mejorar la clase.</code></pre>
 <td><code>/deep-research</code> + carpeta de papers en 20 min</td>
 </tr>
 <tr class="even">
-<td>Resultados por correo en Word</td>
-<td>Dashboard compartible por link</td>
-</tr>
-<tr class="odd">
 <td>“No sé LaTeX”</td>
 <td>PDF y Beamer compilados, sin escribir código</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>“¿Cómo estaba este archivo antes?”</td>
 <td>Git guarda cada versión; todo es reversible</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Las clases se evaporaban</td>
 <td>Transcritas, analizadas y con feedback</td>
 </tr>
