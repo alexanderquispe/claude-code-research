@@ -1,0 +1,87 @@
+<svg viewBox="0 0 1000 570" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#0e7c86"/>
+    </marker>
+    <marker id="arw" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#c05621"/>
+    </marker>
+  </defs>
+
+  <!-- top lane: Anthropic -->
+  <rect x="10" y="30" width="980" height="244" rx="12" fill="#eef2f8" stroke="#0f2d52" stroke-width="1.5"/>
+  <text x="28" y="62" font-size="18" font-weight="700" fill="#0f2d52">ON ANTHROPIC SERVERS  the brain: <tspan fill="#c05621">Opus</tspan> (selected in /model)</text>
+
+  <!-- bottom lane: your computer -->
+  <rect x="10" y="296" width="980" height="240" rx="12" fill="#e8f6f5" stroke="#0e7c86" stroke-width="1.5"/>
+  <text x="28" y="524" font-size="18" font-weight="700" fill="#0e7c86">ON YOUR COMPUTER  the worker: <tspan fill="#c05621">Python + pdfplumber</tspan> (free, local)</text>
+
+  <!-- A: plan -->
+  <rect x="38" y="96" width="196" height="124" rx="10" fill="#ffffff" stroke="#0f2d52" stroke-width="2"/>
+  <text x="52" y="128" font-size="17" fill="#0f2d52" font-weight="700">` Plan</text>
+  <text x="52" y="158" font-size="16" fill="#334">Understand the request</text>
+  <text x="52" y="182" font-size="16" fill="#334">and draft the plan</text>
+
+  <!-- B: skim -->
+  <rect x="266" y="96" width="208" height="124" rx="10" fill="#ffffff" stroke="#0f2d52" stroke-width="2"/>
+  <text x="280" y="128" font-size="17" fill="#0f2d52"><tspan font-weight="700">a Skim the PDF</tspan> <tspan font-size="13" fill="#889">Read</tspan></text>
+  <text x="280" y="158" font-size="16" fill="#334">Read 23 pages to</text>
+  <text x="280" y="182" font-size="16" fill="#334">understand the cases</text>
+  <text x="280" y="206" font-size="16" fill="#334">format</text>
+
+  <!-- C: write script -->
+  <rect x="506" y="96" width="212" height="124" rx="10" fill="#ffffff" stroke="#0f2d52" stroke-width="2"/>
+  <text x="520" y="128" font-size="17" fill="#0f2d52"><tspan font-weight="700">b Write the code</tspan> <tspan font-size="13" fill="#889">Write</tspan></text>
+  <text x="520" y="158" font-size="16" fill="#334">A Python script</text>
+  <text x="520" y="182" font-size="16" fill="#334">(extract.py) using the</text>
+  <text x="520" y="206" font-size="16" fill="#334"><tspan font-weight="700">pdfplumber</tspan> library</text>
+
+  <!-- D: fix -->
+  <rect x="750" y="96" width="212" height="124" rx="10" fill="#ffffff" stroke="#0f2d52" stroke-width="2"/>
+  <text x="764" y="128" font-size="17" fill="#0f2d52" font-weight="700">d Read errors</text>
+  <text x="764" y="158" font-size="16" fill="#334">Match the official</text>
+  <text x="764" y="182" font-size="16" fill="#334">totals? Fix the script</text>
+  <text x="764" y="206" font-size="16" fill="#334">and rerun</text>
+
+  <!-- P: prompt -->
+  <rect x="38" y="356" width="196" height="124" rx="10" fill="#0f2d52"/>
+  <text x="52" y="388" font-size="16" fill="#ffffff" font-weight="700">Your request:</text>
+  <text x="52" y="418" font-size="15" fill="#cfe0f4" font-style="italic">Extract all cases</text>
+  <text x="52" y="440" font-size="15" fill="#cfe0f4" font-style="italic">from the reports</text>
+  <text x="52" y="462" font-size="15" fill="#cfe0f4" font-style="italic">to a CSV</text>
+
+  <!-- PDFs -->
+  <rect x="266" y="356" width="208" height="124" rx="10" fill="#ffffff" stroke="#0e7c86" stroke-width="2"/>
+  <text x="280" y="388" font-size="17" font-weight="700" fill="#0e7c86">The 10 PDF reports</text>
+  <text x="280" y="418" font-size="16" fill="#334">~1,200 pages from</text>
+  <text x="280" y="442" font-size="16" fill="#334">the Ombudsman</text>
+  <text x="280" y="468" font-size="14" fill="#889">(they never leave here)</text>
+
+  <!-- S: script runs -->
+  <rect x="506" y="356" width="212" height="124" rx="10" fill="#ffffff" stroke="#0e7c86" stroke-width="2"/>
+  <text x="520" y="388" font-size="17" fill="#0e7c86"><tspan font-weight="700">c The script runs</tspan> <tspan font-size="13" fill="#889">Bash</tspan></text>
+  <text x="520" y="418" font-size="16" fill="#334">Opens the 10 PDFs and</text>
+  <text x="520" y="442" font-size="16" fill="#334">extracts each case  in</text>
+  <text x="520" y="466" font-size="16" fill="#334">seconds, no tokens</text>
+
+  <!-- R: result -->
+  <rect x="750" y="356" width="212" height="124" rx="10" fill="#fff7f2" stroke="#c05621" stroke-width="2.5"/>
+  <text x="764" y="388" font-size="17" font-weight="700" fill="#c05621">cases.csv</text>
+  <text x="764" y="418" font-size="16" fill="#334">One row per case,</text>
+  <text x="764" y="442" font-size="16" fill="#334">checked against the</text>
+  <text x="764" y="466" font-size="16" fill="#334">reports tables</text>
+
+  <!-- arrows -->
+  <path d="M136,356 L136,222" stroke="#0e7c86" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M234,158 L264,158" stroke="#0e7c86" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M368,222 L368,354" stroke="#0e7c86" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+  <path d="M394,354 L394,222" stroke="#0e7c86" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+  <path d="M474,158 L504,158" stroke="#0e7c86" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M612,222 L612,354" stroke="#0e7c86" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M718,438 L748,438" stroke="#c05621" stroke-width="3" fill="none" marker-end="url(#arw)"/>
+  <path d="M732,396 L788,224" stroke="#0e7c86" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M810,222 L688,352" stroke="#c05621" stroke-width="2.5" fill="none" stroke-dasharray="6 4" marker-end="url(#arw)"/>
+  <text x="826" y="288" font-size="14.5" fill="#c05621" font-weight="700">repeat until it matches</text>
+
+  <text x="500" y="562" font-size="16" text-anchor="middle" fill="#556">The model <tspan font-weight="700">reasons and writes code</tspan> · bulk reading is done by <tspan font-weight="700">the script, on your machine</tspan></text>
+</svg>

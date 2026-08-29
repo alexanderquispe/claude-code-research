@@ -1,0 +1,74 @@
+<svg viewBox="0 0 1000 430" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arq" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#c05621"/>
+    </marker>
+  </defs>
+
+  <!-- folder window -->
+  <rect x="15" y="12" width="645" height="406" rx="12" fill="#ffffff" stroke="#c3cad6" stroke-width="1.5"/>
+  <rect x="15" y="12" width="645" height="44" rx="12" fill="#eef1f6"/>
+  <rect x="15" y="40" width="645" height="16" fill="#eef1f6"/>
+  <circle cx="41" cy="34" r="6.5" fill="#ff5f57"/>
+  <circle cx="63" cy="34" r="6.5" fill="#febc2e"/>
+  <circle cx="85" cy="34" r="6.5" fill="#28c840"/>
+  <text x="337" y="40" font-size="14.5" text-anchor="middle" fill="#556" font-weight="600">=Á My paper  7 items</text>
+
+  <!-- rows -->
+  <g font-size="15">
+    <g transform="translate(0,0)">
+      <rect x="40" y="72" width="22" height="28" rx="3" fill="#dbe4f0" stroke="#9db4d4"/>
+      <text x="78" y="92" fill="#223">paper_final.docx</text>
+      <text x="560" y="92" fill="#98a1af" font-size="13" text-anchor="end">Mar 12</text>
+    </g>
+    <g transform="translate(0,48)">
+      <rect x="40" y="72" width="22" height="28" rx="3" fill="#dbe4f0" stroke="#9db4d4"/>
+      <text x="78" y="92" fill="#223">paper_final_v2.docx</text>
+      <text x="560" y="92" fill="#98a1af" font-size="13" text-anchor="end">Apr 3</text>
+    </g>
+    <g transform="translate(0,96)">
+      <rect x="40" y="72" width="22" height="28" rx="3" fill="#dbe4f0" stroke="#9db4d4"/>
+      <text x="78" y="92" fill="#223">paper_final_v2_NOW_REALLY.docx</text>
+      <text x="560" y="92" fill="#98a1af" font-size="13" text-anchor="end">Apr 3</text>
+    </g>
+    <g transform="translate(0,144)">
+      <rect x="40" y="72" width="22" height="28" rx="3" fill="#dbe4f0" stroke="#9db4d4"/>
+      <text x="78" y="92" fill="#223">paper_final_v2_NOW_REALLY (3).docx</text>
+      <text x="560" y="92" fill="#98a1af" font-size="13" text-anchor="end">Apr 8</text>
+    </g>
+    <g transform="translate(0,192)">
+      <rect x="40" y="72" width="22" height="28" rx="3" fill="#dbe4f0" stroke="#9db4d4"/>
+      <text x="78" y="92" fill="#223">paper_v3_comments_MARITZA.docx</text>
+      <text x="560" y="92" fill="#98a1af" font-size="13" text-anchor="end">May 15</text>
+    </g>
+    <g transform="translate(0,240)">
+      <rect x="40" y="72" width="22" height="28" rx="3" fill="#dbe4f0" stroke="#9db4d4"/>
+      <text x="78" y="92" fill="#223">paper_v3_comments_MARITZA_ok.docx</text>
+      <text x="560" y="92" fill="#98a1af" font-size="13" text-anchor="end">May 15</text>
+    </g>
+    <g transform="translate(0,288)">
+      <rect x="40" y="72" width="22" height="28" rx="3" fill="#f5dede" stroke="#d49d9d"/>
+      <text x="78" y="92" fill="#223" font-weight="700">FINAL_for_journal??.docx</text>
+      <text x="560" y="92" fill="#98a1af" font-size="13" text-anchor="end">yesterday, 11:58 pm</text>
+    </g>
+  </g>
+
+  <!-- questions -->
+  <g>
+    <rect x="700" y="96" width="280" height="52" rx="12" fill="#fff0e8" stroke="#c05621" stroke-width="2"/>
+    <text x="840" y="128" font-size="15" text-anchor="middle" fill="#c05621" font-weight="700">Which one was the good one?</text>
+    <path d="M700,128 C660,140 630,150 600,158" stroke="#c05621" stroke-width="2.5" fill="none" marker-end="url(#arq)"/>
+  </g>
+  <g>
+    <rect x="700" y="196" width="280" height="72" rx="12" fill="#fff0e8" stroke="#c05621" stroke-width="2"/>
+    <text x="840" y="226" font-size="15" text-anchor="middle" fill="#c05621" font-weight="700">What changed between</text>
+    <text x="840" y="248" font-size="15" text-anchor="middle" fill="#c05621" font-weight="700">these two?</text>
+    <path d="M700,240 C660,255 630,270 600,285" stroke="#c05621" stroke-width="2.5" fill="none" marker-end="url(#arq)"/>
+  </g>
+  <g>
+    <rect x="700" y="316" width="280" height="72" rx="12" fill="#fff0e8" stroke="#c05621" stroke-width="2"/>
+    <text x="840" y="346" font-size="15" text-anchor="middle" fill="#c05621" font-weight="700">And which one</text>
+    <text x="840" y="368" font-size="15" text-anchor="middle" fill="#c05621" font-weight="700">got sent to the journal&?</text>
+    <path d="M700,362 C665,372 640,376 615,378" stroke="#c05621" stroke-width="2.5" fill="none" marker-end="url(#arq)"/>
+  </g>
+</svg>

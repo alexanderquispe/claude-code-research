@@ -20,14 +20,14 @@ A 4-hour hands-on course (August 17–18, 2026), from **zero knowledge** to runn
 | **Day 1** (2h) | [Foundations](ras/day1-foundations.html) | claude.ai vs. Cowork vs. Claude Code · the agent loop · `/init` & `CLAUDE.md` · permission modes · **Plan Mode** |
 | **Day 2** (2h) | [Power Tools](ras/day2-power-tools.html) | custom commands & subagents · **MCP** servers · dashboards · **`/deep-research`** · **Whisper** for paper discussions · the Sant'Anna academic workflow |
 
-## 👩‍🏫 For faculty — Facultad de Ciencias Sociales
+## 👩‍🏫 For faculty — Faculty of Social Sciences
 
-Two 3-hour sessions for professors, taught step by step in Spanish, with no technical background assumed.
+Two 3-hour sessions for professors, taught step by step in English, with no technical background assumed.
 
-| Sesión | Deck | Temas |
-|--------|------|-------|
-| **Sesión 1** (3h) | [Confianza y verificación](profesores/sesion1-confianza.html) | qué es y qué no es · seguridad · terminal mínimo · `/init` · **la trampa de la cita** · biblioteca PUCP |
-| **Sesión 2** (3h) | [El flujo de investigación](profesores/sesion2-flujo.html) | Plan Mode · **`/deep-research`** · de PDFs a base de datos · LaTeX sin escribir LaTeX · **Whisper** |
+| Session | Deck | Topics |
+|---------|------|--------|
+| **Session 1** (3h) | [Trust and Verification](profesores/sesion1-confianza.html) | what it is and isn’t · safety · minimal terminal · `/init` · **the citation trap** · university library proxy |
+| **Session 2** (3h) | [The Research Flow](profesores/sesion2-flujo.html) | Plan Mode · **`/deep-research`** · from PDFs to a dataset · LaTeX without writing LaTeX · **Whisper** |
 
 The written guide (guion + manual) is in [`profesores/README.md`](https://github.com/alexanderquispe/claude-code-research/blob/main/profesores/README.md).
 

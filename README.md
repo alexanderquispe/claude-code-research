@@ -11,7 +11,7 @@ Built with [Quarto](https://quarto.org) + reveal.js. Rendered HTML in `docs/` (G
 | Folder | Audience | Content |
 |--------|----------|---------|
 | `ras/` | Q-LAB research assistants | 4-hour hands-on course (2 decks, English): foundations · power tools |
-| `profesores/` | Faculty, Facultad de Ciencias Sociales PUCP | Two 3-hour step-by-step sessions (Spanish, no technical background assumed). `README.md` is the working workshop guide; slides in preparation |
+| `profesores/` | Faculty, Faculty of Social Sciences (PUCP) | Two 3-hour step-by-step sessions (English; Spanish originals preserved under `profesores/es/`). `README.md` is the working workshop guide; slides included |
 | `figures/`, `styles/` | shared | SVG diagrams and the reveal.js theme |
 | `recordings/`, `transcripts/` | local only (gitignored) | class recordings and their Whisper transcriptions, used to improve the faculty material |
 

@@ -1,370 +1,296 @@
-# Claude Code para investigación en ciencias sociales
+# Claude Code for research in the social sciences
 
-**Taller para docentes — Facultad de Ciencias Sociales, PUCP**
-Alexander Quispe · [Q-LAB](https://qlab.pucp.edu.pe/), Laboratorio de Inteligencia
-Artificial y Métodos Computacionales en Ciencias Sociales
+**Faculty workshop — Faculty of Social Sciences, PUCP**  
+Alexander Quispe · [Q-LAB](https://qlab.pucp.edu.pe/), Laboratory of AI and Computational Methods in the Social Sciences
 
-Este documento sirve para dos cosas: como guion de la sesión y como manual al que
-volver después. Todo lo que aparece aquí fue probado en un caso real —preparar un
-curso, descargar su bibliografía desde la biblioteca PUCP y auditar sus citas—, no
-es una lista de funciones tomada de la documentación.
+This document serves two purposes: as the session script and as a manual you can come back to. Everything here was tested in a real case — preparing a course, downloading its bibliography through the university library proxy, and auditing the citations — not a feature list copied from the docs.
 
-## Material del taller
+## Workshop materials
 
-| Archivo | Qué es |
+| File | What it is |
 |---|---|
-| `sesion1-confianza.qmd` | Slides — Sesión 1: qué es, seguridad, terminal, `/init`, la trampa de la cita, biblioteca PUCP |
-| `sesion2-flujo.qmd` | Slides — Sesión 2: Plan Mode, `/deep-research`, de PDFs a base de datos, LaTeX, Whisper |
-| `guia-ejemplo.md` | **Guía del instructor** para el proyecto de ejemplo: solucionario y trampas |
-| `notas-clases-ra.md` | Lecciones extraídas de las clases piloto con los asistentes del Q-LAB |
-| [`../ejemplo-mineria-conflicto/`](../ejemplo-mineria-conflicto/) | **El proyecto de ejemplo** que usan los participantes |
+| `sesion1-confianza.qmd` | Slides — Session 1: what it is and isn’t, safety, minimal terminal, `/init`, the citation trap, university library proxy |
+| `sesion2-flujo.qmd` | Slides — Session 2: Plan Mode, `/deep-research`, from PDFs to a dataset, LaTeX, Whisper |
+| `guia-ejemplo.md` | **Instructor’s guide** for the example project: answer key and gotchas |
+| `notas-clases-ra.md` | Lessons from the pilot classes with Q‑LAB RAs |
+| [`../ejemplo-mineria-conflicto/`](../ejemplo-mineria-conflicto/) | **The example project** used by participants |
 
-### El proyecto de ejemplo
+### The example project
 
-Una carpeta de ~41 MB con un proyecto de investigación real, a medio empezar y
-deliberadamente desordenado, sobre **minería y conflicto social en el Perú**.
-Existe porque los ejercicios necesitan datos de verdad, y porque un profesor de
-antropología no tiene por qué llegar con un CSV bajo el brazo.
+A ~41 MB folder with a real research project, half‑started and deliberately messy, on **mining and social conflict in Peru**. It exists because the exercises need real data, and because an anthropology professor shouldn’t have to arrive with a neat CSV.
 
-> **La pregunta:** en los departamentos mineros del Perú, ¿la renta minera reduce
-> la conflictividad social — o solo cambia aquello por lo que se protesta?
+> **The question:** in Peru’s mining departments, does mining revenue reduce
+> social conflict — or does it mainly change what people protest about?
 
-Combina **datos estructurados** (producción y empleo minero del MINEM, mesas de
-diálogo y compromisos de la PCM, 251 proyectos de ley del Congreso en JSON) con
-**texto sin estructurar** (10 reportes mensuales de la Defensoría del Pueblo, con
-la descripción narrativa de cada conflicto). Todas las fuentes fueron verificadas
-con descargas reales en agosto de 2026.
+It combines **structured data** (mining output and employment from MINEM, dialogue tables and commitments from the Prime Minister’s Office, 251 congressional bills as JSON) with **unstructured text** (10 monthly Ombudsman reports, each with a narrative description per case). All sources were verified with real downloads in August 2026.
 
-Los detalles —qué contiene, los ocho errores sembrados en la bibliografía, las
-trampas técnicas y el solucionario— están en **`guia-ejemplo.md`**.
+Details — what’s inside, the eight planted bibliography errors, technical traps, and the answer key — are in **`guia-ejemplo.md`**.
 
 ---
 
-## 1. Qué es Claude Code, en una frase
+## 1. Claude Code, in one sentence
 
-Un agente que vive en tu terminal, ve tus archivos y puede ejecutar comandos por
-ti. No es un chat al que le pegas texto: **trabaja dentro de tu computadora**.
+An agent that lives in your terminal, can see your files, and can run commands for you. It’s not a chat where you paste text: **it works inside your computer**.
 
-Eso cambia lo que le puedes pedir. En lugar de "escríbeme un resumen de este
-paper", le pides "lee los 40 PDF de esta carpeta, dime cuáles usan datos de panel
-y arma una tabla". La diferencia no es de calidad de redacción: es que puede
-abrir, contar, comparar y escribir archivos.
+That changes what you can ask. Instead of “write me a summary of this paper,” you ask “read the 40 PDFs in this folder, tell me which ones use panel data, and make a table.” The difference isn’t writing quality: it’s that it can open, count, compare, and write files.
 
-### Lo que hizo en el caso que voy a mostrarles
+### What it did in the real case I’ll show
 
-En una sesión de trabajo real, sobre un curso de teoría económica:
+In a real work session, for a theory course:
 
-- Leyó el sílabo y verificó **cada cita** contra Crossref, NBER y arXiv.
-  Encontró **cuatro citas equivocadas**, incluida una donde el título del paper
-  no existía y otra donde faltaba un coautor.
-- Descargó 28 papers, varios a través del proxy de la biblioteca PUCP.
-- Escribió el sílabo en LaTeX, lo compiló y revisó el PDF resultante.
-- Armó la página web del curso y la publicó.
-- Creó las tareas semanales como *issues* de GitHub.
+- Read the syllabus and verified **every citation** against Crossref, NBER, and arXiv.  
+  Found **four wrong citations**, including one where the paper title didn’t exist and another where a coauthor was missing.
+- Downloaded 28 papers, several through the university library proxy (PUCP).
+- Wrote the syllabus in LaTeX, compiled it, and reviewed the resulting PDF.
+- Built the course website and published it.
+- Created the weekly assignments as GitHub issues.
 
-Nada de eso requiere saber programar. Sí requiere saber **qué pedirle y cómo
-verificarlo**, que es de lo que trata este taller.
+None of that requires programming. It does require knowing **what to ask and how to verify**, which is what this workshop covers.
 
 ---
 
-## 2. La idea central del taller
+## 2. The workshop’s central idea
 
-> **Lo más valioso que hizo el agente no fue escribir: fue encontrar errores.
-> Y también los cometió.**
+> **The most valuable thing the agent did wasn’t writing: it was finding errors.
+> And it also made some.**
 
-Las dos mitades importan igual.
+Both halves matter equally.
 
-**Encontró errores reales.** Un paper citado en el sílabo como *"Coding Beyond
-Your Training"* resultó llamarse *"Agentic Delegation and the Language Frontier of
-Software Developers"*, tener un coautor que no figuraba, y una muestra de 5 346
-observaciones en lugar de 5 838. Nadie lo había notado.
+**It found real errors.** A paper cited in the syllabus as *“Coding Beyond Your Training”* turned out to be titled *“Agentic Delegation and the Language Frontier of Software Developers”*, to have a coauthor that wasn’t listed, and a sample of 5,346 observations instead of 5,838. Nobody had noticed.
 
-**Cometió errores.** En ese mismo trabajo, el agente anotó un DOI inventado para
-un artículo de *Management Science*. Se descubrió recién al intentar descargarlo:
-la página daba error. El DOI correcto apareció consultando Crossref.
+**It made errors.** In that same work, the agent wrote down an invented DOI for a *Management Science* article. It was discovered only when trying to download it: the page failed. The correct DOI appeared by checking Crossref.
 
-La conclusión práctica para investigadores: **el agente es excelente verificando
-contra fuentes, y poco confiable recordando de memoria.** Todo lo que produzca de
-memoria —una cita, una fecha, un número de página— hay que verificarlo. Todo lo
-que verifique contra una fuente primaria, con el enlace a la vista, es sólido.
+The practical conclusion for researchers: **the agent is excellent at verifying against sources and unreliable at recalling from memory.** Anything it produces “from memory” — a citation, a date, a page number — needs verification. Anything it verifies against a primary source, with a visible link, is solid.
 
 ---
 
-## 3. Antes de la sesión: qué instalar
+## 3. Before class: what to install
 
-Pídanles que lleguen con esto listo. Toma unos 30 minutos y es mejor no gastarlos
-en clase.
+Ask participants to arrive with this ready. It takes ~30 minutes and it’s better not to spend them in class.
 
-| Herramienta | Para qué | Nota |
+| Tool | What for | Note |
 |---|---|---|
-| **Claude Code** | El agente | Instrucciones en [docs.claude.com/claude-code](https://docs.claude.com/en/docs/claude-code) |
-| **Git** | Control de versiones | En Mac viene con Xcode Command Line Tools |
-| **Cuenta de GitHub** | Guardar y compartir trabajo | Con credenciales configuradas |
-| **Visual Studio Code** | Editor | Opcional pero recomendado |
-| **LaTeX** | Documentos y presentaciones | MiKTeX en Windows, MacTeX o Tectonic en Mac |
-| **Python 3** | Scripts y análisis | Con `pypdf` o `pymupdf` para leer PDF |
+| **Claude Code** | The agent | Instructions at [docs.claude.com/claude-code](https://docs.claude.com/en/docs/claude-code) |
+| **Git** | Version control | On Mac it comes with Xcode Command Line Tools |
+| **GitHub account** | Save and share work | With credentials configured |
+| **Visual Studio Code** | Editor | Optional but recommended |
+| **LaTeX** | Documents and presentations | MiKTeX on Windows; MacTeX or Tectonic on Mac |
+| **Python 3** | Scripts and analysis | With `pypdf` or `pymupdf` to read PDFs |
 
-**Sobre LaTeX:** hay dos caminos. MacTeX o MiKTeX instalan todo (varios GB).
-[Tectonic](https://tectonic-typesetting.github.io/) es un binario único que
-descarga cada paquete la primera vez que lo necesita. Si van a compilar poco,
-Tectonic es mucho más liviano.
+**About LaTeX:** two paths. MacTeX or MiKTeX install everything (several GB).  
+[Tectonic](https://tectonic-typesetting.github.io/) is a single binary that downloads each package the first time it’s needed. If you’ll compile rarely, Tectonic is much lighter.
 
-### Verificación en un solo paso
+### One-step verification
 
-Que abran una terminal, escriban `claude` y le pidan literalmente esto:
+Have them open a terminal, type `claude`, and ask literally this:
 
-> Revisa mi entorno: dime qué versión tengo de git, python y latex, si tengo
-> credenciales de GitHub configuradas, y qué me falta instalar.
+> Check my environment: tell me which versions of git, python, and latex I have,
+> whether my GitHub credentials are configured, and what I’m missing.
 
-Es el primer ejercicio y a la vez el diagnóstico. Si algo falta, el agente
-normalmente les dice cómo instalarlo.
+It’s the first exercise and the diagnostic at once. If something’s missing, the agent will usually tell them how to install it.
 
 ---
 
-## 4. Las reglas de seguridad, explicadas desde el inicio
+## 4. Safety rules, explained upfront
 
-Conviene decirlas al comenzar, porque si no la gente choca con ellas y cree que
-la herramienta está rota.
+Say these at the start, or people will hit them and think the tool is broken.
 
-### Nunca va a escribir tu contraseña
+### It will never type your password
 
-**Claude Code no ingresa contraseñas en formularios de login.** Ni la tuya, ni
-ninguna. No importa que se la des, que lo autorices explícitamente, o que insistas:
-es una restricción sin excepciones.
+**Claude Code does not enter passwords into login forms.** Not yours, not anyone’s. No matter if you hand it over, explicitly authorize it, or insist: it’s a no‑exceptions rule.
 
-Tampoco crea cuentas, ni ingresa datos de tarjetas, ni resuelve CAPTCHAs.
+It also won’t create accounts, enter card details, or solve CAPTCHAs.
 
-**Esto no es un obstáculo, es un cambio de reparto de tareas.** El patrón correcto:
+**This isn’t a roadblock: it’s a task‑split change.** The correct pattern:
 
-1. **Tú** te logueas en el navegador, una vez.
-2. **El agente** trabaja sobre esa sesión ya abierta.
+1. **You** log in in the browser, once.
+2. **The agent** works over that already‑open session.
 
-Funciona igual de bien y te toma treinta segundos. En el caso real, así se
-descargaron seis papers de bases suscritas: el profesor se logueó, el agente hizo
-el resto.
+It works just as well and takes thirty seconds. In the real case, that’s how six papers from subscribed sources were downloaded: the professor logged in; the agent did the rest.
 
-### Otras acciones que te va a preguntar antes de hacer
+### Other actions it will ask before doing
 
-- Descargar archivos
-- Aceptar términos y condiciones
-- Enviar correos o mensajes
-- Publicar contenido
-- Borrar o sobrescribir cosas
+- Downloading files
+- Accepting terms and conditions
+- Sending emails or messages
+- Publishing content
+- Deleting or overwriting things
 
-Es sano. Cuando pregunte, lean qué está por hacer.
+That’s healthy. When it asks, read what it’s about to do.
 
 ---
 
-## 5. Acceso a la biblioteca PUCP
+## 5. University library access (proxy)
 
-Esta es la parte que más les va a servir en el día a día, y la que descubrimos
-probando.
+This is what will help you most day to day — and what we discovered by trying.
 
-### El punto de entrada
+### The entry point
 
-El proxy de la PUCP se llama **elogim**. La URL general es:
+Your university library has a proxy that logs you in once and lets subscribed journals open as if you were on campus. At PUCP that proxy is called **elogim**. The general URL is:
 
 ```
-https://pucp.elogim.com/auth-meta/login.php?url=<URL DEL EDITOR>
+https://pucp.elogim.com/auth-meta/login.php?url=<PUBLISHER_URL>
 ```
 
-Pegan cualquier dirección de una revista después de `url=` y, si la Universidad
-tiene suscripción, entra con acceso institucional. El proxy reescribe el host a
-`<recurso>.pucp.elogim.com`.
+Paste any journal URL after `url=` and, if the university has a subscription, it opens with institutional access. The proxy rewrites the host to `<resource>.pucp.elogim.com`.
 
-Ejemplo, para un artículo de JSTOR:
+Example, for a JSTOR article:
 
 ```
 https://pucp.elogim.com/auth-meta/login.php?url=https://www.jstor.org/stable/2171832
 ```
 
-### Tres cosas que cuestan un rato descubrir solo
+### Three things that take a while to discover alone
 
-**Tu cuenta personal no es el acceso institucional.** Si entran a JSTOR con su
-usuario propio, verán "100 artículos gratis este mes" y solo podrán *leer en
-pantalla*. El botón de descarga aparece únicamente bajo la sesión de la
-Universidad. Es el error más común.
+**Your personal account is not institutional access.** If you log into JSTOR with your personal user, you’ll see “100 free articles this month” and will only be able to *read on screen*. The download button appears only under the university session. This is the most common mistake.
 
-**La sesión va por cookie.** Cualquier herramienta de línea de comandos —`curl`,
-`wget`, un script de Python— va a recibir la página de login, no el PDF. Tiene que
-ser un navegador logueado. Si le piden al agente "descarga este paper" y usa
-`curl`, va a fallar: díganle que use el navegador.
+**The session is by cookie.** Any command‑line tool —`curl`, `wget`, a Python script— will receive the login page, not the PDF. It has to be a logged‑in browser. If you ask the agent “download this paper” and it uses `curl`, it will fail: tell it to use the browser.
 
-**Que el servidor responda no significa que haya suscripción.** Probando, el host
-de INFORMS respondía perfectamente… y el artículo pedía "Request Access". La PUCP
-no tiene *Management Science*. Verificar que la página carga no basta: hay que
-llegar hasta el PDF.
+**A server reply doesn’t mean there’s a subscription.** Testing, the INFORMS host responded perfectly… and the article asked for “Request Access”. PUCP doesn’t have *Management Science*. Verifying that the page loads isn’t enough: you must reach the PDF.
 
-### Qué hay, y con qué grado de certeza
+### What exists, and with what confidence
 
-Conviene distinguir dos niveles, porque es exactamente el error que el propio
-taller enseña a evitar.
+It helps to distinguish two levels — exactly the error the workshop itself trains you to avoid.
 
-**Comprobado bajando el PDF completo** (agosto 2026): JSTOR, Science/AAAS,
-Wiley, AEA (AER, JEL, AEJ).
+**Confirmed by downloading the full PDF** (Aug 2026): JSTOR, Science/AAAS, Wiley, AEA (AER, JEL, AEJ).
 
-**Aparece en el catálogo de la biblioteca**, sin comprobar hasta el PDF:
+**Appears in the library catalog**, not confirmed to the PDF level:  
 ACM Digital Library, ACS, AIP, American Physical Society, Annual Reviews,
 APA PsycNet, Brill, Cambridge Core, De Gruyter, EBSCO, Edward Elgar,
 ProQuest Ebook Central.
 
-**El servidor del proxy responde**, que es la evidencia más débil de las tres:
+**Proxy server responds**, the weakest of the three:  
 Emerald, IEEE Xplore, Nature, PNAS, Project MUSE, SAGE, ScienceDirect, Springer,
-Taylor & Francis, Scopus, Web of Science. Trátenlo como una lista de candidatos
-a probar, no como suscripciones confirmadas.
+Taylor & Francis, Scopus, Web of Science. Treat it as a list of candidates to test, not confirmed subscriptions.
 
-**Comprobado que NO tenemos:** Management Science / INFORMS, y Oxford University
-Press (o sea, no hay QJE ni Review of Economic Studies por esta vía).
+**Confirmed we do NOT have:** Management Science / INFORMS, and Oxford University Press (i.e., no QJE or Review of Economic Studies through this route).
 
-### Cuando no hay acceso
+### When there’s no access
 
-Casi siempre existe una versión abierta:
+There’s almost always an open version:
 
-- **NBER, SSRN, arXiv, RePEc** — versiones *working paper*
-- **Repositorios institucionales** de los autores
-- **Google Scholar** suele mostrar un enlace [PDF] a la derecha
+- **NBER, SSRN, arXiv, RePEc** — working‑paper versions
+- **Institutional repositories** by the authors
+- **Google Scholar** often shows a [PDF] link on the right
 
-Con una advertencia que no es menor: **el working paper no es el artículo
-publicado**. En un caso encontramos que la versión de SSRN tenía un solo autor y
-la publicada tenía dos, y otra donde el título había cambiado por completo. Si van
-a citar, citen la publicada; si van a leer, sirve cualquiera —pero sepan cuál
-están leyendo.
+With one important caveat: **the working paper is not the published article**. In one case we found the SSRN version had one author and the final published one had two, and another where the title had changed completely. For citing, cite the published one; for reading, either is fine — but know which you have.
 
 ---
 
-## 6. Ejercicios
+## 6. Exercises
 
-Ordenados de menor a mayor. Cada uno con lo que hay que observar, que es más
-importante que completarlo.
+Ordered from smaller to larger. Each one includes what to observe — that matters more than completing it.
 
-### Ejercicio 1 — Diagnóstico del entorno *(5 min)*
+### Exercise 1 — Environment diagnostics (5 min)
 
-> Revisa mi entorno de trabajo y dime qué tengo instalado y qué me falta.
+> Check my working environment and tell me what I have installed and what I’m missing.
 
-**Qué observar:** que el agente ejecuta comandos y les muestra qué hace. No les
-está contestando de memoria: está mirando su máquina.
+**What to observe:** the agent runs commands and shows you what it does. It’s not answering from memory: it’s looking at your machine.
 
-### Ejercicio 2 — Poner orden en una carpeta *(10 min)*
+### Exercise 2 — Put a folder in order (10 min)
 
-Que usen una carpeta real con PDF descargados y nombres inconsistentes.
+Have them use a real folder with downloaded PDFs and inconsistent names.
 
-> En esta carpeta hay PDF de artículos. Ábrelos, y renómbralos con el formato
-> apellido-año-palabraclave.pdf. Antes de renombrar nada, muéstrame la lista de
-> cambios que vas a hacer.
+> In this folder there are article PDFs. Open them and rename them as
+> lastName-year-keyword.pdf. Before renaming anything, show me the list
+> of changes you plan to make.
 
-**Qué observar:** que pedir el plan antes de ejecutar es una buena costumbre. Y
-que el agente lee el contenido del PDF, no adivina por el nombre.
+**What to observe:** asking for the plan before execution is a good habit. And the agent reads the PDF content; it doesn’t guess from filename.
 
-### Ejercicio 3 — La trampa de la cita *(15 min)* ← el más importante
+### Exercise 3 — The citation trap (15 min) ← the most important one
 
-Primera parte, sin verificar:
+First part, without verification:
 
-> Dame la cita completa, en APA, del paper de Noy y Zhang sobre los efectos de
-> ChatGPT en la productividad. Incluye volumen, número, páginas y DOI.
+> Give me the full APA citation for Noy and Zhang’s paper on ChatGPT’s
+> effects on productivity. Include volume, issue, pages, and DOI.
 
-Segunda parte:
+Second part:
 
-> Ahora verifica cada dato de esa cita contra Crossref y dime exactamente qué
-> estaba mal.
+> Now verify each element of that citation against Crossref and tell me
+> exactly what was wrong.
 
-**Qué observar:** es muy frecuente que algo no cuadre —un número de páginas, un
-año, un DOI—. Y el mismo agente lo detecta cuando se le pide verificar. **Esa es la
-lección central del taller:** no es que mienta, es que la memoria y la
-verificación son dos modos distintos, y hay que pedir el segundo explícitamente.
+**What to observe:** it’s very common that something is off — page range, year, DOI. And the very same agent detects it when asked to verify. **That’s the workshop’s central lesson:** it’s not about “lying”; memory and verification are two distinct modes, and you must explicitly ask for the second.
 
-### Ejercicio 4 — Descargar de la biblioteca *(15 min)*
+### Exercise 4 — Download from the library (15 min)
 
-Que se logueen primero en el navegador, en el portal de la biblioteca. Después:
+Have them log into the library portal first, in the browser. Then:
 
-> Estoy logueado en la biblioteca PUCP. Busca este artículo [DOI] y descárgalo a
-> la carpeta papers/. Si no tenemos acceso, dime dónde más se puede conseguir.
+> I’m logged into the university library proxy. Find this article [DOI]
+> and download it to the papers/ folder. If we don’t have access, tell
+> me where else it can be obtained.
 
-**Qué observar:** el reparto de tareas —ellos autentican, el agente opera— y que
-el agente reporta honestamente cuando no hay acceso, en vez de inventar.
+**What to observe:** the division of labor — they authenticate, the agent operates — and that the agent reports honestly when there’s no access, instead of inventing.
 
-### Ejercicio 5 — Un documento reproducible *(20 min)*
+### Exercise 5 — A reproducible document (20 min)
 
-> Toma estos datos y hazme una tabla en LaTeX, compílala a PDF y muéstrame el
-> resultado. Si algo no compila, arréglalo y vuelve a intentar.
+> Take these data and build me a table in LaTeX, compile it to PDF, and
+> show me the result. If something doesn’t compile, fix it and try again.
 
-**Qué observar:** el ciclo de escribir–compilar–revisar–corregir sin intervención.
-Aquí es donde la herramienta se separa claramente de un chat.
+**What to observe:** the write–compile–review–fix loop without intervention. This is where the tool clearly departs from a chat.
 
-### Ejercicio 6 — Git sin miedo *(20 min)*
+### Exercise 6 — Git without fear (20 min)
 
-> Crea un repositorio para este proyecto, haz el primer commit, crea una rama
-> llamada analisis, y explícame en lenguaje simple qué acabas de hacer y por qué.
+> Create a repository for this project, make the first commit, create a
+> branch called analysis, and explain in plain language what you just did
+> and why.
 
-**Qué observar:** que se puede aprender Git *usándolo con un agente que explica*,
-en lugar de leer un tutorial primero.
+**What to observe:** you can learn Git *by using it with an explaining agent*, instead of reading a tutorial first.
 
 ---
 
-## 7. Cómo pedir las cosas
+## 7. How to ask for things
 
-Cuatro hábitos que hacen casi toda la diferencia.
+Four habits that make almost all the difference.
 
-**Pide el plan antes de la acción.** "Antes de hacer nada, dime qué vas a hacer."
-Especialmente si va a modificar o borrar archivos.
+**Ask for the plan before the action.** “Before doing anything, tell me what you’re going to do.” Especially when it will modify or delete files.
 
-**Di dónde está la verdad.** "Verifica contra el PDF que está en esta carpeta",
-"consulta Crossref", "revisa la página oficial". Un agente con fuente asignada es
-mucho más confiable que uno respondiendo de memoria.
+**Say where truth lives.** “Verify against the PDF in this folder,” “consult Crossref,” “check the official page.” An agent with an assigned source is far more reliable than one answering from memory.
 
-**Pide que muestre el trabajo.** "Muéstrame el comando que usaste", "pega el
-fragmento del que sacaste eso". Verificable es mejor que correcto.
+**Ask it to show the work.** “Show me the command you used,” “paste the snippet you pulled that from.” Verifiable beats “correct.”
 
-**Cuando se equivoque, díselo directo.** No hay que ser diplomático. "Eso está
-mal, el año es 2025" es la corrección más eficiente.
+**When it’s wrong, say so directly.** No need to be diplomatic. “That’s wrong, the year is 2025” is the most efficient correction.
 
 ---
 
-## 8. Errores comunes en las primeras sesiones
+## 8. Common mistakes in the first sessions
 
-**Tratarlo como buscador.** "¿Qué opinas de la teoría X?" desperdicia la
-herramienta. Sirve para trabajar sobre *tus* archivos y *tus* datos.
+**Treating it like a search engine.** “What do you think of theory X?” wastes the tool. It shines working over *your* files and *your* data.
 
-**Aceptar la primera respuesta sin mirar.** Sobre todo con números, citas y
-fechas.
+**Accepting the first answer without looking.** Especially with numbers, citations, and dates.
 
-**Pedir demasiado de golpe.** "Reorganiza todo mi proyecto" sale mal. "Renombra
-estos 12 PDF según este criterio" sale bien. Tareas acotadas, verificables una a
-una.
+**Asking for too much at once.** “Reorganize my whole project” goes poorly. “Rename these 12 PDFs with this criterion” goes well. Bounded tasks, verifiable one by one.
 
-**No usar control de versiones.** Si el agente va a tocar archivos, que estén en
-Git. Así cualquier cambio es reversible y se ve exactamente qué se modificó.
+**Not using version control.** If the agent will touch files, put them under Git. Then every change is reversible and you see exactly what was modified.
 
-**Insistir con la contraseña.** No va a pasar. Loguéate tú.
+**Insisting on passwords.** It won’t happen. Log in yourself.
 
 ---
 
-## 9. Guion sugerido de la sesión
+## 9. Suggested session script
 
-| Tiempo | Bloque |
+| Time | Block |
 |---|---|
-| 0:00–0:10 | Qué es y qué no es. El caso real como demostración |
-| 0:10–0:20 | Reglas de seguridad. Por qué no escribe contraseñas |
-| 0:20–0:30 | Ejercicios 1 y 2: entorno y carpeta |
-| 0:30–0:50 | **Ejercicio 3: la trampa de la cita.** El corazón del taller |
-| 0:50–1:10 | Biblioteca PUCP: el proxy, y ejercicio 4 |
-| 1:10–1:30 | Ejercicio 5 o 6, según el público |
-| 1:30–1:45 | Cómo pedir las cosas, errores comunes, preguntas |
+| 0:00–0:10 | What it is and isn’t. The real case as a demo |
+| 0:10–0:20 | Safety rules. Why it won’t type passwords |
+| 0:20–0:50 | Exercises 1 and 2: environment and folder |
+| 0:50–1:10 | **Exercise 3: the citation trap.** The heart of the workshop |
+| 1:10–1:30 | University library: the proxy, and exercise 4 |
+| 1:30–1:45 | Exercise 5 or 6, depending on the audience |
+| 1:45–2:00 | How to ask, common mistakes, Q&A |
 
-Si el tiempo se acorta, **el ejercicio 3 es el que no se puede saltar**. Todo lo
-demás se aprende solo después; el hábito de verificar, no.
+If time shrinks, **exercise 3 is the one you cannot skip**. Everything else can be learned later; the verification habit cannot.
 
 ---
 
-## 10. Para seguir después del taller
+## 10. To continue after the workshop
 
-Que empiecen por una tarea real y pequeña de su propia investigación. Las que
-mejor funcionan de entrada:
+Have them start with a real, small task from their own research. The ones that work best at first:
 
-- Ordenar y renombrar una carpeta de PDF acumulados
-- Verificar la bibliografía de un artículo en preparación
-- Extraer una tabla de un PDF a CSV
-- Convertir apuntes en un documento con formato
-- Automatizar algo que hacen a mano cada semana
+- Sort and rename a folder of accumulated PDFs
+- Verify the bibliography of a paper in progress
+- Extract a table from a PDF to CSV
+- Turn notes into a formatted document
+- Automate something they do by hand every week
 
-Lo que **no** conviene de entrada: pedirle que reescriba un capítulo entero, o
-que analice datos cuya limpieza no pueden verificar.
+What **not** to start with: asking it to rewrite an entire chapter, or to analyze data whose cleaning they cannot verify.
+

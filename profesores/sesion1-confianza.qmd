@@ -1,289 +1,280 @@
 ---
-title: "Claude Code para investigación"
-subtitle: "Sesión 1 — Confianza y verificación · Taller para docentes"
+title: "Claude Code for Research"
+subtitle: "Session 1 — Trust and Verification · Faculty Workshop"
 author: "Alexander Quispe"
-institute: "Facultad de Ciencias Sociales, PUCP · con apoyo de Q-LAB"
+institute: "Faculty of Social Sciences, PUCP · with support from Q-LAB"
 format:
   revealjs:
-    footer: "Claude Code para investigación — Taller para docentes · PUCP 2026"
-lang: es
+    footer: "Claude Code for Research — Faculty Workshop · PUCP 2026"
+lang: en
 ---
 
-## Plan de hoy (3 horas) {.smaller}
+## Today’s plan (3 hours) {.smaller}
 
-| Hora | Bloque | Tema |
-|------|--------|------|
-| 6:00 – 6:20 | 1 | Qué es Claude y sus tres productos |
-| 6:20 – 6:50 | 2 | VS Code y el terminal, paso a paso |
-| 6:50 – 7:10 | 3 | Configuración: modelo, effort, modos |
-| 7:10 – 7:20 | ☕ | Pausa 1 |
-| 7:20 – 7:45 | 4 | Lo primero: `/init` y markdown |
-| 7:45 – 8:05 | 5 | Trabajar: conversar y ordenar |
-| 8:05 – 8:15 | ☕ | Pausa 2 |
-| 8:15 – 8:55 | 6 | ⭐ Literatura: buscar, verificar y descargar |
-| 8:55 – 9:00 | 7 | Cierre y tarea |
+| Time | Block | Topic |
+|------|-------|-------|
+| 6:00 – 6:20 | 1 | What Claude is and its three products |
+| 6:20 – 6:50 | 2 | VS Code and the terminal, step by step |
+| 6:50 – 7:10 | 3 | Configuration: model, effort, modes |
+| 7:10 – 7:20 | ☕ | Break 1 |
+| 7:20 – 7:45 | 4 | First things first: `/init` and markdown |
+| 7:45 – 8:05 | 5 | Working: converse and organize |
+| 8:05 – 8:15 | ☕ | Break 2 |
+| 8:15 – 8:55 | 6 | ⭐ Literature: search, verify, and download |
+| 8:55 – 9:00 | 7 | Wrap-up and homework |
 
-[Los asistentes del Q-LAB están en la sala: levanten la mano ante cualquier problema técnico y ellos los ayudan sin detener la clase.]{.small .muted}
+[Q-LAB assistants are in the room: if you hit a technical snag, raise your hand and they’ll help without stopping the class.]{.small .muted}
 
-# Bloque 1 — Qué es Claude
+# Block 1 — What Claude is
 
-## Claude Code, en una frase
+## Claude Code, in one sentence
 
-> Un agente que vive en su computadora, **ve sus archivos** y puede
-> **trabajar sobre ellos** por usted.
+> An agent that lives on your computer, can **see your files**, and can
+> **work on them** for you.
 
 . . .
 
-No es un chat al que le pegan texto. La diferencia práctica:
+It’s not a chat where you paste text. Practically:
 
-| En el chat de siempre | Con Claude Code |
+| The usual chat | With Claude Code |
 |---|---|
-| "Resúmeme este paper" *(y usted pega el texto)* | "Lee los **40 PDF de esta carpeta**, dime cuáles usan datos de panel y arma una tabla" |
-| Usted copia la respuesta a Word | Él **crea y edita los archivos** directamente |
+| “Summarize this paper” *(and you paste the text)* | “Read the **40 PDFs in this folder**, tell me which ones use panel data, and make a table” |
+| You copy the answer to Word | It **creates and edits files** directly |
 
-## ¿Para qué les sirve, concretamente? {.smaller}
+## What’s concretely useful for you? {.smaller}
 
-En su semana de investigación y docencia, Claude Code puede:
+In a week of research and teaching, Claude Code can:
 
-- **Verificar la bibliografía** de un artículo, cita por cita, contra Crossref
-- **Ordenar y renombrar** esa carpeta de PDFs acumulados de años
-- **Extraer una tabla** de un PDF a Excel — o de 40 PDFs a una sola tabla
-- **Escribir y compilar** documentos y slides en LaTeX, sin que ustedes sepan LaTeX
-- **Explorar una base de datos** y devolver estadísticas y gráficos
-
-. . .
-
-::: {.callout-tip}
-## Nada de eso requiere saber programar
-Sí requiere saber **qué pedirle y cómo verificarlo** — de eso trata este taller.
-:::
-
-## Un mismo cerebro, tres productos
-
-Antes de instalar nada, ubíquense: **Claude son tres cosas distintas** y es fácil confundirlas. Veámoslas una por una.
+- **Verify a bibliography** reference by reference against Crossref
+- **Sort and rename** that chaotic PDFs folder you’ve kept for years
+- **Extract a table** from one PDF to Excel — or from 40 PDFs to a single table
+- **Write and compile** documents and slides in LaTeX, even if you don’t know LaTeX
+- **Explore a dataset** and return statistics and charts
 
 . . .
 
-1. **claude.ai** — el chat en el navegador *(este seguro ya lo conocen)*
-2. **Claude Cowork** — una app de escritorio para trabajar sobre carpetas
-3. **Claude Code** — el agente en el terminal *(el de este taller)*
+:::: {.callout-tip}
+## None of this requires programming
+It does require knowing **what to ask and how to verify** — that’s what this workshop is about.
+::::
 
-## 1 · claude.ai — el chat {.smaller}
+## One brain, three products
+
+Before installing anything, situate yourselves: **Claude is three distinct things**, easy to confuse. Let’s see them one by one.
+
+. . .
+
+1. **claude.ai** — the chat in your browser *(you likely know this one)*
+2. **Claude Cowork** — a desktop app to work over folders
+3. **Claude Code** — the terminal agent *(today’s focus)*
+
+## 1 · claude.ai — the chat {.smaller}
 
 ![](../figures/screenshots/claude-ai-chrome.png){.nostretch width=76% fig-align="center"}
 
-**Vive en el navegador** (miren la dirección: `claude.ai`). Como ChatGPT: ustedes **pegan** texto y él responde. Excelente tutor de conceptos — pero **no ve sus archivos**.
+**Lives in the browser** (look at the address: `claude.ai`). Like ChatGPT: you **paste** text and it replies. A great tutor for concepts — but it **doesn’t see your files**.
 
-## 2 · Claude Cowork — la app de escritorio {.smaller}
+## 2 · Claude Cowork — the desktop app {.smaller}
 
 ![](../figures/screenshots/cowork-app.png){.nostretch width=68% fig-align="center"}
 
-**Una app instalada, sin terminal** — noten abajo el botón **Select folder…** y la caja *"Describe a task"*: le señalan una carpeta y le describen la tarea, y el agente trabaja sobre esos archivos. Ideal para documentos — pero requiere **plan pago** ($20/mes o más).
+**An installed app, no terminal** — notice the **Select folder…** button below and the “Describe a task” box: you pick a folder and describe the task, and the agent works on those files. Ideal for documents — but requires a **paid plan** ($20/month or more).
 
-## 3 · Claude Code — el del taller {.smaller}
+## 3 · Claude Code — today’s agent {.smaller}
 
 ![](../figures/screenshots/claude-code-vscode.png){.nostretch width=90% fig-align="center"}
 
-El mismo agente, en el **terminal de VS Code** — así lo verán hoy: la caja de bienvenida arriba, y abajo donde ustedes escriben. Ve sus archivos, ejecuta, verifica. Funciona con suscripción **o solo con una clave API** (paga por uso).
+The same agent, inside the **VS Code terminal** — this is how you’ll see it today: welcome panel on top, where you type below. It sees your files, executes, verifies. Works with a subscription **or just an API key** (pay-as-you-go).
 
-## ¿Cuál necesito yo? ¿Cuánto cuesta? {.smaller}
+## Which one do I need? How much does it cost? {.smaller}
 
-| Producto | ¿Para quién? | Acceso |
-|----------|--------------|--------|
-| **claude.ai** (el chat) | Preguntas, borradores, explicaciones | Gratis con límites · Pro **$20/mes** |
-| **Claude Cowork** | Trabajo sobre documentos sin terminal | ❌ **Solo con plan pago** ($20/mes o más) |
-| **Claude Code** | Investigación: datos, PDFs, LaTeX | ✅ Suscripción **o solo una clave API** (paga por uso) |
+| Product | For whom? | Access |
+|---------|-----------|--------|
+| **claude.ai** (chat) | Questions, drafts, explanations | Free with limits · Pro **$20/mo** |
+| **Claude Cowork** | Document work without a terminal | ❌ **Paid plan only** ($20/mo or more) |
+| **Claude Code** | Research: data, PDFs, LaTeX | ✅ Subscription **or API key only** (pay-as-you-go) |
 
 . . .
 
-- El chat es como un **tutor**: excelente para que le expliquen un concepto (*"¿qué es diferencias en diferencias?"*).
-- Claude Code es el **asistente de investigación**: trabaja sobre *sus* carpetas, *sus* datos, *sus* papers.
-- Regla del taller: **usen el modelo Opus para todo**. Fable solo para redacción fina — es caro y se agota rápido.
+- The chat is like a **tutor**: excellent for explaining a concept (*“what is difference-in-differences?”*).
+- Claude Code is the **research assistant**: it works on *your* folders, *your* data, *your* papers.
+- Workshop rule: **use the Opus model for everything**. Fable only for fine writing — it’s expensive and caps out quickly.
 
+## How it works: the agent loop {.smaller}
 
-## Así trabaja: el ciclo del agente {.smaller}
+![](../figures/agent-loop.svg){width=60% fig-align="center"}
 
-![](../figures/es/agent-loop.svg){width=60% fig-align="center"}
+- Every action goes through tools: read, edit, execute, search.
+- Every risky action **asks for your approval** first.
+- You direct the research; Claude is a very fast assistant.
 
-- Cada acción pasa por herramientas: leer, editar, ejecutar, buscar.
-- Cada acción riesgosa **pide su aprobación** primero.
-- Usted es quien dirige la investigación; Claude es un asistente muy rápido.
+# Block 2 — VS Code and the terminal
 
-# Bloque 2 — VS Code y el terminal
+## Why do we work in Visual Studio Code? {.smaller}
 
-## ¿Por qué trabajamos en Visual Studio Code? {.smaller}
+![](../figures/vscode-ui.svg){width=76% fig-align="center"}
 
-![](../figures/es/vscode-ui.svg){width=76% fig-align="center"}
+**Everything in one window**: your files on the left, the document in the center, and the terminal below where Claude lives. It’s **free**, works the same on Windows and Mac, and opens PDFs, data, and text without changing apps.
 
-**Todo en una sola ventana**: sus archivos a la izquierda, el documento al centro, y abajo el terminal donde vive Claude. Además es **gratis**, funciona igual en Windows y Mac, y abre PDFs, datos y texto sin cambiar de programa.
-
-## Un plugin que necesitarán: vscode-pdf {.smaller}
+## One extension you’ll want: vscode-pdf {.smaller}
 
 ![](../figures/screenshots/vscode-pdf-ext.png){.nostretch width=72% fig-align="center"}
 
-Para **leer PDFs dentro de VS Code** (sus papers, y el PDF que compile LaTeX):
+To **read PDFs inside VS Code** (your papers, and the PDF LaTeX compiles):
 
-1. Clic en el icono de **Extensiones** 🧩 de la barra izquierda
-2. Buscar `pdf`
-3. Instalar **vscode-pdf** (de *tomoki1207*) — un clic y listo
+1. Click the **Extensions** 🧩 icon on the left bar
+2. Search `pdf`
+3. Install **vscode-pdf** (by *tomoki1207*) — one click and done
 
-[Sin esto, cada PDF se abre en otro programa y pierden la gracia de "todo en una sola ventana".]{.small .muted}
+[Without this, every PDF opens in a separate app and you lose the “everything in one window” flow.]{.small .muted}
 
-## Traer su proyecto a VS Code {.smaller}
+## Bring your project into VS Code {.smaller}
 
-::: columns
-::: {.column width="55%"}
-Para el taller les enviaremos **la carpeta del proyecto** lista para descargar.
+:::: columns
+:::: {.column width="55%"}
+For the workshop we’ll send you **the project folder** ready to download.
 
-1. Descárguenla y colóquenla en **Documentos** (igual en Windows que en Mac)
-2. En VS Code: menú **File → Add Folder to Workspace…**
-3. Elijan la carpeta → aparece en el **panel izquierdo**
+1. Download it and place it under **Documents** (same on Windows and Mac)
+2. In VS Code: **File → Add Folder to Workspace…**
+3. Pick the folder → it appears in the **left panel**
 
 . . .
 
-Con eso VS Code ya "ve" su proyecto: desde ese panel saldrá la ruta que le daremos al terminal en el siguiente paso.
+With that, VS Code now “sees” your project: we’ll copy the path from that panel into the terminal in the next step.
 
-[Este mismo camino sirve después para cualquier carpeta suya: tesis, cursos, papers.]{.small .muted}
-:::
-::: {.column width="45%"}
+[Same steps later for any folder of yours: thesis, courses, papers.]{.small .muted}
+::::
+:::: {.column width="45%"}
 ![](../figures/screenshots/vscode-add-folder.png){.nostretch width=88% fig-align="center"}
-:::
-:::
+::::
+::::
 
-## Abrir el terminal: un solo clic {.smaller}
+## Open the terminal: one click {.smaller}
 
-![](../figures/es/vscode-terminal-menu.svg){width=80% fig-align="center"}
+![](../figures/vscode-terminal-menu.svg){width=80% fig-align="center"}
 
-Menú **Terminal → Nuevo terminal**. [Tip: si la ventanita de abajo les parece chica, repitan el menú y elijan *Nueva ventana de terminal* para tenerla grande y aparte.]{.small}
+Menu **Terminal → New Terminal**. [Tip: if the bottom panel feels small, repeat the menu and pick *New Terminal Window* to get a large separate window.]{.small}
 
-## ¿Qué es "el terminal"? (sin miedo)
+## What is “the terminal”? (no fear)
 
-Una ventana donde uno escribe **instrucciones en texto** en lugar de hacer clics.
-
-. . .
-
-La buena noticia de 2026:
-
-- **No necesitan memorizar comandos** — Claude los escribe y ejecuta por ustedes.
-- Ustedes solo necesitan **UNO**: `cd` (*change directory* = "cámbiate a esta carpeta").
+A window where you type **text instructions** instead of clicking.
 
 . . .
 
-¿Por qué uno solo? Porque lo único que ustedes hacen a mano es **decirle en qué carpeta trabajar**. Todo lo demás se pide conversando.
+Good news in 2026:
 
-## Paso a paso: abrir Claude en su carpeta {.smaller}
+- **You don’t need to memorize commands** — Claude writes and runs them for you.
+- You only need **ONE**: `cd` (*change directory* = “switch into this folder”).
 
-1. Abran **VS Code** → menú **Terminal** → **New Terminal**.
-   [Tip: si la ventanita de abajo les parece chica, repitan Terminal → *New Terminal Window* para tener una ventana grande aparte (a veces hay que abrir el terminal una vez para que aparezca esa opción).]{.small}
-2. En el panel izquierdo de VS Code, busquen la **carpeta de su investigación** → clic derecho → **Copy Path**.
-3. En el terminal escriban `cd`, un espacio, **peguen la ruta**, Enter.
-4. Escriban `claude`, Enter.
-5. Les preguntará si confían en esa carpeta → **Yes**.
+. . .
+
+Why just one? Because the only thing you do by hand is **tell it which folder to work in**. Everything else is asked in conversation.
+
+## Step by step: open Claude in your folder {.smaller}
+
+1. Open **VS Code** → **Terminal** menu → **New Terminal**.
+   [Tip: if the bottom panel feels small, repeat Terminal → *New Terminal Window* to get a large separate window (sometimes you have to open a terminal once before that option appears).]{.small}
+2. In VS Code’s left panel, find your **research folder** → right‑click → **Copy Path**.
+3. In the terminal, type `cd`, a space, **paste the path**, Enter.
+4. Type `claude`, Enter.
+5. It will ask if you trust that folder → **Yes**.
 
 . . .
 
 ```text
-cd /Users/su-nombre/Documents/mi-investigacion
+cd /Users/your-name/Documents/my-research
 claude
 ```
 
-[Ese es TODO el "código" que este taller les va a pedir escribir.]{.warm}
+[That’s ALL the “code” this workshop will ask you to type.]{.warm}
 
-## 🧯 Kit de rescate — guarden este slide {.smaller}
+## 🧯 Rescue kit — save this slide {.smaller}
 
-Todos nos atascamos. Esto resuelve el 95 % de los líos:
+We all get stuck. This solves 95% of tangles:
 
-| Problema | Solución |
-|----------|----------|
-| Claude está haciendo algo que no quiero | <kbd>Esc</kbd> — lo interrumpe sin romper nada |
-| Quiero salir de Claude | <kbd>Ctrl</kbd>+<kbd>C</kbd> **dos veces** |
-| Me metí a la carpeta equivocada | Salgan (Ctrl+C ×2), `cd` con la ruta correcta, `claude` de nuevo |
-| Cerré todo, ¿perdí mi conversación? | No: `claude --resume` muestra sus conversaciones anteriores |
-| Nada responde y no sé qué pasa | Cierren la ventana del terminal, abran una nueva y retomen |
+| Problem | Solution |
+|---------|----------|
+| Claude is doing something I don’t want | <kbd>Esc</kbd> — interrupts without breaking anything |
+| I want to quit Claude | <kbd>Ctrl</kbd>+<kbd>C</kbd> **twice** |
+| I switched into the wrong folder | Quit (Ctrl+C ×2), `cd` to the right path, run `claude` again |
+| I closed everything — did I lose my conversation? | No: `claude --resume` lists your past sessions |
+| Nothing responds and I don’t know why | Close the terminal window, open a new one, and resume |
 
 . . .
 
-::: {.callout-tip}
-Y la herramienta universal: **tómenle captura de pantalla al problema, péguenla en Claude** (Ctrl+V / Cmd+V en el chat del terminal) y pregunten *"¿por qué me sale esto?"*. Claude se depura a sí mismo sorprendentemente bien.
-:::
+:::: {.callout-tip}
+And the universal tool: **screenshot the problem and paste it into Claude** (Ctrl+V / Cmd+V in the terminal chat) and ask *“why am I seeing this?”*. Claude self‑debugs surprisingly well.
+::::
 
-# Bloque 3 — Configuración y diagnóstico
+# Block 3 — Configuration and diagnostics
 
-## Antes de configurar: producto ≠ modelo {.smaller}
+## Before configuring: product ≠ model {.smaller}
 
-En el Bloque 1 eligieron el **producto**: Claude Code. Lo primero que van a configurar es el **modelo** — y es fácil confundirlos:
+In Block 1 you picked the **product**: Claude Code. The first thing you’ll configure is the **model** — and they’re easy to confuse:
 
-| | El producto | El modelo |
+| | The product | The model |
 |---|---|---|
-| **Qué es** | La puerta de entrada — *dónde* usan Claude | El cerebro que razona — *quién* les responde |
-| **Los nombres** | claude.ai · Cowork · **Claude Code** | **Opus** · Fable · Sonnet · Haiku |
-| **La analogía** | el vehículo | el motor |
+| **What it is** | The entryway — *where* you use Claude | The reasoning brain — *who* answers you |
+| **The names** | claude.ai · Cowork · **Claude Code** | **Opus** · Fable · Sonnet · Haiku |
+| **Analogy** | the vehicle | the engine |
 
 . . .
 
-Un mismo producto puede montar distintos motores — por eso dentro de Claude Code existe el menú `/model` para cambiar de cerebro.
+One product can mount different engines — that’s why Claude Code has a `/model` menu to switch brains.
 
-[Así que no, "¿Opus es lo mismo que Claude Code?" — Claude Code es *desde dónde* trabajan; Opus es *quién* piensa.]{.warm}
+[So no, “Is Opus the same as Claude Code?” — Claude Code is *from where* you work; Opus is *who* thinks.]{.warm}
 
-## Elegir el modelo (una sola vez) {.smaller}
+## Choose the model (one time) {.smaller}
 
-Dentro de Claude, escriban `/model` y elijan **Opus**.
+Inside Claude, type `/model` and pick **Opus**.
 
-| Modelo | ¿Cuándo? |
-|--------|----------|
-| **Opus** | ✅ Todo el trabajo del día a día: datos, tablas, LaTeX, organización |
-| **Fable** | Solo redacción fina de un paper — es caro y el límite se agota en horas |
-| Sonnet, Haiku | No los necesitan por ahora |
+| Model | When |
+|-------|------|
+| **Opus** | ✅ All day‑to‑day work: data, tables, LaTeX, organization |
+| **Fable** | Only fine paper writing — it’s pricey and the cap runs out fast |
+| Sonnet, Haiku | You don’t need them today |
 
 . . .
 
-[Si un día algo responde "raro", lo primero que deben revisar es `/model`: ¿qué modelo quedó seleccionado?]{.small .muted}
+[If something ever answers “oddly”, first check `/model`: which model is selected?]{.small .muted}
 
-## Así se ve el menú `/model` {.smaller}
+## What “effort” means {.smaller}
 
-![](../figures/screenshots/model-selector.png){.nostretch width=92% fig-align="center"}
+Effort is **how much the model thinks before answering** — like choosing between a quick reply or a careful analysis.
 
-- Naveguen con ↑/↓ hasta **Opus (1M context)** y déjenlo con el **✓ verde**, como en la imagen. *Ese es el modelo del taller.*
-- <kbd>Enter</kbd> lo fija como **default** para futuras sesiones · <kbd>s</kbd> lo usa **solo en esta sesión** · <kbd>Esc</kbd> cancela.
-- ¿Y esa línea naranja de abajo, **"xHigh effort"**? → siguiente slide.
-
-## ¿Qué significa "effort"? {.smaller}
-
-El *effort* es **cuánto razona el modelo antes de responder** — como la diferencia entre pedirle a un asistente una respuesta al vuelo o un análisis cuidadoso.
-
-| | Menos effort | Más effort |
+| | Less effort | More effort |
 |---|---|---|
-| **Velocidad** | responde más rápido | piensa más tiempo |
-| **Profundidad** | suficiente para tareas simples | mejor en problemas difíciles |
-| **Consumo** | gasta menos | gasta más tokens |
+| **Speed** | answers faster | thinks longer |
+| **Depth** | fine for simple tasks | better on hard problems |
+| **Cost** | uses fewer tokens | uses more tokens |
 
 . . .
 
-- **Cómo se ajusta:** dentro del menú `/model`, con las flechas <kbd>←</kbd>/<kbd>→</kbd> — la línea naranja va cambiando: *low · medium · high · xHigh…*
-- **Recomendación del taller: déjenlo en High o xHigh.** El modelo además adapta solo cuánto piensa según la dificultad de cada pedido.
+- **How to adjust:** inside `/model` with <kbd>←</kbd>/<kbd>→</kbd> — the orange bar shifts: *low · medium · high · xHigh…*
+- **Workshop recommendation: keep it at High or xHigh.** The model also self‑tunes based on each request’s difficulty.
 
-## Los modos de trabajo (y el freno de mano) {.smaller}
+## Work modes (and the handbrake) {.smaller}
 
-Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — son **cuatro**, y se ven en la **barra de abajo** de Claude:
+Press <kbd>Shift</kbd>+<kbd>Tab</kbd> to switch modes — there are **four**, shown in Claude’s **bottom bar**:
 
-![](../figures/es/safety-spectrum.svg){width=88% fig-align="center"}
+![](../figures/safety-spectrum.svg){width=88% fig-align="center"}
 
-- **plan mode on** — solo lee y **propone un plan**; no toca nada. *A fondo en la Sesión 2.*
-- **manual mode on** — pregunta antes de **cada** acción.
-- **accept edits on** — edita sin preguntar; los comandos aún piden permiso.
-- **auto mode on** — ejecuta ediciones **y** comandos. **El modo de hoy.**
+- **plan mode on** — only reads and **proposes a plan**; no changes. *Deep dive in Session 2.*
+- **manual mode on** — asks before **every** action.
+- **accept edits on** — edits without asking; commands still ask.
+- **auto mode on** — executes edits **and** commands. **Today’s mode.**
 
-[Existe una bandera que desactiva todas las protecciones (`--dangerously-skip-permissions`) — no la usen.]{.small .muted}
+[There’s a flag that disables all protections (`--dangerously-skip-permissions`) — don’t use it.]{.small .muted}
 
-## Así se ve en su terminal {.smaller}
+## What it looks like in your terminal {.smaller}
 
-![](../figures/es/modes-bar.svg){.nostretch width=74% fig-align="center"}
+![](../figures/modes-bar.svg){.nostretch width=74% fig-align="center"}
 
-Presionen <kbd>Shift</kbd>+<kbd>Tab</kbd> varias veces ahora mismo y miren cómo **rota la etiqueta**. Déjenlo en **auto mode on**: así los ejercicios que siguen corren de corrido, sin detenerse en cada permiso.
+Press <kbd>Shift</kbd>+<kbd>Tab</kbd> a few times now and watch the **label rotate**. Leave it on **auto mode on** so the upcoming exercises run end‑to‑end without stopping for each permission.
 
-## Último paso: la llave de la biblioteca {.your-turn .smaller}
+## Last setup: the library key {.your-turn .smaller}
 
-Lo dejamos listo ahora para no perder tiempo después. En el navegador, abran esta dirección **tal cual** (es JSTOR a través del proxy):
+We set this up now so we don’t waste time later. In your browser, open this address **as‑is** (it’s JSTOR through the proxy):
 
 ```text
 https://pucp.elogim.com/auth-meta/login.php?url=https://www.jstor.org
@@ -291,74 +282,73 @@ https://pucp.elogim.com/auth-meta/login.php?url=https://www.jstor.org
 
 . . .
 
-Les pedirá **usuario y contraseña del campus virtual** — los mismos de PAIDEIA/Intranet.
-Y listo: **dejen esa pestaña abierta** el resto de la clase. El navegador quedó reconocido como PUCP.
+It will ask for your **campus username and password** — the same ones you use for your university systems.
+Leave that tab **open** for the rest of class. Your browser is now recognized as on-campus (PUCP in this example).
 
 . . .
 
-**Para otra revista, cambian solo lo que va después de `url=`:**
+**For another journal, change only what comes after `url=`:**
 
 ```text
-https://pucp.elogim.com/auth-meta/login.php?url=<dirección de la revista>
+https://pucp.elogim.com/auth-meta/login.php?url=<journal URL>
 ```
 
 . . .
 
-::: {.callout-important}
-No se registran en JSTOR, ni en Wiley, ni en ninguna. **Su cuenta personal de JSTOR no sirve** — con ella solo pueden *leer en pantalla*. El botón de descarga aparece únicamente bajo la sesión de la Universidad.
-:::
+:::: {.callout-important}
+You are not signing up for JSTOR, Wiley, or anything else. **Your personal JSTOR account does not grant download access** — it only lets you read on screen. The download button appears only under your university’s institutional session (via your library proxy).
+::::
 
-## Su turno: ¿qué me falta instalar? {.your-turn .smaller}
+## Your turn: what am I missing? {.your-turn .smaller}
 
-Con todo ya configurado, pídanle **literalmente esto**:
+With everything configured, ask **literally this**:
 
 ```text
-Revisa mi entorno: dime qué versión tengo de Python y de LaTeX,
-qué me falta instalar para trabajar con datos, PDFs y documentos
-en este taller, y cómo instalarlo.
+Check my environment: tell me what versions of Python and LaTeX I have,
+what I’m missing to work with data, PDFs, and documents in this workshop,
+and how to install it.
 ```
 
 . . .
 
-**Qué observar:** el agente **ejecuta comandos y les muestra qué hace**. No les contesta de memoria: está mirando *su* máquina.
+**What to observe:** the agent **runs commands and shows you what it’s doing**. It’s not answering from memory: it’s looking at *your* machine.
 
-::: {.callout-note}
-Este ejercicio es a la vez el diagnóstico: si algo falta, el propio agente les dice cómo instalarlo — y puede instalarlo por ustedes. Es la primera lección de actitud: **cuando tengan una duda técnica, pregúntenle a Claude**.
-:::
+:::: {.callout-note}
+This exercise doubles as diagnostics: if something’s missing, the agent itself tells you how to install it — and can install it for you. First lesson in attitude: **when you have a technical doubt, ask Claude.**
+::::
 
-## Su turno: conozcan su computadora {.your-turn .smaller}
+## Your turn: get to know your machine {.your-turn .smaller}
 
-La mayoría no sabe qué máquina tiene — y a veces tiene más poder del que cree. Pregúntenle:
+Most people don’t know what machine they have — and sometimes it’s more powerful than they think. Ask:
 
 ```text
-¿Qué computadora tengo? Dime mi procesador (CPU), si tengo GPU o
-aceleración para inteligencia artificial, y cuánta memoria RAM.
-Con esas características, ¿qué herramientas de IA podría correr
-localmente? Por ejemplo, ¿podría transcribir audio de mis clases
-con Whisper, y qué tan rápido?
+What computer do I have? Tell me my processor (CPU), whether I have a GPU
+or AI acceleration, and how much RAM. With those specs, what AI tools could
+I run locally? For example, could I transcribe class audio with Whisper,
+and how fast?
 ```
 
 . . .
 
-**Qué observar:** la respuesta es **distinta para cada persona** — Claude mira su hardware real y adapta la recomendación.
+**What to observe:** the answer is **different for each person** — Claude inspects your actual hardware and adapts its recommendation.
 
-::: {.callout-tip}
-Guarden esa respuesta: en la **Sesión 2** vamos a transcribir una clase grabada con Whisper, y la velocidad dependerá exactamente de esto (con GPU o chip moderno: minutos; solo CPU: más lento, pero funciona igual).
-:::
+:::: {.callout-tip}
+Save that answer: in **Session 2** we’ll transcribe a recorded class with Whisper, and speed will depend exactly on this (with GPU or a recent chip: minutes; CPU‑only: slower, but it still works).
+::::
 
-# ☕ Pausa 1 — 10 minutos {background-color="#e6fbfc"}
+# ☕ Break 1 — 10 minutes {background-color="#e6fbfc"}
 
-[Volvemos 7:20 pm]{.big}
+[Back at 7:20 pm]{.big}
 
-# Bloque 4 — Lo primero: `/init`
+# Block 4 — First things first: `/init`
 
-## Antes de pedirle nada: denle contexto {.smaller}
+## Before asking anything: give it context {.smaller}
 
-Podrían empezar a conversar de inmediato… pero Claude no sabe **nada** de su proyecto: qué contiene, cómo se organiza, qué reglas tiene.
+You could start chatting right away… but Claude knows **nothing** about your project: what it contains, how it’s organized, what rules it follows.
 
 . . .
 
-Por eso el **primer comando de todo proyecto nuevo** es:
+That’s why the **first command in any new project** is:
 
 ```text
 /init
@@ -366,432 +356,428 @@ Por eso el **primer comando de todo proyecto nuevo** es:
 
 . . .
 
-Claude **explora toda la carpeta** — lee sus documentos, sus datos, sus PDFs — y redacta un archivo llamado **`CLAUDE.md`** con lo que encontró: de qué trata el proyecto, cómo está organizado, qué convenciones sigue.
+Claude **explores the whole folder** — reads your documents, your data, your PDFs — and drafts a file called **`CLAUDE.md`** with what it found: what the project is about, how it’s organized, which conventions it follows.
 
-[Ese archivo se vuelve la **memoria del proyecto**: Claude lo lee automáticamente cada vez que inicien sesión ahí. Nunca más tendrán que volver a explicar de qué va su investigación.]{.warm}
+[That file becomes the project’s **memory**: Claude reads it automatically every time you start a session there. You’ll never again need to re‑explain what your research is about.]{.warm}
 
-## ¿Qué es un archivo markdown (`.md`)? {.smaller}
+## What is a markdown (`.md`) file? {.smaller}
 
-Es **texto simple con marcas de formato** — se abre con cualquier editor, pesa nada, y se lee igual dentro de 20 años.
+It’s **plain text with formatting marks** — opens with any editor, tiny size, and readable the same 20 years from now.
 
-| Lo que escriben | Lo que significa |
+| What you write | What it means |
 |---|---|
-| `# Título` | encabezado |
-| `## Subtítulo` | encabezado menor |
-| `- punto` | viñeta |
-| `**palabra**` | negrita |
-| `` `código` `` | resaltar un comando o ruta |
+| `# Title` | heading |
+| `## Subtitle` | subheading |
+| `- item` | bullet |
+| `**word**` | bold |
+| `` `code` `` | highlight a command or path |
 
 . . .
 
-**Por qué importa para ustedes:** es el formato en el que Claude guarda *todo* lo que quiere recordar — la memoria del proyecto, las notas de una reunión, un resumen de literatura. A diferencia de Word, es **legible tanto por ustedes como por la máquina**, y se puede versionar y comparar.
+**Why it matters for you:** it’s the format Claude uses for *everything* it wants to remember — project memory, meeting notes, a literature summary. Unlike Word, it’s **readable both by you and the machine**, and you can version and diff it.
 
-## Un `.md` abierto en VS Code {.smaller}
+## A `.md` open in VS Code {.smaller}
 
 ![](../figures/screenshots/vscode-md-raw.png){.nostretch width=86% fig-align="center"}
 
-Así se ve **por dentro** — y no es un ejemplo inventado: es el `CLAUDE.md` del proyecto de hoy. Los `#`, `**` y las viñetas, a la vista. [▸ Clic en el **icono de la lupa** (arriba a la derecha, en el círculo) y VS Code lo lee por ustedes.]{.warm}
+This is how it looks **inside** — and it’s not a toy example: it’s today’s project `CLAUDE.md`. The `#`, `**`, and bullets, in plain view. [▸ Click the **magnifier icon** (top‑right, in the circle) and VS Code reads it for you.]{.warm}
 
-## …y así lo muestra VS Code {.smaller}
+## …and how VS Code renders it {.smaller}
 
 ![](../figures/screenshots/vscode-md-preview.png){.nostretch width=86% fig-align="center"}
 
-El mismo archivo, dos vistas: a la izquierda las marcas, a la derecha **el documento formateado**. Por eso markdown funciona tan bien con un agente — **él lo escribe, ustedes lo leen cómodo**.
+Same file, two views: on the left the marks, on the right **the formatted document**. That’s why markdown works so well with an agent — **it writes it, you read it comfortably**.
 
-## Su turno: `/init` en su proyecto {.your-turn .smaller}
+## Your turn: `/init` in your project {.your-turn .smaller}
 
 ```text
 /init
 ```
 
-Déjenlo trabajar (puede tomar un par de minutos: está leyendo todo).
+Let it work (it may take a couple of minutes; it’s reading everything).
 
 . . .
 
-Cuando termine, **ábranlo y léanlo**: `CLAUDE.md` aparece en el panel izquierdo de VS Code.
+When it finishes, **open and read it**: `CLAUDE.md` appears in VS Code’s left panel.
 
 . . .
 
-Después edítenlo como cualquier documento — agréguenle sus propias reglas:
+Then edit it like any document — add your own rules:
 
 ```markdown
-- Nunca modifiques los archivos de datos-originales/
-- Las citas siempre en formato APA 7
-- Respóndeme siempre en español
+- Never modify files under original-data/
+- Citations always in APA 7
+- Always answer me in English
 ```
 
-[**Qué observar:** entendió de qué trata su investigación sin que ustedes se lo dijeran.]{.warm}
+[**What to observe:** it understood what your research is about without you saying it.]{.warm}
 
-## La memoria tiene niveles
+## Memory has levels
 
-![](../figures/es/memory-stack.svg){width=76% fig-align="center"}
+![](../figures/memory-stack.svg){width=76% fig-align="center"}
 
-[Ninguno existe por defecto: el del proyecto lo genera `/init`; el personal lo crean ustedes (o el atajo `#`); el de subcarpeta es opcional.]{.small .muted}
+[None exist by default: the project one is generated by `/init`; the personal one is created by you (or the `#` shortcut); the subfolder one is optional.]{.small .muted}
 
-# Bloque 5 — Ahora sí: trabajar
+# Block 5 — Now we work
 
-## Su turno: la primera conversación {.your-turn .smaller}
+## Your turn: the first conversation {.your-turn .smaller}
 
-Ya dentro de su carpeta real, prueben estas preguntas — **ninguna modifica nada**, solo leen:
+Now inside your real folder, try these — **none of them modify anything**, they only read:
 
 ```text
-Dame un resumen de esta carpeta: ¿qué archivos hay y de qué trata?
+Give me a summary of this folder: what files are here and what’s the project about?
 ```
 ```text
-¿Qué archivos parecen versiones duplicadas o viejas?
+Which files look like duplicate or outdated versions?
 ```
 ```text
-Explícale la estructura de esta carpeta a un nuevo asistente de
-investigación, y publícala como una página para poder compartirla.
+Explain this folder’s structure for a new research assistant, and publish it
+as a page I can share.
 ```
 
 . . .
 
-**Qué observar:** responde sobre **sus** archivos reales, citando nombres y contenidos — eso un chat de la web no puede hacerlo. Y el tercer prompt trae bonus: al ver "para compartirla", Claude carga uno de sus **skills** (manuales internos que activa cuando la tarea lo amerita — verán `⏺ Skill(artifact-design)` en el terminal) y publica la explicación como una **página web** (*Artifact*): enlace en claude.ai, **privado hasta que ustedes lo compartan**.
+**What to observe:** it answers about **your** actual files, citing names and contents — a web chat cannot do that. And the third prompt has a bonus: seeing “to share it”, Claude loads one of its **skills** (internal manuals it activates when the task warrants it — you’ll see `⏺ Skill(artifact-design)` in the terminal) and publishes the explanation as a **web page** (*Artifact*): link lives in claude.ai, **private until you share it**.
 
-[Lo que antes era un Word adjunto para el nuevo asistente, ahora sale del terminal listo para enviar.]{.warm}
+[What used to be a Word attachment for a new RA now comes out of the terminal ready to send.]{.warm}
 
-## El proyecto de ejemplo {.smaller}
+## The example project {.smaller}
 
-De aquí en adelante trabajamos sobre una carpeta que les entregamos:
-**`ejemplo-mineria-conflicto/`**. Es un proyecto de investigación real, a medio
-empezar y **deliberadamente desordenado**.
+From here on we’ll work over a folder we provided:
+**`ejemplo-mineria-conflicto/`**. It’s a real research project, half‑started and **deliberately messy**.
 
-> **La pregunta:** en los departamentos mineros del Perú, ¿la renta minera reduce
-> la conflictividad social — o solo cambia **aquello por lo que se protesta**?
+> **The question:** in Peru’s mining departments, does mining revenue reduce
+> social conflict — or does it mainly change **what people protest about**?
 
 . . .
 
-| Carpeta | Qué hay |
+| Folder | What’s there |
 |---|---|
-| `datos/` | 10 reportes de conflictos de la Defensoría · producción y empleo minero · mesas de diálogo · 251 proyectos de ley |
-| `papers/` | 8 PDFs con nombres imposibles |
-| `notas/` | Apuntes sueltos del investigador |
+| `datos/` | 10 conflict reports from the Ombudsman’s Office · mining output and employment · dialogue tables · 251 congressional bills |
+| `papers/` | 8 PDFs with impossible names |
+| `notas/` | The researcher’s scattered notes |
 
-[Úsenla hoy y quédensela. Si prefieren, todos los ejercicios funcionan igual sobre una carpeta suya.]{.small .muted}
+[Use it today and keep it. If you prefer, every exercise works the same over one of your own folders.]{.small .muted}
 
-## Su turno 1 — identificar: los nombres {.your-turn .smaller}
+## Your turn 1 — identify: the names {.your-turn .smaller}
 
-Empecemos por saber **qué es cada archivo**. Miren `papers/`: hay cosas como
+Let’s start by learning **what each file is**. Look at `papers/`: there are things like
 `descarga.pdf`, `el pasado importa - copia (2).pdf`, `articulo minería (1).pdf`.
 
 ```text
-En la carpeta papers/ hay PDFs de artículos. Ábrelos y renómbralos con
-el formato apellido-año-palabraclave.pdf. ANTES de renombrar nada,
-muéstrame la lista de cambios que vas a hacer.
+In the papers/ folder there are article PDFs. Open them and rename them as
+lastName-year-keyword.pdf. BEFORE renaming anything, show me the list of
+changes you plan to make.
 ```
 
 . . .
 
-**Qué observar:**
+**What to observe:**
 
-1. **Pedir el plan antes de ejecutar** es el hábito de seguridad número uno.
-2. El agente **lee el contenido del PDF** — no adivina por el nombre del archivo.
-3. **Tres de esos papers no vienen al caso.** ¿Los detecta? Pregúntenle:
-   *"¿cuáles de estos no tienen que ver con minería y conflicto en el Perú?"*
+1. **Asking for the plan before execution** is the #1 safety habit.
+2. The agent **reads the PDF content** — it doesn’t guess from the filename.
+3. **Three of those papers are off-topic.** Does it detect them? Ask:
+   “which of these are not about mining and social conflict in Peru?”
 
-## Su turno 2 — archivar: la estructura {.your-turn .smaller}
+## Your turn 2 — file away: the structure {.your-turn .smaller}
 
-Ya saben qué es cada cosa. Ahora **dónde va**:
+Now you know what each thing is. Next: **where it goes**:
 
 ```text
-Quiero dejar este proyecto ordenado como un paquete de replicación
-listo para enviar a una revista: carpetas claras (datos, código,
-resultados, documento) y un README que explique cómo reproducir todo.
+I want this project organized like a replication package ready to send
+to a journal: clear folders (data, code, results, manuscript) and a README
+that explains how to reproduce everything.
 
-Propónme primero el plan — qué mueves y por qué. No cambies nada
-todavía.
+Propose the plan first — what you’d move and why. Don’t change anything yet.
 ```
 
 . . .
 
-**Qué observar:** llega un plan concreto sobre *sus* archivos reales. Léanlo, cambien lo que no les guste, y recién entonces autoricen.
+**What to observe:** you get a concrete plan over *your* real files. Read it, change what you don’t like, and only then authorize execution.
 
-[Cuando terminen, pídanle que **actualice el `CLAUDE.md`** con la nueva estructura — así la memoria del proyecto queda al día.]{.small .muted}
+[When you finish, ask it to **update `CLAUDE.md`** with the new structure — so the project memory stays current.]{.small .muted}
 
-# ☕ Pausa 2 — 10 minutos {background-color="#e6fbfc"}
+# ☕ Break 2 — 10 minutes {background-color="#e6fbfc"}
 
-[Volvemos 8:15 pm]{.big}
+[Back at 8:15 pm]{.big}
 
-# Bloque 6 — La literatura: buscar, verificar y descargar
+# Block 6 — The literature: search, verify, and download
 
-## Primero lo lanzamos, después conversamos {.your-turn .smaller}
+## Launch first, talk later {.your-turn .smaller}
 
-`/deep-research` **tarda 15–20 minutos** — lo echamos a andar *ahora* y seguimos la clase mientras trabaja. Copien este prompt completo:
+`/deep-research` **takes 15–20 minutes** — we’ll start it *now* and continue class while it runs. Copy this prompt:
 
-::: {.compact-code}
+:::: {.compact-code}
 ```text
-/deep-research ¿Qué dice la evidencia empírica desde 2015 sobre la
-relación entre actividad minera y conflictividad social en el Perú?
-Prioriza estudios cuantitativos, revisiones sistemáticas e informes
-oficiales.
+/deep-research What does the empirical evidence since 2015 say about the
+relationship between mining activity and social conflict in Peru?
+Prioritize quantitative studies, systematic reviews, and official reports.
 
-Además del informe, hazme estas tres cosas:
+Besides the report, do these three things:
 
-1. Descarga a la carpeta papers/ todos los documentos de acceso
-   abierto que cites (working papers, preprints, informes, tesis),
-   nombrados apellido-año-tema.pdf y agrupados por subtema.
+1. Download to the papers/ folder every open-access document you cite
+   (working papers, preprints, reports, theses), named lastName-year-topic.pdf
+   and grouped by subtopic.
 
-2. Crea un archivo pendientes.md con las fuentes relevantes que NO
-   pudiste descargar — artículos en revistas por suscripción, libros
-   y capítulos de libro. Para cada una incluye: cita completa en APA,
-   DOI o ISBN, enlace al editor, y el motivo (suscripción, libro
-   impreso, sin versión abierta disponible).
+2. Create a file pending.md with the relevant sources you could NOT
+   download — subscription journal articles, books and book chapters.
+   For each include: full APA citation, DOI or ISBN, publisher link,
+   and the reason (subscription, book, no open version available).
 
-3. En el informe cita esas fuentes igual que las demás, pero
-   márcalas como [pendiente de descarga].
+3. In the report, cite those sources like the rest but mark them as
+   [pending download].
 ```
-:::
+::::
 
-[Corre **en segundo plano**: la sesión les queda libre. Mírenlo con `/workflows`.]{.warm}
+[It runs **in the background**: your session stays free. Watch it with `/workflows`.]{.warm}
 
-## ¿Por qué pedir también lo que *no* pudo bajar? {.smaller}
+## Why also ask for what it could not download? {.smaller}
 
-Porque en Ciencias Sociales **lo que queda fuera suele ser lo más citado**: el libro clásico de la disciplina, el artículo en una revista indexada de suscripción.
-
-. . .
-
-Si solo pidieran "descarga lo que encuentres", esas fuentes **desaparecerían silenciosamente** de su revisión — y una revisión de literatura con un hueco invisible es peor que una corta.
+Because in the social sciences **what’s excluded is often the most cited**: a field’s classic book, or a subscription journal’s article.
 
 . . .
 
-Con este prompt obtienen dos productos:
+If you only asked “download what you find”, those sources would **silently vanish** from your review — and a literature review with an invisible hole is worse than a short one.
 
-| Archivo | Qué contiene | Para qué |
+. . .
+
+With this prompt you get two products:
+
+| File | What it contains | For |
 |---|---|---|
-| `papers/` | Los PDFs que sí consiguió | Leer y citar hoy mismo |
-| `pendientes.md` | Cita completa, DOI/ISBN, enlace y motivo | **La lista de tareas** para la biblioteca PUCP |
+| `papers/` | The PDFs it did obtain | Read and cite today |
+| `pending.md` | Full citation, DOI/ISBN, link and reason | **The to‑do list** for your library proxy |
 
-[Volveremos a `pendientes.md` al final del bloque: es exactamente lo que el proxy de la biblioteca va a resolver.]{.warm}
+[We’ll come back to `pending.md` at the end of the block: it’s exactly what your university library proxy will resolve.]{.warm}
 
-## Lo que acaba de pasar por dentro {.smaller}
+## What just happened under the hood {.smaller}
 
-![](../figures/es/agentes-paralelo.svg){.nostretch width=80% fig-align="center"}
+![](../figures/agentes-paralelo.svg){.nostretch width=80% fig-align="center"}
 
-Una revisión que a un asistente le tomaría **dos o tres semanas**, un equipo de agentes en paralelo la entrega **en lo que dura este bloque**. No es magia: es que son **muchos, a la vez** — y mientras trabajan, ustedes siguen con lo suyo.
+What would take a human RA **two or three weeks**, a parallel team of agents delivers **within this block**. Not magic: they’re **many, at once** — and while they work, you keep doing your own.
 
-## No es una búsqueda: es un equipo {.smaller}
+## It’s not “search”: it’s a team {.smaller}
 
-![](../figures/es/deep-research-caso.svg){.nostretch width=70% fig-align="center"}
+![](../figures/deep-research-caso.svg){.nostretch width=70% fig-align="center"}
 
-Su pregunta se repartió en **cinco ángulos**; cada agente busca por el suyo, leen y extraen, y **se verifican entre ellos** antes de escribir el informe. Es la estructura de un seminario de investigación, no la de un buscador.
+Your question split into **five angles**; each agent explores its angle, reads and extracts, and they **cross‑verify** before writing the report. It’s an academic seminar structure, not a search engine’s.
 
 . . .
 
-**¿Y cuántos son?** Dos números que no hay que confundir: **a la vez** corren hasta **16 en paralelo**; **en total**, a lo largo de la corrida, entran **cientos** por fases — en una corrida real de este taller, cerca de **100**. [El tamaño se regula con `/config workflowSizeGuideline`: `small` <5 · **`medium` <15 (por defecto)** · `large` <50.]{.small .muted}
+**How many are they?** Two numbers not to confuse: **at once** up to **16 in parallel**; **in total**, across phases, **hundreds** — in a real workshop run, around **100**. [You can tune size with `/config workflowSizeGuideline`: `small` <5 · **`medium` <15 (default)** · `large` <50.]{.small .muted}
 
-## Por qué esto importa para la verificación {.smaller}
+## Why this matters for verification {.smaller}
 
-Un buscador les da **enlaces**. Este equipo les da **afirmaciones ya contrastadas**:
+A search engine gives you **links**. This team gives you **already‑cross‑checked claims**:
 
-- Cada agente busca por un **ángulo distinto** — nadie depende de una sola consulta afortunada.
-- Los agentes **se revisan entre ellos**: lo que un agente afirma, otros lo verifican contra la fuente.
-- Lo que **no sobrevive** esa votación **no llega al informe**; lo que no se pudo comprobar aparece marcado como *no verificado*.
+- Each agent looks from a **different angle** — nobody depends on a single lucky query.
+- Agents **check each other**: what one asserts, others verify against the source.
+- What **doesn’t survive** that vote **doesn’t make it** into the report; what couldn’t be confirmed is marked *unverified*.
 
 . . .
 
 ![](../figures/screenshots/workflows-deep-research.png){.nostretch width=100% fig-align="center"}
 
-[Captura de `/workflows` en una corrida real: fases Scope → Search → Fetch → **Verify** → Synthesize. Miren la fase Verify: **75 agentes** dedicados solo a comprobar lo que afirmaron los demás.]{.small}
+[Screenshot of `/workflows` in a real run: phases Scope → Search → Fetch → **Verify** → Synthesize. Look at Verify: **75 agents** dedicated just to checking others’ claims.]{.small}
 
-::: {.callout-tip}
-Empiecen a leer el informe **por lo marcado como no verificado**: ahí es donde su criterio de investigador hace la diferencia.
-:::
+:::: {.callout-tip}
+Start reading the report **from what’s marked unverified**: that’s where your researcher judgment makes the difference.
+::::
 
-## ⭐ De vuelta al informe: verifiquen {.your-turn .smaller}
+## ⭐ Back to the report: verify {.your-turn .smaller}
 
-Ya debe haber terminado. Ábranlo… y **antes de usar una sola cita**, pídanle esto:
+It should be done now. Open it… and **before using a single citation**, ask this:
 
 ```text
-De la bibliografía que armaste, verifica cada referencia contra
-Crossref: autores, año, título, volumen, páginas y DOI. Dime cuáles
-tienen algún dato que no coincide y cuál es el correcto.
-No me digas que está bien si no la pudiste comprobar.
+From the bibliography you assembled, verify each reference against
+Crossref: authors, year, title, volume, pages, and DOI. Tell me which
+have any mismatch and what the correct data is.
+Don’t tell me it’s fine if you couldn’t check it.
 ```
 
 . . .
 
-**Qué observar:** el informe ya venía con la fuente de cada afirmación — **y la verificación igual encuentra cosas**. Un DOI roto lo detecta cualquiera al primer clic; uno que abre el paper equivocado sobrevive a la revisión por pares.
+**What to observe:** the report already cited a source for each claim — **and verification still finds things**. A broken DOI is caught with one click; a DOI resolving to the wrong paper can survive peer review.
 
 . . .
 
-::: {.callout-important}
-## La lección central del taller
-**Recordar** y **verificar** son dos modos distintos de trabajo, y el segundo **hay que pedirlo explícitamente**. Todo lo que vaya a una publicación de ustedes pasa por el modo verificar.
-:::
+:::: {.callout-important}
+## The workshop’s central lesson
+**Remembering** and **verifying** are distinct work modes, and the second **must be requested explicitly**. Anything that goes into your publications runs through the verify mode.
+::::
 
-## El límite: qué puede y qué no puede descargar {.smaller}
+## The limit: what it can and cannot download {.smaller}
 
-| Tipo de fuente | ¿Lo consigue solo? |
+| Source type | Can it get it alone? |
 |---|---|
-| Working papers (NBER, SSRN, RePEc), preprints (arXiv) | ✅ Sí |
-| Informes oficiales, tesis, repositorios institucionales | ✅ Sí |
-| **Artículos publicados en revistas de suscripción** | ❌ **No** — llega al resumen, no al PDF |
-| **Libros** | ❌ No — y en Ciencias Sociales muchas veces el libro *es* la fuente |
+| Working papers (NBER, SSRN, RePEc), preprints (arXiv) | ✅ Yes |
+| Official reports, theses, institutional repositories | ✅ Yes |
+| **Published articles in subscription journals** | ❌ **No** — it reaches the abstract, not the PDF |
+| **Books** | ❌ No — and in the social sciences books are often the key sources |
 
 . . .
 
-[No es un defecto de la herramienta: es que **esas puertas están cerradas para cualquiera que no esté logueado**. Y ustedes sí lo están.]{.warm}
+[Not a tool flaw: **those doors are closed to anyone not logged in**. You are logged in.]{.warm}
 
-## La solución: un solo login {.smaller}
+## The solution: one login {.smaller}
 
-![](../figures/es/biblioteca-flujo.svg){.nostretch width=84% fig-align="center"}
+![](../figures/biblioteca-flujo.svg){.nostretch width=84% fig-align="center"}
 
-**Un** login — el del proxy de la biblioteca, con sus credenciales del campus virtual — y el navegador queda reconocido como PUCP: **todas** las revistas suscritas abren sin ingresar nada más. Ya lo hicieron al inicio de la clase; esa pestaña abierta es la llave.
+**One** login — your university library proxy, with your campus credentials — and the browser is recognized as “on campus”: **all** subscribed journals open without entering anything else. You already did this at the start of class; that open tab is the key.
 
-## ¿Y por qué `/deep-research` no usó esa sesión? {.smaller}
+## Why didn’t `/deep-research` use that session? {.smaller}
 
-Ustedes se loguearon al inicio de la clase… y aun así el informe dejó pendientes. No es un error:
+You logged in at the start of class… and yet the report had items pending. Not an error:
 
-::: {.callout-important}
-Los agentes de `/deep-research` **no navegan desde su computadora**: buscan y leen desde los servidores de Anthropic. Por eso **no ven la cookie de su navegador** — para ellos, esas revistas siguen cerradas.
-:::
+:::: {.callout-important}
+`/deep-research` agents **do not browse from your computer**: they search and read from Anthropic’s servers. They **don’t see your browser cookie** — for them, those journals are still locked.
+::::
 
 . . .
 
-De ahí el reparto de tareas que ya conocen, ahora con nombre técnico:
+Hence the division of labor you’ve seen, now with names:
 
-| Quién | Qué hace | Con qué |
+| Who | What they do | With what |
 |---|---|---|
-| **Los agentes** | Encuentran todo y bajan lo abierto; listan el resto | Búsqueda web, sin sesión |
-| **Su navegador** | Descarga lo suscrito | La sesión PUCP que abrieron |
+| **The agents** | Find everything and download what’s open; list the rest | Web search, no session |
+| **Your browser** | Downloads what’s under subscription | The library‑proxy session you opened |
 
-[Por eso `pendientes.md` no es un consuelo: es **el puente** entre las dos mitades.]{.warm}
+[That’s why `pending.md` is not a consolation prize: it’s **the bridge** between the two halves.]{.warm}
 
-## Que él prepare, ustedes hagan clic {.your-turn .smaller}
+## Let it prepare, you do the clicks {.your-turn .smaller}
 
-Claude **no puede descargar de la biblioteca por ustedes** — no tiene su sesión. Pero sí puede dejarles el trabajo servido:
+Claude **cannot download through your library proxy for you** — it doesn’t have your session. But it can set the work up:
 
 ```text
-Toma pendientes.md y arma una lista donde cada fuente tenga su enlace
-de descarga ya armado con el proxy de la biblioteca, con este formato:
-https://pucp.elogim.com/auth-meta/login.php?url=<enlace al artículo>
+Take pending.md and build a list where each source has its download link
+prepped through the library proxy in this format:
+https://pucp.elogim.com/auth-meta/login.php?url=<article link>
 
-Ordénalas de más a menos citada y guárdala como descargar.md.
+Order them from most to least cited and save as download.md.
 ```
 
 . . .
 
-Entonces ustedes: **clic en cada enlace → descargar → todo a `papers/`**. Con la sesión ya abierta, son segundos por artículo.
+Then you: **click each link → download → everything into `papers/`**. With the session already open, each article takes seconds.
 
 . . .
 
-Y al terminar, se lo devuelven:
+And when you’re done, hand it back:
 
 ```text
-Ya descargué los PDFs a papers/. Renómbralos con el formato
-apellido-año-tema.pdf, verifica que cada uno corresponda a su cita,
-y actualiza pendientes.md con los que siguen faltando.
+I’ve downloaded the PDFs into papers/. Rename them using the
+lastName-year-topic.pdf format, verify each one matches its citation,
+and update pending.md with what’s still missing.
 ```
 
-## El reparto de tareas, otra vez {.smaller}
+## Division of labor, once more {.smaller}
 
-Es el mismo principio de siempre, y conviene que quede grabado:
+Same principle as always, and worth engraving:
 
-| Ustedes | Claude |
+| You | Claude |
 |---|---|
-| Se loguean · hacen clic · descargan | Busca · arma los enlaces · organiza · renombra · verifica |
+| Log in · click · download | Search · assemble links · organize · rename · verify |
 
 . . .
 
-**Por qué es así:** Claude nunca escribe contraseñas por ustedes — regla de seguridad — y, trabajando con **clave API**, tampoco puede manejar su navegador.
+**Why it is this way:** Claude never types passwords for you — security rule — and when working with an **API key**, it also cannot drive your browser.
 
 . . .
 
-::: {.callout-note}
-## ¿Y no hay forma de que él haga hasta los clics?
-La hay: la extensión **Claude in Chrome** le permite operar su navegador ya logueado — con ella, la descarga de `pendientes.md` sí sería automática. Pero **requiere suscripción paga** (Pro, $20/mes o más); **no funciona con la clave API** con la que trabajamos hoy.
-:::
+:::: {.callout-note}
+## Can it also do the actual clicks?
+It can: the **Claude in Chrome** extension lets it operate your already‑logged‑in browser — with it, downloading from `pending.md` can be fully automatic. But it **requires a paid subscription** (Pro, $20/mo or more); **it does not work with the API key** we’re using today.
+::::
 
-::: {.callout-tip}
-Aun así el ahorro es enorme: la parte lenta no era hacer clic, era **saber qué buscar, dónde está y si la cita es correcta**.
-:::
+:::: {.callout-tip}
+Even so, the time saver is huge: the slow part wasn’t clicking; it was **knowing what to look for, where it is, and whether the citation is correct**.
+::::
 
-[Que la página cargue no significa que haya suscripción — hay que llegar hasta el PDF. Comprobado que **no** tenemos: Oxford ni Management Science/INFORMS (o sea, ni QJE ni ReStud por esta vía).]{.small .muted}
+[A page “loading” doesn’t mean there’s a subscription — you must reach the PDF. Verified missing in our case: Oxford and Management Science/INFORMS (i.e., neither QJE nor ReStud are available via this route).]{.small .muted}
 
-## El broche: la revisión, en LaTeX y en PDF {.your-turn .smaller}
+## The finale: the review, in LaTeX and PDF {.your-turn .smaller}
 
-Todo lo del bloque converge aquí. Pídanle:
+Everything in this block converges here. Ask:
 
 ```text
-Con el informe de deep-research y los PDFs de papers/, escribe la
-sección "Revisión de la literatura" de mi paper: 3 a 4 páginas,
-organizada por temas (no paper por paper), con citas autor-año
-y su archivo referencias.bib.
+With the deep-research report and the PDFs in papers/, write the
+“Literature Review” section of my paper: 3–4 pages, organized by themes
+(not paper-by-paper), with author–year citations and a referencias.bib file.
 
-Créala como documento LaTeX independiente (revision-literatura.tex),
-compílala a PDF y ábreme el resultado. Si la compilación falla,
-lee el error, corrige y reintenta hasta que salga.
+Create it as a standalone LaTeX document (literature-review.tex),
+compile it to PDF, and open the result. If compilation fails, read the
+error, fix it, and retry until it works.
 ```
 
 . . .
 
-**Qué observar:**
+**What to observe:**
 
-1. **Ustedes no escribieron ni una línea de LaTeX** — la promesa del Bloque 1, cumplida. Si la compilación falla, él lee el error y se corrige solo: es el ciclo del agente.
-2. El PDF se abre **dentro de VS Code** — para eso instalaron vscode-pdf.
-3. [Es un **borrador para su edición**: la estructura y las citas ya están (y verificadas); la voz y el argumento los ponen ustedes.]{.warm}
+1. **You didn’t write a single line of LaTeX** — Block 1’s promise delivered. If compilation fails, it reads the error and self‑corrects: it’s the agent loop.
+2. The PDF opens **inside VS Code** — that’s why you installed vscode‑pdf.
+3. [It’s a **draft for your editing**: structure and citations are there (and verified); you bring the voice and argument.]{.warm}
 
-# Bloque 7 — Cierre
+# Block 7 — Closing
 
-## Lo que ya saben hacer {.smaller}
+## What you can now do {.smaller}
 
-- Distinguir el chat, Cowork y **Claude Code** — y qué cuesta cada uno.
-- Moverse en VS Code y abrir el terminal con un clic.
-- Abrir Claude en su carpeta con el único comando necesario (`cd`).
-- El kit de rescate: <kbd>Esc</kbd>, <kbd>Ctrl</kbd>+<kbd>C</kbd> ×2, `claude --resume`.
-- Darle memoria al proyecto con `/init` + `CLAUDE.md`.
-- **La lección central: memoria ≠ verificación.** Pidan verificar, siempre.
-- Descargar de la biblioteca PUCP con el patrón "yo me logueo, él opera".
+- Distinguish the chat, Cowork, and **Claude Code** — and what each costs.
+- Move around VS Code and open the terminal with one click.
+- Open Claude in your folder with the one necessary command (`cd`).
+- Use the rescue kit: <kbd>Esc</kbd>, <kbd>Ctrl</kbd>+<kbd>C</kbd> ×2, `claude --resume`.
+- Give your project memory with `/init` + `CLAUDE.md`.
+- **Central lesson: memory ≠ verification.** Always ask to verify.
+- Download from your university library via the “you log in, it operates” pattern.
 
-## Tarea para la próxima sesión {.your-turn .smaller}
+## Homework for next time {.your-turn .smaller}
 
-Elijan **una tarea real y pequeña** de su propia investigación:
+Pick **one real, small task** from your own research:
 
-1. Corran `/init` en la carpeta de un proyecto suyo y **lean** el `CLAUDE.md` que genera. Corrijan lo que no le gustó.
-2. Pídanle que ordene y renombre una carpeta de PDFs acumulados — **con plan previo**.
-3. Verifiquen la bibliografía de algo que estén escribiendo: *"revisa cada cita de este documento contra Crossref y dime cuáles tienen errores"*.
-
-. . .
-
-**Próxima sesión:** el flujo completo de investigación — revisión de literatura automática con `/deep-research`, dashboards de datos, LaTeX sin escribir LaTeX, y cómo convertir sus clases grabadas en material de trabajo.
-
-## Referencias {.smaller}
-
-- Guía escrita de este taller (guion + manual): carpeta `profesores/` del repositorio del curso
-- Sant'Anna, P. H. C. — *My Claude Code Workflow*: [psantanna.com/claude-code-my-workflow](https://psantanna.com/claude-code-my-workflow/workflow-guide.html)
-- Documentación oficial: [code.claude.com/docs](https://code.claude.com/docs)
-- Biblioteca PUCP: [biblioteca.pucp.edu.pe](https://biblioteca.pucp.edu.pe)
-
-[Estos slides fueron escritos, diagramados y compilados con Claude Code — incluyendo el análisis de las grabaciones de las clases piloto con los asistentes del Q-LAB.]{.small .muted}
-
-# Anexo — por si surge en preguntas
-
-## Cuando de verdad no hay acceso {.smaller}
-
-Casi siempre existe una versión abierta: **NBER · SSRN · arXiv · RePEc**, el repositorio del autor, o el enlace [PDF] a la derecha en Google Scholar.
-
-::: {.callout-warning}
-El *working paper* **no es** el artículo publicado — hay casos con distinto título y hasta distintos autores. Para **citar**, la versión publicada; para leer, cualquiera — sabiendo cuál tienen.
-:::
+1. Run `/init` in a folder from your work and **read** the `CLAUDE.md` it generates. Fix what you don’t like.
+2. Ask it to organize and rename a folder of accumulated PDFs — **with a proposed plan first**.
+3. Verify the bibliography of something you’re writing: *“check each citation in this document against Crossref and tell me which ones have errors.”*
 
 . . .
 
-Y para libros, que es lo que más pesa en varias de sus disciplinas: la búsqueda en el **catálogo de la biblioteca** sigue siendo insustituible. Esta herramienta **complementa**, no reemplaza.
+**Next session:** the complete research flow — automatic literature review with `/deep-research`, data dashboards, LaTeX without writing LaTeX, and how to turn recorded classes into working material.
 
-## ¿Se puede acortar la espera? {.smaller}
+## References {.smaller}
 
-**No hay un parámetro de tiempo** — pero sí tres palancas reales:
+- Written guide for this workshop (script + manual): `profesores/` folder in the course repository
+- Sant’Anna, P. H. C. — *My Claude Code Workflow*: [psantanna.com/claude-code-my-workflow](https://psantanna.com/claude-code-my-workflow/workflow-guide.html)
+- Official docs: [code.claude.com/docs](https://code.claude.com/docs)
+- PUCP Library: [biblioteca.pucp.edu.pe](https://biblioteca.pucp.edu.pe)
 
-| Palanca | Cómo |
+[These slides were written, laid out, and compiled with Claude Code — including analysis of pilot‑class recordings with the Q‑LAB assistants.]{.small .muted}
+
+# Appendix — likely Q&A follow‑ups
+
+## When there truly isn’t access {.smaller}
+
+There’s almost always an open version: **NBER · SSRN · arXiv · RePEc**, the author’s repository, or the [PDF] link on the right in Google Scholar.
+
+:::: {.callout-warning}
+The *working paper* is **not** the published article — sometimes with a different title and even different authors. For **citing**, use the published version; for reading, either is fine — as long as you know which you have.
+::::
+
+. . .
+
+For books — often central in several of your disciplines — the **library catalog** is still essential. This tool **complements**, it doesn’t replace.
+
+## Can we shorten the wait? {.smaller}
+
+**There’s no time knob** — but there are three real levers:
+
+| Lever | How |
 |---|---|
-| **Menos agentes** | `/config workflowSizeGuideline=small` → apunta a menos de 5 agentes (por defecto son hasta 15) |
-| **Pregunta más estrecha** | Un periodo, un país, un tipo de fuente. Una pregunta amplia abre más frentes y tarda más |
-| **Cortarlo a mano** | `/workflows` → seleccionar la corrida → <kbd>x</kbd> detiene · <kbd>p</kbd> pausa y reanuda |
+| **Fewer agents** | `/config workflowSizeGuideline=small` → target <5 agents (default is up to 15) |
+| **Narrower question** | A time period, a country, a source type. Broader questions open more fronts and take longer |
+| **Stop it manually** | `/workflows` → select the run → <kbd>x</kbd> stop · <kbd>p</kbd> pause/resume |
 
 . . .
 
-- En `/workflows` ven **en vivo** cuántos agentes hay, cuántos tokens llevan y el tiempo transcurrido.
-- Si una corrida se dispara (más de 25 agentes), Claude Code muestra un aviso de **corrida grande**.
+- In `/workflows` you see **live** how many agents there are, token counts, and elapsed time.
+- If a run gets large (over 25 agents), Claude Code shows a **large run** heads‑up.
 
-[La estrategia práctica es la de hoy: **lánzenlo y sigan trabajando**. No es tiempo perdido si ustedes no lo están mirando.]{.warm}
+[The practical strategy is today’s: **launch it and keep working**. It’s not wasted time if you’re not staring at it.]{.warm}
+

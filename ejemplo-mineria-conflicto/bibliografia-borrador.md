@@ -1,32 +1,31 @@
-# Bibliografía — borrador
+# Bibliography — draft
 
-Notas para la sección de literatura del paper sobre canon minero y conflictividad.
-Armado a las apuradas entre el gestor bibliográfico y Google Scholar. **Revisar
-antes de mandar nada.**
+Notes for the literature section of the paper on mining canon (revenue transfers) and conflict.
+Thrown together between the reference manager and Google Scholar. **Verify before sending anything.**
 
 ---
 
-## Efectos económicos locales de la minería
+## Local economic effects of mining
 
 Loayza, N., Mier y Teran, A., & Rigolini, J. (2016). The Local Impact of Mining
 on Poverty and Inequality: Evidence from the Commodity Boom in Peru.
 *World Development*, 84, 219–234. https://doi.org/10.1016/j.worlddev.2016.03.005
 
-> Encuentran que la minería reduce pobreza pero aumenta desigualdad a nivel
-> distrital. Es el resultado que quiero contrastar. Tengo el PDF en `papers/`.
+> They find mining reduces poverty but increases inequality at the district level.
+> That’s the result I want to contrast. I have the PDF in `papers/`.
 
 Aragón, F. M., & Rud, J. P. (2013). The Blessing of Natural Resources: Evidence
 from a Peruvian Gold Mine. *American Economic Journal: Applied Economics*, 5(2),
 1–25. https://doi.org/10.1257/pol.5.2.1
 
-> El caso Yanacocha. Efecto positivo vía demanda local de bienes y trabajo.
+> The Yanacocha case. Positive effect via local demand for goods and labor.
 
 Orihuela, O., & Gamarra-Echenique, V. (2020). Fading local effects: boom and bust
 evidence from a Peruvian gold mine. *Environment and Development Economics*,
 25(2), 182–203. https://doi.org/10.1017/s1355770x19000330
 
-> Mismo caso que Aragón & Rud pero con horizonte más largo — y concluyen distinto.
-> Buen contrapunto para la discusión de validez externa.
+> Same case as Aragón & Rud but with a longer horizon — and they conclude differently.
+> Good counterpoint for the external‑validity discussion.
 
 Aragón, F. M., & Winkler, H. (2023). The long-term impact of a resource-based
 fiscal windfall: Evidence from the Peruvian canon. *Resources Policy*, 87, 104305.
@@ -34,15 +33,15 @@ https://doi.org/10.1016/j.resourpol.2023.104612
 
 ---
 
-## Canon, descentralización y conflicto
+## Canon, decentralization, and conflict
 
 Arellano-Yanguas, J. (2011). A Thoroughly Modern Resource Curse? The New Natural
 Resource Policy Agenda and the Mining Revival in Peru. *The Journal of
 Development Studies*, 47(4), 617–638.
 https://doi.org/10.1080/00220381003706478
 
-> **La referencia central de mi argumento.** El canon, al descentralizar rentas
-> sin capacidad de gestión, multiplica las disputas por el reparto.
+> **The central reference of my argument.** By decentralizing revenue without
+> management capacity, the canon multiplies disputes over distribution.
 
 Ponce, A. F., & McClintock, C. (2014). The Explosive Combination of Inefficient
 Local Bureaucracies and Mining Production: Evidence from Localized Societal
@@ -55,15 +54,15 @@ Lesser Stateness: Lessons from the Peruvian Commodity Boom. *Politics & Society*
 
 ---
 
-## Antropología y ecología política
+## Anthropology and political ecology
 
 Bebbington, A., Bury, J., Humphreys Bebbington, D., Lingan, J., Muñoz, J. P., &
 Scurrah, M. (2008). Mining and Social Movements: Struggles over Livelihood and
 Rural Territorial Development in the Andes. *World Development*, 36(12),
 2888–2905. https://doi.org/10.1016/j.worlddev.2007.11.016
 
-> Aquí está el argumento de que el conflicto NO es distributivo sino sobre medios
-> de vida y territorio. Es la tensión que quiero explorar con los datos de texto.
+> Here’s the argument that conflict is NOT distributive but about livelihoods
+> and territory. That’s the tension I want to explore with text data.
 
 Bebbington, A., Hinojosa, L., Humphreys Bebbington, D., Burneo, M. L., &
 Warnaars, X. (2008). Contention and Ambiguity: Mining and the Possibilities of
@@ -74,17 +73,17 @@ Salas Carreño, G. (2016). Mining and the living materiality of mountains in
 Andean societies. *Journal of Material Culture*, 22(2), 133–150.
 https://doi.org/10.1177/1359183516679439
 
-> La dimensión ontológica: las montañas como seres con los que se establecen
-> relaciones. Cambia por completo qué cuenta como "compensación".
+> The ontological dimension: mountains as beings with which relationships are
+> established. Completely changes what counts as “compensation.”
 
 Arce, M. (2014). *Resource Extraction and Protest in Peru*. University of
 Pittsburgh Press.
 
 ---
 
-## Por revisar / no encontrados
+## To review / not found
 
-- Damonte sobre minería informal y gobernanza — creo que es *Resources Policy* 2021
-- Paredes sobre escalas del conflicto — *The Extractive Industries and Society*
-- Thorp & Paredes sobre etnicidad y desigualdad — ¿está en la biblioteca PUCP?
-- ¿Hay algo reciente sobre Las Bambas específicamente?
+- Damonte on informal mining and governance — I think it’s *Resources Policy* 2021
+- Paredes on scales of conflict — *The Extractive Industries and Society*
+- Thorp & Paredes on ethnicity and inequality — is it in the PUCP library?
+- Anything recent on Las Bambas specifically?
