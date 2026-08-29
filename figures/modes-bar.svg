@@ -1,0 +1,33 @@
+<svg viewBox="0 0 960 420" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+<rect x="0" y="0" width="960" height="420" rx="14" fill="#1e1e1e" stroke="#000" stroke-width="2"/>
+<rect x="0" y="0" width="960" height="40" rx="14" fill="#2d2d2d"/>
+<rect x="0" y="20" width="960" height="20" fill="#2d2d2d"/>
+<circle cx="26" cy="20" r="6.5" fill="#ff5f57"/><circle cx="48" cy="20" r="6.5" fill="#febc2e"/><circle cx="70" cy="20" r="6.5" fill="#28c840"/>
+<text x="480" y="26" text-anchor="middle" font-size="13.5" fill="#9a9a9a">each shift+tab changes the bottombar label</text>
+<rect x="150" y="58" width="780" height="74" rx="10" fill="#252525" stroke="#4a4a4a" stroke-width="1.5"/>
+<text x="172" y="88" font-size="15" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#e8e6e3">&gt; <tspan fill="#6a6a6a">type your request here&</tspan></text>
+<text x="172" y="116" font-size="14" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#5ac8fa">ø plan mode on</text>
+<text x="925" y="116" text-anchor="end" font-size="12.5" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#7a7a7a">(shift+tab to switch)</text>
+<text x="945" y="98" font-size="13" fill="#9a9a9a"></text>
+<rect x="150" y="148" width="780" height="74" rx="10" fill="#252525" stroke="#4a4a4a" stroke-width="1.5"/>
+<text x="172" y="178" font-size="15" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#e8e6e3">&gt; <tspan fill="#6a6a6a">type your request here&</tspan></text>
+<text x="172" y="206" font-size="14" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#e8e6e3">· manual mode on</text>
+<text x="925" y="206" text-anchor="end" font-size="12.5" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#7a7a7a">(shift+tab to switch)</text>
+<text x="945" y="188" font-size="13" fill="#9a9a9a"></text>
+<rect x="150" y="238" width="780" height="74" rx="10" fill="#252525" stroke="#4a4a4a" stroke-width="1.5"/>
+<text x="172" y="268" font-size="15" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#e8e6e3">&gt; <tspan fill="#6a6a6a">type your request here&</tspan></text>
+<text x="172" y="296" font-size="14" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#98c379">õõ accept edits on</text>
+<text x="925" y="296" text-anchor="end" font-size="12.5" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#7a7a7a">(shift+tab to switch)</text>
+<text x="945" y="278" font-size="13" fill="#9a9a9a"></text>
+<rect x="150" y="328" width="780" height="74" rx="10" fill="#252525" stroke="#4a4a4a" stroke-width="1.5"/>
+<text x="172" y="358" font-size="15" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#e8e6e3">&gt; <tspan fill="#6a6a6a">type your request here&</tspan></text>
+<text x="172" y="386" font-size="14" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#e5a565">õõ auto mode on</text>
+<text x="925" y="386" text-anchor="end" font-size="12.5" font-family="'SF Mono',Menlo,Consolas,monospace" fill="#7a7a7a">(shift+tab to switch)</text>
+<text x="945" y="368" font-size="13" fill="#9a9a9a"></text>
+<g stroke="#0e7c86" stroke-width="2.5" fill="none">
+<path d="M120,110 C90,125 90,140 120,158"/>
+<path d="M120,200 C90,215 90,230 120,248"/>
+<path d="M120,290 C90,305 90,320 120,338"/>
+</g>
+<text x="62" y="212" font-size="26" fill="#0e7c86" transform="rotate(-90 62 212)" text-anchor="middle" font-family="'SF Mono',Menlo,Consolas,monospace">shift+tab ó</text>
+</svg>

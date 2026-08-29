@@ -74,19 +74,19 @@ When? **Whenever you start something new or don’t know where to go.** Claude e
 
 This came from one of you after Session 1: *“every time Claude modifies a file I feel I have to ask how it was before — just in case.”*
 
-![](../figures/es/git-memoria-vs-disco.svg){.nostretch width=74% fig-align="center"}
+![](../figures/git-memoria-vs-disco.svg){.nostretch width=74% fig-align="center"}
 
 [That program that saves versions is **Git**: free, lives on your computer, and Claude operates it for you.]{.warm}
 
 ## The problem we all know {.smaller}
 
-![](../figures/es/versiones-caos.svg){.nostretch width=76% fig-align="center"}
+![](../figures/versiones-caos.svg){.nostretch width=76% fig-align="center"}
 
 That mess isn’t a personal flaw: it’s **manual version control** — and it fails when it matters. [Git answers all three questions with one idea →]{.warm}
 
 ## What it is: photos of your folder with date and message {.smaller}
 
-![](../figures/es/git-linea-tiempo.svg){.nostretch width=78% fig-align="center"}
+![](../figures/git-linea-tiempo.svg){.nostretch width=78% fig-align="center"}
 
 Each point on the line is a **full photo** of the folder, retrievable or restorable when needed. [One file, the whole history — the three questions from the previous slide, answered.]{.muted}
 
@@ -158,7 +158,7 @@ Three requests, in order, over the project’s bibliography:
 
 ## What request #2 will show {.smaller}
 
-![](../figures/es/git-diff-ejemplo.svg){.nostretch width=80% fig-align="center"}
+![](../figures/git-diff-ejemplo.svg){.nostretch width=80% fig-align="center"}
 
 The diff **calls it out instantly**: the adulterated year and the deleted note, line by line. And request #3 restores everything, **instant and total**. [You just lost the fear of Claude touching your files.]{.warm}
 
@@ -238,7 +238,7 @@ with a column indicating which report it came from.
 
 ## What it did behind the scenes, step by step {.smaller}
 
-![](../figures/es/pipeline-extraccion.svg){.nostretch width=92% fig-align="center"}
+![](../figures/pipeline-extraccion.svg){.nostretch width=92% fig-align="center"}
 
 ## Who does what? (and what travels where) {.smaller}
 
@@ -329,7 +329,7 @@ Vision APIs can also “read” a scan — sending each page as an image. The di
 
 ## The pipeline, now with scans {.smaller}
 
-![](../figures/es/pipeline-ocr.svg){.nostretch width=90% fig-align="center"}
+![](../figures/pipeline-ocr.svg){.nostretch width=90% fig-align="center"}
 
 ## ⚡ Step 2 — PaddleOCR over the scans {.your-turn .smaller}
 

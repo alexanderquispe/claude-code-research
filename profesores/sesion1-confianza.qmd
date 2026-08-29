@@ -112,7 +112,7 @@ The same agent, inside the **VS Code terminal** — this is how you’ll see it 
 
 ## Why do we work in Visual Studio Code? {.smaller}
 
-![](../figures/es/vscode-ui.svg){width=76% fig-align="center"}
+![](../figures/vscode-ui.svg){width=76% fig-align="center"}
 
 **Everything in one window**: your files on the left, the document in the center, and the terminal below where Claude lives. It’s **free**, works the same on Windows and Mac, and opens PDFs, data, and text without changing apps.
 
@@ -151,7 +151,7 @@ With that, VS Code now “sees” your project: we’ll copy the path from that 
 
 ## Open the terminal: one click {.smaller}
 
-![](../figures/es/vscode-terminal-menu.svg){width=80% fig-align="center"}
+![](../figures/vscode-terminal-menu.svg){width=80% fig-align="center"}
 
 Menu **Terminal → New Terminal**. [Tip: if the bottom panel feels small, repeat the menu and pick *New Terminal Window* to get a large separate window.]{.small}
 
@@ -268,7 +268,7 @@ Press <kbd>Shift</kbd>+<kbd>Tab</kbd> to switch modes — there are **four**, sh
 
 ## What it looks like in your terminal {.smaller}
 
-![](../figures/es/modes-bar.svg){.nostretch width=74% fig-align="center"}
+![](../figures/modes-bar.svg){.nostretch width=74% fig-align="center"}
 
 Press <kbd>Shift</kbd>+<kbd>Tab</kbd> a few times now and watch the **label rotate**. Leave it on **auto mode on** so the upcoming exercises run end‑to‑end without stopping for each permission.
 
@@ -552,13 +552,13 @@ With this prompt you get two products:
 
 ## What just happened under the hood {.smaller}
 
-![](../figures/es/agentes-paralelo.svg){.nostretch width=80% fig-align="center"}
+![](../figures/agentes-paralelo.svg){.nostretch width=80% fig-align="center"}
 
 What would take a human RA **two or three weeks**, a parallel team of agents delivers **within this block**. Not magic: they’re **many, at once** — and while they work, you keep doing your own.
 
 ## It’s not “search”: it’s a team {.smaller}
 
-![](../figures/es/deep-research-caso.svg){.nostretch width=70% fig-align="center"}
+![](../figures/deep-research-caso.svg){.nostretch width=70% fig-align="center"}
 
 Your question split into **five angles**; each agent explores its angle, reads and extracts, and they **cross‑verify** before writing the report. It’s an academic seminar structure, not a search engine’s.
 
@@ -621,7 +621,7 @@ Don’t tell me it’s fine if you couldn’t check it.
 
 ## The solution: one login {.smaller}
 
-![](../figures/es/biblioteca-flujo.svg){.nostretch width=84% fig-align="center"}
+![](../figures/biblioteca-flujo.svg){.nostretch width=84% fig-align="center"}
 
 **One** login — your university library proxy, with your campus credentials — and the browser is recognized as “on campus”: **all** subscribed journals open without entering anything else. You already did this at the start of class; that open tab is the key.
 
