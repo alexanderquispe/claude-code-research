@@ -1,217 +1,162 @@
-# Guía del instructor — proyecto de ejemplo
+# Instructor’s guide — example project
 
-**Carpeta:** `ejemplo-mineria-conflicto/` · **Peso:** ~41 MB · 27 archivos
+**Folder:** `ejemplo-mineria-conflicto/` · **Size:** ~41 MB · 27 files
 
-Este documento es para quien dicta, no para los participantes. Contiene el
-solucionario de los ejercicios y lo que debería pasar en cada uno.
+This document is for the instructor, not participants. It contains the answer key for the exercises and what should happen in each.
 
 ---
 
-## 1. Qué es el proyecto
+## 1. What the project is
 
-Un proyecto de investigación real, a medio empezar y deliberadamente desordenado,
-sobre **minería y conflicto social en el Perú**. Sirve de espina dorsal a los
-ejercicios de las dos sesiones.
+A real research project, half‑started and deliberately messy, on **mining and social conflict in Peru**. It anchors the exercises in both sessions.
 
-**Pregunta de investigación:**
+**Research question:**
 
-> En los departamentos mineros del Perú, ¿la renta minera reduce la conflictividad
-> social — o solo cambia aquello por lo que se protesta?
+> In Peru’s mining departments, does mining revenue reduce social conflict —
+> or does it mainly change what people protest about?
 
-Está diseñada para que **se rompa si le quitas uno de los dos tipos de dato**. La
-primera mitad se responde con CSV; la segunda exige leer texto. Por eso funciona
-con las cuatro disciplinas a la vez:
+It’s designed to **break if you remove either data type**. The first half is answered with CSVs; the second requires reading text. That’s why it works across four disciplines at once:
 
-| Disciplina | Su versión de la pregunta | Dato que usa |
+| Discipline | Its version of the question | Data used |
 |---|---|---|
-| Economía | ¿Correlaciona la intensidad minera con la frecuencia de conflictos? | Producción y empleo minero |
-| Ciencia política | ¿Responde la agenda legislativa a los conflictos del terreno? | Proyectos de ley (JSON) |
-| Sociología | ¿Qué actores aparecen y cómo cambia el repertorio? | Narrativas de la Defensoría |
-| Antropología | ¿Se enmarca como agua y territorio, o como empleo y renta? | Narrativas de la Defensoría |
+| Economics | Does mining intensity correlate with conflict frequency? | Mining output and employment |
+| Political Science | Does the legislative agenda respond to on‑the‑ground conflicts? | Bills (JSON) |
+| Sociology | Which actors appear and how does the repertoire change? | Ombudsman narratives |
+| Anthropology | Is it framed as water and territory, or as jobs and revenue? | Ombudsman narratives |
 
-**El proyecto NO viene con `CLAUDE.md`.** Generarlo con `/init` es el ejercicio
-del Bloque 5 de la Sesión 1.
+**The project does NOT ship with `CLAUDE.md`.** Generating it with `/init` is the Block 5 exercise in Session 1.
 
 ---
 
-## 2. Qué hay en la carpeta
+## 2. What’s in the folder
 
 ### `datos/`
 
-| Archivo | Qué es | Detalle |
+| File | What it is | Detail |
 |---|---|---|
-| 10 PDF de la Defensoría | Reportes mensuales n.° 258–269 (ago 2025 – jul 2026) | 99–122 pp. c/u, con capa de texto |
-| `produccion-minera-2025.zip` | Producción minera 2025 | 3 XLSX adentro |
-| `produccion minera ene-may 2026.zip` | Producción ene–may 2026 | nombre con espacios, a propósito |
-| `empleo_minero_2020_may2026.xlsx` | Empleo minero por departamento | 35 filas × 92 columnas, formato ancho |
-| `mesas-dialogo.csv` | Mesas de diálogo monitoreadas (PCM) | 19 registros, 13 regiones |
-| `compromisos-dialogo.csv` | Compromisos del Estado en mesas (PCM) | 506 registros, texto libre + estado |
-| `proyectos-ley-mineria.json` | 251 proyectos de ley sobre minería y canon | API del Congreso |
+| 10 Ombudsman PDFs | Monthly reports no. 258–269 (Aug 2025 – Jul 2026) | 99–122 pp. each, with text layer |
+| `produccion-minera-2025.zip` | 2025 mining production | 3 XLSX inside |
+| `produccion minera ene-may 2026.zip` | Jan–May 2026 production | spaces in name, on purpose |
+| `empleo_minero_2020_may2026.xlsx` | Mining employment by department | 35 rows × 92 columns, wide format |
+| `mesas-dialogo.csv` | Dialogue tables (Prime Minister’s Office) | 19 records, 13 regions |
+| `compromisos-dialogo.csv` | Government commitments in dialogue tables | 506 records, free text + status |
+| `proyectos-ley-mineria.json` | 251 mining/canon bills | Congress API |
 
-**Faltan los reportes 261 y 263.** No es un descuido: la Defensoría no los publicó
-con ninguna URL derivable. Si alguien lo nota, es un buen momento para hablar de
-datos faltantes en fuentes oficiales.
+**Reports 261 and 263 are missing.** Not a mistake: the Ombudsman didn’t publish them with any derivable URL. If someone notices, it’s a good moment to discuss missing data in official sources.
 
 ### `papers/`
 
-Ocho PDF con nombres deliberadamente caóticos (`descarga.pdf`,
-`el pasado importa - copia (2).pdf`, `articulo minería (1).pdf`…). Materia prima
-del ejercicio de renombrado.
+Eight PDFs with deliberately chaotic names (`descarga.pdf`,
+`el pasado importa - copia (2).pdf`, `articulo minería (1).pdf`…). Raw material for the renaming exercise.
 
-**Tres de ellos no vienen al caso** (uno sobre Colombia, una reseña de economía,
-un artículo metodológico). Es intencional: toda carpeta real tiene ruido, y
-detectarlo es parte del ejercicio.
+**Three are off‑topic** (one on Colombia, one literature review, one methods article). Intentional: every real folder has noise, and spotting it is part of the exercise.
 
-### Otros
+### Others
 
-- `bibliografia-borrador.md` — ★ el archivo con los errores sembrados (§4)
-- `notas/ideas sueltas.md` — notas del "investigador"; incluye pistas sobre la
-  decisión metodológica del canon y sobre la bibliografía sospechosa
-- `descargar-datos.sh` — reproducibilidad; los datos ya vienen descargados
+- `bibliografia-borrador.md` — ★ the file with planted errors (§4)
+- `notas/ideas sueltas.md` — the “researcher’s” notes; includes hints on the canon proxy decision and suspicious citations
+- `descargar-datos.sh` — reproducibility; data already shipped downloaded
 
 ---
 
-## 3. Trampas técnicas reales (úselas, no las evite)
+## 3. Real technical traps (use them, don’t avoid them)
 
-Todas verificadas. Aparecen solas si alguien intenta automatizar:
+All verified. They show up by themselves if someone tries to automate:
 
-1. **`wc -l` ≠ número de registros.** `compromisos-dialogo.csv` tiene 634 líneas
-   pero **506 registros**: hay saltos de línea dentro de los campos de texto.
-   Excelente para mostrar por qué contar líneas engaña.
-2. **Codificación y separador.** Los CSV de la PCM van en **latin-1** con
-   separador **`;`**. Abrirlos "normal" produce mojibake.
-3. **Una errata del propio Estado.** La cabecera del CSV de mesas dice
-   `ENTIDENTIDAD QUE PRESIDE EL ESPACIOAD`. Los datos oficiales también vienen
-   sucios.
-4. **`www.datosabiertos.gob.pe` exige el `www.`** — sin él no resuelve en DNS.
-5. **Portales que rechazan scripts.** gob.pe devuelve HTTP 418 y la API del
-   Congreso devuelve 403 si el User-Agent no parece navegador.
-6. **Formato ancho.** El XLSX de empleo minero trae los meses en 92 columnas.
-   Hay que reestructurarlo antes de analizar.
+1. **`wc -l` ≠ number of records.** `compromisos-dialogo.csv` has 634 lines but **506 records**: there are line breaks inside text fields. Great to show why “count lines” is misleading.
+2. **Encoding and separator.** PCM CSVs are **latin‑1** with **`;`** as separator. Opening them “normally” produces mojibake.
+3. **An official typo.** The `mesas` CSV header says `ENTIDENTIDAD QUE PRESIDE EL ESPACIOAD`. Official data come dirty too.
+4. **`www.datosabiertos.gob.pe` requires the `www.`** — without it DNS doesn’t resolve.
+5. **Script‑hostile portals.** gob.pe returns HTTP 418 and Congress’s API returns 403 if the User‑Agent doesn’t look like a browser.
+6. **Wide format.** The mining employment XLSX has months in 92 columns. You must reshape it before analyzing.
 
 ---
 
-## 4. ★ Solucionario: los ocho errores de `bibliografia-borrador.md`
+## 4. ★ Answer key: the eight errors in `bibliografia-borrador.md`
 
-Todos son **reales y verificables contra Crossref**. El ejercicio es pedirle a
-Claude que verifique cada cita; debería encontrarlos todos.
+All **real and verifiable against Crossref**. The exercise is to ask Claude to verify each citation; it should find them all.
 
-| # | Lo que dice el borrador | Lo que dice Crossref |
+| # | What the draft says | What Crossref says |
 |---|---|---|
-| 1 | Loayza, **Mier y Teran** & Rigolini (2016), *World Development* | Solo **Loayza y Rigolini**. Mier y Teran es autor del *working paper* de 2013 (IZA DP 7226), y desaparece en la publicada |
-| 2 | Aragón & Rud, **"The Blessing of Natural Resources"** | El publicado se llama **"Natural Resources and Local Communities"**. "The Blessing…" es el título del documento de trabajo del BCRP (2009) |
-| 3 | …en *AEJ: **Applied Economics*** | Es *AEJ: **Economic Policy*** |
-| 4 | Aragón & Winkler, DOI `…resourpol.2023.**104612**` | Ese DOI **existe pero es otro artículo**: Zhang et al. (2024), "Resilient recovery strategies". El correcto es `104305` |
-| 5 | Arellano-Yanguas, **"A Thoroughly Modern Resource Curse?"** en *JDS* 47(4) | El artículo publicado es **"Aggravating the Resource Curse"**. Ese título es el del IDS Working Paper 300 |
-| 6 | **Dargent, P.** | Es **Eduardo** Dargent |
-| 7 | Bebbington, **Bury, Humphreys Bebbington**, … | En *World Development* el orden es **Humphreys Bebbington, Bury** — posiciones 2 y 3 intercambiadas |
-| 8 | Salas Carreño (**2016**), vol. 22(2) | Impreso en **2017**; online en dic-2016. El volumen 22(2) es de 2017, así que el borrador se contradice solo |
+| 1 | Loayza, **Mier y Teran** & Rigolini (2016), *World Development* | Only **Loayza and Rigolini**. Mier y Teran is an author on the 2013 working paper (IZA DP 7226) and disappears in the published version |
+| 2 | Aragón & Rud, **“The Blessing of Natural Resources”** | The published title is **“Natural Resources and Local Communities.”** “The Blessing…” is the BCRP working paper title (2009) |
+| 3 | …in *AEJ: **Applied Economics*** | It’s *AEJ: **Economic Policy*** |
+| 4 | Aragón & Winkler, DOI `…resourpol.2023.**104612**` | That DOI **exists but is a different paper**: Zhang et al. (2024), “Resilient recovery strategies.” The correct one is `104305` |
+| 5 | Arellano‑Yanguas, **“A Thoroughly Modern Resource Curse?”** in *JDS* 47(4) | The published article is **“Aggravating the Resource Curse.”** That title is from IDS Working Paper 300 |
+| 6 | **Dargent, P.** | It’s **Eduardo** Dargent |
+| 7 | Bebbington, **Bury, Humphreys Bebbington**, … | In *World Development* the order is **Humphreys Bebbington, Bury** — positions 2 and 3 swapped |
+| 8 | Salas Carreño (**2016**), vol. 22(2) | Print is **2017**; online Dec‑2016. Volume 22(2) is 2017, so the draft contradicts itself |
 
-Hay además un noveno detalle, más suave: en la sección "Por revisar" aparece
-**"Orihuela, O."** en la cita de *Fading local effects*. Es **José Carlos**
-Orihuela. Y Crossref devuelve además un *Carlos Orihuela* (UNALM) que es **otra
-persona** — buen ejemplo de desambiguación de autores.
+There’s also a softer ninth detail: in “To review” you’ll find **“Orihuela, O.”** in the *Fading local effects* citation. It’s **José Carlos** Orihuela. Crossref also returns a *Carlos Orihuela* (UNALM) who is **a different person** — a good author‑disambiguation example.
 
-**El más valioso es el #4.** Un DOI roto se detecta al primer clic; un DOI que
-resuelve al artículo equivocado sobrevive a la revisión por pares. Es exactamente
-el tipo de error que solo aparece si uno verifica de verdad.
+**The most valuable is #4.** A broken DOI is caught at the first click; a DOI that resolves to the wrong article can survive peer review. It’s exactly the kind of error that only shows up if you truly verify.
 
-**El prompt que lo destapa todo:**
+**The prompt that exposes them all:**
 
 ```text
-Verifica cada cita de bibliografia-borrador.md contra Crossref.
-Para cada una dime qué dato no coincide y cuál es el correcto.
-No me digas que está bien si no la pudiste comprobar.
+Verify each citation in bibliografia-borrador.md against Crossref.
+For each one, tell me what doesn’t match and what the correct data is.
+Don’t tell me it’s fine if you couldn’t check it.
 ```
 
 ---
 
-## 5. ★ El ejercicio de auditoría de la codificación (Sesión 2)
+## 5. ★ The coding‑audit exercise (Session 2)
 
-El que traslada la lección del taller —memoria contra verificación— del terreno
-de las citas al de los datos.
+The one that moves the workshop’s lesson —memory vs. verification— from citations to data.
 
-**Paso 1.** Claude extrae los casos de los reportes PDF a un CSV. En el reporte
-n.° 268, el texto narra **103 casos** con los campos `Caso`, `Fecha de inicio`,
-`Tipo`, `Ubicación`, `Descripción de caso` y actores.
+**Step 1.** Claude extracts cases from the PDF reports to a CSV. In report no. 268, the text narrates **103 cases** with fields `Case`, `Start date`, `Type`, `Location`, `Case description`, and actors.
 
-**Paso 2.** Claude clasifica cada demanda en categorías (agua, tierra y
-territorio, empleo local, renta y compensación, consulta previa, incumplimiento
-de acuerdos).
+**Step 2.** Claude classifies each demand into categories (water, land and territory, local employment, revenue/compensation, prior consultation/procedures, breach of agreements).
 
-**Paso 3 — el corazón.** Cada participante **lee 20 casos a mano** y compara con
-la clasificación de Claude. ¿Cuántos están mal? Esa tasa de error es un dato del
-proyecto, no una anécdota: si es del 15%, hay que decirlo en el paper.
+**Step 3 — the heart.** Each participant **reads 20 cases by hand** and compares with Claude’s classification. How many are wrong? That error rate is a project datum, not an anecdote: if it’s 15%, you must say so in the paper.
 
-**Paso 4 — validación con fuente. Aquí está la mejor sorpresa del ejercicio.**
+**Step 4 — validation with the source. Here’s the exercise’s best surprise.**
 
-Cifras oficiales del reporte n.° 268 (junio 2026), verificadas en el PDF:
+Official figures for report no. 268 (June 2026), verified in the PDF:
 
-| Cifra oficial | Valor |
+| Official figure | Value |
 |---|---|
-| Conflictos registrados en el mes | **197** |
-| Activos / latentes | 151 (76.6%) / 46 (23.4%) |
-| En proceso de diálogo | 90 |
-| Conflictos **socioambientales** | **96** |
-| De ellos, **minería** | **61 casos = 63.5%** |
-| Activos que **no registraron hechos** en el mes | **81** |
+| Conflicts recorded that month | **197** |
+| Active / latent | 151 (76.6%) / 46 (23.4%) |
+| In dialogue process | 90 |
+| **Socio‑environmental** conflicts | **96** |
+| Of those, **mining** | **61 cases = 63.5%** |
+| Active with **no events** that month | **81** |
 
-Serie mensual de socioambientales, jun-2025 a jun-2026:
+Monthly series of socio‑environmental conflicts, Jun‑2025 to Jun‑2026:  
 `99, 100, 98, 98, 97, 99, 101, 99, 98, 98, 97, 98, 96`
 
-**La extracción ingenua NO va a cuadrar, y eso es lo valioso.** Una extracción
-directa de los campos `Tipo:` recupera ~103 casos y ~42 socioambientales, contra
-**197 y 96** oficiales.
+**Naive extraction will NOT match — and that’s what’s valuable.** A straight extraction of `Type:` fields recovers ~103 cases and ~42 socio‑environmental ones, vs. the official **197 and 96**.
 
-¿Por qué? Porque el reporte **narra en detalle solo los casos que tuvieron hechos
-nuevos en el mes**; los otros 81 aparecen únicamente en las tablas agregadas. La
-base construida a partir del texto cubre **poco más de la mitad del universo**.
+Why? Because the report **narrates in detail only the cases with new events that month**; the other 81 appear only in aggregate tables. The dataset built from running text covers **just over half the universe**.
 
-Un participante que no valide se lleva una base sesgada —sobrerrepresenta los
-conflictos activos y ruidosos— **y no lo sabe**. Ese sesgo, en un paper, es fatal.
+A participant who doesn’t validate walks away with a biased dataset — overrepresents active, noisy conflicts — **and doesn’t know it**. In a paper, that bias is fatal.
 
-::: NOTA PARA QUIEN DICTA
-Deje que descubran la discrepancia solos. El momento en que alguien dice "me
-salen 42 pero el PDF dice 96" es el punto más alto de la sesión. Recién ahí
-explique de dónde viene la brecha.
+::: NOTE TO THE INSTRUCTOR
+Let them discover the discrepancy themselves. The moment someone says “I get 42 but the PDF says 96” is the session’s peak. Only then explain where the gap comes from.
 :::
 
 ---
 
-## 6. Decisiones metodológicas que conviene explicar en voz alta
+## 6. Methodological decisions to say out loud
 
-**Por qué no usamos el canon minero.** Es la variable ideal, pero el MEF solo lo
-expone en un frameset ASP.NET de los años 2000 con navegación por postback: no
-hay forma de exportarlo programáticamente. Usamos **producción y empleo minero
-como proxy**, que es defendible porque el canon *es* el 50% del impuesto a la
-renta minera distribuido a las zonas productoras.
+**Why we’re not using the mining canon (revenue transfers).** It’s the ideal variable, but the Finance Ministry only exposes it in an early‑2000s ASP.NET frameset with postback navigation: there’s no programmatic export. We use **mining output and employment as a proxy**, which is defensible because the canon is 50% of the corporate income tax on mining companies distributed to producing areas.
 
-Vale la pena decirlo tal cual: la investigación real está llena de estas
-sustituciones, y lo que distingue al buen trabajo no es evitarlas sino
-**declararlas**. Está anotado en `notas/ideas sueltas.md`, donde los
-participantes lo van a encontrar solos.
+Say it plainly: real research is full of substitutions like this, and what distinguishes good work isn’t avoiding them but **declaring them**. It’s noted in `notas/ideas sueltas.md`, where participants will find it on their own.
 
-**Por qué no hay entrevistas.** Se buscó en Harvard Dataverse, QDR, Zenodo,
-ICPSR, ALICIA y el repositorio de la PUCP: **no existen entrevistas de acceso
-abierto sobre minería peruana**. Las narrativas de la Defensoría cumplen esa
-función y son del tema exacto.
+**Why there are no interviews.** We searched Harvard Dataverse, QDR, Zenodo, ICPSR, ALICIA, and PUCP’s repository: **there are no open‑access interviews on Peruvian mining**. The Ombudsman narratives serve that function and are exactly on topic.
 
-**Por qué no hay prensa.** El `robots.txt` de La República bloquea por nombre a
-`ClaudeBot`, `anthropic-ai` y `GPTBot`; El Comercio prohíbe el rastreo de su
-archivo histórico. Es el mejor ejemplo concreto de que **"público" no significa
-"reutilizable"**, y conviene mostrarlo en pantalla.
+**Why there’s no press.** La República’s `robots.txt` blocks by name `ClaudeBot`, `anthropic-ai`, and `GPTBot`; El Comercio forbids crawling of its historical archive. It’s the best concrete example that **“public” does not mean “reusable,”** and it’s worth showing on screen.
 
-**Sobre la API del Congreso.** Es pública y no pide autenticación, pero **no está
-documentada ni licenciada**. Puede romperse sin aviso. Preséntela así.
+**About Congress’s API.** It’s public and doesn’t ask for authentication, but **it’s undocumented and unlicensed**. It can break without notice. Present it as such.
 
 ---
 
-## 7. Antes de la clase
+## 7. Before class
 
-- [ ] Verificar que la carpeta esté en la máquina de cada participante (o clonada
-      del repo). **No dependa de descargarla en vivo.**
-- [ ] Confirmar `python3` con `pypdf`, `pandas` y `openpyxl` instalados.
-- [ ] Tener a mano una captura del resultado esperado de cada ejercicio, por si
-      una demo falla.
-- [ ] Recordar: los datos ya están descargados. `descargar-datos.sh` es para
-      reproducibilidad, no para correrlo en clase.
+- [ ] Verify that the folder is on each participant’s computer (or cloned from the repo). **Do not rely on downloading it live.**
+- [ ] Confirm `python3` with `pypdf`, `pandas`, and `openpyxl` installed.
+- [ ] Keep a screenshot of each exercise’s expected result handy, in case a demo fails.
+- [ ] Reminder: the data are already downloaded. `descargar-datos.sh` is for reproducibility, not for running in class.
+
