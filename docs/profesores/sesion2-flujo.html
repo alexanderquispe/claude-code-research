@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es"><head>
+<html lang="en"><head>
 <script src="sesion2-flujo_files/libs/clipboard/clipboard.min.js"></script>
 <script src="sesion2-flujo_files/libs/quarto-html/tabby.min.js"></script>
 <script src="sesion2-flujo_files/libs/quarto-html/popper.min.js"></script>
@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Alexander Quispe">
-  <title>Claude Code para investigación</title>
+  <title>Claude Code for Research</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -199,8 +199,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Claude Code para investigación</h1>
-  <p class="subtitle">Sesión 2 — El flujo de investigación completo · Taller para docentes</p>
+  <h1 class="title">Claude Code for Research</h1>
+  <p class="subtitle">Session 2 — The full research workflow · Faculty Workshop</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -208,243 +208,242 @@
 Alexander Quispe
 </div>
         <p class="quarto-title-affiliation">
-            Facultad de Ciencias Sociales, PUCP · con apoyo de Q-LAB
+            Faculty of Social Sciences, PUCP · with support from Q-LAB
           </p>
     </div>
 </div>
 
 </section>
-<section id="plan-de-hoy-3-horas" class="slide level2 smaller">
-<h2>Plan de hoy (3 horas)</h2>
+<section id="todays-plan-3-hours" class="slide level2 smaller">
+<h2>Today’s plan (3 hours)</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Hora</th>
-<th>Bloque</th>
-<th>Tema</th>
+<th>Time</th>
+<th>Block</th>
+<th>Topic</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>6:00 – 6:20</td>
 <td>1</td>
-<td>Repaso y Plan Mode</td>
+<td>Recap and Plan Mode</td>
 </tr>
 <tr class="even">
 <td>6:20 – 6:55</td>
 <td>2</td>
-<td>Git: la máquina del tiempo de su carpeta</td>
+<td>Git: your folder’s time machine</td>
 </tr>
 <tr class="odd">
 <td>6:55 – 7:30</td>
 <td>3</td>
-<td>⭐ De 10 PDFs a una base de datos: extraer</td>
+<td>⭐ From 10 PDFs to a dataset: extraction</td>
 </tr>
 <tr class="even">
 <td>7:30 – 7:40</td>
 <td>☕</td>
-<td>Pausa 1</td>
+<td>Break 1</td>
 </tr>
 <tr class="odd">
 <td>7:40 – 8:20</td>
 <td>3</td>
-<td>⭐ OCR: los escaneados también entran a la base</td>
+<td>⭐ OCR: scanned PDFs also enter the dataset</td>
 </tr>
 <tr class="even">
 <td>8:20 – 8:30</td>
 <td>☕</td>
-<td>Pausa 2</td>
+<td>Break 2</td>
 </tr>
 <tr class="odd">
 <td>8:30 – 8:45</td>
 <td>4</td>
-<td>Whisper: sus clases se vuelven material</td>
+<td>Whisper: your classes become material</td>
 </tr>
 <tr class="even">
 <td>8:45 – 8:55</td>
 <td>5</td>
-<td>MCPs: conectar Claude con su correo, Drive y más</td>
+<td>MCPs: connect Claude to email, Drive, and more</td>
 </tr>
 <tr class="odd">
 <td>8:55 – 9:00</td>
 <td>—</td>
-<td>Háblenle, no le tipeen + cierre</td>
+<td>Speak to it, don’t type + closing</td>
 </tr>
 </tbody>
 </table>
-<p><span class="small muted">Hoy varias demos toman minutos en correr: las lanzamos al inicio y revisamos resultados al final de cada bloque. Así se trabaja de verdad con agentes.</span></p>
+<p><span class="small muted">Several demos today take minutes to run: we’ll launch them at the start and review results at each block’s end. That’s how you actually work with agents.</span></p>
 </section>
 <section>
-<section id="bloque-1-repaso-y-plan-mode" class="title-slide slide level1 center">
-<h1>Bloque 1 — Repaso y Plan Mode</h1>
+<section id="block-1-recap-and-plan-mode" class="title-slide slide level1 center">
+<h1>Block 1 — Recap and Plan Mode</h1>
 
 </section>
-<section id="la-sesión-pasada-en-6-movimientos" class="slide level2 smaller">
-<h2>La sesión pasada, en 6 movimientos</h2>
+<section id="last-session-in-6-moves" class="slide level2 smaller">
+<h2>Last session in 6 moves</h2>
 <table class="caption-top">
 <colgroup>
-<col style="width: 66%">
-<col style="width: 33%">
+<col style="width: 54%">
+<col style="width: 45%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Movimiento</th>
-<th>Cómo</th>
+<th>Move</th>
+<th>How</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Abrir Claude en mi carpeta</td>
-<td><code>cd</code> + pegar ruta → <code>claude</code></td>
+<td>Open Claude in my folder</td>
+<td><code>cd</code> + paste path → <code>claude</code></td>
 </tr>
 <tr class="even">
-<td>Salir de un lío</td>
-<td><kbd>Esc</kbd> interrumpe · <kbd>Ctrl</kbd>+<kbd>C</kbd> ×2 sale · <code>claude --resume</code> recupera</td>
+<td>Get out of a jam</td>
+<td><kbd>Esc</kbd> interrupts · <kbd>Ctrl</kbd>+<kbd>C</kbd> ×2 exits · <code>claude --resume</code> recovers</td>
 </tr>
 <tr class="odd">
-<td>Memoria del proyecto</td>
-<td><code>/init</code> genera el <code>CLAUDE.md</code>; ustedes lo corrigen</td>
+<td>Project memory</td>
+<td><code>/init</code> generates <code>CLAUDE.md</code>; you edit it</td>
 </tr>
 <tr class="even">
-<td>Elegir modelo</td>
-<td><code>/model</code> → <strong>Opus</strong> para todo</td>
+<td>Choose model</td>
+<td><code>/model</code> → <strong>Opus</strong> for everything</td>
 </tr>
 <tr class="odd">
-<td>La regla de oro</td>
-<td>Lo que recuerda se <strong>verifica</strong>; lo que comprueba contra fuente, es sólido</td>
+<td>The golden rule</td>
+<td>What it “remembers” must be <strong>verified</strong>; what it checks against sources is solid</td>
 </tr>
 <tr class="even">
-<td><strong>La literatura, completa</strong></td>
-<td><code>/deep-research</code> → verificar contra Crossref → biblioteca (un solo login) → revisión en LaTeX compilada</td>
+<td><strong>Literature, complete</strong></td>
+<td><code>/deep-research</code> → verify against Crossref → library (one login) → LaTeX review compiled</td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
-<p>Pregunta de control: <em>¿quién corrió <code>/init</code> en un proyecto real? ¿Qué entendió bien y qué corrigieron?</em></p>
+<p>Control question: <em>Who ran <code>/init</code> on a real project? What did it get right and what did you correct?</em></p>
 </div>
 </section>
-<section id="piensen-como-jefes-de-investigación" class="slide level2">
-<h2>Piensen como jefes de investigación</h2>
-<p>La forma correcta de trabajar con Claude Code no es una conversación eterna: son <strong>varias sesiones en paralelo, como asistentes con tareas asignadas</strong>.</p>
+<section id="think-like-research-leads" class="slide level2">
+<h2>Think like research leads</h2>
+<p>The right way to work with Claude Code isn’t one endless conversation: it’s <strong>several sessions in parallel, like assistants with assigned tasks</strong>.</p>
 <div class="fragment">
 <ul>
-<li>Sesión 1 → <em>“extrae los casos de estos PDF a una base”</em></li>
-<li>Sesión 2 → <em>“explora y describe esta base de datos”</em></li>
-<li>Sesión 3 → <em>“arma la presentación con lo que ya está listo”</em></li>
+<li>Session 1 → <em>“extract cases from these PDFs into a database”</em></li>
+<li>Session 2 → <em>“explore and describe this dataset”</em></li>
+<li>Session 3 → <em>“assemble the presentation with what’s ready”</em></li>
 </ul>
 </div>
 <div class="fragment">
-<p>Cada sesión con <strong>una tarea clara y acotada</strong>. Ustedes supervisan, corrigen y deciden — como con un equipo humano, pero con la paciencia infinita y el costo de una suscripción.</p>
+<p>Each session with <strong>one clear, bounded task</strong>. You supervise, correct, and decide — like with a human team, but with infinite patience and the cost of a subscription.</p>
 </div>
 </section>
-<section id="plan-mode-pensar-antes-de-tocar" class="slide level2">
-<h2>Plan Mode: pensar antes de tocar</h2>
-<p><kbd>Shift</kbd>+<kbd>Tab</kbd> hasta que la barra inferior diga <strong>plan mode</strong>: Claude puede <strong>leer y proponer, pero no tocar nada</strong>.</p>
+<section id="plan-mode-think-before-touching" class="slide level2">
+<h2>Plan Mode: think before touching</h2>
+<p>Press <kbd>Shift</kbd>+<kbd>Tab</kbd> until the bottom bar says <strong>plan mode</strong>: Claude can <strong>read and propose, but not touch</strong> anything.</p>
 
-<img data-src="../figures/es/plan-workflow.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="fragment">
-<p>¿Cuándo? <strong>Siempre que empiecen algo nuevo o no sepan por dónde ir.</strong> Claude explora, les presenta un plan numerado, ustedes lo leen, cambian lo que quieran, y recién entonces se ejecuta.</p>
-<p><span class="warm">Revisar un plan cuesta 2 minutos. Revisar 40 archivos modificados cuesta una tarde.</span></p>
+<img data-src="../figures/plan-workflow.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="fragment">
+<p>When? <strong>Whenever you start something new or don’t know where to go.</strong> Claude explores, presents a numbered plan, you read it, tweak whatever you want, and only then execute.</p>
+<p><span class="warm">Reviewing a plan costs 2 minutes. Reviewing 40 modified files costs an afternoon.</span></p>
 </div>
 </section></section>
 <section>
-<section id="bloque-2-git-la-máquina-del-tiempo-de-su-carpeta" class="title-slide slide level1 center">
-<h1>Bloque 2 — Git: la máquina del tiempo de su carpeta</h1>
+<section id="block-2-git-your-folders-time-machine" class="title-slide slide level1 center">
+<h1>Block 2 — Git: your folder’s time machine</h1>
 
 </section>
-<section id="cómo-estaba-mi-archivo-antes" class="slide level2 smaller">
-<h2>“¿Cómo estaba mi archivo antes?”</h2>
-<p>La pregunta llegó de uno de ustedes tras la primera sesión: <em>“cada vez que Claude modifica un archivo, tengo que preguntarle cómo estaba antes — por si acaso”</em>.</p>
+<section id="what-did-my-file-look-like-before" class="slide level2 smaller">
+<h2>“What did my file look like before?”</h2>
+<p>This came from one of you after Session 1: <em>“every time Claude modifies a file I feel I have to ask how it was before — just in case.”</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/git-memoria-vs-disco.svg" class="quarto-figure quarto-figure-center" style="width:74.0%"></p>
+<p><img data-src="../figures/git-memoria-vs-disco.svg" class="quarto-figure quarto-figure-center" style="width:74.0%"></p>
 </figure>
 </div>
-<p><span class="warm">Ese programa que guarda las versiones se llama <strong>Git</strong>: gratuito, vive en su computadora, y Claude lo maneja por ustedes.</span></p>
+<p><span class="warm">That program that saves versions is <strong>Git</strong>: free, lives on your computer, and Claude operates it for you.</span></p>
 </section>
-<section id="el-problema-que-todos-conocemos" class="slide level2 smaller">
-<h2>El problema que todos conocemos</h2>
+<section id="the-problem-we-all-know" class="slide level2 smaller">
+<h2>The problem we all know</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/versiones-caos.svg" class="quarto-figure quarto-figure-center" style="width:76.0%"></p>
+<p><img data-src="../figures/versiones-caos.svg" class="quarto-figure quarto-figure-center" style="width:76.0%"></p>
 </figure>
 </div>
-<p>Ese desorden no es un defecto suyo: es <strong>control de versiones a mano</strong> — y falla justo cuando importa. <span class="warm">Git resuelve las tres preguntas con una sola idea →</span></p>
+<p>That mess isn’t a personal flaw: it’s <strong>manual version control</strong> — and it fails when it matters. <span class="warm">Git answers all three questions with one idea →</span></p>
 </section>
-<section id="qué-es-fotos-de-su-carpeta-con-fecha-y-mensaje" class="slide level2 smaller">
-<h2>Qué es: fotos de su carpeta, con fecha y mensaje</h2>
+<section id="what-it-is-photos-of-your-folder-with-date-and-message" class="slide level2 smaller">
+<h2>What it is: photos of your folder with date and message</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/git-linea-tiempo.svg" class="quarto-figure quarto-figure-center" style="width:78.0%"></p>
+<p><img data-src="../figures/git-linea-tiempo.svg" class="quarto-figure quarto-figure-center" style="width:78.0%"></p>
 </figure>
 </div>
-<p>Cada punto de la línea es una <strong>foto completa</strong> de la carpeta, que se puede consultar o restaurar cuando haga falta. <span class="muted">Un solo archivo, toda la historia — las tres preguntas del slide anterior, respondidas.</span></p>
+<p>Each point on the line is a <strong>full photo</strong> of the folder, retrievable or restorable when needed. <span class="muted">One file, the whole history — the three questions from the previous slide, answered.</span></p>
 </section>
-<section id="tres-palabras-tres-pedidos" class="slide level2 smaller">
-<h2>Tres palabras, tres pedidos</h2>
-<p>Todo el vocabulario de hoy — y el pedido exacto para cada etapa, <strong>listo para copiar</strong>:</p>
-<p><strong>Repositorio</strong> — la carpeta vigilada por Git (<em>“mi proyecto, con historia”</em>). Para setearlo:</p>
-<pre class="text"><code>Convierte esta carpeta en un repositorio de Git y confírmame
-que quedó listo.</code></pre>
-<p><strong>Versión</strong> (<em>commit</em>) — una foto completa de la carpeta, con fecha y mensaje. Para tomarla:</p>
-<pre class="text"><code>Guarda una versión de todo el proyecto con el mensaje
-"avance de hoy: bibliografía revisada".</code></pre>
-<p><strong>Diff</strong> — la comparación exacta entre dos fotos. Para pedirla:</p>
-<pre class="text"><code>¿Qué cambió en el proyecto desde la última versión guardada?
-Muéstramelo línea por línea.</code></pre>
-<p><span class="small muted">Y para ver la línea de tiempo entera: <em>“muéstrame la lista de versiones guardadas, con fecha y mensaje”</em>. No hay más vocabulario que aprender hoy.</span></p>
+<section id="three-words-three-requests" class="slide level2 smaller">
+<h2>Three words, three requests</h2>
+<p>All the vocabulary you need today — and the exact request to copy for each stage:</p>
+<p><strong>Repository</strong> — the folder watched by Git (<em>“my project, with history”</em>). To set it up:</p>
+<pre class="text"><code>Turn this folder into a Git repository and confirm it’s ready.</code></pre>
+<p><strong>Commit</strong> — a full photo of the folder, with date and message. To take it:</p>
+<pre class="text"><code>Save a version of the whole project with the message
+"today’s progress: bibliography verified".</code></pre>
+<p><strong>Diff</strong> — the exact comparison between two photos. To ask for it:</p>
+<pre class="text"><code>What changed in the project since the last saved version?
+Show me line by line.</code></pre>
+<p><span class="small muted">And to see the whole timeline: <em>“show me the list of saved versions with date and message”</em>. No more vocabulary today.</span></p>
 </section>
-<section id="su-turno-①-enciendan-la-máquina-del-tiempo" class="slide level2 your-turn smaller">
-<h2>⚡ Su turno ① — enciendan la máquina del tiempo</h2>
-<p>En la carpeta del proyecto de ejemplo, pidan <strong>literalmente esto</strong>:</p>
-<pre class="text"><code>¿Tengo Git instalado? Si no, instálalo. Luego convierte esta
-carpeta en un repositorio y guarda la primera versión de todo
-el proyecto con el mensaje "punto de partida".</code></pre>
+<section id="your-turn-①-start-the-time-machine" class="slide level2 your-turn smaller">
+<h2>⚡ Your turn ① — start the time machine</h2>
+<p>In the example project’s folder, ask <strong>literally this</strong>:</p>
+<pre class="text"><code>Do I have Git installed? If not, install it. Then turn this
+folder into a repository and save the first version of the whole
+project with the message "starting point".</code></pre>
 <div class="fragment">
-<p><strong>Qué observar:</strong></p>
+<p><strong>What to observe:</strong></p>
 <ol type="1">
-<li>En Mac, Git suele venir instalado; en Windows, Claude lo instala en un minuto.</li>
-<li>Aparece una carpeta oculta <strong><code>.git</code></strong> — la caja donde vivirán todas las fotos. No se toca.</li>
-<li>Sus archivos siguen <strong>idénticos</strong>. Git observa; no estorba.</li>
+<li>On Mac, Git often comes installed; on Windows, Claude installs it in a minute.</li>
+<li>A hidden <strong><code>.git</code></strong> folder appears — the box that holds every photo. Don’t touch it.</li>
+<li>Your files remain <strong>identical</strong>. Git observes; it doesn’t get in the way.</li>
 </ol>
 </div>
 </section>
-<section id="su-turno-②-rompan-comparen-vuelvan" class="slide level2 your-turn smaller">
-<h2>⚡ Su turno ② — rompan, comparen, vuelvan</h2>
-<p>Tres pedidos, en orden, sobre la bibliografía del proyecto:</p>
-<pre class="text"><code>1. En bibliografia-borrador.md cambia el año de Arellano-Yanguas
-   de 2011 a 2019, y borra la nota que sigue a Salas Carreño.</code></pre>
-<pre class="text"><code>2. ¿Qué cambió en el proyecto desde "punto de partida"?
-   Muéstramelo línea por línea.</code></pre>
-<pre class="text"><code>3. Uy, no — vuelve TODO a como estaba en "punto de partida".</code></pre>
+<section id="your-turn-②-break-compare-revert" class="slide level2 your-turn smaller">
+<h2>⚡ Your turn ② — break, compare, revert</h2>
+<p>Three requests, in order, over the project’s bibliography:</p>
+<pre class="text"><code>1. In bibliografia-borrador.md change Arellano-Yanguas’s year
+   from 2011 to 2019, and delete the note after Salas Carreño.</code></pre>
+<pre class="text"><code>2. What changed in the project since "starting point"?
+   Show me line by line.</code></pre>
+<pre class="text"><code>3. Oops — revert EVERYTHING to how it was at "starting point".</code></pre>
 <div class="fragment">
-<p><span class="warm">Fíjense en lo que eligieron romper: <strong>la referencia central del argumento</strong> ahora cita un año falso — a ojo, nadie lo notaría jamás.</span></p>
+<p><span class="warm">Note what you chose to break: <strong>the central reference of the argument</strong> now cites a false year — nobody would notice by eye.</span></p>
 </div>
 </section>
-<section id="lo-que-les-va-a-mostrar-el-pedido-2" class="slide level2 smaller">
-<h2>Lo que les va a mostrar el pedido 2</h2>
+<section id="what-request-2-will-show" class="slide level2 smaller">
+<h2>What request #2 will show</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/git-diff-ejemplo.svg" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+<p><img data-src="../figures/git-diff-ejemplo.svg" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
 </figure>
 </div>
-<p>El diff <strong>lo canta en un segundo</strong>: el año adulterado y la nota borrada, línea por línea. Y el pedido 3 restaura todo, <strong>instantáneo y total</strong>. <span class="warm">Acaban de perderle el miedo a que Claude toque sus archivos.</span></p>
+<p>The diff <strong>calls it out instantly</strong>: the adulterated year and the deleted note, line by line. And request #3 restores everything, <strong>instant and total</strong>. <span class="warm">You just lost the fear of Claude touching your files.</span></p>
 </section>
-<section id="que-se-guarde-solo-dos-líneas-en-claude.md" class="slide level2 smaller">
-<h2>Que se guarde solo: dos líneas en <code>CLAUDE.md</code></h2>
-<p>No hace falta acordarse de guardar versiones. Agréguenle esto al <code>CLAUDE.md</code> del proyecto (la memoria de ayer):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Versiones</span></span>
-<span id="cb8-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Antes de modificar cualquier archivo, guarda una versión en Git.</span>
-<span id="cb8-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Al terminar cada sesión, guarda una versión con un mensaje que</span>
-<span id="cb8-4"><a href="" aria-hidden="true" tabindex="-1"></a>  resuma qué se logró.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="have-it-save-automatically-two-lines-in-claude.md" class="slide level2 smaller">
+<h2>Have it save automatically: two lines in <code>CLAUDE.md</code></h2>
+<p>You don’t need to remember to save versions. Add this to the project’s <code>CLAUDE.md</code> (yesterday’s memory):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Versions</span></span>
+<span id="cb8-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Before modifying any file, save a version in Git.</span>
+<span id="cb8-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>At the end of each session, save a version with a message</span>
+<span id="cb8-4"><a href="" aria-hidden="true" tabindex="-1"></a>  summarizing what was achieved.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="fragment">
-<p>Desde ese momento, <strong>Claude guarda versiones solo</strong> — ustedes solo piden volver cuando haga falta.</p>
+<p>From that moment, <strong>Claude saves versions by itself</strong> — you only ask to go back when needed.</p>
 </div>
 <div class="fragment">
-<p><span class="small muted">Límites honestos: Git <strong>no es respaldo</strong> (vive en el mismo disco — la nube, otro día) y brilla con texto (<code>.md</code>, <code>.tex</code>, <code>.csv</code>); los ZIP pesados mejor quedan fuera.</span></p>
+<p><span class="small muted">Honest limits: Git is <strong>not a backup</strong> (it lives on the same disk — cloud is for another day) and it shines with text (<code>.md</code>, <code>.tex</code>, <code>.csv</code>); heavy ZIPs are better left out.</span></p>
 </div>
 </section>
-<section id="lo-que-cambia-desde-hoy" class="slide level2 smaller">
-<h2>Lo que cambia desde hoy</h2>
+<section id="what-changes-starting-today" class="slide level2 smaller">
+<h2>What changes starting today</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
@@ -452,41 +451,41 @@ el proyecto con el mensaje "punto de partida".</code></pre>
 </colgroup>
 <thead>
 <tr class="header">
-<th>Antes</th>
-<th>Ahora</th>
+<th>Before</th>
+<th>Now</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>“¿Cómo estaba ayer?” → preguntarle a Claude, cruzar los dedos</td>
-<td>→ preguntarle <strong>al repositorio</strong>: respuesta exacta</td>
+<td>“How was it yesterday?” → ask Claude, cross your fingers</td>
+<td>→ ask <strong>the repository</strong>: exact answer</td>
 </tr>
 <tr class="even">
-<td>Miedo a que Claude rompa algo</td>
-<td>Todo cambio es <strong>reversible</strong></td>
+<td>Fear Claude might break something</td>
+<td>Every change is <strong>reversible</strong></td>
 </tr>
 <tr class="odd">
 <td><code>paper_v2_FINAL(3).docx</code></td>
-<td>Una carpeta limpia, con <strong>toda su historia</strong></td>
+<td>A clean folder with <strong>full history</strong></td>
 </tr>
 <tr class="even">
-<td>Guardar versiones: un hábito más que mantener</td>
-<td>Dos líneas en <code>CLAUDE.md</code> y <strong>se guarda solo</strong></td>
+<td>Saving versions: another habit to maintain</td>
+<td>Two lines in <code>CLAUDE.md</code> and <strong>it saves itself</strong></td>
 </tr>
 </tbody>
 </table>
 </section></section>
 <section>
-<section id="bloque-3-de-10-pdfs-a-una-base-de-datos" class="title-slide slide level1 center">
-<h1>Bloque 3 — ⭐ De 10 PDFs a una base de datos</h1>
+<section id="block-3-from-10-pdfs-to-a-dataset" class="title-slide slide level1 center">
+<h1>Block 3 — ⭐ From 10 PDFs to a dataset</h1>
 
 </section>
-<section id="el-problema-con-nombre-propio" class="slide level2 smaller">
-<h2>El problema, con nombre propio</h2>
-<p>La Defensoría del Pueblo publica un <strong>reporte mensual de conflictos sociales</strong> desde 2004. Van <strong>269 reportes</strong>. Cada uno trae, caso por caso: tipo, fecha de inicio, ubicación, <strong>descripción narrativa</strong> y los actores involucrados.</p>
+<section id="the-problem-with-a-name" class="slide level2 smaller">
+<h2>The problem, with a name</h2>
+<p>Peru’s Ombudsman’s Office publishes a <strong>monthly report on social conflicts</strong> since 2004. There are <strong>269 reports</strong>. Each one lists, case by case: type, start date, location, <strong>narrative description</strong>, and actors involved.</p>
 <div class="fragment">
-<p>Todos en <strong>PDF</strong>. Ninguno en Excel.</p>
-<p><span class="warm">Nadie tiene esa serie como base de datos. Nadie.</span></p>
+<p>All in <strong>PDF</strong>. None in Excel.</p>
+<p><span class="warm">Nobody has that series as a dataset. Nobody.</span></p>
 </div>
 <div class="fragment">
 <div class="callout callout-note callout-titled callout-style-default">
@@ -495,48 +494,48 @@ el proyecto con el mensaje "punto de partida".</code></pre>
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Esto es exactamente el trabajo de un asistente</strong></p>
+<p><strong>This is exactly an assistant’s job</strong></p>
 </div>
 <div class="callout-content">
-<p>Copiar 103 casos de un PDF a un Excel toma una tarde. Por doce meses, dos semanas. Y hay que hacerlo otra vez el mes que viene.</p>
+<p>Copying 103 cases from one PDF to Excel takes an afternoon. For twelve months, two weeks. And you’ll need to do it again next month.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="así-se-ve-la-base-de-datos-hoy" class="slide level2 smaller">
-<h2>Así se ve la “base de datos” hoy</h2>
+<section id="what-the-dataset-looks-like-today" class="slide level2 smaller">
+<h2>What the “dataset” looks like today</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../figures/screenshots/defensoria-raw.png" class="quarto-figure quarto-figure-center" style="width:72.0%"></p>
 </figure>
 </div>
-<p>La página 54 del reporte n.º 268, <strong>tal cual</strong>: cada caso trae <code>Tipo</code>, fecha de ingreso, <code>Caso</code> (la narrativa), <code>Ubicación</code> y <code>Actores</code> — texto corrido, caso tras caso, por <strong>122 páginas</strong>. <span class="warm">Todo lo que necesitamos ya está aquí. Solo que en el peor formato posible para analizarlo.</span></p>
+<p>Page 54 of report no. 268, <strong>as-is</strong>: each case has <code>Type</code>, intake date, <code>Case</code> (the narrative), <code>Location</code>, and <code>Actors</code> — running text, case after case, across <strong>122 pages</strong>. <span class="warm">Everything we need is here. Just in the worst possible format for analysis.</span></p>
 </section>
-<section id="paso-1-extraer" class="slide level2 your-turn smaller">
-<h2>Paso 1 — extraer</h2>
-<p>En <code>datos/</code> del proyecto de ejemplo están los 10 reportes.</p>
-<pre class="text"><code>En datos/ hay reportes de conflictos sociales de la Defensoría en PDF.
-Cada caso tiene tipo, fecha de inicio, ubicación, descripción y actores.
-Extrae todos los casos a un CSV en datos-limpios/, una fila por caso,
-con una columna que indique de qué reporte salió.</code></pre>
+<section id="step-1-extract" class="slide level2 your-turn smaller">
+<h2>Step 1 — extract</h2>
+<p>In the example project’s <code>datos/</code> folder there are 10 reports.</p>
+<pre class="text"><code>In datos/ there are Ombudsman PDF reports on social conflicts.
+Each case has a type, start date, location, description, and actors.
+Extract every case into one CSV under datos-limpios/, one row per case,
+with a column indicating which report it came from.</code></pre>
 <div class="fragment">
-<p><strong>Qué observar:</strong> el ciclo completo sin intervención — abre el PDF, encuentra el patrón, escribe el código, lo corre, <strong>ve que algo no cuadra y lo arregla</strong>.</p>
+<p><strong>What to observe:</strong> the full loop without intervention — opens the PDF, finds a pattern, writes code, runs it, <strong>notices something’s off and fixes it</strong>.</p>
 </div>
 <div class="fragment">
-<p><span class="small muted">Aviso: los nombres de los archivos son un desastre (<code>N°-259</code>, <code>n.º-258</code>, <code>n-265-VF</code>). Son los nombres reales de la Defensoría. Nadie limpió nada para ustedes.</span></p>
+<p><span class="small muted">Note: filenames are a mess (<code>N°-259</code>, <code>n.º-258</code>, <code>n-265-VF</code>). They’re the real Ombudsman names. Nobody cleaned anything for you.</span></p>
 </div>
 </section>
-<section id="lo-que-hizo-por-detrás-paso-a-paso" class="slide level2 smaller">
-<h2>Lo que hizo por detrás, paso a paso</h2>
+<section id="what-it-did-behind-the-scenes-step-by-step" class="slide level2 smaller">
+<h2>What it did behind the scenes, step by step</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/pipeline-extraccion.svg" class="quarto-figure quarto-figure-center" style="width:92.0%"></p>
+<p><img data-src="../figures/pipeline-extraccion.svg" class="quarto-figure quarto-figure-center" style="width:92.0%"></p>
 </figure>
 </div>
 </section>
-<section id="quién-hace-qué-y-qué-viaja-a-dónde" class="slide level2 smaller">
-<h2>¿Quién hace qué? (y qué viaja a dónde)</h2>
+<section id="who-does-what-and-what-travels-where" class="slide level2 smaller">
+<h2>Who does what? (and what travels where)</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -545,90 +544,90 @@ con una columna que indique de qué reporte salió.</code></pre>
 </colgroup>
 <thead>
 <tr class="header">
-<th>Pieza</th>
-<th>Dónde vive</th>
-<th>Qué hace en este ejercicio</th>
+<th>Piece</th>
+<th>Where it lives</th>
+<th>What it does here</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Opus</strong> — el modelo que eligieron en <code>/model</code></td>
-<td>Servidores de Anthropic</td>
-<td>Razona: entiende el pedido, <strong>escribe el código</strong>, interpreta los errores, decide cuándo está listo</td>
+<td><strong>Opus</strong> — the model you picked in <code>/model</code></td>
+<td>Anthropic’s servers</td>
+<td>Reasons: understands the request, <strong>writes code</strong>, interprets errors, decides when it’s ready</td>
 </tr>
 <tr class="even">
-<td><strong>PyMuPDF</strong> — librería de Python, gratuita</td>
-<td><strong>Su computadora</strong></td>
-<td>El trabajo pesado: abre las ~1 200 páginas y extrae el texto <strong>con sus coordenadas</strong>. El modelo nunca “lee” todo eso</td>
+<td><strong>PyMuPDF</strong> — a free Python library</td>
+<td><strong>Your computer</strong></td>
+<td>Heavy lifting: opens ~1,200 pages and extracts the text <strong>with coordinates</strong>. The model never “reads” all of that</td>
 </tr>
 <tr class="odd">
-<td>Las herramientas (<code>Read</code>, <code>Write</code>, <code>Bash</code>)</td>
-<td>Su computadora</td>
-<td>Las manos: conectan al modelo con sus archivos y su Python</td>
+<td>The tools (<code>Read</code>, <code>Write</code>, <code>Bash</code>)</td>
+<td>Your computer</td>
+<td>The hands: connect the model to your files and your Python</td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
-<p><strong>Qué viaja a Anthropic:</strong> su pedido, las 2–3 páginas de muestra que hojea, y los errores del script. <strong>Qué no viaja:</strong> los 10 PDF completos — esos los procesa el script, en local.</p>
+<p><strong>What travels to Anthropic:</strong> your request, the 2–3 sample pages it previews, and script errors. <strong>What doesn’t:</strong> all 10 full PDFs — those are processed by the script, locally.</p>
 </div>
 <div class="fragment">
-<p><span class="warm">Ojo: cuando el trabajo sea <strong>leer y juzgar</strong> cada narrativa — clasificar demandas, resumir casos — la división se invierte: eso es trabajo de cerebro, no de obrero, y sí consume tokens en serio.</span></p>
-<p><span class="small muted">Además, Claude Code usa por dentro modelos pequeños y baratos (Haiku) para tareas de apoyo: resúmenes, títulos, búsquedas internas.</span></p>
+<p><span class="warm">Note: when the job is to <strong>read and judge</strong> each narrative — classify demands, summarize cases — the split flips: that’s brain work, not manual labor, and it does consume tokens.</span></p>
+<p><span class="small muted">Also, Claude Code uses small, cheap models (Haiku) under the hood for support tasks: summaries, titles, internal searches.</span></p>
 </div>
 </section>
-<section id="el-momento-en-que-la-extracción-no-cuadra" class="slide level2 smaller">
-<h2>⚠️ El momento en que la extracción no cuadra</h2>
-<p>Corrí este ejercicio sobre el reporte n.º 269 y salieron <strong>tres números distintos</strong> para la misma pregunta — <em>¿cuántos casos hay?</em></p>
+<section id="the-moment-extraction-doesnt-add-up" class="slide level2 smaller">
+<h2>⚠️ The moment extraction doesn’t add up</h2>
+<p>I ran this over report no. 269 and got <strong>three different numbers</strong> to the same question — <em>how many cases are there?</em></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Cifra</th>
-<th>Valor</th>
+<th>Count</th>
+<th>Value</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Conflictos que el propio reporte declara en su página 2</td>
+<td>Conflicts declared on page 2 of the report</td>
 <td><strong>191</strong></td>
 </tr>
 <tr class="even">
-<td>Veces que aparece la palabra <code>Caso:</code> en el PDF</td>
+<td>Times the word <code>Case:</code> appears in the PDF</td>
 <td><strong>103</strong></td>
 </tr>
 <tr class="odd">
-<td>Casos con ficha completa: descripción <strong>y</strong> actores</td>
+<td>Cases with a complete record: description <strong>and</strong> actors</td>
 <td><strong>64</strong></td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
-<p>Tres razones, todas verificables abriendo el PDF:</p>
+<p>Three reasons, all verifiable by opening the PDF:</p>
 <ol type="1">
-<li><code>Caso:</code> no marca un tipo de registro sino <strong>tres</strong> — fichas de mediación, mesas de diálogo y conflictos.</li>
-<li>El reporte <strong>narra en detalle solo los casos con hechos nuevos del mes</strong>; los demás aparecen únicamente en tablas resumidas.</li>
-<li>El formato <strong>cambia entre reportes</strong>: solo el n.º 269 numera los casos con <code>Código:</code>.</li>
+<li><code>Case:</code> doesn’t mark one registry type but <strong>three</strong> — mediation files, dialogue tables, and conflicts.</li>
+<li>The report <strong>narrates only the cases with new events that month</strong>; the others appear only in summary tables.</li>
+<li>The format <strong>changes between reports</strong>: only no. 269 numbers cases with <code>Code:</code>.</li>
 </ol>
 </div>
 <div class="fragment">
-<p><span class="warm">Quien no valida se lleva una base que cubre <strong>la mitad del universo</strong> y sobrerrepresenta los conflictos ruidosos — sin saberlo. En un paper, eso es fatal.</span></p>
-<p><span class="small muted">La regla de la sesión pasada, mudada de las citas a los datos: <strong>cada reporte publica sus propios totales — úsenlos</strong>.</span></p>
+<p><span class="warm">Those who don’t validate walk away with a dataset that covers <strong>half the universe</strong> and overrepresents noisy conflicts — without realizing it. In a paper, that’s fatal.</span></p>
+<p><span class="small muted">Last session’s rule, moved from citations to data: <strong>each report publishes its own totals — use them</strong>.</span></p>
 </div>
 </section></section>
 <section>
-<section id="pausa-1-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
-<h1>☕ Pausa 1 — 10 minutos</h1>
-<p><span class="big">Volvemos 7:40 pm</span></p>
-<p><span class="small muted">¿La extracción del Paso 1 no les salió? Es el momento de llamar a un asistente del Q-LAB — al volver la necesitamos lista.</span></p>
+<section id="break-1-10-minutes" class="title-slide slide level1 center" data-background-color="#e6fbfc">
+<h1>☕ Break 1 — 10 minutes</h1>
+<p><span class="big">Back at 7:40 pm</span></p>
+<p><span class="small muted">Did Step 1’s extraction not work for you? Time to call a Q‑LAB assistant — we’ll need it ready when we return.</span></p>
 </section>
-<section id="y-si-el-pdf-es-una-foto-paddleocr" class="slide level2 smaller">
-<h2>¿Y si el PDF es una foto? PaddleOCR</h2>
-<p>Los reportes recientes traen texto nativo. Pero el archivo histórico —lo que está en bibliotecas— es <strong>escaneado</strong>: el PDF es una foto, y PyMuPDF devuelve… nada.</p>
-<p>En <code>datos/antiguos/</code> les dejé un caso real: la revista <strong>QUEHACER n.º 173</strong>, 132 páginas escaneadas con la marca de agua de la biblioteca de San Marcos encima.</p>
+<section id="what-if-the-pdf-is-a-scan-paddleocr" class="slide level2 smaller">
+<h2>What if the PDF is a scan? PaddleOCR</h2>
+<p>Recent reports ship native text. But the historical archive —what lives in libraries— is <strong>scanned</strong>: the PDF is a photo, and PyMuPDF returns… nothing.</p>
+<p>In <code>datos/antiguos/</code> I left a real case: <strong>QUEHACER no. 173</strong>, 132 scanned pages with San Marcos library’s watermark over them.</p>
 <div class="fragment">
-<p>Para eso existe <strong>PaddleOCR</strong>: un kit de OCR <strong>gratuito y open source</strong> (Apache 2.0) que corre <strong>en su computadora</strong>.</p>
+<p>Enter <strong>PaddleOCR</strong>: a <strong>free and open‑source</strong> OCR toolkit (Apache 2.0) that runs <strong>on your machine</strong>.</p>
 <ul>
-<li>Versión <strong>PP-OCRv6</strong> (2026): un solo modelo lee <strong>50 idiomas</strong> — español incluido — y entiende tablas y estructura, no solo texto corrido.</li>
-<li>Lo corrí sobre esas 132 páginas: <strong>6 min 32 s</strong>, confianza media <strong>0,993</strong>.</li>
+<li><strong>PP‑OCRv6</strong> (2026): one model reads <strong>50 languages</strong> — Spanish included — and understands tables and structure, not just running text.</li>
+<li>I ran it over those 132 pages: <strong>6 min 32 s</strong>, average confidence <strong>0.993</strong>.</li>
 </ul>
 </div>
 <div class="fragment">
@@ -638,19 +637,19 @@ con una columna que indique de qué reporte salió.</code></pre>
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Si trabajan en Mac, sépanlo antes de la clase</strong></p>
+<p><strong>If you teach on Mac, know this before class</strong></p>
 </div>
 <div class="callout-content">
-<p>PaddleOCR <strong>no usa la GPU en Mac</strong>: la versión para Apple Silicon se compila sin CUDA y pedirle GPU falla con un error explícito. Corre en CPU. La velocidad no viene del chip sino de <strong>procesar varias páginas a la vez</strong>: de 10 s por página a <strong>3 s</strong>.</p>
+<p>PaddleOCR <strong>doesn’t use the GPU on Mac</strong>: the Apple Silicon build ships without CUDA and asking for GPU fails with an explicit error. It runs on CPU. Speed comes not from the chip but from <strong>processing multiple pages at once</strong>: from 10 s per page down to <strong>3 s</strong>.</p>
 </div>
 </div>
 </div>
-<p><span class="warm">Descarga y documentación: <strong>github.com/PaddlePaddle/PaddleOCR</strong></span></p>
+<p><span class="warm">Download and docs: <strong>github.com/PaddlePaddle/PaddleOCR</strong></span></p>
 </div>
 </section>
-<section id="cuánto-cuesta-leer-100-páginas-escaneadas" class="slide level2 smaller">
-<h2>¿Cuánto cuesta leer 100 páginas escaneadas?</h2>
-<p>Las APIs de visión también pueden “leer” un escaneo — mandándole cada página como imagen. La diferencia está en la factura:</p>
+<section id="how-much-does-it-cost-to-read-100-scanned-pages" class="slide level2 smaller">
+<h2>How much does it cost to read 100 scanned pages?</h2>
+<p>Vision APIs can also “read” a scan — sending each page as an image. The difference is on the bill:</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 25%">
@@ -660,21 +659,21 @@ con una columna que indique de qué reporte salió.</code></pre>
 </colgroup>
 <thead>
 <tr class="header">
-<th>Herramienta</th>
-<th>Tarifa (entrada · salida, por millón de tokens)</th>
-<th>PDF de 100 págs.</th>
-<th>El archivo entero (~31 500 págs.)</th>
+<th>Tool</th>
+<th>Rate (input · output, per million tokens)</th>
+<th>100‑page PDF</th>
+<th>The whole file (~31,500 pages)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>PaddleOCR, local</strong></td>
-<td><strong>no cobra</strong></td>
+<td><strong>no charge</strong></td>
 <td><strong>$0</strong></td>
 <td><strong>$0</strong></td>
 </tr>
 <tr class="even">
-<td>DeepSeek V4 (vision) — el más barato</td>
+<td>DeepSeek V4 (vision) — the cheapest</td>
 <td>~$0.44 · $1.32</td>
 <td>~$0.20</td>
 <td>~$60</td>
@@ -686,122 +685,118 @@ con una columna que indique de qué reporte salió.</code></pre>
 <td>~$190</td>
 </tr>
 <tr class="even">
-<td>Claude Opus — el más caro</td>
+<td>Claude Opus — the most expensive</td>
 <td>$5 · $25</td>
 <td>~$3.00</td>
 <td>~$950</td>
 </tr>
 </tbody>
 </table>
-<p><span class="small muted">Estimado con ~2 000 tokens de imagen + 800 de texto por página; precios de agosto 2026. “El archivo entero”: los 269 reportes de la Defensoría desde 2004. Las demás APIs de visión caen dentro de ese rango.</span></p>
+<p><span class="small muted">Estimated with ~2,000 image tokens + 800 text tokens per page; prices as of Aug 2026. “The whole file”: the 269 Ombudsman reports since 2004. Other vision APIs fall in this range.</span></p>
 <div class="fragment">
-<p><strong>La jugada inteligente no es elegir bando:</strong> PaddleOCR extrae el texto <strong>gratis</strong>, y el modelo razona sobre ese texto — que cuesta centavos, no dólares. <span class="small">Excepción honesta: manuscritos y tablas muy dañadas — ahí los modelos de visión sí ganan.</span></p>
+<p><strong>The smart move isn’t to pick a side:</strong> let PaddleOCR extract text <strong>for free</strong>, and have the model reason over that text — which costs cents, not dollars. <span class="small">Honest exception: badly damaged manuscripts and tables — vision models can win there.</span></p>
 </div>
 </section>
-<section id="el-pipeline-ahora-con-fotos" class="slide level2 smaller">
-<h2>El pipeline, ahora con fotos</h2>
+<section id="the-pipeline-now-with-scans" class="slide level2 smaller">
+<h2>The pipeline, now with scans</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/pipeline-ocr.svg" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
+<p><img data-src="../figures/pipeline-ocr.svg" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
 </figure>
 </div>
 </section>
-<section id="paso-2-paddleocr-sobre-los-escaneados" class="slide level2 your-turn smaller">
-<h2>⚡ Paso 2 — PaddleOCR sobre los escaneados</h2>
-<p>En <code>datos/antiguos/</code> está la revista escaneada. El pedido, <strong>listo para copiar</strong>:</p>
-<pre class="text"><code>En datos/antiguos/ hay un PDF escaneado de 132 páginas, con la
-marca de agua de la biblioteca encima.
-1. Instala PaddleOCR con sus dependencias y dime qué instalaste.
-2. Convierte SOLO la página 20 y muéstrame el texto: quiero
-   validar la calidad antes de seguir.
-3. Si apruebo, convierte el documento entero a datos-limpios/ocr/,
-   un .txt por página y otro con todo junto.
-4. Al final: páginas procesadas, tiempo total, confianza media y
-   qué páginas quedaron dudosas para revisarlas a mano.</code></pre>
+<section id="step-2-paddleocr-over-the-scans" class="slide level2 your-turn smaller">
+<h2>⚡ Step 2 — PaddleOCR over the scans</h2>
+<p>In <code>datos/antiguos/</code> there’s the scanned magazine. The request, <strong>ready to copy</strong>:</p>
+<pre class="text"><code>In datos/antiguos/ there’s a 132-page scanned PDF, with a library
+watermark over it.
+1. Install PaddleOCR with its dependencies and tell me what you installed.
+2. Convert ONLY page 20 and show me the text: I want to validate
+   quality before proceeding.
+3. If I approve, convert the whole document to datos-limpios/ocr/,
+   one .txt per page and one with everything together.
+4. At the end: pages processed, total time, average confidence,
+   and which pages look doubtful to review manually.</code></pre>
 <div class="fragment">
-<p><strong>Qué observar:</strong> el punto 2 es la disciplina de siempre — <strong>una muestra antes de correr todo</strong>; la conversión corre <strong>en su máquina, sin tokens</strong>; y la confianza del punto 4 es la tasa de error del OCR: <strong>se mide, no se supone</strong>.</p>
+<p><strong>What to observe:</strong> point 2 is the usual discipline — <strong>a sample before running it all</strong>; conversion runs <strong>on your machine, no tokens</strong>; and the confidence in point 4 is the OCR error rate: <strong>you measure it, you don’t assume it</strong>.</p>
 </div>
 <div class="fragment">
-<p><span class="small muted">Dos cosas que aparecen solas si miran el resultado: el PDF <strong>ya traía</strong> una capa de texto —del escáner, pésima: <em>co11trola11do</em>, <em>Sl!GURA</em>— y el OCR nuevo la corrige; y la marca de agua <strong>desaparece</strong> si se trabaja sobre la imagen escaneada en vez de sobre la página completa.</span></p>
+<p><span class="small muted">Two things that pop out if you look: the PDF <strong>already had</strong> a text layer —from the scanner, awful: <em>co11trola11do</em>, <em>Sl!GURA</em>— and the new OCR fixes it; and the watermark <strong>disappears</strong> if you work on the scanned image instead of the full page.</span></p>
 </div>
 </section></section>
-<section id="pausa-2-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
-<h1>☕ Pausa 2 — 10 minutos</h1>
-<p><span class="big">Volvemos 8:30 pm</span></p>
-<p><span class="small muted">El OCR del Paso 2 puede seguir corriendo solo mientras tanto — así se trabaja con agentes: no se les mira, se les asigna.</span></p>
+<section id="break-2-10-minutes" class="title-slide slide level1 center" data-background-color="#e6fbfc">
+<h1>☕ Break 2 — 10 minutes</h1>
+<p><span class="big">Back at 8:30 pm</span></p>
+<p><span class="small muted">Step 2’s OCR can keep running by itself in the meantime — that’s how you work with agents: don’t watch them, assign them.</span></p>
 </section>
 
 <section>
-<section id="bloque-4-whisper-sus-clases-se-vuelven-material" class="title-slide slide level1 center">
-<h1>Bloque 4 — Whisper: sus clases se vuelven material</h1>
+<section id="block-4-whisper-your-classes-become-material" class="title-slide slide level1 center">
+<h1>Block 4 — Whisper: your classes become material</h1>
 
 </section>
-<section id="la-idea" class="slide level2">
-<h2>La idea</h2>
-<p>Sus conversaciones más valiosas son <strong>habladas</strong> — clases, seminarios, asesorías — y normalmente <strong>se evaporan</strong>.</p>
+<section id="the-idea" class="slide level2">
+<h2>The idea</h2>
+<p>Your most valuable conversations are <strong>spoken</strong> — classes, seminars, advising — and they usually <strong>evaporate</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/whisper-pipeline.svg" class="quarto-figure quarto-figure-center" style="width:94.0%"></p>
+<p><img data-src="../figures/whisper-pipeline.svg" class="quarto-figure quarto-figure-center" style="width:94.0%"></p>
 </figure>
 </div>
-<p><strong>Whisper</strong>: transcriptor <strong>gratuito y local</strong> — el audio nunca sale de su máquina. <span class="small muted">En Mac, mlx-whisper usa la GPU: los 12 minutos del video del ejercicio, transcritos en <strong>9 segundos</strong>.</span></p>
+<p><strong>Whisper</strong>: <strong>free and local</strong> transcription — audio never leaves your machine. <span class="small muted">On Mac, mlx‑whisper uses the GPU: the 12‑minute exercise video, transcribed in <strong>9 seconds</strong>.</span></p>
 </section>
-<section id="la-receta-conversando-con-claude" class="slide level2 smaller">
-<h2>La receta, conversando con Claude</h2>
-<p><strong>Paso 1 — que Claude conozca su máquina</strong> (una sola vez):</p>
-<pre class="text"><code>Quiero transcribir grabaciones de mis clases con Whisper.
-Primero dime qué computadora tengo (procesador, memoria) y qué
-versión de Whisper me conviene instalar. Instálala.</code></pre>
-<p><span class="small">Claude detecta si su equipo puede usar la versión rápida (Mac: mlx-whisper · Windows: faster-whisper) y la deja lista.</span></p>
+<section id="the-recipe-speaking-with-claude" class="slide level2 smaller">
+<h2>The recipe, speaking with Claude</h2>
+<p><strong>Step 1 — let Claude learn your machine</strong> (one time):</p>
+<pre class="text"><code>I want to transcribe recordings of my classes with Whisper.
+First tell me what machine I have (processor, memory) and which
+Whisper version I should install. Install it.</code></pre>
+<p><span class="small">Claude detects whether your machine can use the fast build (Mac: mlx‑whisper · Windows: faster‑whisper) and sets it up.</span></p>
 <div class="fragment">
-<p><strong>Paso 2 — transcribir y pedir algo útil:</strong></p>
-<pre class="text"><code>En datos/ está videoplayback.mp4: un video de ~12 minutos sobre
-conflictos sociales. Transcríbelo con marcas de tiempo y guarda
-el texto en transcripciones/. Después léelo y dime: qué actores
-aparecen, qué demandas plantean, y con qué casos de los reportes
-de la Defensoría podría conectarse lo que narra.</code></pre>
-<p><span class="small muted">Si les falla con <code>FileNotFoundError: 'ffmpeg'</code>, no está roto: mlx-whisper trae su propio ffmpeg dentro y solo hay que dejárselo a la vista. Díganle <em>“no encuentra ffmpeg, arréglalo”</em> y lo resuelve.</span></p>
+<p><strong>Step 2 — transcribe and ask for something useful:</strong></p>
+<pre class="text"><code>In datos/ there’s videoplayback.mp4: a ~12-minute video on social
+conflicts. Transcribe it with timestamps and save the text under
+transcripciones/. Then read it and tell me: which actors appear,
+what demands they raise, and which Ombudsman cases might connect
+to what it narrates.</code></pre>
+<p><span class="small muted">If it fails with <code>FileNotFoundError: 'ffmpeg'</code>, it’s not broken: mlx‑whisper ships its own ffmpeg inside; you only need to expose it. Tell it “ffmpeg is not found, fix it” and it will.</span></p>
 </div>
 </section>
-<section id="esto-no-es-teoría-lo-hice-con-este-taller" class="slide level2 smaller">
-<h2>Esto no es teoría: lo hice con este taller</h2>
-<p>Transcribí mi clase piloto con los asistentes del Q-LAB (97 min → <strong>90 segundos</strong>) y le pedí feedback:</p>
+<section id="this-isnt-theory-i-did-it-for-this-workshop" class="slide level2 smaller">
+<h2>This isn’t theory: I did it for this workshop</h2>
+<p>I transcribed my pilot class with the Q‑LAB assistants (97 min → <strong>90 seconds</strong>) and asked for feedback:</p>
 <blockquote>
-<p><em>“El material del día se agotó en 59 minutos; los 38 restantes fueron improvisados. La clase no estaba calibrada en tiempo.”</em></p>
-</blockquote>
-<blockquote>
-<p><em>“Elegiste un repositorio demasiado grande para la demo.”</em></p>
-</blockquote>
-<blockquote>
-<p><em>“El consejo sobre modelos quedó contradictorio: un alumno no puede salir de ahí con una regla accionable.”</em></p>
+<p><em>“You ran out of material at minute 59; the remaining 38 min were improvised. The class wasn’t time‑calibrated.”</em></p>
+<p><em>“You picked a repository that was too large for the demo.”</em></p>
+<p><em>“Your model advice was contradictory: students can’t leave with an actionable rule.”</em></p>
 </blockquote>
 <div class="fragment">
-<p>Tenía razón en las tres. <strong>Esta sesión que están viendo fue rediseñada con ese feedback.</strong></p>
+<p>They were right on all three. <strong>This very session you’re seeing was redesigned with that feedback.</strong></p>
 </div>
 <div class="fragment">
-<p><span class="small muted"><strong>La transcripción también se verifica:</strong> del video del ejercicio, solo 33 de 491 fragmentos son habla — y escribe <em>“Anacocha”</em> por <strong>Yanacocha</strong>. Revisen cobertura y nombres propios antes de citar.</span></p>
-<p><span class="warm">Usos inmediatos: mejorar sus cursos, actas de asesorías, entrevistas de campo (con consentimiento), y los comentarios que reciben al presentar.</span></p>
+<p><span class="small muted"><strong>Transcriptions also need verification:</strong> in the exercise video, only 33 of 491 fragments are speech — and it writes <em>“Anacocha”</em> for <strong>Yanacocha</strong>. Check coverage and proper names before citing.</span></p>
+<p><span class="warm">Immediate uses: improve your courses, minutes for advising sessions, field interviews (with consent), and the comments you receive when presenting.</span></p>
 </div>
 </section></section>
 <section>
-<section id="bloque-5-mcps-conectar-claude-con-sus-otras-apps" class="title-slide slide level1 center">
-<h1>Bloque 5 — MCPs: conectar Claude con sus otras apps</h1>
+<section id="block-5-mcps-connect-claude-to-your-other-apps" class="title-slide slide level1 center">
+<h1>Block 5 — MCPs: connect Claude to your other apps</h1>
 
 </section>
-<section id="qué-es-un-mcp" class="slide level2 smaller">
-<h2>Qué es un MCP</h2>
-<p>Hasta ahora Claude ve <strong>su carpeta</strong>. Pero su vida académica también vive en el correo, el calendario, el Drive…</p>
+<section id="what-an-mcp-is" class="slide level2 smaller">
+<h2>What an MCP is</h2>
+<p>So far Claude sees <strong>your folder</strong>. But your academic life also lives in email, calendar, Drive…</p>
 <div class="fragment">
-<p>Un <strong>MCP</strong> (<em>Model Context Protocol</em>) es un <strong>enchufe estándar</strong> que le da a Claude acceso — <strong>con su permiso</strong> — a otra aplicación. Piénsenlo como el USB de las apps: un conector universal.</p>
+<p>An <strong>MCP</strong> (<em>Model Context Protocol</em>) is a <strong>standard plug</strong> that gives Claude access — <strong>with your permission</strong> — to another application. Think of it as USB for apps: a universal connector.</p>
 <ul>
-<li>Se conecta <strong>una sola vez</strong>, con su login normal (el de Google, por ejemplo), guiados por el propio Claude: <em>“conéctame Gmail por MCP”</em>.</li>
-<li>Desde entonces, se pide <strong>en español</strong>, como todo lo de este taller.</li>
-<li>Es un estándar abierto — lo creó Anthropic y hoy lo usa toda la industria.</li>
+<li>You connect it <strong>once</strong>, with your normal login (Google, for example), guided by Claude itself: <em>“connect Gmail via MCP for me.”</em></li>
+<li>From then on, you ask <strong>in English</strong>, like everything else in this workshop.</li>
+<li>It’s an open standard — created by Anthropic and adopted industry‑wide today.</li>
 </ul>
 </div>
 </section>
-<section id="los-que-más-les-van-a-servir" class="slide level2 smaller">
-<h2>Los que más les van a servir</h2>
+<section id="the-ones-youll-use-most" class="slide level2 smaller">
+<h2>The ones you’ll use most</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -811,87 +806,83 @@ de la Defensoría podría conectarse lo que narra.</code></pre>
 <thead>
 <tr class="header">
 <th>MCP</th>
-<th>Qué le permite a Claude</th>
-<th>Un pedido real</th>
+<th>What it lets Claude do</th>
+<th>A real request</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>Gmail</strong></td>
-<td>Leer y buscar su correo; preparar borradores</td>
-<td><em>“Busca los correos del editor de la revista y dime en qué quedó la revisión”</em></td>
+<td>Read and search your email; draft replies</td>
+<td><em>“Find the editor’s emails for my paper and tell me where the review stands.”</em></td>
 </tr>
 <tr class="even">
 <td><strong>Google Calendar</strong></td>
-<td>Ver y crear eventos</td>
-<td><em>“Encuentra un hueco de 2 horas esta semana para el paper y resérvalo”</em></td>
+<td>View and create events</td>
+<td><em>“Find a 2‑hour slot this week for the paper and reserve it.”</em></td>
 </tr>
 <tr class="odd">
 <td><strong>Google Drive</strong></td>
-<td>Leer sus documentos compartidos</td>
-<td><em>“Lee los comentarios de mi coautora en el Drive y aplícalos al documento”</em></td>
+<td>Read your shared docs</td>
+<td><em>“Read my coauthor’s comments in Drive and apply them to the doc.”</em></td>
 </tr>
 <tr class="even">
 <td><strong>GitHub</strong></td>
-<td>Traer paquetes de replicación publicados</td>
-<td><em>“El paquete de replicación de ese paper está en GitHub: descárgalo y explícamelo”</em></td>
+<td>Fetch replication packages</td>
+<td><em>“The replication package is on GitHub: download it and explain it to me.”</em></td>
 </tr>
 <tr class="odd">
-<td><strong>Zotero</strong> <em>(comunidad)</em></td>
-<td>Su biblioteca de referencias</td>
-<td><em>“Agrega a mi Zotero los papers de papers/, con metadatos completos”</em></td>
+<td><strong>Zotero</strong> <em>(community)</em></td>
+<td>Your reference library</td>
+<td><em>“Add the papers in papers/ to my Zotero, with full metadata.”</em></td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
-<p><span class="small muted">Con <code>/mcp</code> dentro de Claude Code ven cuáles tienen conectados. Hay cientos más — el criterio: ¿dónde vive información que hoy le copian a mano?</span></p>
+<p><span class="small muted">Inside Claude Code, <code>/mcp</code> shows which ones you’ve connected. There are hundreds more — the criterion: where does information live that you currently copy by hand?</span></p>
 </div>
 </section>
-<section id="la-letra-chica-importa" class="slide level2 smaller">
-<h2>La letra chica (importa)</h2>
+<section id="the-fine-print-matters" class="slide level2 smaller">
+<h2>The fine print (matters)</h2>
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Conectar el correo es abrir la puerta de su correo</strong></p>
+<p><strong>Connecting email opens the door to your email</strong></p>
 </div>
 <div class="callout-content">
 <ul>
-<li>Cada acción sensible (enviar, borrar, crear) <strong>pide su permiso</strong> — leer, no siempre. Conecten solo lo que necesitan.</li>
-<li>Solo en <strong>su</strong> computadora. Nunca conecten sus cuentas en una máquina compartida o del aula.</li>
-<li>Claude <strong>nunca envía un correo sin mostrarles el borrador</strong> — y si un MCP les pide la contraseña <em>en el chat</em>, algo anda mal: el login siempre ocurre en el navegador, en la página oficial.</li>
+<li>Every sensitive action (send, delete, create) <strong>asks for your permission</strong> — reading, not always. Connect only what you need.</li>
+<li>Only on <strong>your</strong> computer. Never connect your accounts on a shared or classroom machine.</li>
+<li>Claude <strong>never sends an email without showing you the draft</strong> — and if an MCP asks for your password <em>in the chat</em>, something’s wrong: login always happens in the browser, on the official page.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="fragment">
-<p><strong>El patrón de siempre, una vez más:</strong> ustedes se loguean (el navegador, la página oficial); él opera con el acceso que ustedes le dieron — igual que con la biblioteca PUCP en la Sesión 1.</p>
+<p><strong>Same pattern, once again:</strong> you sign in (browser, official page); it operates with the access you granted — just like the PUCP library proxy in Session 1.</p>
 </div>
 </section>
-<section id="el-último-consejo-háblenle-no-le-tipeen" class="slide level2 smaller">
-<h2>El último consejo: háblenle, no le tipeen</h2>
-<p>Ustedes hablan a ~<strong>150 palabras por minuto</strong> y tipean a ~40. Con voz, el pedido de 2 líneas se vuelve de 2 párrafos — el contexto, las restricciones, el “ah, y también…” — y <strong>el resultado mejora sin que el modelo haya mejorado</strong>: mejoró el pedido.</p>
+<section id="one-last-tip-speak-to-it-dont-type" class="slide level2 smaller">
+<h2>One last tip: speak to it, don’t type</h2>
+<p>You speak at ~<strong>150 words per minute</strong> and type at ~40. With voice, a 2‑line request becomes 2 paragraphs — the context, constraints, the “oh, and also…” — and <strong>results improve without the model changing</strong>: the request improved.</p>
 <div class="fragment">
-<p>Ya viene incluido: escriban <code>/voice</code> y <strong>mantengan la barra espaciadora mientras hablan</strong>. Y no hay que pulir el discurso — hablen desordenado, que organizar el enredo es trabajo del modelo.</p>
+<p>It’s already built‑in: type <code>/voice</code> and <strong>hold the space bar while you speak</strong>. No need to polish — speak messy; organizing the tangle is the model’s job.</p>
 </div>
 <div class="fragment">
-<p>No lo decimos nosotros:</p>
+<p>Not just our claim:</p>
 <blockquote>
-<p><em>“You speak 3x faster than you type, and your prompts get way more detailed.”</em> — <strong>Boris Cherny</strong>, creador de Claude Code (2026)</p>
-</blockquote>
-<blockquote>
+<p><em>“You speak 3x faster than you type, and your prompts get way more detailed.”</em> — <strong>Boris Cherny</strong>, creator of Claude Code (2026)</p>
 <p><em>“Lean back, switch to /voice and just ramble for like 10 minutes.”</em> — <strong>Andrej Karpathy</strong> (2026)</p>
-</blockquote>
-<blockquote>
 <p><em>“You stop optimizing keystrokes and start optimizing thinking.”</em> — <strong>Josef Dvorak</strong> (2026)</p>
 </blockquote>
-<p><span class="small muted">El teclado no se jubila: es dictado, y todos mezclan ambos. Fuentes: x.com/bcherny · x.com/karpathy · docs de /voice</span></p>
+<p><span class="small muted">Keyboards aren’t retiring: it’s dictation, and everyone mixes both. Sources: x.com/bcherny · x.com/karpathy · /voice docs</span></p>
 </div>
 </section>
-<section id="cierre" class="slide level2 smaller">
-<h2>Cierre</h2>
+<section id="closing" class="slide level2 smaller">
+<h2>Closing</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
@@ -899,48 +890,48 @@ de la Defensoría podría conectarse lo que narra.</code></pre>
 </colgroup>
 <thead>
 <tr class="header">
-<th>Ayer no podían</th>
-<th>Hoy sí</th>
+<th>Yesterday you couldn’t</th>
+<th>Today you can</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>El chat solo veía lo que le pegaban</td>
-<td>Un agente trabaja dentro de sus carpetas</td>
+<td>A chat only saw what you pasted</td>
+<td>An agent works inside your folders</td>
 </tr>
 <tr class="even">
-<td>Bibliografías a mano, con errores invisibles</td>
-<td>Verificación cita por cita contra Crossref</td>
+<td>Bibliographies by hand, with invisible errors</td>
+<td>Citation‑by‑citation verification against Crossref</td>
 </tr>
 <tr class="odd">
-<td>Semanas buscando literatura</td>
-<td><code>/deep-research</code> + carpeta de papers en 20 min</td>
+<td>Weeks searching literature</td>
+<td><code>/deep-research</code> + a papers folder in 20 minutes</td>
 </tr>
 <tr class="even">
-<td>“No sé LaTeX”</td>
-<td>PDF y Beamer compilados, sin escribir código</td>
+<td>“I don’t know LaTeX”</td>
+<td>Beamer and PDFs compiled, without writing code</td>
 </tr>
 <tr class="odd">
-<td>“¿Cómo estaba este archivo antes?”</td>
-<td>Git guarda cada versión; todo es reversible</td>
+<td>“How was this file before?”</td>
+<td>Git saves every version; everything is reversible</td>
 </tr>
 <tr class="even">
-<td>Las clases se evaporaban</td>
-<td>Transcritas, analizadas y con feedback</td>
+<td>Classes evaporated</td>
+<td>Transcribed, analyzed, and with feedback</td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
-<p><strong>Soporte continuo:</strong> los asistentes del Q-LAB · la guía escrita del taller (carpeta <code>profesores/</code>) · y el propio Claude — pregúntenle a él primero.</p>
-<p><strong>Gracias</strong> — alexander.quispe@pucp.edu.pe</p>
-<p><span class="small muted">Estos slides: escritos, diagramados y compilados con Claude Code, y mejorados con el análisis Whisper de las clases piloto.</span></p>
+<p><strong>Ongoing support:</strong> Q‑LAB assistants · the written workshop guide (<code>profesores/</code>) · and Claude itself — ask it first.</p>
+<p><strong>Thank you</strong> — alexander.quispe@pucp.edu.pe</p>
+<p><span class="small muted">These slides: written, laid out, and compiled with Claude Code, improved with Whisper analysis from the pilot classes.</span></p>
 
 </div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Claude Code para investigación — Taller para docentes · PUCP 2026</p>
+<p>Claude Code for Research — Faculty Workshop · PUCP 2026</p>
 </div>
 </div></div>
 
@@ -1174,12 +1165,12 @@ de la Defensoría podría conectarse lo que narra.</code></pre>
           // flash "checked"
           button.classList.add('code-copy-button-checked');
           var currentTitle = button.getAttribute("title");
-          button.setAttribute("title", "Copiado");
+          button.setAttribute("title", "Copied!");
           let tooltip;
           if (window.bootstrap) {
             button.setAttribute("data-bs-toggle", "tooltip");
             button.setAttribute("data-bs-placement", "left");
-            button.setAttribute("data-bs-title", "Copiado");
+            button.setAttribute("data-bs-title", "Copied!");
             tooltip = new bootstrap.Tooltip(button, 
               { trigger: "manual", 
                 customClass: "code-copy-button-tooltip",

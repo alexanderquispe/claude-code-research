@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es"><head>
+<html lang="en"><head>
 <script src="sesion1-confianza_files/libs/clipboard/clipboard.min.js"></script>
 <script src="sesion1-confianza_files/libs/quarto-html/tabby.min.js"></script>
 <script src="sesion1-confianza_files/libs/quarto-html/popper.min.js"></script>
@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Alexander Quispe">
-  <title>Claude Code para investigación</title>
+  <title>Claude Code for Research</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -199,8 +199,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Claude Code para investigación</h1>
-  <p class="subtitle">Sesión 1 — Confianza y verificación · Taller para docentes</p>
+  <h1 class="title">Claude Code for Research</h1>
+  <p class="subtitle">Session 1 — Trust and Verification · Faculty Workshop</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -208,84 +208,84 @@
 Alexander Quispe
 </div>
         <p class="quarto-title-affiliation">
-            Facultad de Ciencias Sociales, PUCP · con apoyo de Q-LAB
+            Faculty of Social Sciences, PUCP · with support from Q-LAB
           </p>
     </div>
 </div>
 
 </section>
-<section id="plan-de-hoy-3-horas" class="slide level2 smaller">
-<h2>Plan de hoy (3 horas)</h2>
+<section id="todays-plan-3-hours" class="slide level2 smaller">
+<h2>Today’s plan (3 hours)</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Hora</th>
-<th>Bloque</th>
-<th>Tema</th>
+<th>Time</th>
+<th>Block</th>
+<th>Topic</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>6:00 – 6:20</td>
 <td>1</td>
-<td>Qué es Claude y sus tres productos</td>
+<td>What Claude is and its three products</td>
 </tr>
 <tr class="even">
 <td>6:20 – 6:50</td>
 <td>2</td>
-<td>VS Code y el terminal, paso a paso</td>
+<td>VS Code and the terminal, step by step</td>
 </tr>
 <tr class="odd">
 <td>6:50 – 7:10</td>
 <td>3</td>
-<td>Configuración: modelo, effort, modos</td>
+<td>Configuration: model, effort, modes</td>
 </tr>
 <tr class="even">
 <td>7:10 – 7:20</td>
 <td>☕</td>
-<td>Pausa 1</td>
+<td>Break 1</td>
 </tr>
 <tr class="odd">
 <td>7:20 – 7:45</td>
 <td>4</td>
-<td>Lo primero: <code>/init</code> y markdown</td>
+<td>First things first: <code>/init</code> and markdown</td>
 </tr>
 <tr class="even">
 <td>7:45 – 8:05</td>
 <td>5</td>
-<td>Trabajar: conversar y ordenar</td>
+<td>Working: converse and organize</td>
 </tr>
 <tr class="odd">
 <td>8:05 – 8:15</td>
 <td>☕</td>
-<td>Pausa 2</td>
+<td>Break 2</td>
 </tr>
 <tr class="even">
 <td>8:15 – 8:55</td>
 <td>6</td>
-<td>⭐ Literatura: buscar, verificar y descargar</td>
+<td>⭐ Literature: search, verify, and download</td>
 </tr>
 <tr class="odd">
 <td>8:55 – 9:00</td>
 <td>7</td>
-<td>Cierre y tarea</td>
+<td>Wrap-up and homework</td>
 </tr>
 </tbody>
 </table>
-<p><span class="small muted">Los asistentes del Q-LAB están en la sala: levanten la mano ante cualquier problema técnico y ellos los ayudan sin detener la clase.</span></p>
+<p><span class="small muted">Q-LAB assistants are in the room: if you hit a technical snag, raise your hand and they’ll help without stopping the class.</span></p>
 </section>
 <section>
-<section id="bloque-1-qué-es-claude" class="title-slide slide level1 center">
-<h1>Bloque 1 — Qué es Claude</h1>
+<section id="block-1-what-claude-is" class="title-slide slide level1 center">
+<h1>Block 1 — What Claude is</h1>
 
 </section>
-<section id="claude-code-en-una-frase" class="slide level2">
-<h2>Claude Code, en una frase</h2>
+<section id="claude-code-in-one-sentence" class="slide level2">
+<h2>Claude Code, in one sentence</h2>
 <blockquote>
-<p>Un agente que vive en su computadora, <strong>ve sus archivos</strong> y puede <strong>trabajar sobre ellos</strong> por usted.</p>
+<p>An agent that lives on your computer, can <strong>see your files</strong>, and can <strong>work on them</strong> for you.</p>
 </blockquote>
 <div class="fragment">
-<p>No es un chat al que le pegan texto. La diferencia práctica:</p>
+<p>It’s not a chat where you paste text. Practically:</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
@@ -293,32 +293,32 @@ Alexander Quispe
 </colgroup>
 <thead>
 <tr class="header">
-<th>En el chat de siempre</th>
-<th>Con Claude Code</th>
+<th>The usual chat</th>
+<th>With Claude Code</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>“Resúmeme este paper” <em>(y usted pega el texto)</em></td>
-<td>“Lee los <strong>40 PDF de esta carpeta</strong>, dime cuáles usan datos de panel y arma una tabla”</td>
+<td>“Summarize this paper” <em>(and you paste the text)</em></td>
+<td>“Read the <strong>40 PDFs in this folder</strong>, tell me which ones use panel data, and make a table”</td>
 </tr>
 <tr class="even">
-<td>Usted copia la respuesta a Word</td>
-<td>Él <strong>crea y edita los archivos</strong> directamente</td>
+<td>You copy the answer to Word</td>
+<td>It <strong>creates and edits files</strong> directly</td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="para-qué-les-sirve-concretamente" class="slide level2 smaller">
-<h2>¿Para qué les sirve, concretamente?</h2>
-<p>En su semana de investigación y docencia, Claude Code puede:</p>
+<section id="whats-concretely-useful-for-you" class="slide level2 smaller">
+<h2>What’s concretely useful for you?</h2>
+<p>In a week of research and teaching, Claude Code can:</p>
 <ul>
-<li><strong>Verificar la bibliografía</strong> de un artículo, cita por cita, contra Crossref</li>
-<li><strong>Ordenar y renombrar</strong> esa carpeta de PDFs acumulados de años</li>
-<li><strong>Extraer una tabla</strong> de un PDF a Excel — o de 40 PDFs a una sola tabla</li>
-<li><strong>Escribir y compilar</strong> documentos y slides en LaTeX, sin que ustedes sepan LaTeX</li>
-<li><strong>Explorar una base de datos</strong> y devolver estadísticas y gráficos</li>
+<li><strong>Verify a bibliography</strong> reference by reference against Crossref</li>
+<li><strong>Sort and rename</strong> that chaotic PDFs folder you’ve kept for years</li>
+<li><strong>Extract a table</strong> from one PDF to Excel — or from 40 PDFs to a single table</li>
+<li><strong>Write and compile</strong> documents and slides in LaTeX, even if you don’t know LaTeX</li>
+<li><strong>Explore a dataset</strong> and return statistics and charts</li>
 </ul>
 <div class="fragment">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -327,141 +327,141 @@ Alexander Quispe
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Nada de eso requiere saber programar</strong></p>
+<p><strong>None of this requires programming</strong></p>
 </div>
 <div class="callout-content">
-<p>Sí requiere saber <strong>qué pedirle y cómo verificarlo</strong> — de eso trata este taller.</p>
+<p>It does require knowing <strong>what to ask and how to verify</strong> — that’s what this workshop is about.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="un-mismo-cerebro-tres-productos" class="slide level2">
-<h2>Un mismo cerebro, tres productos</h2>
-<p>Antes de instalar nada, ubíquense: <strong>Claude son tres cosas distintas</strong> y es fácil confundirlas. Veámoslas una por una.</p>
+<section id="one-brain-three-products" class="slide level2">
+<h2>One brain, three products</h2>
+<p>Before installing anything, situate yourselves: <strong>Claude is three distinct things</strong>, easy to confuse. Let’s see them one by one.</p>
 <div class="fragment">
 <ol type="1">
-<li><strong>claude.ai</strong> — el chat en el navegador <em>(este seguro ya lo conocen)</em></li>
-<li><strong>Claude Cowork</strong> — una app de escritorio para trabajar sobre carpetas</li>
-<li><strong>Claude Code</strong> — el agente en el terminal <em>(el de este taller)</em></li>
+<li><strong>claude.ai</strong> — the chat in your browser <em>(you likely know this one)</em></li>
+<li><strong>Claude Cowork</strong> — a desktop app to work over folders</li>
+<li><strong>Claude Code</strong> — the terminal agent <em>(today’s focus)</em></li>
 </ol>
 </div>
 </section>
-<section id="claude.ai-el-chat" class="slide level2 smaller">
-<h2>1 · claude.ai — el chat</h2>
+<section id="claude.ai-the-chat" class="slide level2 smaller">
+<h2>1 · claude.ai — the chat</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../figures/screenshots/claude-ai-chrome.png" class="quarto-figure quarto-figure-center" style="width:76.0%"></p>
 </figure>
 </div>
-<p><strong>Vive en el navegador</strong> (miren la dirección: <code>claude.ai</code>). Como ChatGPT: ustedes <strong>pegan</strong> texto y él responde. Excelente tutor de conceptos — pero <strong>no ve sus archivos</strong>.</p>
+<p><strong>Lives in the browser</strong> (look at the address: <code>claude.ai</code>). Like ChatGPT: you <strong>paste</strong> text and it replies. A great tutor for concepts — but it <strong>doesn’t see your files</strong>.</p>
 </section>
-<section id="claude-cowork-la-app-de-escritorio" class="slide level2 smaller">
-<h2>2 · Claude Cowork — la app de escritorio</h2>
+<section id="claude-cowork-the-desktop-app" class="slide level2 smaller">
+<h2>2 · Claude Cowork — the desktop app</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../figures/screenshots/cowork-app.png" class="quarto-figure quarto-figure-center" style="width:68.0%"></p>
 </figure>
 </div>
-<p><strong>Una app instalada, sin terminal</strong> — noten abajo el botón <strong>Select folder…</strong> y la caja <em>“Describe a task”</em>: le señalan una carpeta y le describen la tarea, y el agente trabaja sobre esos archivos. Ideal para documentos — pero requiere <strong>plan pago</strong> ($20/mes o más).</p>
+<p><strong>An installed app, no terminal</strong> — notice the <strong>Select folder…</strong> button below and the “Describe a task” box: you pick a folder and describe the task, and the agent works on those files. Ideal for documents — but requires a <strong>paid plan</strong> ($20/month or more).</p>
 </section>
-<section id="claude-code-el-del-taller" class="slide level2 smaller">
-<h2>3 · Claude Code — el del taller</h2>
+<section id="claude-code-todays-agent" class="slide level2 smaller">
+<h2>3 · Claude Code — today’s agent</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../figures/screenshots/claude-code-vscode.png" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
 </figure>
 </div>
-<p>El mismo agente, en el <strong>terminal de VS Code</strong> — así lo verán hoy: la caja de bienvenida arriba, y abajo donde ustedes escriben. Ve sus archivos, ejecuta, verifica. Funciona con suscripción <strong>o solo con una clave API</strong> (paga por uso).</p>
+<p>The same agent, inside the <strong>VS Code terminal</strong> — this is how you’ll see it today: welcome panel on top, where you type below. It sees your files, executes, verifies. Works with a subscription <strong>or just an API key</strong> (pay-as-you-go).</p>
 </section>
-<section id="cuál-necesito-yo-cuánto-cuesta" class="slide level2 smaller">
-<h2>¿Cuál necesito yo? ¿Cuánto cuesta?</h2>
+<section id="which-one-do-i-need-how-much-does-it-cost" class="slide level2 smaller">
+<h2>Which one do I need? How much does it cost?</h2>
 <table class="caption-top">
 <colgroup>
-<col style="width: 31%">
-<col style="width: 43%">
-<col style="width: 25%">
+<col style="width: 32%">
+<col style="width: 39%">
+<col style="width: 28%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Producto</th>
-<th>¿Para quién?</th>
-<th>Acceso</th>
+<th>Product</th>
+<th>For whom?</th>
+<th>Access</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>claude.ai</strong> (el chat)</td>
-<td>Preguntas, borradores, explicaciones</td>
-<td>Gratis con límites · Pro <strong>$20/mes</strong></td>
+<td><strong>claude.ai</strong> (chat)</td>
+<td>Questions, drafts, explanations</td>
+<td>Free with limits · Pro <strong>$20/mo</strong></td>
 </tr>
 <tr class="even">
 <td><strong>Claude Cowork</strong></td>
-<td>Trabajo sobre documentos sin terminal</td>
-<td>❌ <strong>Solo con plan pago</strong> ($20/mes o más)</td>
+<td>Document work without a terminal</td>
+<td>❌ <strong>Paid plan only</strong> ($20/mo or more)</td>
 </tr>
 <tr class="odd">
 <td><strong>Claude Code</strong></td>
-<td>Investigación: datos, PDFs, LaTeX</td>
-<td>✅ Suscripción <strong>o solo una clave API</strong> (paga por uso)</td>
+<td>Research: data, PDFs, LaTeX</td>
+<td>✅ Subscription <strong>or API key only</strong> (pay-as-you-go)</td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
 <ul>
-<li>El chat es como un <strong>tutor</strong>: excelente para que le expliquen un concepto (<em>“¿qué es diferencias en diferencias?”</em>).</li>
-<li>Claude Code es el <strong>asistente de investigación</strong>: trabaja sobre <em>sus</em> carpetas, <em>sus</em> datos, <em>sus</em> papers.</li>
-<li>Regla del taller: <strong>usen el modelo Opus para todo</strong>. Fable solo para redacción fina — es caro y se agota rápido.</li>
+<li>The chat is like a <strong>tutor</strong>: excellent for explaining a concept (<em>“what is difference-in-differences?”</em>).</li>
+<li>Claude Code is the <strong>research assistant</strong>: it works on <em>your</em> folders, <em>your</em> data, <em>your</em> papers.</li>
+<li>Workshop rule: <strong>use the Opus model for everything</strong>. Fable only for fine writing — it’s expensive and caps out quickly.</li>
 </ul>
 </div>
 </section>
-<section id="así-trabaja-el-ciclo-del-agente" class="slide level2 smaller">
-<h2>Así trabaja: el ciclo del agente</h2>
+<section id="how-it-works-the-agent-loop" class="slide level2 smaller">
+<h2>How it works: the agent loop</h2>
 
-<img data-src="../figures/es/agent-loop.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><ul>
-<li>Cada acción pasa por herramientas: leer, editar, ejecutar, buscar.</li>
-<li>Cada acción riesgosa <strong>pide su aprobación</strong> primero.</li>
-<li>Usted es quien dirige la investigación; Claude es un asistente muy rápido.</li>
+<img data-src="../figures/agent-loop.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><ul>
+<li>Every action goes through tools: read, edit, execute, search.</li>
+<li>Every risky action <strong>asks for your approval</strong> first.</li>
+<li>You direct the research; Claude is a very fast assistant.</li>
 </ul>
 </section></section>
 <section>
-<section id="bloque-2-vs-code-y-el-terminal" class="title-slide slide level1 center">
-<h1>Bloque 2 — VS Code y el terminal</h1>
+<section id="block-2-vs-code-and-the-terminal" class="title-slide slide level1 center">
+<h1>Block 2 — VS Code and the terminal</h1>
 
 </section>
-<section id="por-qué-trabajamos-en-visual-studio-code" class="slide level2 smaller">
-<h2>¿Por qué trabajamos en Visual Studio Code?</h2>
+<section id="why-do-we-work-in-visual-studio-code" class="slide level2 smaller">
+<h2>Why do we work in Visual Studio Code?</h2>
 
-<img data-src="../figures/es/vscode-ui.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:76.0%"><p><strong>Todo en una sola ventana</strong>: sus archivos a la izquierda, el documento al centro, y abajo el terminal donde vive Claude. Además es <strong>gratis</strong>, funciona igual en Windows y Mac, y abre PDFs, datos y texto sin cambiar de programa.</p>
+<img data-src="../figures/vscode-ui.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:76.0%"><p><strong>Everything in one window</strong>: your files on the left, the document in the center, and the terminal below where Claude lives. It’s <strong>free</strong>, works the same on Windows and Mac, and opens PDFs, data, and text without changing apps.</p>
 </section>
-<section id="un-plugin-que-necesitarán-vscode-pdf" class="slide level2 smaller">
-<h2>Un plugin que necesitarán: vscode-pdf</h2>
+<section id="one-extension-youll-want-vscode-pdf" class="slide level2 smaller">
+<h2>One extension you’ll want: vscode-pdf</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../figures/screenshots/vscode-pdf-ext.png" class="quarto-figure quarto-figure-center" style="width:72.0%"></p>
 </figure>
 </div>
-<p>Para <strong>leer PDFs dentro de VS Code</strong> (sus papers, y el PDF que compile LaTeX):</p>
+<p>To <strong>read PDFs inside VS Code</strong> (your papers, and the PDF LaTeX compiles):</p>
 <ol type="1">
-<li>Clic en el icono de <strong>Extensiones</strong> 🧩 de la barra izquierda</li>
-<li>Buscar <code>pdf</code></li>
-<li>Instalar <strong>vscode-pdf</strong> (de <em>tomoki1207</em>) — un clic y listo</li>
+<li>Click the <strong>Extensions</strong> 🧩 icon on the left bar</li>
+<li>Search <code>pdf</code></li>
+<li>Install <strong>vscode-pdf</strong> (by <em>tomoki1207</em>) — one click and done</li>
 </ol>
-<p><span class="small muted">Sin esto, cada PDF se abre en otro programa y pierden la gracia de “todo en una sola ventana”.</span></p>
+<p><span class="small muted">Without this, every PDF opens in a separate app and you lose the “everything in one window” flow.</span></p>
 </section>
-<section id="traer-su-proyecto-a-vs-code" class="slide level2 smaller">
-<h2>Traer su proyecto a VS Code</h2>
+<section id="bring-your-project-into-vs-code" class="slide level2 smaller">
+<h2>Bring your project into VS Code</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
-<p>Para el taller les enviaremos <strong>la carpeta del proyecto</strong> lista para descargar.</p>
+<p>For the workshop we’ll send you <strong>the project folder</strong> ready to download.</p>
 <ol type="1">
-<li>Descárguenla y colóquenla en <strong>Documentos</strong> (igual en Windows que en Mac)</li>
-<li>En VS Code: menú <strong>File → Add Folder to Workspace…</strong></li>
-<li>Elijan la carpeta → aparece en el <strong>panel izquierdo</strong></li>
+<li>Download it and place it under <strong>Documents</strong> (same on Windows and Mac)</li>
+<li>In VS Code: <strong>File → Add Folder to Workspace…</strong></li>
+<li>Pick the folder → it appears in the <strong>left panel</strong></li>
 </ol>
 <div class="fragment">
-<p>Con eso VS Code ya “ve” su proyecto: desde ese panel saldrá la ruta que le daremos al terminal en el siguiente paso.</p>
-<p><span class="small muted">Este mismo camino sirve después para cualquier carpeta suya: tesis, cursos, papers.</span></p>
+<p>With that, VS Code now “sees” your project: we’ll copy the path from that panel into the terminal in the next step.</p>
+<p><span class="small muted">Same steps later for any folder of yours: thesis, courses, papers.</span></p>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
@@ -471,74 +471,74 @@ Alexander Quispe
 </div>
 </div></div>
 </section>
-<section id="abrir-el-terminal-un-solo-clic" class="slide level2 smaller">
-<h2>Abrir el terminal: un solo clic</h2>
+<section id="open-the-terminal-one-click" class="slide level2 smaller">
+<h2>Open the terminal: one click</h2>
 
-<img data-src="../figures/es/vscode-terminal-menu.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p>Menú <strong>Terminal → Nuevo terminal</strong>. <span class="small">Tip: si la ventanita de abajo les parece chica, repitan el menú y elijan <em>Nueva ventana de terminal</em> para tenerla grande y aparte.</span></p>
+<img data-src="../figures/vscode-terminal-menu.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p>Menu <strong>Terminal → New Terminal</strong>. <span class="small">Tip: if the bottom panel feels small, repeat the menu and pick <em>New Terminal Window</em> to get a large separate window.</span></p>
 </section>
-<section id="qué-es-el-terminal-sin-miedo" class="slide level2">
-<h2>¿Qué es “el terminal”? (sin miedo)</h2>
-<p>Una ventana donde uno escribe <strong>instrucciones en texto</strong> en lugar de hacer clics.</p>
+<section id="what-is-the-terminal-no-fear" class="slide level2">
+<h2>What is “the terminal”? (no fear)</h2>
+<p>A window where you type <strong>text instructions</strong> instead of clicking.</p>
 <div class="fragment">
-<p>La buena noticia de 2026:</p>
+<p>Good news in 2026:</p>
 <ul>
-<li><strong>No necesitan memorizar comandos</strong> — Claude los escribe y ejecuta por ustedes.</li>
-<li>Ustedes solo necesitan <strong>UNO</strong>: <code>cd</code> (<em>change directory</em> = “cámbiate a esta carpeta”).</li>
+<li><strong>You don’t need to memorize commands</strong> — Claude writes and runs them for you.</li>
+<li>You only need <strong>ONE</strong>: <code>cd</code> (<em>change directory</em> = “switch into this folder”).</li>
 </ul>
 </div>
 <div class="fragment">
-<p>¿Por qué uno solo? Porque lo único que ustedes hacen a mano es <strong>decirle en qué carpeta trabajar</strong>. Todo lo demás se pide conversando.</p>
+<p>Why just one? Because the only thing you do by hand is <strong>tell it which folder to work in</strong>. Everything else is asked in conversation.</p>
 </div>
 </section>
-<section id="paso-a-paso-abrir-claude-en-su-carpeta" class="slide level2 smaller">
-<h2>Paso a paso: abrir Claude en su carpeta</h2>
+<section id="step-by-step-open-claude-in-your-folder" class="slide level2 smaller">
+<h2>Step by step: open Claude in your folder</h2>
 <ol type="1">
-<li>Abran <strong>VS Code</strong> → menú <strong>Terminal</strong> → <strong>New Terminal</strong>. <span class="small">Tip: si la ventanita de abajo les parece chica, repitan Terminal → <em>New Terminal Window</em> para tener una ventana grande aparte (a veces hay que abrir el terminal una vez para que aparezca esa opción).</span></li>
-<li>En el panel izquierdo de VS Code, busquen la <strong>carpeta de su investigación</strong> → clic derecho → <strong>Copy Path</strong>.</li>
-<li>En el terminal escriban <code>cd</code>, un espacio, <strong>peguen la ruta</strong>, Enter.</li>
-<li>Escriban <code>claude</code>, Enter.</li>
-<li>Les preguntará si confían en esa carpeta → <strong>Yes</strong>.</li>
+<li>Open <strong>VS Code</strong> → <strong>Terminal</strong> menu → <strong>New Terminal</strong>. <span class="small">Tip: if the bottom panel feels small, repeat Terminal → <em>New Terminal Window</em> to get a large separate window (sometimes you have to open a terminal once before that option appears).</span></li>
+<li>In VS Code’s left panel, find your <strong>research folder</strong> → right‑click → <strong>Copy Path</strong>.</li>
+<li>In the terminal, type <code>cd</code>, a space, <strong>paste the path</strong>, Enter.</li>
+<li>Type <code>claude</code>, Enter.</li>
+<li>It will ask if you trust that folder → <strong>Yes</strong>.</li>
 </ol>
 <div class="fragment">
-<pre class="text"><code>cd /Users/su-nombre/Documents/mi-investigacion
+<pre class="text"><code>cd /Users/your-name/Documents/my-research
 claude</code></pre>
-<p><span class="warm">Ese es TODO el “código” que este taller les va a pedir escribir.</span></p>
+<p><span class="warm">That’s ALL the “code” this workshop will ask you to type.</span></p>
 </div>
 </section>
-<section id="kit-de-rescate-guarden-este-slide" class="slide level2 smaller">
-<h2>🧯 Kit de rescate — guarden este slide</h2>
-<p>Todos nos atascamos. Esto resuelve el 95 % de los líos:</p>
+<section id="rescue-kit-save-this-slide" class="slide level2 smaller">
+<h2>🧯 Rescue kit — save this slide</h2>
+<p>We all get stuck. This solves 95% of tangles:</p>
 <table class="caption-top">
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 47%">
+<col style="width: 52%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Problema</th>
-<th>Solución</th>
+<th>Problem</th>
+<th>Solution</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Claude está haciendo algo que no quiero</td>
-<td><kbd>Esc</kbd> — lo interrumpe sin romper nada</td>
+<td>Claude is doing something I don’t want</td>
+<td><kbd>Esc</kbd> — interrupts without breaking anything</td>
 </tr>
 <tr class="even">
-<td>Quiero salir de Claude</td>
-<td><kbd>Ctrl</kbd>+<kbd>C</kbd> <strong>dos veces</strong></td>
+<td>I want to quit Claude</td>
+<td><kbd>Ctrl</kbd>+<kbd>C</kbd> <strong>twice</strong></td>
 </tr>
 <tr class="odd">
-<td>Me metí a la carpeta equivocada</td>
-<td>Salgan (Ctrl+C ×2), <code>cd</code> con la ruta correcta, <code>claude</code> de nuevo</td>
+<td>I switched into the wrong folder</td>
+<td>Quit (Ctrl+C ×2), <code>cd</code> to the right path, run <code>claude</code> again</td>
 </tr>
 <tr class="even">
-<td>Cerré todo, ¿perdí mi conversación?</td>
-<td>No: <code>claude --resume</code> muestra sus conversaciones anteriores</td>
+<td>I closed everything — did I lose my conversation?</td>
+<td>No: <code>claude --resume</code> lists your past sessions</td>
 </tr>
 <tr class="odd">
-<td>Nada responde y no sé qué pasa</td>
-<td>Cierren la ventana del terminal, abran una nueva y retomen</td>
+<td>Nothing responds and I don’t know why</td>
+<td>Close the terminal window, open a new one, and resume</td>
 </tr>
 </tbody>
 </table>
@@ -552,20 +552,20 @@ claude</code></pre>
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>Y la herramienta universal: <strong>tómenle captura de pantalla al problema, péguenla en Claude</strong> (Ctrl+V / Cmd+V en el chat del terminal) y pregunten <em>“¿por qué me sale esto?”</em>. Claude se depura a sí mismo sorprendentemente bien.</p>
+<p>And the universal tool: <strong>screenshot the problem and paste it into Claude</strong> (Ctrl+V / Cmd+V in the terminal chat) and ask <em>“why am I seeing this?”</em>. Claude self‑debugs surprisingly well.</p>
 </div>
 </div>
 </div>
 </div>
 </section></section>
 <section>
-<section id="bloque-3-configuración-y-diagnóstico" class="title-slide slide level1 center">
-<h1>Bloque 3 — Configuración y diagnóstico</h1>
+<section id="block-3-configuration-and-diagnostics" class="title-slide slide level1 center">
+<h1>Block 3 — Configuration and diagnostics</h1>
 
 </section>
-<section id="antes-de-configurar-producto-modelo" class="slide level2 smaller">
-<h2>Antes de configurar: producto ≠ modelo</h2>
-<p>En el Bloque 1 eligieron el <strong>producto</strong>: Claude Code. Lo primero que van a configurar es el <strong>modelo</strong> — y es fácil confundirlos:</p>
+<section id="before-configuring-product-model" class="slide level2 smaller">
+<h2>Before configuring: product ≠ model</h2>
+<p>In Block 1 you picked the <strong>product</strong>: Claude Code. The first thing you’ll configure is the <strong>model</strong> — and they’re easy to confuse:</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -575,151 +575,133 @@ claude</code></pre>
 <thead>
 <tr class="header">
 <th></th>
-<th>El producto</th>
-<th>El modelo</th>
+<th>The product</th>
+<th>The model</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Qué es</strong></td>
-<td>La puerta de entrada — <em>dónde</em> usan Claude</td>
-<td>El cerebro que razona — <em>quién</em> les responde</td>
+<td><strong>What it is</strong></td>
+<td>The entryway — <em>where</em> you use Claude</td>
+<td>The reasoning brain — <em>who</em> answers you</td>
 </tr>
 <tr class="even">
-<td><strong>Los nombres</strong></td>
+<td><strong>The names</strong></td>
 <td>claude.ai · Cowork · <strong>Claude Code</strong></td>
 <td><strong>Opus</strong> · Fable · Sonnet · Haiku</td>
 </tr>
 <tr class="odd">
-<td><strong>La analogía</strong></td>
-<td>el vehículo</td>
-<td>el motor</td>
+<td><strong>Analogy</strong></td>
+<td>the vehicle</td>
+<td>the engine</td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
-<p>Un mismo producto puede montar distintos motores — por eso dentro de Claude Code existe el menú <code>/model</code> para cambiar de cerebro.</p>
-<p><span class="warm">Así que no, “¿Opus es lo mismo que Claude Code?” — Claude Code es <em>desde dónde</em> trabajan; Opus es <em>quién</em> piensa.</span></p>
+<p>One product can mount different engines — that’s why Claude Code has a <code>/model</code> menu to switch brains.</p>
+<p><span class="warm">So no, “Is Opus the same as Claude Code?” — Claude Code is <em>from where</em> you work; Opus is <em>who</em> thinks.</span></p>
 </div>
 </section>
-<section id="elegir-el-modelo-una-sola-vez" class="slide level2 smaller">
-<h2>Elegir el modelo (una sola vez)</h2>
-<p>Dentro de Claude, escriban <code>/model</code> y elijan <strong>Opus</strong>.</p>
+<section id="choose-the-model-one-time" class="slide level2 smaller">
+<h2>Choose the model (one time)</h2>
+<p>Inside Claude, type <code>/model</code> and pick <strong>Opus</strong>.</p>
 <table class="caption-top">
 <colgroup>
-<col style="width: 44%">
-<col style="width: 55%">
+<col style="width: 53%">
+<col style="width: 46%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Modelo</th>
-<th>¿Cuándo?</th>
+<th>Model</th>
+<th>When</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>Opus</strong></td>
-<td>✅ Todo el trabajo del día a día: datos, tablas, LaTeX, organización</td>
+<td>✅ All day‑to‑day work: data, tables, LaTeX, organization</td>
 </tr>
 <tr class="even">
 <td><strong>Fable</strong></td>
-<td>Solo redacción fina de un paper — es caro y el límite se agota en horas</td>
+<td>Only fine paper writing — it’s pricey and the cap runs out fast</td>
 </tr>
 <tr class="odd">
 <td>Sonnet, Haiku</td>
-<td>No los necesitan por ahora</td>
+<td>You don’t need them today</td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
-<p><span class="small muted">Si un día algo responde “raro”, lo primero que deben revisar es <code>/model</code>: ¿qué modelo quedó seleccionado?</span></p>
+<p><span class="small muted">If something ever answers “oddly”, first check <code>/model</code>: which model is selected?</span></p>
 </div>
 </section>
-<section id="así-se-ve-el-menú-model" class="slide level2 smaller">
-<h2>Así se ve el menú <code>/model</code></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../figures/screenshots/model-selector.png" class="quarto-figure quarto-figure-center" style="width:92.0%"></p>
-</figure>
-</div>
-<ul>
-<li>Naveguen con ↑/↓ hasta <strong>Opus (1M context)</strong> y déjenlo con el <strong>✓ verde</strong>, como en la imagen. <em>Ese es el modelo del taller.</em></li>
-<li><kbd>Enter</kbd> lo fija como <strong>default</strong> para futuras sesiones · <kbd>s</kbd> lo usa <strong>solo en esta sesión</strong> · <kbd>Esc</kbd> cancela.</li>
-<li>¿Y esa línea naranja de abajo, <strong>“xHigh effort”</strong>? → siguiente slide.</li>
-</ul>
-</section>
-<section id="qué-significa-effort" class="slide level2 smaller">
-<h2>¿Qué significa “effort”?</h2>
-<p>El <em>effort</em> es <strong>cuánto razona el modelo antes de responder</strong> — como la diferencia entre pedirle a un asistente una respuesta al vuelo o un análisis cuidadoso.</p>
+<section id="what-effort-means" class="slide level2 smaller">
+<h2>What “effort” means</h2>
+<p>Effort is <strong>how much the model thinks before answering</strong> — like choosing between a quick reply or a careful analysis.</p>
 <table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th></th>
-<th>Menos effort</th>
-<th>Más effort</th>
+<th>Less effort</th>
+<th>More effort</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Velocidad</strong></td>
-<td>responde más rápido</td>
-<td>piensa más tiempo</td>
+<td><strong>Speed</strong></td>
+<td>answers faster</td>
+<td>thinks longer</td>
 </tr>
 <tr class="even">
-<td><strong>Profundidad</strong></td>
-<td>suficiente para tareas simples</td>
-<td>mejor en problemas difíciles</td>
+<td><strong>Depth</strong></td>
+<td>fine for simple tasks</td>
+<td>better on hard problems</td>
 </tr>
 <tr class="odd">
-<td><strong>Consumo</strong></td>
-<td>gasta menos</td>
-<td>gasta más tokens</td>
+<td><strong>Cost</strong></td>
+<td>uses fewer tokens</td>
+<td>uses more tokens</td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
 <ul>
-<li><strong>Cómo se ajusta:</strong> dentro del menú <code>/model</code>, con las flechas <kbd>←</kbd>/<kbd>→</kbd> — la línea naranja va cambiando: <em>low · medium · high · xHigh…</em></li>
-<li><strong>Recomendación del taller: déjenlo en High o xHigh.</strong> El modelo además adapta solo cuánto piensa según la dificultad de cada pedido.</li>
+<li><strong>How to adjust:</strong> inside <code>/model</code> with <kbd>←</kbd>/<kbd>→</kbd> — the orange bar shifts: <em>low · medium · high · xHigh…</em></li>
+<li><strong>Workshop recommendation: keep it at High or xHigh.</strong> The model also self‑tunes based on each request’s difficulty.</li>
 </ul>
 </div>
 </section>
-<section id="los-modos-de-trabajo-y-el-freno-de-mano" class="slide level2 smaller">
-<h2>Los modos de trabajo (y el freno de mano)</h2>
-<p>Con <kbd>Shift</kbd>+<kbd>Tab</kbd> se cambia de modo — son <strong>cuatro</strong>, y se ven en la <strong>barra de abajo</strong> de Claude:</p>
+<section id="work-modes-and-the-handbrake" class="slide level2 smaller">
+<h2>Work modes (and the handbrake)</h2>
+<p>Press <kbd>Shift</kbd>+<kbd>Tab</kbd> to switch modes — there are <strong>four</strong>, shown in Claude’s <strong>bottom bar</strong>:</p>
 
-<img data-src="../figures/es/safety-spectrum.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:88.0%"><ul>
-<li><strong>plan mode on</strong> — solo lee y <strong>propone un plan</strong>; no toca nada. <em>A fondo en la Sesión 2.</em></li>
-<li><strong>manual mode on</strong> — pregunta antes de <strong>cada</strong> acción.</li>
-<li><strong>accept edits on</strong> — edita sin preguntar; los comandos aún piden permiso.</li>
-<li><strong>auto mode on</strong> — ejecuta ediciones <strong>y</strong> comandos. <strong>El modo de hoy.</strong></li>
+<img data-src="../figures/safety-spectrum.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:88.0%"><ul>
+<li><strong>plan mode on</strong> — only reads and <strong>proposes a plan</strong>; no changes. <em>Deep dive in Session 2.</em></li>
+<li><strong>manual mode on</strong> — asks before <strong>every</strong> action.</li>
+<li><strong>accept edits on</strong> — edits without asking; commands still ask.</li>
+<li><strong>auto mode on</strong> — executes edits <strong>and</strong> commands. <strong>Today’s mode.</strong></li>
 </ul>
-<p><span class="small muted">Existe una bandera que desactiva todas las protecciones (<code>--dangerously-skip-permissions</code>) — no la usen.</span></p>
+<p><span class="small muted">There’s a flag that disables all protections (<code>--dangerously-skip-permissions</code>) — don’t use it.</span></p>
 </section>
-<section id="así-se-ve-en-su-terminal" class="slide level2 smaller">
-<h2>Así se ve en su terminal</h2>
+<section id="what-it-looks-like-in-your-terminal" class="slide level2 smaller">
+<h2>What it looks like in your terminal</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/modes-bar.svg" class="quarto-figure quarto-figure-center" style="width:74.0%"></p>
+<p><img data-src="../figures/modes-bar.svg" class="quarto-figure quarto-figure-center" style="width:74.0%"></p>
 </figure>
 </div>
-<p>Presionen <kbd>Shift</kbd>+<kbd>Tab</kbd> varias veces ahora mismo y miren cómo <strong>rota la etiqueta</strong>. Déjenlo en <strong>auto mode on</strong>: así los ejercicios que siguen corren de corrido, sin detenerse en cada permiso.</p>
+<p>Press <kbd>Shift</kbd>+<kbd>Tab</kbd> a few times now and watch the <strong>label rotate</strong>. Leave it on <strong>auto mode on</strong> so the upcoming exercises run end‑to‑end without stopping for each permission.</p>
 </section>
-<section id="último-paso-la-llave-de-la-biblioteca" class="slide level2 your-turn smaller">
-<h2>Último paso: la llave de la biblioteca</h2>
-<p>Lo dejamos listo ahora para no perder tiempo después. En el navegador, abran esta dirección <strong>tal cual</strong> (es JSTOR a través del proxy):</p>
+<section id="last-setup-the-library-key" class="slide level2 your-turn smaller">
+<h2>Last setup: the library key</h2>
+<p>We set this up now so we don’t waste time later. In your browser, open this address <strong>as‑is</strong> (it’s JSTOR through the proxy):</p>
 <pre class="text"><code>https://pucp.elogim.com/auth-meta/login.php?url=https://www.jstor.org</code></pre>
 <div class="fragment">
-<p>Les pedirá <strong>usuario y contraseña del campus virtual</strong> — los mismos de PAIDEIA/Intranet. Y listo: <strong>dejen esa pestaña abierta</strong> el resto de la clase. El navegador quedó reconocido como PUCP.</p>
+<p>It will ask for your <strong>campus username and password</strong> — the same ones you use for your university systems. Leave that tab <strong>open</strong> for the rest of class. Your browser is now recognized as on-campus (PUCP in this example).</p>
 </div>
 <div class="fragment">
-<p><strong>Para otra revista, cambian solo lo que va después de <code>url=</code>:</strong></p>
-<pre class="text"><code>https://pucp.elogim.com/auth-meta/login.php?url=&lt;dirección de la revista&gt;</code></pre>
+<p><strong>For another journal, change only what comes after <code>url=</code>:</strong></p>
+<pre class="text"><code>https://pucp.elogim.com/auth-meta/login.php?url=&lt;journal URL&gt;</code></pre>
 </div>
 <div class="fragment">
 <div class="callout callout-important callout-titled callout-style-default">
@@ -728,48 +710,47 @@ claude</code></pre>
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Importante</strong></p>
+<p><strong>Important</strong></p>
 </div>
 <div class="callout-content">
-<p>No se registran en JSTOR, ni en Wiley, ni en ninguna. <strong>Su cuenta personal de JSTOR no sirve</strong> — con ella solo pueden <em>leer en pantalla</em>. El botón de descarga aparece únicamente bajo la sesión de la Universidad.</p>
+<p>You are not signing up for JSTOR, Wiley, or anything else. <strong>Your personal JSTOR account does not grant download access</strong> — it only lets you read on screen. The download button appears only under your university’s institutional session (via your library proxy).</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="su-turno-qué-me-falta-instalar" class="slide level2 your-turn smaller">
-<h2>Su turno: ¿qué me falta instalar?</h2>
-<p>Con todo ya configurado, pídanle <strong>literalmente esto</strong>:</p>
-<pre class="text"><code>Revisa mi entorno: dime qué versión tengo de Python y de LaTeX,
-qué me falta instalar para trabajar con datos, PDFs y documentos
-en este taller, y cómo instalarlo.</code></pre>
+<section id="your-turn-what-am-i-missing" class="slide level2 your-turn smaller">
+<h2>Your turn: what am I missing?</h2>
+<p>With everything configured, ask <strong>literally this</strong>:</p>
+<pre class="text"><code>Check my environment: tell me what versions of Python and LaTeX I have,
+what I’m missing to work with data, PDFs, and documents in this workshop,
+and how to install it.</code></pre>
 <div class="fragment">
-<p><strong>Qué observar:</strong> el agente <strong>ejecuta comandos y les muestra qué hace</strong>. No les contesta de memoria: está mirando <em>su</em> máquina.</p>
+<p><strong>What to observe:</strong> the agent <strong>runs commands and shows you what it’s doing</strong>. It’s not answering from memory: it’s looking at <em>your</em> machine.</p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Nota</strong></p>
+<p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
-<p>Este ejercicio es a la vez el diagnóstico: si algo falta, el propio agente les dice cómo instalarlo — y puede instalarlo por ustedes. Es la primera lección de actitud: <strong>cuando tengan una duda técnica, pregúntenle a Claude</strong>.</p>
+<p>This exercise doubles as diagnostics: if something’s missing, the agent itself tells you how to install it — and can install it for you. First lesson in attitude: <strong>when you have a technical doubt, ask Claude.</strong></p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="su-turno-conozcan-su-computadora" class="slide level2 your-turn smaller">
-<h2>Su turno: conozcan su computadora</h2>
-<p>La mayoría no sabe qué máquina tiene — y a veces tiene más poder del que cree. Pregúntenle:</p>
-<pre class="text"><code>¿Qué computadora tengo? Dime mi procesador (CPU), si tengo GPU o
-aceleración para inteligencia artificial, y cuánta memoria RAM.
-Con esas características, ¿qué herramientas de IA podría correr
-localmente? Por ejemplo, ¿podría transcribir audio de mis clases
-con Whisper, y qué tan rápido?</code></pre>
+<section id="your-turn-get-to-know-your-machine" class="slide level2 your-turn smaller">
+<h2>Your turn: get to know your machine</h2>
+<p>Most people don’t know what machine they have — and sometimes it’s more powerful than they think. Ask:</p>
+<pre class="text"><code>What computer do I have? Tell me my processor (CPU), whether I have a GPU
+or AI acceleration, and how much RAM. With those specs, what AI tools could
+I run locally? For example, could I transcribe class audio with Whisper,
+and how fast?</code></pre>
 <div class="fragment">
-<p><strong>Qué observar:</strong> la respuesta es <strong>distinta para cada persona</strong> — Claude mira su hardware real y adapta la recomendación.</p>
+<p><strong>What to observe:</strong> the answer is <strong>different for each person</strong> — Claude inspects your actual hardware and adapts its recommendation.</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -779,131 +760,131 @@ con Whisper, y qué tan rápido?</code></pre>
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>Guarden esa respuesta: en la <strong>Sesión 2</strong> vamos a transcribir una clase grabada con Whisper, y la velocidad dependerá exactamente de esto (con GPU o chip moderno: minutos; solo CPU: más lento, pero funciona igual).</p>
+<p>Save that answer: in <strong>Session 2</strong> we’ll transcribe a recorded class with Whisper, and speed will depend exactly on this (with GPU or a recent chip: minutes; CPU‑only: slower, but it still works).</p>
 </div>
 </div>
 </div>
 </div>
 </section></section>
-<section id="pausa-1-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
-<h1>☕ Pausa 1 — 10 minutos</h1>
-<p><span class="big">Volvemos 7:20 pm</span></p>
+<section id="break-1-10-minutes" class="title-slide slide level1 center" data-background-color="#e6fbfc">
+<h1>☕ Break 1 — 10 minutes</h1>
+<p><span class="big">Back at 7:20 pm</span></p>
 </section>
 
 <section>
-<section id="bloque-4-lo-primero-init" class="title-slide slide level1 center">
-<h1>Bloque 4 — Lo primero: <code>/init</code></h1>
+<section id="block-4-first-things-first-init" class="title-slide slide level1 center">
+<h1>Block 4 — First things first: <code>/init</code></h1>
 
 </section>
-<section id="antes-de-pedirle-nada-denle-contexto" class="slide level2 smaller">
-<h2>Antes de pedirle nada: denle contexto</h2>
-<p>Podrían empezar a conversar de inmediato… pero Claude no sabe <strong>nada</strong> de su proyecto: qué contiene, cómo se organiza, qué reglas tiene.</p>
+<section id="before-asking-anything-give-it-context" class="slide level2 smaller">
+<h2>Before asking anything: give it context</h2>
+<p>You could start chatting right away… but Claude knows <strong>nothing</strong> about your project: what it contains, how it’s organized, what rules it follows.</p>
 <div class="fragment">
-<p>Por eso el <strong>primer comando de todo proyecto nuevo</strong> es:</p>
+<p>That’s why the <strong>first command in any new project</strong> is:</p>
 <pre class="text"><code>/init</code></pre>
 </div>
 <div class="fragment">
-<p>Claude <strong>explora toda la carpeta</strong> — lee sus documentos, sus datos, sus PDFs — y redacta un archivo llamado <strong><code>CLAUDE.md</code></strong> con lo que encontró: de qué trata el proyecto, cómo está organizado, qué convenciones sigue.</p>
-<p><span class="warm">Ese archivo se vuelve la <strong>memoria del proyecto</strong>: Claude lo lee automáticamente cada vez que inicien sesión ahí. Nunca más tendrán que volver a explicar de qué va su investigación.</span></p>
+<p>Claude <strong>explores the whole folder</strong> — reads your documents, your data, your PDFs — and drafts a file called <strong><code>CLAUDE.md</code></strong> with what it found: what the project is about, how it’s organized, which conventions it follows.</p>
+<p><span class="warm">That file becomes the project’s <strong>memory</strong>: Claude reads it automatically every time you start a session there. You’ll never again need to re‑explain what your research is about.</span></p>
 </div>
 </section>
-<section id="qué-es-un-archivo-markdown-.md" class="slide level2 smaller">
-<h2>¿Qué es un archivo markdown (<code>.md</code>)?</h2>
-<p>Es <strong>texto simple con marcas de formato</strong> — se abre con cualquier editor, pesa nada, y se lee igual dentro de 20 años.</p>
+<section id="what-is-a-markdown-.md-file" class="slide level2 smaller">
+<h2>What is a markdown (<code>.md</code>) file?</h2>
+<p>It’s <strong>plain text with formatting marks</strong> — opens with any editor, tiny size, and readable the same 20 years from now.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Lo que escriben</th>
-<th>Lo que significa</th>
+<th>What you write</th>
+<th>What it means</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code># Título</code></td>
-<td>encabezado</td>
+<td><code># Title</code></td>
+<td>heading</td>
 </tr>
 <tr class="even">
-<td><code>## Subtítulo</code></td>
-<td>encabezado menor</td>
+<td><code>## Subtitle</code></td>
+<td>subheading</td>
 </tr>
 <tr class="odd">
-<td><code>- punto</code></td>
-<td>viñeta</td>
+<td><code>- item</code></td>
+<td>bullet</td>
 </tr>
 <tr class="even">
-<td><code>**palabra**</code></td>
-<td>negrita</td>
+<td><code>**word**</code></td>
+<td>bold</td>
 </tr>
 <tr class="odd">
-<td><code>`código`</code></td>
-<td>resaltar un comando o ruta</td>
+<td><code>`code`</code></td>
+<td>highlight a command or path</td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
-<p><strong>Por qué importa para ustedes:</strong> es el formato en el que Claude guarda <em>todo</em> lo que quiere recordar — la memoria del proyecto, las notas de una reunión, un resumen de literatura. A diferencia de Word, es <strong>legible tanto por ustedes como por la máquina</strong>, y se puede versionar y comparar.</p>
+<p><strong>Why it matters for you:</strong> it’s the format Claude uses for <em>everything</em> it wants to remember — project memory, meeting notes, a literature summary. Unlike Word, it’s <strong>readable both by you and the machine</strong>, and you can version and diff it.</p>
 </div>
 </section>
-<section id="un-.md-abierto-en-vs-code" class="slide level2 smaller">
-<h2>Un <code>.md</code> abierto en VS Code</h2>
+<section id="a-.md-open-in-vs-code" class="slide level2 smaller">
+<h2>A <code>.md</code> open in VS Code</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../figures/screenshots/vscode-md-raw.png" class="quarto-figure quarto-figure-center" style="width:86.0%"></p>
 </figure>
 </div>
-<p>Así se ve <strong>por dentro</strong> — y no es un ejemplo inventado: es el <code>CLAUDE.md</code> del proyecto de hoy. Los <code>#</code>, <code>**</code> y las viñetas, a la vista. <span class="warm">▸ Clic en el <strong>icono de la lupa</strong> (arriba a la derecha, en el círculo) y VS Code lo lee por ustedes.</span></p>
+<p>This is how it looks <strong>inside</strong> — and it’s not a toy example: it’s today’s project <code>CLAUDE.md</code>. The <code>#</code>, <code>**</code>, and bullets, in plain view. <span class="warm">▸ Click the <strong>magnifier icon</strong> (top‑right, in the circle) and VS Code reads it for you.</span></p>
 </section>
-<section id="y-así-lo-muestra-vs-code" class="slide level2 smaller">
-<h2>…y así lo muestra VS Code</h2>
+<section id="and-how-vs-code-renders-it" class="slide level2 smaller">
+<h2>…and how VS Code renders it</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../figures/screenshots/vscode-md-preview.png" class="quarto-figure quarto-figure-center" style="width:86.0%"></p>
 </figure>
 </div>
-<p>El mismo archivo, dos vistas: a la izquierda las marcas, a la derecha <strong>el documento formateado</strong>. Por eso markdown funciona tan bien con un agente — <strong>él lo escribe, ustedes lo leen cómodo</strong>.</p>
+<p>Same file, two views: on the left the marks, on the right <strong>the formatted document</strong>. That’s why markdown works so well with an agent — <strong>it writes it, you read it comfortably</strong>.</p>
 </section>
-<section id="su-turno-init-en-su-proyecto" class="slide level2 your-turn smaller">
-<h2>Su turno: <code>/init</code> en su proyecto</h2>
+<section id="your-turn-init-in-your-project" class="slide level2 your-turn smaller">
+<h2>Your turn: <code>/init</code> in your project</h2>
 <pre class="text"><code>/init</code></pre>
-<p>Déjenlo trabajar (puede tomar un par de minutos: está leyendo todo).</p>
+<p>Let it work (it may take a couple of minutes; it’s reading everything).</p>
 <div class="fragment">
-<p>Cuando termine, <strong>ábranlo y léanlo</strong>: <code>CLAUDE.md</code> aparece en el panel izquierdo de VS Code.</p>
+<p>When it finishes, <strong>open and read it</strong>: <code>CLAUDE.md</code> appears in VS Code’s left panel.</p>
 </div>
 <div class="fragment">
-<p>Después edítenlo como cualquier documento — agréguenle sus propias reglas:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Nunca modifiques los archivos de datos-originales/</span>
-<span id="cb8-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Las citas siempre en formato APA 7</span>
-<span id="cb8-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Respóndeme siempre en español</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p><span class="warm"><strong>Qué observar:</strong> entendió de qué trata su investigación sin que ustedes se lo dijeran.</span></p>
+<p>Then edit it like any document — add your own rules:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never modify files under original-data/</span>
+<span id="cb8-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Citations always in APA 7</span>
+<span id="cb8-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Always answer me in English</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span class="warm"><strong>What to observe:</strong> it understood what your research is about without you saying it.</span></p>
 </div>
 </section>
-<section id="la-memoria-tiene-niveles" class="slide level2">
-<h2>La memoria tiene niveles</h2>
+<section id="memory-has-levels" class="slide level2">
+<h2>Memory has levels</h2>
 
-<img data-src="../figures/es/memory-stack.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:76.0%"><p><span class="small muted">Ninguno existe por defecto: el del proyecto lo genera <code>/init</code>; el personal lo crean ustedes (o el atajo <code>#</code>); el de subcarpeta es opcional.</span></p>
+<img data-src="../figures/memory-stack.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:76.0%"><p><span class="small muted">None exist by default: the project one is generated by <code>/init</code>; the personal one is created by you (or the <code>#</code> shortcut); the subfolder one is optional.</span></p>
 </section></section>
 <section>
-<section id="bloque-5-ahora-sí-trabajar" class="title-slide slide level1 center">
-<h1>Bloque 5 — Ahora sí: trabajar</h1>
+<section id="block-5-now-we-work" class="title-slide slide level1 center">
+<h1>Block 5 — Now we work</h1>
 
 </section>
-<section id="su-turno-la-primera-conversación" class="slide level2 your-turn smaller">
-<h2>Su turno: la primera conversación</h2>
-<p>Ya dentro de su carpeta real, prueben estas preguntas — <strong>ninguna modifica nada</strong>, solo leen:</p>
-<pre class="text"><code>Dame un resumen de esta carpeta: ¿qué archivos hay y de qué trata?</code></pre>
-<pre class="text"><code>¿Qué archivos parecen versiones duplicadas o viejas?</code></pre>
-<pre class="text"><code>Explícale la estructura de esta carpeta a un nuevo asistente de
-investigación, y publícala como una página para poder compartirla.</code></pre>
+<section id="your-turn-the-first-conversation" class="slide level2 your-turn smaller">
+<h2>Your turn: the first conversation</h2>
+<p>Now inside your real folder, try these — <strong>none of them modify anything</strong>, they only read:</p>
+<pre class="text"><code>Give me a summary of this folder: what files are here and what’s the project about?</code></pre>
+<pre class="text"><code>Which files look like duplicate or outdated versions?</code></pre>
+<pre class="text"><code>Explain this folder’s structure for a new research assistant, and publish it
+as a page I can share.</code></pre>
 <div class="fragment">
-<p><strong>Qué observar:</strong> responde sobre <strong>sus</strong> archivos reales, citando nombres y contenidos — eso un chat de la web no puede hacerlo. Y el tercer prompt trae bonus: al ver “para compartirla”, Claude carga uno de sus <strong>skills</strong> (manuales internos que activa cuando la tarea lo amerita — verán <code>⏺ Skill(artifact-design)</code> en el terminal) y publica la explicación como una <strong>página web</strong> (<em>Artifact</em>): enlace en claude.ai, <strong>privado hasta que ustedes lo compartan</strong>.</p>
-<p><span class="warm">Lo que antes era un Word adjunto para el nuevo asistente, ahora sale del terminal listo para enviar.</span></p>
+<p><strong>What to observe:</strong> it answers about <strong>your</strong> actual files, citing names and contents — a web chat cannot do that. And the third prompt has a bonus: seeing “to share it”, Claude loads one of its <strong>skills</strong> (internal manuals it activates when the task warrants it — you’ll see <code>⏺ Skill(artifact-design)</code> in the terminal) and publishes the explanation as a <strong>web page</strong> (<em>Artifact</em>): link lives in claude.ai, <strong>private until you share it</strong>.</p>
+<p><span class="warm">What used to be a Word attachment for a new RA now comes out of the terminal ready to send.</span></p>
 </div>
 </section>
-<section id="el-proyecto-de-ejemplo" class="slide level2 smaller">
-<h2>El proyecto de ejemplo</h2>
-<p>De aquí en adelante trabajamos sobre una carpeta que les entregamos: <strong><code>ejemplo-mineria-conflicto/</code></strong>. Es un proyecto de investigación real, a medio empezar y <strong>deliberadamente desordenado</strong>.</p>
+<section id="the-example-project" class="slide level2 smaller">
+<h2>The example project</h2>
+<p>From here on we’ll work over a folder we provided: <strong><code>ejemplo-mineria-conflicto/</code></strong>. It’s a real research project, half‑started and <strong>deliberately messy</strong>.</p>
 <blockquote>
-<p><strong>La pregunta:</strong> en los departamentos mineros del Perú, ¿la renta minera reduce la conflictividad social — o solo cambia <strong>aquello por lo que se protesta</strong>?</p>
+<p><strong>The question:</strong> in Peru’s mining departments, does mining revenue reduce social conflict — or does it mainly change <strong>what people protest about</strong>?</p>
 </blockquote>
 <div class="fragment">
 <table class="caption-top">
@@ -913,101 +894,98 @@ investigación, y publícala como una página para poder compartirla.</code></pr
 </colgroup>
 <thead>
 <tr class="header">
-<th>Carpeta</th>
-<th>Qué hay</th>
+<th>Folder</th>
+<th>What’s there</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><code>datos/</code></td>
-<td>10 reportes de conflictos de la Defensoría · producción y empleo minero · mesas de diálogo · 251 proyectos de ley</td>
+<td>10 conflict reports from the Ombudsman’s Office · mining output and employment · dialogue tables · 251 congressional bills</td>
 </tr>
 <tr class="even">
 <td><code>papers/</code></td>
-<td>8 PDFs con nombres imposibles</td>
+<td>8 PDFs with impossible names</td>
 </tr>
 <tr class="odd">
 <td><code>notas/</code></td>
-<td>Apuntes sueltos del investigador</td>
+<td>The researcher’s scattered notes</td>
 </tr>
 </tbody>
 </table>
-<p><span class="small muted">Úsenla hoy y quédensela. Si prefieren, todos los ejercicios funcionan igual sobre una carpeta suya.</span></p>
+<p><span class="small muted">Use it today and keep it. If you prefer, every exercise works the same over one of your own folders.</span></p>
 </div>
 </section>
-<section id="su-turno-1-identificar-los-nombres" class="slide level2 your-turn smaller">
-<h2>Su turno 1 — identificar: los nombres</h2>
-<p>Empecemos por saber <strong>qué es cada archivo</strong>. Miren <code>papers/</code>: hay cosas como <code>descarga.pdf</code>, <code>el pasado importa - copia (2).pdf</code>, <code>articulo minería (1).pdf</code>.</p>
-<pre class="text"><code>En la carpeta papers/ hay PDFs de artículos. Ábrelos y renómbralos con
-el formato apellido-año-palabraclave.pdf. ANTES de renombrar nada,
-muéstrame la lista de cambios que vas a hacer.</code></pre>
+<section id="your-turn-1-identify-the-names" class="slide level2 your-turn smaller">
+<h2>Your turn 1 — identify: the names</h2>
+<p>Let’s start by learning <strong>what each file is</strong>. Look at <code>papers/</code>: there are things like <code>descarga.pdf</code>, <code>el pasado importa - copia (2).pdf</code>, <code>articulo minería (1).pdf</code>.</p>
+<pre class="text"><code>In the papers/ folder there are article PDFs. Open them and rename them as
+lastName-year-keyword.pdf. BEFORE renaming anything, show me the list of
+changes you plan to make.</code></pre>
 <div class="fragment">
-<p><strong>Qué observar:</strong></p>
+<p><strong>What to observe:</strong></p>
 <ol type="1">
-<li><strong>Pedir el plan antes de ejecutar</strong> es el hábito de seguridad número uno.</li>
-<li>El agente <strong>lee el contenido del PDF</strong> — no adivina por el nombre del archivo.</li>
-<li><strong>Tres de esos papers no vienen al caso.</strong> ¿Los detecta? Pregúntenle: <em>“¿cuáles de estos no tienen que ver con minería y conflicto en el Perú?”</em></li>
+<li><strong>Asking for the plan before execution</strong> is the #1 safety habit.</li>
+<li>The agent <strong>reads the PDF content</strong> — it doesn’t guess from the filename.</li>
+<li><strong>Three of those papers are off-topic.</strong> Does it detect them? Ask: “which of these are not about mining and social conflict in Peru?”</li>
 </ol>
 </div>
 </section>
-<section id="su-turno-2-archivar-la-estructura" class="slide level2 your-turn smaller">
-<h2>Su turno 2 — archivar: la estructura</h2>
-<p>Ya saben qué es cada cosa. Ahora <strong>dónde va</strong>:</p>
-<pre class="text"><code>Quiero dejar este proyecto ordenado como un paquete de replicación
-listo para enviar a una revista: carpetas claras (datos, código,
-resultados, documento) y un README que explique cómo reproducir todo.
+<section id="your-turn-2-file-away-the-structure" class="slide level2 your-turn smaller">
+<h2>Your turn 2 — file away: the structure</h2>
+<p>Now you know what each thing is. Next: <strong>where it goes</strong>:</p>
+<pre class="text"><code>I want this project organized like a replication package ready to send
+to a journal: clear folders (data, code, results, manuscript) and a README
+that explains how to reproduce everything.
 
-Propónme primero el plan — qué mueves y por qué. No cambies nada
-todavía.</code></pre>
+Propose the plan first — what you’d move and why. Don’t change anything yet.</code></pre>
 <div class="fragment">
-<p><strong>Qué observar:</strong> llega un plan concreto sobre <em>sus</em> archivos reales. Léanlo, cambien lo que no les guste, y recién entonces autoricen.</p>
-<p><span class="small muted">Cuando terminen, pídanle que <strong>actualice el <code>CLAUDE.md</code></strong> con la nueva estructura — así la memoria del proyecto queda al día.</span></p>
+<p><strong>What to observe:</strong> you get a concrete plan over <em>your</em> real files. Read it, change what you don’t like, and only then authorize execution.</p>
+<p><span class="small muted">When you finish, ask it to <strong>update <code>CLAUDE.md</code></strong> with the new structure — so the project memory stays current.</span></p>
 </div>
 </section></section>
-<section id="pausa-2-10-minutos" class="title-slide slide level1 center" data-background-color="#e6fbfc">
-<h1>☕ Pausa 2 — 10 minutos</h1>
-<p><span class="big">Volvemos 8:15 pm</span></p>
+<section id="break-2-10-minutes" class="title-slide slide level1 center" data-background-color="#e6fbfc">
+<h1>☕ Break 2 — 10 minutes</h1>
+<p><span class="big">Back at 8:15 pm</span></p>
 </section>
 
 <section>
-<section id="bloque-6-la-literatura-buscar-verificar-y-descargar" class="title-slide slide level1 center">
-<h1>Bloque 6 — La literatura: buscar, verificar y descargar</h1>
+<section id="block-6-the-literature-search-verify-and-download" class="title-slide slide level1 center">
+<h1>Block 6 — The literature: search, verify, and download</h1>
 
 </section>
-<section id="primero-lo-lanzamos-después-conversamos" class="slide level2 your-turn smaller">
-<h2>Primero lo lanzamos, después conversamos</h2>
-<p><code>/deep-research</code> <strong>tarda 15–20 minutos</strong> — lo echamos a andar <em>ahora</em> y seguimos la clase mientras trabaja. Copien este prompt completo:</p>
+<section id="launch-first-talk-later" class="slide level2 your-turn smaller">
+<h2>Launch first, talk later</h2>
+<p><code>/deep-research</code> <strong>takes 15–20 minutes</strong> — we’ll start it <em>now</em> and continue class while it runs. Copy this prompt:</p>
 <div class="compact-code">
-<pre class="text"><code>/deep-research ¿Qué dice la evidencia empírica desde 2015 sobre la
-relación entre actividad minera y conflictividad social en el Perú?
-Prioriza estudios cuantitativos, revisiones sistemáticas e informes
-oficiales.
+<pre class="text"><code>/deep-research What does the empirical evidence since 2015 say about the
+relationship between mining activity and social conflict in Peru?
+Prioritize quantitative studies, systematic reviews, and official reports.
 
-Además del informe, hazme estas tres cosas:
+Besides the report, do these three things:
 
-1. Descarga a la carpeta papers/ todos los documentos de acceso
-   abierto que cites (working papers, preprints, informes, tesis),
-   nombrados apellido-año-tema.pdf y agrupados por subtema.
+1. Download to the papers/ folder every open-access document you cite
+   (working papers, preprints, reports, theses), named lastName-year-topic.pdf
+   and grouped by subtopic.
 
-2. Crea un archivo pendientes.md con las fuentes relevantes que NO
-   pudiste descargar — artículos en revistas por suscripción, libros
-   y capítulos de libro. Para cada una incluye: cita completa en APA,
-   DOI o ISBN, enlace al editor, y el motivo (suscripción, libro
-   impreso, sin versión abierta disponible).
+2. Create a file pending.md with the relevant sources you could NOT
+   download — subscription journal articles, books and book chapters.
+   For each include: full APA citation, DOI or ISBN, publisher link,
+   and the reason (subscription, book, no open version available).
 
-3. En el informe cita esas fuentes igual que las demás, pero
-   márcalas como [pendiente de descarga].</code></pre>
+3. In the report, cite those sources like the rest but mark them as
+   [pending download].</code></pre>
 </div>
-<p><span class="warm">Corre <strong>en segundo plano</strong>: la sesión les queda libre. Mírenlo con <code>/workflows</code>.</span></p>
+<p><span class="warm">It runs <strong>in the background</strong>: your session stays free. Watch it with <code>/workflows</code>.</span></p>
 </section>
-<section id="por-qué-pedir-también-lo-que-no-pudo-bajar" class="slide level2 smaller">
-<h2>¿Por qué pedir también lo que <em>no</em> pudo bajar?</h2>
-<p>Porque en Ciencias Sociales <strong>lo que queda fuera suele ser lo más citado</strong>: el libro clásico de la disciplina, el artículo en una revista indexada de suscripción.</p>
+<section id="why-also-ask-for-what-it-could-not-download" class="slide level2 smaller">
+<h2>Why also ask for what it could not download?</h2>
+<p>Because in the social sciences <strong>what’s excluded is often the most cited</strong>: a field’s classic book, or a subscription journal’s article.</p>
 <div class="fragment">
-<p>Si solo pidieran “descarga lo que encuentres”, esas fuentes <strong>desaparecerían silenciosamente</strong> de su revisión — y una revisión de literatura con un hueco invisible es peor que una corta.</p>
+<p>If you only asked “download what you find”, those sources would <strong>silently vanish</strong> from your review — and a literature review with an invisible hole is worse than a short one.</p>
 </div>
 <div class="fragment">
-<p>Con este prompt obtienen dos productos:</p>
+<p>With this prompt you get two products:</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -1016,55 +994,55 @@ Además del informe, hazme estas tres cosas:
 </colgroup>
 <thead>
 <tr class="header">
-<th>Archivo</th>
-<th>Qué contiene</th>
-<th>Para qué</th>
+<th>File</th>
+<th>What it contains</th>
+<th>For</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><code>papers/</code></td>
-<td>Los PDFs que sí consiguió</td>
-<td>Leer y citar hoy mismo</td>
+<td>The PDFs it did obtain</td>
+<td>Read and cite today</td>
 </tr>
 <tr class="even">
-<td><code>pendientes.md</code></td>
-<td>Cita completa, DOI/ISBN, enlace y motivo</td>
-<td><strong>La lista de tareas</strong> para la biblioteca PUCP</td>
+<td><code>pending.md</code></td>
+<td>Full citation, DOI/ISBN, link and reason</td>
+<td><strong>The to‑do list</strong> for your library proxy</td>
 </tr>
 </tbody>
 </table>
-<p><span class="warm">Volveremos a <code>pendientes.md</code> al final del bloque: es exactamente lo que el proxy de la biblioteca va a resolver.</span></p>
+<p><span class="warm">We’ll come back to <code>pending.md</code> at the end of the block: it’s exactly what your university library proxy will resolve.</span></p>
 </div>
 </section>
-<section id="lo-que-acaba-de-pasar-por-dentro" class="slide level2 smaller">
-<h2>Lo que acaba de pasar por dentro</h2>
+<section id="what-just-happened-under-the-hood" class="slide level2 smaller">
+<h2>What just happened under the hood</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/agentes-paralelo.svg" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+<p><img data-src="../figures/agentes-paralelo.svg" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
 </figure>
 </div>
-<p>Una revisión que a un asistente le tomaría <strong>dos o tres semanas</strong>, un equipo de agentes en paralelo la entrega <strong>en lo que dura este bloque</strong>. No es magia: es que son <strong>muchos, a la vez</strong> — y mientras trabajan, ustedes siguen con lo suyo.</p>
+<p>What would take a human RA <strong>two or three weeks</strong>, a parallel team of agents delivers <strong>within this block</strong>. Not magic: they’re <strong>many, at once</strong> — and while they work, you keep doing your own.</p>
 </section>
-<section id="no-es-una-búsqueda-es-un-equipo" class="slide level2 smaller">
-<h2>No es una búsqueda: es un equipo</h2>
+<section id="its-not-search-its-a-team" class="slide level2 smaller">
+<h2>It’s not “search”: it’s a team</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/deep-research-caso.svg" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+<p><img data-src="../figures/deep-research-caso.svg" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
-<p>Su pregunta se repartió en <strong>cinco ángulos</strong>; cada agente busca por el suyo, leen y extraen, y <strong>se verifican entre ellos</strong> antes de escribir el informe. Es la estructura de un seminario de investigación, no la de un buscador.</p>
+<p>Your question split into <strong>five angles</strong>; each agent explores its angle, reads and extracts, and they <strong>cross‑verify</strong> before writing the report. It’s an academic seminar structure, not a search engine’s.</p>
 <div class="fragment">
-<p><strong>¿Y cuántos son?</strong> Dos números que no hay que confundir: <strong>a la vez</strong> corren hasta <strong>16 en paralelo</strong>; <strong>en total</strong>, a lo largo de la corrida, entran <strong>cientos</strong> por fases — en una corrida real de este taller, cerca de <strong>100</strong>. <span class="small muted">El tamaño se regula con <code>/config workflowSizeGuideline</code>: <code>small</code> &lt;5 · <strong><code>medium</code> &lt;15 (por defecto)</strong> · <code>large</code> &lt;50.</span></p>
+<p><strong>How many are they?</strong> Two numbers not to confuse: <strong>at once</strong> up to <strong>16 in parallel</strong>; <strong>in total</strong>, across phases, <strong>hundreds</strong> — in a real workshop run, around <strong>100</strong>. <span class="small muted">You can tune size with <code>/config workflowSizeGuideline</code>: <code>small</code> &lt;5 · <strong><code>medium</code> &lt;15 (default)</strong> · <code>large</code> &lt;50.</span></p>
 </div>
 </section>
-<section id="por-qué-esto-importa-para-la-verificación" class="slide level2 smaller">
-<h2>Por qué esto importa para la verificación</h2>
-<p>Un buscador les da <strong>enlaces</strong>. Este equipo les da <strong>afirmaciones ya contrastadas</strong>:</p>
+<section id="why-this-matters-for-verification" class="slide level2 smaller">
+<h2>Why this matters for verification</h2>
+<p>A search engine gives you <strong>links</strong>. This team gives you <strong>already‑cross‑checked claims</strong>:</p>
 <ul>
-<li>Cada agente busca por un <strong>ángulo distinto</strong> — nadie depende de una sola consulta afortunada.</li>
-<li>Los agentes <strong>se revisan entre ellos</strong>: lo que un agente afirma, otros lo verifican contra la fuente.</li>
-<li>Lo que <strong>no sobrevive</strong> esa votación <strong>no llega al informe</strong>; lo que no se pudo comprobar aparece marcado como <em>no verificado</em>.</li>
+<li>Each agent looks from a <strong>different angle</strong> — nobody depends on a single lucky query.</li>
+<li>Agents <strong>check each other</strong>: what one asserts, others verify against the source.</li>
+<li>What <strong>doesn’t survive</strong> that vote <strong>doesn’t make it</strong> into the report; what couldn’t be confirmed is marked <em>unverified</em>.</li>
 </ul>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
@@ -1072,7 +1050,7 @@ Además del informe, hazme estas tres cosas:
 <p><img data-src="../figures/screenshots/workflows-deep-research.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
-<p><span class="small">Captura de <code>/workflows</code> en una corrida real: fases Scope → Search → Fetch → <strong>Verify</strong> → Synthesize. Miren la fase Verify: <strong>75 agentes</strong> dedicados solo a comprobar lo que afirmaron los demás.</span></p>
+<p><span class="small">Screenshot of <code>/workflows</code> in a real run: phases Scope → Search → Fetch → <strong>Verify</strong> → Synthesize. Look at Verify: <strong>75 agents</strong> dedicated just to checking others’ claims.</span></p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1082,21 +1060,21 @@ Además del informe, hazme estas tres cosas:
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>Empiecen a leer el informe <strong>por lo marcado como no verificado</strong>: ahí es donde su criterio de investigador hace la diferencia.</p>
+<p>Start reading the report <strong>from what’s marked unverified</strong>: that’s where your researcher judgment makes the difference.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="de-vuelta-al-informe-verifiquen" class="slide level2 your-turn smaller">
-<h2>⭐ De vuelta al informe: verifiquen</h2>
-<p>Ya debe haber terminado. Ábranlo… y <strong>antes de usar una sola cita</strong>, pídanle esto:</p>
-<pre class="text"><code>De la bibliografía que armaste, verifica cada referencia contra
-Crossref: autores, año, título, volumen, páginas y DOI. Dime cuáles
-tienen algún dato que no coincide y cuál es el correcto.
-No me digas que está bien si no la pudiste comprobar.</code></pre>
+<section id="back-to-the-report-verify" class="slide level2 your-turn smaller">
+<h2>⭐ Back to the report: verify</h2>
+<p>It should be done now. Open it… and <strong>before using a single citation</strong>, ask this:</p>
+<pre class="text"><code>From the bibliography you assembled, verify each reference against
+Crossref: authors, year, title, volume, pages, and DOI. Tell me which
+have any mismatch and what the correct data is.
+Don’t tell me it’s fine if you couldn’t check it.</code></pre>
 <div class="fragment">
-<p><strong>Qué observar:</strong> el informe ya venía con la fuente de cada afirmación — <strong>y la verificación igual encuentra cosas</strong>. Un DOI roto lo detecta cualquiera al primer clic; uno que abre el paper equivocado sobrevive a la revisión por pares.</p>
+<p><strong>What to observe:</strong> the report already cited a source for each claim — <strong>and verification still finds things</strong>. A broken DOI is caught with one click; a DOI resolving to the wrong paper can survive peer review.</p>
 </div>
 <div class="fragment">
 <div class="callout callout-important callout-titled callout-style-default">
@@ -1105,17 +1083,17 @@ No me digas que está bien si no la pudiste comprobar.</code></pre>
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>La lección central del taller</strong></p>
+<p><strong>The workshop’s central lesson</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Recordar</strong> y <strong>verificar</strong> son dos modos distintos de trabajo, y el segundo <strong>hay que pedirlo explícitamente</strong>. Todo lo que vaya a una publicación de ustedes pasa por el modo verificar.</p>
+<p><strong>Remembering</strong> and <strong>verifying</strong> are distinct work modes, and the second <strong>must be requested explicitly</strong>. Anything that goes into your publications runs through the verify mode.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="el-límite-qué-puede-y-qué-no-puede-descargar" class="slide level2 smaller">
-<h2>El límite: qué puede y qué no puede descargar</h2>
+<section id="the-limit-what-it-can-and-cannot-download" class="slide level2 smaller">
+<h2>The limit: what it can and cannot download</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
@@ -1123,60 +1101,60 @@ No me digas que está bien si no la pudiste comprobar.</code></pre>
 </colgroup>
 <thead>
 <tr class="header">
-<th>Tipo de fuente</th>
-<th>¿Lo consigue solo?</th>
+<th>Source type</th>
+<th>Can it get it alone?</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Working papers (NBER, SSRN, RePEc), preprints (arXiv)</td>
-<td>✅ Sí</td>
+<td>✅ Yes</td>
 </tr>
 <tr class="even">
-<td>Informes oficiales, tesis, repositorios institucionales</td>
-<td>✅ Sí</td>
+<td>Official reports, theses, institutional repositories</td>
+<td>✅ Yes</td>
 </tr>
 <tr class="odd">
-<td><strong>Artículos publicados en revistas de suscripción</strong></td>
-<td>❌ <strong>No</strong> — llega al resumen, no al PDF</td>
+<td><strong>Published articles in subscription journals</strong></td>
+<td>❌ <strong>No</strong> — it reaches the abstract, not the PDF</td>
 </tr>
 <tr class="even">
-<td><strong>Libros</strong></td>
-<td>❌ No — y en Ciencias Sociales muchas veces el libro <em>es</em> la fuente</td>
+<td><strong>Books</strong></td>
+<td>❌ No — and in the social sciences books are often the key sources</td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
-<p><span class="warm">No es un defecto de la herramienta: es que <strong>esas puertas están cerradas para cualquiera que no esté logueado</strong>. Y ustedes sí lo están.</span></p>
+<p><span class="warm">Not a tool flaw: <strong>those doors are closed to anyone not logged in</strong>. You are logged in.</span></p>
 </div>
 </section>
-<section id="la-solución-un-solo-login" class="slide level2 smaller">
-<h2>La solución: un solo login</h2>
+<section id="the-solution-one-login" class="slide level2 smaller">
+<h2>The solution: one login</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/biblioteca-flujo.svg" class="quarto-figure quarto-figure-center" style="width:84.0%"></p>
+<p><img data-src="../figures/biblioteca-flujo.svg" class="quarto-figure quarto-figure-center" style="width:84.0%"></p>
 </figure>
 </div>
-<p><strong>Un</strong> login — el del proxy de la biblioteca, con sus credenciales del campus virtual — y el navegador queda reconocido como PUCP: <strong>todas</strong> las revistas suscritas abren sin ingresar nada más. Ya lo hicieron al inicio de la clase; esa pestaña abierta es la llave.</p>
+<p><strong>One</strong> login — your university library proxy, with your campus credentials — and the browser is recognized as “on campus”: <strong>all</strong> subscribed journals open without entering anything else. You already did this at the start of class; that open tab is the key.</p>
 </section>
-<section id="y-por-qué-deep-research-no-usó-esa-sesión" class="slide level2 smaller">
-<h2>¿Y por qué <code>/deep-research</code> no usó esa sesión?</h2>
-<p>Ustedes se loguearon al inicio de la clase… y aun así el informe dejó pendientes. No es un error:</p>
+<section id="why-didnt-deep-research-use-that-session" class="slide level2 smaller">
+<h2>Why didn’t <code>/deep-research</code> use that session?</h2>
+<p>You logged in at the start of class… and yet the report had items pending. Not an error:</p>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Importante</strong></p>
+<p><strong>Important</strong></p>
 </div>
 <div class="callout-content">
-<p>Los agentes de <code>/deep-research</code> <strong>no navegan desde su computadora</strong>: buscan y leen desde los servidores de Anthropic. Por eso <strong>no ven la cookie de su navegador</strong> — para ellos, esas revistas siguen cerradas.</p>
+<p><code>/deep-research</code> agents <strong>do not browse from your computer</strong>: they search and read from Anthropic’s servers. They <strong>don’t see your browser cookie</strong> — for them, those journals are still locked.</p>
 </div>
 </div>
 </div>
 <div class="fragment">
-<p>De ahí el reparto de tareas que ya conocen, ahora con nombre técnico:</p>
+<p>Hence the division of labor you’ve seen, now with names:</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -1185,48 +1163,48 @@ No me digas que está bien si no la pudiste comprobar.</code></pre>
 </colgroup>
 <thead>
 <tr class="header">
-<th>Quién</th>
-<th>Qué hace</th>
-<th>Con qué</th>
+<th>Who</th>
+<th>What they do</th>
+<th>With what</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Los agentes</strong></td>
-<td>Encuentran todo y bajan lo abierto; listan el resto</td>
-<td>Búsqueda web, sin sesión</td>
+<td><strong>The agents</strong></td>
+<td>Find everything and download what’s open; list the rest</td>
+<td>Web search, no session</td>
 </tr>
 <tr class="even">
-<td><strong>Su navegador</strong></td>
-<td>Descarga lo suscrito</td>
-<td>La sesión PUCP que abrieron</td>
+<td><strong>Your browser</strong></td>
+<td>Downloads what’s under subscription</td>
+<td>The library‑proxy session you opened</td>
 </tr>
 </tbody>
 </table>
-<p><span class="warm">Por eso <code>pendientes.md</code> no es un consuelo: es <strong>el puente</strong> entre las dos mitades.</span></p>
+<p><span class="warm">That’s why <code>pending.md</code> is not a consolation prize: it’s <strong>the bridge</strong> between the two halves.</span></p>
 </div>
 </section>
-<section id="que-él-prepare-ustedes-hagan-clic" class="slide level2 your-turn smaller">
-<h2>Que él prepare, ustedes hagan clic</h2>
-<p>Claude <strong>no puede descargar de la biblioteca por ustedes</strong> — no tiene su sesión. Pero sí puede dejarles el trabajo servido:</p>
-<pre class="text"><code>Toma pendientes.md y arma una lista donde cada fuente tenga su enlace
-de descarga ya armado con el proxy de la biblioteca, con este formato:
-https://pucp.elogim.com/auth-meta/login.php?url=&lt;enlace al artículo&gt;
+<section id="let-it-prepare-you-do-the-clicks" class="slide level2 your-turn smaller">
+<h2>Let it prepare, you do the clicks</h2>
+<p>Claude <strong>cannot download through your library proxy for you</strong> — it doesn’t have your session. But it can set the work up:</p>
+<pre class="text"><code>Take pending.md and build a list where each source has its download link
+prepped through the library proxy in this format:
+https://pucp.elogim.com/auth-meta/login.php?url=&lt;article link&gt;
 
-Ordénalas de más a menos citada y guárdala como descargar.md.</code></pre>
+Order them from most to least cited and save as download.md.</code></pre>
 <div class="fragment">
-<p>Entonces ustedes: <strong>clic en cada enlace → descargar → todo a <code>papers/</code></strong>. Con la sesión ya abierta, son segundos por artículo.</p>
+<p>Then you: <strong>click each link → download → everything into <code>papers/</code></strong>. With the session already open, each article takes seconds.</p>
 </div>
 <div class="fragment">
-<p>Y al terminar, se lo devuelven:</p>
-<pre class="text"><code>Ya descargué los PDFs a papers/. Renómbralos con el formato
-apellido-año-tema.pdf, verifica que cada uno corresponda a su cita,
-y actualiza pendientes.md con los que siguen faltando.</code></pre>
+<p>And when you’re done, hand it back:</p>
+<pre class="text"><code>I’ve downloaded the PDFs into papers/. Rename them using the
+lastName-year-topic.pdf format, verify each one matches its citation,
+and update pending.md with what’s still missing.</code></pre>
 </div>
 </section>
-<section id="el-reparto-de-tareas-otra-vez" class="slide level2 smaller">
-<h2>El reparto de tareas, otra vez</h2>
-<p>Es el mismo principio de siempre, y conviene que quede grabado:</p>
+<section id="division-of-labor-once-more" class="slide level2 smaller">
+<h2>Division of labor, once more</h2>
+<p>Same principle as always, and worth engraving:</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
@@ -1234,19 +1212,19 @@ y actualiza pendientes.md con los que siguen faltando.</code></pre>
 </colgroup>
 <thead>
 <tr class="header">
-<th>Ustedes</th>
+<th>You</th>
 <th>Claude</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Se loguean · hacen clic · descargan</td>
-<td>Busca · arma los enlaces · organiza · renombra · verifica</td>
+<td>Log in · click · download</td>
+<td>Search · assemble links · organize · rename · verify</td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
-<p><strong>Por qué es así:</strong> Claude nunca escribe contraseñas por ustedes — regla de seguridad — y, trabajando con <strong>clave API</strong>, tampoco puede manejar su navegador.</p>
+<p><strong>Why it is this way:</strong> Claude never types passwords for you — security rule — and when working with an <strong>API key</strong>, it also cannot drive your browser.</p>
 </div>
 <div class="fragment">
 <div class="callout callout-note callout-titled callout-style-default">
@@ -1255,10 +1233,10 @@ y actualiza pendientes.md con los que siguen faltando.</code></pre>
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>¿Y no hay forma de que él haga hasta los clics?</strong></p>
+<p><strong>Can it also do the actual clicks?</strong></p>
 </div>
 <div class="callout-content">
-<p>La hay: la extensión <strong>Claude in Chrome</strong> le permite operar su navegador ya logueado — con ella, la descarga de <code>pendientes.md</code> sí sería automática. Pero <strong>requiere suscripción paga</strong> (Pro, $20/mes o más); <strong>no funciona con la clave API</strong> con la que trabajamos hoy.</p>
+<p>It can: the <strong>Claude in Chrome</strong> extension lets it operate your already‑logged‑in browser — with it, downloading from <code>pending.md</code> can be fully automatic. But it <strong>requires a paid subscription</strong> (Pro, $20/mo or more); <strong>it does not work with the API key</strong> we’re using today.</p>
 </div>
 </div>
 </div>
@@ -1271,100 +1249,99 @@ y actualiza pendientes.md con los que siguen faltando.</code></pre>
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>Aun así el ahorro es enorme: la parte lenta no era hacer clic, era <strong>saber qué buscar, dónde está y si la cita es correcta</strong>.</p>
+<p>Even so, the time saver is huge: the slow part wasn’t clicking; it was <strong>knowing what to look for, where it is, and whether the citation is correct</strong>.</p>
 </div>
 </div>
 </div>
-<p><span class="small muted">Que la página cargue no significa que haya suscripción — hay que llegar hasta el PDF. Comprobado que <strong>no</strong> tenemos: Oxford ni Management Science/INFORMS (o sea, ni QJE ni ReStud por esta vía).</span></p>
+<p><span class="small muted">A page “loading” doesn’t mean there’s a subscription — you must reach the PDF. Verified missing in our case: Oxford and Management Science/INFORMS (i.e., neither QJE nor ReStud are available via this route).</span></p>
 </div>
 </section>
-<section id="el-broche-la-revisión-en-latex-y-en-pdf" class="slide level2 your-turn smaller">
-<h2>El broche: la revisión, en LaTeX y en PDF</h2>
-<p>Todo lo del bloque converge aquí. Pídanle:</p>
-<pre class="text"><code>Con el informe de deep-research y los PDFs de papers/, escribe la
-sección "Revisión de la literatura" de mi paper: 3 a 4 páginas,
-organizada por temas (no paper por paper), con citas autor-año
-y su archivo referencias.bib.
+<section id="the-finale-the-review-in-latex-and-pdf" class="slide level2 your-turn smaller">
+<h2>The finale: the review, in LaTeX and PDF</h2>
+<p>Everything in this block converges here. Ask:</p>
+<pre class="text"><code>With the deep-research report and the PDFs in papers/, write the
+“Literature Review” section of my paper: 3–4 pages, organized by themes
+(not paper-by-paper), with author–year citations and a referencias.bib file.
 
-Créala como documento LaTeX independiente (revision-literatura.tex),
-compílala a PDF y ábreme el resultado. Si la compilación falla,
-lee el error, corrige y reintenta hasta que salga.</code></pre>
+Create it as a standalone LaTeX document (literature-review.tex),
+compile it to PDF, and open the result. If compilation fails, read the
+error, fix it, and retry until it works.</code></pre>
 <div class="fragment">
-<p><strong>Qué observar:</strong></p>
+<p><strong>What to observe:</strong></p>
 <ol type="1">
-<li><strong>Ustedes no escribieron ni una línea de LaTeX</strong> — la promesa del Bloque 1, cumplida. Si la compilación falla, él lee el error y se corrige solo: es el ciclo del agente.</li>
-<li>El PDF se abre <strong>dentro de VS Code</strong> — para eso instalaron vscode-pdf.</li>
-<li><span class="warm">Es un <strong>borrador para su edición</strong>: la estructura y las citas ya están (y verificadas); la voz y el argumento los ponen ustedes.</span></li>
+<li><strong>You didn’t write a single line of LaTeX</strong> — Block 1’s promise delivered. If compilation fails, it reads the error and self‑corrects: it’s the agent loop.</li>
+<li>The PDF opens <strong>inside VS Code</strong> — that’s why you installed vscode‑pdf.</li>
+<li><span class="warm">It’s a <strong>draft for your editing</strong>: structure and citations are there (and verified); you bring the voice and argument.</span></li>
 </ol>
 </div>
 </section></section>
 <section>
-<section id="bloque-7-cierre" class="title-slide slide level1 center">
-<h1>Bloque 7 — Cierre</h1>
+<section id="block-7-closing" class="title-slide slide level1 center">
+<h1>Block 7 — Closing</h1>
 
 </section>
-<section id="lo-que-ya-saben-hacer" class="slide level2 smaller">
-<h2>Lo que ya saben hacer</h2>
+<section id="what-you-can-now-do" class="slide level2 smaller">
+<h2>What you can now do</h2>
 <ul>
-<li>Distinguir el chat, Cowork y <strong>Claude Code</strong> — y qué cuesta cada uno.</li>
-<li>Moverse en VS Code y abrir el terminal con un clic.</li>
-<li>Abrir Claude en su carpeta con el único comando necesario (<code>cd</code>).</li>
-<li>El kit de rescate: <kbd>Esc</kbd>, <kbd>Ctrl</kbd>+<kbd>C</kbd> ×2, <code>claude --resume</code>.</li>
-<li>Darle memoria al proyecto con <code>/init</code> + <code>CLAUDE.md</code>.</li>
-<li><strong>La lección central: memoria ≠ verificación.</strong> Pidan verificar, siempre.</li>
-<li>Descargar de la biblioteca PUCP con el patrón “yo me logueo, él opera”.</li>
+<li>Distinguish the chat, Cowork, and <strong>Claude Code</strong> — and what each costs.</li>
+<li>Move around VS Code and open the terminal with one click.</li>
+<li>Open Claude in your folder with the one necessary command (<code>cd</code>).</li>
+<li>Use the rescue kit: <kbd>Esc</kbd>, <kbd>Ctrl</kbd>+<kbd>C</kbd> ×2, <code>claude --resume</code>.</li>
+<li>Give your project memory with <code>/init</code> + <code>CLAUDE.md</code>.</li>
+<li><strong>Central lesson: memory ≠ verification.</strong> Always ask to verify.</li>
+<li>Download from your university library via the “you log in, it operates” pattern.</li>
 </ul>
 </section>
-<section id="tarea-para-la-próxima-sesión" class="slide level2 your-turn smaller">
-<h2>Tarea para la próxima sesión</h2>
-<p>Elijan <strong>una tarea real y pequeña</strong> de su propia investigación:</p>
+<section id="homework-for-next-time" class="slide level2 your-turn smaller">
+<h2>Homework for next time</h2>
+<p>Pick <strong>one real, small task</strong> from your own research:</p>
 <ol type="1">
-<li>Corran <code>/init</code> en la carpeta de un proyecto suyo y <strong>lean</strong> el <code>CLAUDE.md</code> que genera. Corrijan lo que no le gustó.</li>
-<li>Pídanle que ordene y renombre una carpeta de PDFs acumulados — <strong>con plan previo</strong>.</li>
-<li>Verifiquen la bibliografía de algo que estén escribiendo: <em>“revisa cada cita de este documento contra Crossref y dime cuáles tienen errores”</em>.</li>
+<li>Run <code>/init</code> in a folder from your work and <strong>read</strong> the <code>CLAUDE.md</code> it generates. Fix what you don’t like.</li>
+<li>Ask it to organize and rename a folder of accumulated PDFs — <strong>with a proposed plan first</strong>.</li>
+<li>Verify the bibliography of something you’re writing: <em>“check each citation in this document against Crossref and tell me which ones have errors.”</em></li>
 </ol>
 <div class="fragment">
-<p><strong>Próxima sesión:</strong> el flujo completo de investigación — revisión de literatura automática con <code>/deep-research</code>, dashboards de datos, LaTeX sin escribir LaTeX, y cómo convertir sus clases grabadas en material de trabajo.</p>
+<p><strong>Next session:</strong> the complete research flow — automatic literature review with <code>/deep-research</code>, data dashboards, LaTeX without writing LaTeX, and how to turn recorded classes into working material.</p>
 </div>
 </section>
-<section id="referencias" class="slide level2 smaller">
-<h2>Referencias</h2>
+<section id="references" class="slide level2 smaller">
+<h2>References</h2>
 <ul>
-<li>Guía escrita de este taller (guion + manual): carpeta <code>profesores/</code> del repositorio del curso</li>
+<li>Written guide for this workshop (script + manual): <code>profesores/</code> folder in the course repository</li>
 <li>Sant’Anna, P. H. C. — <em>My Claude Code Workflow</em>: <a href="https://psantanna.com/claude-code-my-workflow/workflow-guide.html">psantanna.com/claude-code-my-workflow</a></li>
-<li>Documentación oficial: <a href="https://code.claude.com/docs">code.claude.com/docs</a></li>
-<li>Biblioteca PUCP: <a href="https://biblioteca.pucp.edu.pe">biblioteca.pucp.edu.pe</a></li>
+<li>Official docs: <a href="https://code.claude.com/docs">code.claude.com/docs</a></li>
+<li>PUCP Library: <a href="https://biblioteca.pucp.edu.pe">biblioteca.pucp.edu.pe</a></li>
 </ul>
-<p><span class="small muted">Estos slides fueron escritos, diagramados y compilados con Claude Code — incluyendo el análisis de las grabaciones de las clases piloto con los asistentes del Q-LAB.</span></p>
+<p><span class="small muted">These slides were written, laid out, and compiled with Claude Code — including analysis of pilot‑class recordings with the Q‑LAB assistants.</span></p>
 </section></section>
 <section>
-<section id="anexo-por-si-surge-en-preguntas" class="title-slide slide level1 center">
-<h1>Anexo — por si surge en preguntas</h1>
+<section id="appendix-likely-qa-followups" class="title-slide slide level1 center">
+<h1>Appendix — likely Q&amp;A follow‑ups</h1>
 
 </section>
-<section id="cuando-de-verdad-no-hay-acceso" class="slide level2 smaller">
-<h2>Cuando de verdad no hay acceso</h2>
-<p>Casi siempre existe una versión abierta: <strong>NBER · SSRN · arXiv · RePEc</strong>, el repositorio del autor, o el enlace [PDF] a la derecha en Google Scholar.</p>
+<section id="when-there-truly-isnt-access" class="slide level2 smaller">
+<h2>When there truly isn’t access</h2>
+<p>There’s almost always an open version: <strong>NBER · SSRN · arXiv · RePEc</strong>, the author’s repository, or the [PDF] link on the right in Google Scholar.</p>
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Advertencia</strong></p>
+<p><strong>Warning</strong></p>
 </div>
 <div class="callout-content">
-<p>El <em>working paper</em> <strong>no es</strong> el artículo publicado — hay casos con distinto título y hasta distintos autores. Para <strong>citar</strong>, la versión publicada; para leer, cualquiera — sabiendo cuál tienen.</p>
+<p>The <em>working paper</em> is <strong>not</strong> the published article — sometimes with a different title and even different authors. For <strong>citing</strong>, use the published version; for reading, either is fine — as long as you know which you have.</p>
 </div>
 </div>
 </div>
 <div class="fragment">
-<p>Y para libros, que es lo que más pesa en varias de sus disciplinas: la búsqueda en el <strong>catálogo de la biblioteca</strong> sigue siendo insustituible. Esta herramienta <strong>complementa</strong>, no reemplaza.</p>
+<p>For books — often central in several of your disciplines — the <strong>library catalog</strong> is still essential. This tool <strong>complements</strong>, it doesn’t replace.</p>
 </div>
 </section>
-<section id="se-puede-acortar-la-espera" class="slide level2 smaller">
-<h2>¿Se puede acortar la espera?</h2>
-<p><strong>No hay un parámetro de tiempo</strong> — pero sí tres palancas reales:</p>
+<section id="can-we-shorten-the-wait" class="slide level2 smaller">
+<h2>Can we shorten the wait?</h2>
+<p><strong>There’s no time knob</strong> — but there are three real levers:</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
@@ -1372,38 +1349,38 @@ lee el error, corrige y reintenta hasta que salga.</code></pre>
 </colgroup>
 <thead>
 <tr class="header">
-<th>Palanca</th>
-<th>Cómo</th>
+<th>Lever</th>
+<th>How</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Menos agentes</strong></td>
-<td><code>/config workflowSizeGuideline=small</code> → apunta a menos de 5 agentes (por defecto son hasta 15)</td>
+<td><strong>Fewer agents</strong></td>
+<td><code>/config workflowSizeGuideline=small</code> → target &lt;5 agents (default is up to 15)</td>
 </tr>
 <tr class="even">
-<td><strong>Pregunta más estrecha</strong></td>
-<td>Un periodo, un país, un tipo de fuente. Una pregunta amplia abre más frentes y tarda más</td>
+<td><strong>Narrower question</strong></td>
+<td>A time period, a country, a source type. Broader questions open more fronts and take longer</td>
 </tr>
 <tr class="odd">
-<td><strong>Cortarlo a mano</strong></td>
-<td><code>/workflows</code> → seleccionar la corrida → <kbd>x</kbd> detiene · <kbd>p</kbd> pausa y reanuda</td>
+<td><strong>Stop it manually</strong></td>
+<td><code>/workflows</code> → select the run → <kbd>x</kbd> stop · <kbd>p</kbd> pause/resume</td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
 <ul>
-<li>En <code>/workflows</code> ven <strong>en vivo</strong> cuántos agentes hay, cuántos tokens llevan y el tiempo transcurrido.</li>
-<li>Si una corrida se dispara (más de 25 agentes), Claude Code muestra un aviso de <strong>corrida grande</strong>.</li>
+<li>In <code>/workflows</code> you see <strong>live</strong> how many agents there are, token counts, and elapsed time.</li>
+<li>If a run gets large (over 25 agents), Claude Code shows a <strong>large run</strong> heads‑up.</li>
 </ul>
-<p><span class="warm">La estrategia práctica es la de hoy: <strong>lánzenlo y sigan trabajando</strong>. No es tiempo perdido si ustedes no lo están mirando.</span></p>
+<p><span class="warm">The practical strategy is today’s: <strong>launch it and keep working</strong>. It’s not wasted time if you’re not staring at it.</span></p>
 
 </div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Claude Code para investigación — Taller para docentes · PUCP 2026</p>
+<p>Claude Code for Research — Faculty Workshop · PUCP 2026</p>
 </div>
 </div></div>
 
@@ -1637,12 +1614,12 @@ lee el error, corrige y reintenta hasta que salga.</code></pre>
           // flash "checked"
           button.classList.add('code-copy-button-checked');
           var currentTitle = button.getAttribute("title");
-          button.setAttribute("title", "Copiado");
+          button.setAttribute("title", "Copied!");
           let tooltip;
           if (window.bootstrap) {
             button.setAttribute("data-bs-toggle", "tooltip");
             button.setAttribute("data-bs-placement", "left");
-            button.setAttribute("data-bs-title", "Copiado");
+            button.setAttribute("data-bs-title", "Copied!");
             tooltip = new bootstrap.Tooltip(button, 
               { trigger: "manual", 
                 customClass: "code-copy-button-tooltip",
