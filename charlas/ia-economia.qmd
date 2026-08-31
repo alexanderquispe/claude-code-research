@@ -23,7 +23,7 @@ lang: es
 
 # Parte 1 — Mi ruta
 
-## Hace 13 años yo estaba sentado donde ustedes {.smaller}
+## Hace 10 años yo estaba sentado donde ustedes {.smaller}
 
 ![](../figures/charla/mi-ruta.svg){.nostretch width=94% fig-align="center"}
 
