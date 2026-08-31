@@ -29,7 +29,7 @@ lang: es
 
 Ninguna etapa estaba planeada desde el inicio. Cada una abrió la puerta de la siguiente.
 
-[Las primeras tres, en una línea: beca completa **5 años consecutivos** en la PUCP · asistente de investigación **para Yale desde Lima**, siendo aún alumno · maestría en Múnich con la beca de intercambio + DAAD.]{.small .muted}
+[Las tres primeras, en una línea: beca completa **5 años consecutivos** en la PUCP · asistente de investigación **para Yale desde Lima**, siendo aún alumno · maestría en Múnich con la beca de intercambio + DAAD.]{.small .muted}
 
 ## Harvard y MIT: encontré mi tema (2019–2020) {.smaller}
 
@@ -40,7 +40,7 @@ Ninguna etapa estaba planeada desde el inicio. Cada una abrió la puerta de la s
 
 ::: {.callout-tip}
 ## La cosa bonita
-Ahí hizo clic: **la tecnología es una pregunta económica**. Quién adopta, quién queda fuera, qué se produce que antes no — ese es mi tema hasta hoy.
+Ahí lo vi claro: **la tecnología es una pregunta económica**. Quién adopta, quién queda fuera, qué se produce que antes no — ese es mi tema hasta hoy.
 :::
 
 ## Banco Mundial: investigar y construir (2020–2025) {.smaller}
@@ -91,7 +91,7 @@ No "dejé" la economía por la computación: hoy son **una sola caja de herramie
 
 . . .
 
-[La palabra del año fue **agente**: la IA pasó de sugerir (copiloto) a ejecutar (delegar). Guarden esa palabra — vuelve en el paper.]{.warm}
+[La palabra del año fue **agente**: la IA pasó de sugerir (copiloto) a ejecutar (delegar). Guárdenla: va a reaparecer cuando lleguemos al paper.]{.warm}
 
 ## 2026: la IA entró a la matemática de frontera {.smaller}
 
@@ -99,7 +99,7 @@ No "dejé" la economía por la computación: hoy son **una sola caja de herramie
 
 - Los **problemas de Erdős**: cientos de preguntas abiertas que dejó Paul Erdős — algunas llevaban **80 años** sin respuesta.
 - **Enero 2026:** primera resolución **autónoma** de un problema de Erdős por un sistema de IA, con prueba formal verificada en Lean.
-- **Mayo 2026:** un modelo de OpenAI encuentra un **contraejemplo** al problema de la distancia unitaria — una conjetura de Erdős **de 1946**. Los matemáticos: *"digno de un journal top"*.
+- **Mayo 2026:** un modelo de OpenAI encuentra un **contraejemplo** al problema de la distancia unitaria — una conjetura de Erdős **de 1946**. Los matemáticos: *"esto merecía publicarse en una revista top"*.
 - Y los mejores del campo — **Terence Tao** incluido — ya publican resolviendo estos problemas **junto con** estos sistemas.
 
 . . .
@@ -133,7 +133,7 @@ Con **Kevin Xu** (GitHub) · Open & User Innovation Conference 2026, **Harvard B
 
 La pregunta, en una línea:
 
-**¿Los agentes de IA solo hacen más rápida a la gente — o expanden *lo que* puede producir?**
+**¿Los agentes de IA solo nos hacen trabajar más rápido — o amplían *lo que* podemos producir?**
 
 . . .
 
@@ -143,17 +143,17 @@ La pregunta, en una línea:
 
 ![](../figures/charla/barrera-lenguaje.svg){.nostretch width=88% fig-align="center"}
 
-Piénsenlo como economistas: hay **valor sin producir** porque falta una habilidad específica — no talento general.
+Piénsenlo como economistas: hay **valor que se queda sin producir** porque falta una habilidad específica — no talento general.
 
 ## Tres formas de producir el mismo proyecto {.smaller}
 
 ![](../figures/charla/tres-modos.svg){.nostretch width=80% fig-align="center"}
 
-La generación 1 (autocompletar) **amplifica la habilidad que ya tienes**. La generación 2 (delegar) es distinta: el agente ejecuta **lo que tú no sabes escribir** — y tú diriges y revisas.
+La generación 1 (el autocompletado) **amplifica la habilidad que uno ya tiene**. La generación 2 (delegar) es distinta: el agente ejecuta **lo que uno no sabe escribir** — y uno dirige y revisa.
 
 ## El modelo, en una figura {.smaller}
 
-Cada quien produce un proyecto solo si su valor supera un **umbral** (como todo en economía). El agente **baja el umbral**:
+Un proyecto se emprende solo si su valor supera un **umbral** (como casi todo en economía). El agente **baja ese umbral**:
 
 ![](../figures/charla/banda-activacion.svg){.nostretch width=88% fig-align="center"}
 
@@ -161,7 +161,7 @@ Cada quien produce un proyecto solo si su valor supera un **umbral** (como todo 
 
 ## Los datos: la adopción deja huella pública {.smaller}
 
-Cuando Claude Code co-escribe un commit en GitHub, lo **firma**. Esa firma nos deja fechar la adopción de cada desarrollador:
+Cuando Claude Code coescribe un commit en GitHub, lo **firma**. Esa firma nos deja fechar la adopción de cada desarrollador:
 
 | | |
 |---|---|
@@ -172,19 +172,19 @@ Cuando Claude Code co-escribe un commit en GitHub, lo **firma**. Esa firma nos d
 
 . . .
 
-**El método** — el mismo que enseño en mis cursos: diferencias en diferencias escalonado (Callaway–Sant'Anna), comparando adoptantes tempranos contra los que adoptan después. [Sí: el mismo **Sant'Anna** del paquete de las 464 mil descargas. El mundo es chico.]{.small .muted}
+**El método** — el mismo que enseño en mis cursos: diferencias en diferencias escalonado (Callaway–Sant'Anna), comparando adoptantes tempranos contra los que adoptan después. [Sí: el mismo **Sant'Anna** del paquete de las 464 mil descargas. El mundo es un pañuelo.]{.small .muted}
 
 ## Resultado 1: la actividad se expande {.smaller}
 
 ![](../figures/charla/ext_es_n_languages.png){.nostretch width=72% fig-align="center"}
 
-Al adoptar, **+2.7 lenguajes activos** en el mes (la base era 0.7) — y los 12 meses previos, planos: no venían expandiéndose ya.
+Al adoptar, **+2.7 lenguajes activos** en el mes (la base era 0.7) — y en los 12 meses previos, nada: no es que ya vinieran en expansión.
 
 ## Resultado 2: producen lo que nunca habían producido {.smaller}
 
 ![](../figures/charla/ext_es_n_new_languages.png){.nostretch width=72% fig-align="center"}
 
-**+1.25 lenguajes usados por primera vez en la vida** — 4 veces la tasa normal de entrada. Y no es un juguete: casi la mitad se **vuelve a usar** en los meses siguientes.
+**+1.25 lenguajes usados por primera vez en la vida** — 4 veces la tasa normal de entrada. Y no es flor de un día: casi la mitad se **vuelve a usar** en los meses siguientes.
 
 ## Resultado 3: ¿quién se expande más? Los especialistas {.smaller}
 
@@ -196,7 +196,7 @@ Los **especialistas** (pocos lenguajes previos) entran a **2–3× más** lengua
 
 - La IA agéntica no solo **acelera**: mueve la **frontera de producción**. Hay proyectos que no existirían sin ella.
 - Si las barreras de habilidad específica caen, cambia una pregunta central de la economía: **¿quién puede contribuir a qué?**
-- La expansión es **producción, no aprendizaje**: la persona entrega Rust sin necesariamente saber Rust. (Discutan las implicancias — da para un ensayo entero.)
+- La expansión es **producción, no aprendizaje**: la persona entrega código en Rust sin necesariamente haber aprendido Rust. (Discutan las implicancias — da para un ensayo entero.)
 
 . . .
 
@@ -245,7 +245,7 @@ La serie de conflictos de la Defensoría existe desde 2004 — **caso por caso, 
 
 En Claude Code esto es **un solo comando: `/deep-research`**. Una revisión que tomaba semanas: ~100 agentes en paralelo, ~20 minutos, citas **verificadas entre ellos** — y los PDFs descargados en su carpeta.
 
-## Hasta lo hablado se vuelve dato {.smaller}
+## La voz también se vuelve dato {.smaller}
 
 ![](../figures/es/whisper-pipeline.svg){.nostretch width=90% fig-align="center"}
 
@@ -267,11 +267,11 @@ Este ciclo se lo enseñamos **este mes** a los docentes de la Facultad de Cienci
 
 . . .
 
-**Todo el material es de ustedes también.** Si sus profesores están aprendiendo esto a mitad de carrera, ustedes tienen la ventaja de empezar en el primer año.
+**Todo el material es de ustedes también.** Si sus profesores están aprendiendo esto a mitad de carrera, ustedes tienen la ventaja de empezar desde ya.
 
 . . .
 
-[La regla que les enseñamos a ellos aplica igual aquí: la IA **recuerda** rápido y **se equivoca** con confianza — todo lo que importe, se **verifica** contra la fuente.]{.warm}
+[La regla que les enseñamos a ellos vale igual para ustedes: la IA **recuerda** rápido y **se equivoca** con confianza — todo lo que importe, se **verifica** contra la fuente.]{.warm}
 
 # Cierre
 
@@ -285,7 +285,7 @@ Están estudiando **economía peruana** en el mejor momento posible:
 
 . . .
 
-[La IA ejecuta. La pregunta, el diseño y el juicio siguen siendo de ustedes. Esa es la parte de economista — y no está en riesgo: está en demanda.]{.warm}
+[La IA ejecuta. La pregunta, el diseño y el juicio siguen siendo de ustedes. Esa es la parte del economista — y no está en riesgo: hoy se cotiza más que nunca.]{.warm}
 
 ## Cómo empezar esta semana {.smaller}
 
@@ -304,6 +304,6 @@ Están estudiando **economía peruana** en el mejor momento posible:
 
 . . .
 
-[Ahora sí: **30 minutos de preguntas** — vale preguntar de la ruta, de las becas, de la IA, del paper o de cómo empezar.]{.big}
+[Ahora sí: **30 minutos de preguntas** — pregunten lo que quieran: la ruta, las becas, la IA, el paper o cómo empezar.]{.big}
 
 [Estos slides fueron escritos, diagramados y compilados con Claude Code — como todo lo que les acabo de contar.]{.small .muted}
