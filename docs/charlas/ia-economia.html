@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<script src="ia-economia_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ia-economia_files/libs/quarto-html/tabby.min.js"></script>
+<script src="ia-economia_files/libs/quarto-html/popper.min.js"></script>
+<script src="ia-economia_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="ia-economia_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ia-economia_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="ia-economia_files/libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
+
+  <meta name="author" content="Alexander Quispe · Caltech &amp; GitHub Research">
+  <title>Inteligencia Artificial y Economía</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="ia-economia_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="ia-economia_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="ia-economia_files/libs/revealjs/dist/theme/quarto-1797efdf6b484f464b1119979ddf5c8f.css">
+  <link href="ia-economia_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="ia-economia_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="ia-economia_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="ia-economia_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Inteligencia Artificial y Economía</h1>
+  <p class="subtitle">Charla invitada — Introducción al Estudio de la Economía Peruana (1ECO23)</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Alexander Quispe · Caltech &amp; GitHub Research
+</div>
+        <p class="quarto-title-affiliation">
+            Invitado por José Carlos Orihuela y César Contreras · PUCP
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="el-plan-de-hoy-tres-historias" class="slide level2 smaller">
+<h2>El plan de hoy: tres historias</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Historia</th>
+<th>Qué quiero que se lleven</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><strong>Mi ruta</strong> — de este campus a Caltech</td>
+<td>Que el camino existe, y empieza aquí</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><strong>Cómo investigo hoy</strong> — agentes de IA sobre datos peruanos</td>
+<td>Que la barrera técnica acaba de caer</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><strong>Un paper</strong> — lo que presenté en Harvard en julio</td>
+<td>Que la IA también es una pregunta económica</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><span class="warm">45 minutos de charla, 30 de preguntas — y las preguntas son la mejor parte.</span></p>
+</div>
+</section>
+<section>
+<section id="parte-1-mi-ruta" class="title-slide slide level1 center">
+<h1>Parte 1 — Mi ruta</h1>
+
+</section>
+<section id="hace-13-años-yo-estaba-sentado-donde-ustedes" class="slide level2 smaller">
+<h2>Hace 13 años yo estaba sentado donde ustedes</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/charla/mi-ruta.svg" class="quarto-figure quarto-figure-center" style="width:94.0%"></p>
+</figure>
+</div>
+<p>Ninguna etapa estaba planeada desde el inicio. Cada una abrió la puerta de la siguiente.</p>
+</section>
+<section id="pucp-donde-se-construyó-todo-20132017" class="slide level2 smaller">
+<h2>PUCP: donde se construyó todo (2013–2017)</h2>
+<ul>
+<li><strong>BS en Economía</strong> — Estudios Generales Letras, después Economía, en estas mismas aulas.</li>
+<li>Beca completa por excelencia académica, <strong>cinco años consecutivos</strong> — estudiar becado era mi trabajo.</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>La cosa bonita de esta etapa</strong></p>
+</div>
+<div class="callout-content">
+<p>Todo lo que viene después — Yale, Múnich, Harvard, Caltech — se apoya en lo que se aprende <strong>aquí</strong>: micro, mate, econometría. No hay salto sin esta base.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="yale-sin-salir-de-lima-20162018" class="slide level2 smaller">
+<h2>Yale, sin salir de Lima (2016–2018)</h2>
+<ul>
+<li>Siendo aún <strong>alumno de pregrado</strong>, trabajé como asistente de investigación <strong>a distancia</strong> para Yale.</li>
+<li>El proyecto era <strong>sobre el Perú</strong>: ¿los bonos monetarios logran retener a los docentes en zonas rurales? (regresión discontinua).</li>
+<li>Mi tarea estrella: un algoritmo de <em>fuzzy matching</em> para cruzar una base con el registro nacional de <strong>4 millones de docentes</strong>.</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>La cosa bonita</strong></p>
+</div>
+<div class="callout-content">
+<p>No esperé el título para investigar. La primera puerta se abrió con un correo bien escrito y las ganas de programar lo que nadie más quería programar.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="múnich-los-métodos-son-un-pasaporte-20182020" class="slide level2 smaller">
+<h2>Múnich: los métodos son un pasaporte (2018–2020)</h2>
+<ul>
+<li><strong>MSc en Economía Cuantitativa</strong> en LMU Múnich — con la beca de intercambio de la PUCP y luego becas DAAD.</li>
+<li>En el <strong>Max Planck Institute</strong>: calculé tiempos de viaje de <strong>inventores</strong> a sus trabajos (en tren, auto y bicicleta) para estudiar si los impuestos los hacen mudarse.</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>La cosa bonita</strong></p>
+</div>
+<div class="callout-content">
+<p>La econometría que aprendí en la PUCP fue el boleto. Los métodos viajan: el mismo RDD que usé para docentes peruanos servía para inventores alemanes.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="harvard-y-mit-encontré-mi-tema-20192020" class="slide level2 smaller">
+<h2>Harvard y MIT: encontré mi tema (2019–2020)</h2>
+<ul>
+<li><strong>Visiting scholar en Harvard</strong> — Laboratory for Innovation Science, con Karim Lakhani.</li>
+<li><strong>Research associate en MIT Sloan</strong>: cómo la tecnología (los contenedores, los barcos, los cables) redujo los costos de comerciar y comunicarse.</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>La cosa bonita</strong></p>
+</div>
+<div class="callout-content">
+<p>Ahí hizo clic: <strong>la tecnología es una pregunta económica</strong>. Quién adopta, quién queda fuera, qué se produce que antes no — ese es mi tema hasta hoy.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="banco-mundial-investigar-y-construir-20202025" class="slide level2 smaller">
+<h2>Banco Mundial: investigar y construir (2020–2025)</h2>
+<ul>
+<li>Lideré la investigación sobre el <strong>impacto de ChatGPT en los desarrolladores de software</strong>, con datos administrativos de GitHub.</li>
+<li>Enseñé <strong>Causal Machine Learning</strong> a nivel de posgrado y construí herramientas con IA para investigación en desarrollo.</li>
+</ul>
+<div class="fragment">
+<p>Y en paralelo, la parte que más lejos ha viajado:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Libro con <strong>Victor Chernozhukov</strong> (MIT)</td>
+<td>se usa en el curso 14.38 de MIT</td>
+</tr>
+<tr class="even">
+<td>Mi libro de <strong>Causal ML con Python</strong></td>
+<td>se usa en un curso de Stanford</td>
+</tr>
+<tr class="odd">
+<td><code>csdid.py</code>, con <strong>Pedro Sant’Anna</strong></td>
+<td><strong>464 000 descargas</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>La cosa bonita</strong></p>
+</div>
+<div class="callout-content">
+<p>Lo que publiquen <strong>gratis y abierto</strong> viaja más lejos que ustedes: un paquete escrito por un economista de la PUCP corre hoy en universidades de todo el mundo.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="hoy-la-frontera-entre-dos-carreras-desapareció" class="slide level2 smaller">
+<h2>Hoy: la frontera entre dos carreras desapareció</h2>
+<ul>
+<li><strong>Microsoft–GitHub Research</strong> (2024–2026): economía de la IA agéntica y el software libre — 3.15 millones de commits, 5 346 desarrolladores.</li>
+<li><strong>MS en Computer Science, Cornell</strong> (2024–2025).</li>
+<li><strong>PhD en Computing &amp; Mathematical Sciences, Caltech</strong> (2025–2029).</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>La cosa bonita</strong></p>
+</div>
+<div class="callout-content">
+<p>No “dejé” la economía por la computación: hoy son <strong>una sola caja de herramientas</strong>. Y el que llega desde economía trae lo que más escasea allá: saber qué pregunta vale la pena.</p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="parte-2-cómo-investigo-hoy" class="title-slide slide level1 center">
+<h1>Parte 2 — Cómo investigo hoy</h1>
+
+</section>
+<section id="su-curso-es-mi-laboratorio" class="slide level2 smaller">
+<h2>Su curso es mi laboratorio</h2>
+<p>Este semestre ustedes estudian la <strong>economía peruana</strong>. Les muestro cómo la investigaría hoy, con una pregunta real:</p>
+<blockquote>
+<p>En los departamentos mineros del Perú, ¿la renta minera <strong>reduce</strong> la conflictividad social — o solo cambia <strong>aquello por lo que se protesta</strong>?</p>
+</blockquote>
+<div class="fragment">
+<p>Los datos existen y son públicos: los reportes de conflictos de la <strong>Defensoría del Pueblo</strong>, la producción minera del <strong>MINEM</strong>, las mesas de diálogo de la <strong>PCM</strong>, los proyectos de ley del <strong>Congreso</strong>.</p>
+</div>
+<div class="fragment">
+<p><span class="warm">El problema nunca fueron los datos. Era el <strong>costo de convertirlos en investigación</strong>. Eso es lo que acaba de cambiar.</span></p>
+</div>
+</section>
+<section id="la-herramienta-un-agente-de-ia" class="slide level2 smaller">
+<h2>La herramienta: un agente de IA</h2>
+
+<img data-src="../figures/es/agent-loop.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:58.0%"><p>Un <strong>agente</strong> no es un chat al que le pegan texto: vive en su computadora, <strong>ve sus archivos</strong>, escribe y ejecuta código, <strong>lee sus propios errores y los corrige</strong>. Ustedes dirigen; él ejecuta.</p>
+</section>
+<section id="el-problema-en-crudo-269-reportes-en-pdf" class="slide level2 smaller">
+<h2>El problema, en crudo: 269 reportes en PDF</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/screenshots/defensoria-raw.png" class="quarto-figure quarto-figure-center" style="width:76.0%"></p>
+</figure>
+</div>
+<p>La serie de conflictos de la Defensoría existe desde 2004 — <strong>caso por caso, con narrativa</strong> — pero solo en PDF. Nadie la tiene como base de datos. <em>Nadie.</em></p>
+</section>
+<section id="lo-que-hace-el-agente-por-dentro" class="slide level2 smaller">
+<h2>Lo que hace el agente, por dentro</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/es/pipeline-extraccion.svg" class="quarto-figure quarto-figure-center" style="width:88.0%"></p>
+</figure>
+</div>
+</section>
+<section id="y-para-la-literatura-un-equipo-entero" class="slide level2 smaller">
+<h2>Y para la literatura: un equipo entero</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/es/deep-research-caso.svg" class="quarto-figure quarto-figure-center" style="width:76.0%"></p>
+</figure>
+</div>
+<p>Una revisión de literatura que tomaba semanas: <strong>~100 agentes en paralelo</strong>, 20 minutos, con las citas <strong>verificadas entre ellos</strong> — y los PDFs descargados en su carpeta.</p>
+</section>
+<section id="hasta-lo-hablado-se-vuelve-dato" class="slide level2 smaller">
+<h2>Hasta lo hablado se vuelve dato</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/es/whisper-pipeline.svg" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
+</figure>
+</div>
+<p>Con <strong>Whisper</strong> (gratuito y local), 12 minutos de video sobre conflictos sociales se transcriben en <strong>9 segundos</strong> — y las entrevistas de campo, las clases y los seminarios dejan de evaporarse.</p>
+</section>
+<section id="esto-no-es-el-futuro-sus-profesores-ya-están-ahí" class="slide level2 smaller">
+<h2>Esto no es el futuro: sus profesores ya están ahí</h2>
+<p>Este ciclo se lo enseñamos <strong>este mes</strong> a los docentes de la Facultad de Ciencias Sociales — dos sesiones completas, públicas, paso a paso:</p>
+<ul>
+<li>Sesión 1 — Confianza y verificación: <span class="small">alexanderquispe.github.io/claude-code-research/profesores/sesion1-confianza.html</span></li>
+<li>Sesión 2 — El flujo completo (Git, datos, OCR, Whisper, MCPs): <span class="small">alexanderquispe.github.io/claude-code-research/profesores/sesion2-flujo.html</span></li>
+</ul>
+<div class="fragment">
+<p><strong>Todo el material es de ustedes también.</strong> Si sus profesores están aprendiendo esto a mitad de carrera, ustedes tienen la ventaja de empezar en el primer año.</p>
+</div>
+<div class="fragment">
+<p><span class="warm">La regla que les enseñamos a ellos aplica igual aquí: la IA <strong>recuerda</strong> rápido y <strong>se equivoca</strong> con confianza — todo lo que importe, se <strong>verifica</strong> contra la fuente.</span></p>
+</div>
+</section></section>
+<section>
+<section id="parte-3-la-ia-como-objeto-de-estudio" class="title-slide slide level1 center">
+<h1>Parte 3 — La IA como objeto de estudio</h1>
+
+</section>
+<section id="el-paper-que-presenté-en-harvard" class="slide level2 smaller">
+<h2>El paper que presenté en Harvard</h2>
+<blockquote>
+<p><strong>Agentic Delegation and the Language Frontier of Software Developers</strong> <em>A Model and Evidence from Claude Code on GitHub</em></p>
+</blockquote>
+<p>Con <strong>Kevin Xu</strong> (GitHub) · Open &amp; User Innovation Conference 2026, <strong>Harvard Business School</strong> · arXiv:2605.25438</p>
+<div class="fragment">
+<p>La pregunta, en una línea:</p>
+<p><strong>¿Los agentes de IA solo hacen más rápida a la gente — o expanden <em>lo que</em> puede producir?</strong></p>
+</div>
+<div class="fragment">
+<p><span class="warm">Fíjense en el movimiento: en la Parte 2 la IA era mi <em>herramienta</em>. Aquí es mi <em>objeto de estudio</em> — con teoría económica y econometría de las que enseña este departamento.</span></p>
+</div>
+</section>
+<section id="el-problema-económico-una-barrera-de-habilidad" class="slide level2 smaller">
+<h2>El problema económico: una barrera de habilidad</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/charla/barrera-lenguaje.svg" class="quarto-figure quarto-figure-center" style="width:88.0%"></p>
+</figure>
+</div>
+<p>Piénsenlo como economistas: hay <strong>valor sin producir</strong> porque falta una habilidad específica — no talento general.</p>
+</section>
+<section id="tres-formas-de-producir-el-mismo-proyecto" class="slide level2 smaller">
+<h2>Tres formas de producir el mismo proyecto</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/charla/tres-modos.svg" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+<p>La generación 1 (autocompletar) <strong>amplifica la habilidad que ya tienes</strong>. La generación 2 (delegar) es distinta: el agente ejecuta <strong>lo que tú no sabes escribir</strong> — y tú diriges y revisas.</p>
+</section>
+<section id="el-modelo-en-una-figura" class="slide level2 smaller">
+<h2>El modelo, en una figura</h2>
+<p>Cada quien produce un proyecto solo si su valor supera un <strong>umbral</strong> (como todo en economía). El agente <strong>baja el umbral</strong>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/charla/banda-activacion.svg" class="quarto-figure quarto-figure-center" style="width:88.0%"></p>
+</figure>
+</div>
+<p><span class="warm">La predicción: al adoptar el agente, la gente empieza a producir en lenguajes que <strong>jamás había usado</strong>. Eso es lo que vamos a buscar en los datos.</span></p>
+</section>
+<section id="los-datos-la-adopción-deja-huella-pública" class="slide level2 smaller">
+<h2>Los datos: la adopción deja huella pública</h2>
+<p>Cuando Claude Code co-escribe un commit en GitHub, lo <strong>firma</strong>. Esa firma nos deja fechar la adopción de cada desarrollador:</p>
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<td>Commits firmados por Claude observados</td>
+<td><strong>~23 millones</strong></td>
+</tr>
+<tr class="even">
+<td>Adoptantes sostenidos en el panel</td>
+<td><strong>6 120 desarrolladores</strong></td>
+</tr>
+<tr class="odd">
+<td>Sus historiales públicos</td>
+<td>3.4M commits · <strong>~60M archivos</strong></td>
+</tr>
+<tr class="even">
+<td>Ventana</td>
+<td>28 meses, cohortes Abr 2025 – Mar 2026</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><strong>El método</strong> — el mismo que enseño en mis cursos: diferencias en diferencias escalonado (Callaway–Sant’Anna), comparando adoptantes tempranos contra los que adoptan después. <span class="small muted">Sí: el mismo <strong>Sant’Anna</strong> del paquete de las 464 mil descargas. El mundo es chico.</span></p>
+</div>
+</section>
+<section id="resultado-1-la-actividad-se-expande" class="slide level2 smaller">
+<h2>Resultado 1: la actividad se expande</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/charla/ext_es_n_languages.png" class="quarto-figure quarto-figure-center" style="width:72.0%"></p>
+</figure>
+</div>
+<p>Al adoptar, <strong>+2.7 lenguajes activos</strong> en el mes (la base era 0.7) — y los 12 meses previos, planos: no venían expandiéndose ya.</p>
+</section>
+<section id="resultado-2-producen-lo-que-nunca-habían-producido" class="slide level2 smaller">
+<h2>Resultado 2: producen lo que nunca habían producido</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/charla/ext_es_n_new_languages.png" class="quarto-figure quarto-figure-center" style="width:72.0%"></p>
+</figure>
+</div>
+<p><strong>+1.25 lenguajes usados por primera vez en la vida</strong> — 4 veces la tasa normal de entrada. Y no es un juguete: casi la mitad se <strong>vuelve a usar</strong> en los meses siguientes.</p>
+</section>
+<section id="resultado-3-quién-se-expande-más-los-especialistas" class="slide level2 smaller">
+<h2>Resultado 3: ¿quién se expande más? Los especialistas</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/charla/ext_es_specialist.png" class="quarto-figure quarto-figure-center" style="width:56.0%"></p>
+</figure>
+</div>
+<p>Los <strong>especialistas</strong> (pocos lenguajes previos) entran a <strong>2–3× más</strong> lenguajes nuevos que los generalistas — exactamente lo que predice el modelo: tenían más frontera por delante.</p>
+</section>
+<section id="lo-que-esto-significa-y-lo-que-no" class="slide level2 smaller">
+<h2>Lo que esto significa (y lo que no)</h2>
+<ul>
+<li>La IA agéntica no solo <strong>acelera</strong>: mueve la <strong>frontera de producción</strong>. Hay proyectos que no existirían sin ella.</li>
+<li>Si las barreras de habilidad específica caen, cambia una pregunta central de la economía: <strong>¿quién puede contribuir a qué?</strong></li>
+<li>La expansión es <strong>producción, no aprendizaje</strong>: la persona entrega Rust sin necesariamente saber Rust. (Discutan las implicancias — da para un ensayo entero.)</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>La honestidad metodológica que este departamento les va a exigir siempre</strong></p>
+</div>
+<div class="callout-content">
+<p>La adopción es <strong>voluntaria</strong>: esto son asociaciones en tiempo de evento con controles exigentes — no un experimento. Lo decimos en el paper con todas sus letras.</p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="cierre" class="title-slide slide level1 center">
+<h1>Cierre</h1>
+
+</section>
+<section id="y-ustedes" class="slide level2 smaller">
+<h2>¿Y ustedes?</h2>
+<p>Están estudiando <strong>economía peruana</strong> en el mejor momento posible:</p>
+<ol type="1">
+<li><strong>Los datos del Perú están ahí</strong> — Defensoría, MINEM, INEI, Congreso — esperando a quien los convierta en investigación.</li>
+<li><strong>La barrera técnica acaba de caer.</strong> Lo que me tomó años de código, hoy se dirige conversando.</li>
+<li>Lo que se volvió escaso — y valioso — es lo que enseña este curso: <strong>buenas preguntas, contexto peruano, y el criterio para verificar</strong>.</li>
+</ol>
+<div class="fragment">
+<p><span class="warm">La IA ejecuta. La pregunta, el diseño y el juicio siguen siendo de ustedes. Esa es la parte de economista — y no está en riesgo: está en demanda.</span></p>
+</div>
+</section>
+<section id="cómo-empezar-esta-semana" class="slide level2 smaller">
+<h2>Cómo empezar esta semana</h2>
+<ol type="1">
+<li><strong>Usen el material del taller de sus profesores</strong> (público): <span class="small">alexanderquispe.github.io/claude-code-research</span></li>
+<li><strong>Tomen en serio la econometría y la causalidad</strong> — es exactamente lo que la IA no decide por ustedes.</li>
+<li><strong>Publiquen lo que hagan</strong> — código, datos, notas. Lo abierto viaja (pregúntenle a <code>csdid.py</code>).</li>
+<li>Y cuando algo les salga mal con la IA: <strong>verifiquen, no confíen</strong>. Ese hábito vale más que cualquier herramienta.</li>
+</ol>
+</section>
+<section id="gracias" class="slide level2 smaller">
+<h2>Gracias</h2>
+<p><strong>Alexander Quispe</strong></p>
+<ul>
+<li>aquisper@caltech.edu</li>
+<li>alexanderquispe.github.io</li>
+<li>El paper: arXiv:2605.25438</li>
+</ul>
+<div class="fragment">
+<p><span class="big">Ahora sí: <strong>30 minutos de preguntas</strong> — vale preguntar de la ruta, de las becas, de la IA, del paper o de cómo empezar.</span></p>
+<p><span class="small muted">Estos slides fueron escritos, diagramados y compilados con Claude Code — como todo lo que les acabo de contar.</span></p>
+
+</div>
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Inteligencia Artificial y Economía — Economía Peruana (1ECO23) · PUCP</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="ia-economia_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="ia-economia_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="ia-economia_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="ia-economia_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="ia-economia_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="ia-economia_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="ia-economia_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="ia-economia_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="ia-economia_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="ia-economia_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: false,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copiado");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copiado");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

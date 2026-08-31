@@ -1,0 +1,37 @@
+<svg viewBox="0 0 1000 330" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ax" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f2d52"/>
+    </marker>
+  </defs>
+
+  <!-- banda -->
+  <rect x="380" y="70" width="320" height="150" fill="#0e7c86" opacity="0.16"/>
+
+  <!-- eje -->
+  <path d="M50,220 L950,220" stroke="#0f2d52" stroke-width="3.5" fill="none" marker-end="url(#ax)"/>
+  <text x="952" y="252" font-size="16.5" text-anchor="end" font-style="italic" fill="#0f2d52">valor del proyecto ω</text>
+
+  <!-- umbral con agente -->
+  <line x1="380" y1="52" x2="380" y2="232" stroke="#0e7c86" stroke-width="4.5"/>
+  <text x="380" y="38" font-size="17" text-anchor="middle" font-weight="700" fill="#0e7c86">umbral CON agente</text>
+
+  <!-- umbral sin agente -->
+  <line x1="700" y1="52" x2="700" y2="232" stroke="#0f2d52" stroke-width="4.5"/>
+  <text x="700" y="38" font-size="17" text-anchor="middle" font-weight="700" fill="#0f2d52">umbral SIN agente</text>
+
+  <!-- etiquetas de regiones -->
+  <text x="210" y="130" font-size="16" text-anchor="middle" fill="#889">no se produce</text>
+  <text x="210" y="153" font-size="16" text-anchor="middle" fill="#889">de ninguna forma</text>
+
+  <text x="540" y="118" font-size="17.5" text-anchor="middle" font-weight="700" fill="#0e7c86">banda de activación</text>
+  <text x="540" y="144" font-size="15.5" text-anchor="middle" fill="#0e7c86">proyectos que SOLO existen</text>
+  <text x="540" y="166" font-size="15.5" text-anchor="middle" fill="#0e7c86">gracias al agente</text>
+
+  <text x="830" y="130" font-size="16" text-anchor="middle" fill="#334">se produce</text>
+  <text x="830" y="153" font-size="16" text-anchor="middle" fill="#334">de todas formas</text>
+
+  <!-- llave -->
+  <path d="M383,255 C383,272 395,272 400,272 L530,272 M697,255 C697,272 685,272 680,272 L550,272 M540,272 L540,272" stroke="#c05621" stroke-width="2.5" fill="none"/>
+  <text x="540" y="303" font-size="17" text-anchor="middle" font-weight="700" fill="#c05621">producción nueva — la frontera se movió</text>
+</svg>

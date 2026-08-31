@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1000 330" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <!-- línea central -->
+  <path d="M60,165 L940,165" stroke="#0f2d52" stroke-width="4"/>
+
+  <!-- paradas: alternando arriba/abajo -->
+  <!-- PUCP -->
+  <circle cx="90" cy="165" r="13" fill="#c05621"/>
+  <rect x="30" y="55" width="140" height="76" rx="10" fill="#fff7f2" stroke="#c05621" stroke-width="2.5"/>
+  <text x="100" y="82" font-size="16" text-anchor="middle" font-weight="700" fill="#c05621">PUCP</text>
+  <text x="100" y="103" font-size="13.5" text-anchor="middle" fill="#334">BS Economía</text>
+  <text x="100" y="121" font-size="13" text-anchor="middle" fill="#889">2013–2017</text>
+  <line x1="90" y1="131" x2="90" y2="152" stroke="#c05621" stroke-width="2"/>
+
+  <!-- Yale -->
+  <circle cx="225" cy="165" r="11" fill="#0f2d52"/>
+  <rect x="160" y="204" width="130" height="76" rx="10" fill="#ffffff" stroke="#0f2d52" stroke-width="1.5"/>
+  <text x="225" y="231" font-size="15" text-anchor="middle" font-weight="700" fill="#0f2d52">Yale</text>
+  <text x="225" y="251" font-size="13" text-anchor="middle" fill="#334">RA a distancia</text>
+  <text x="225" y="269" font-size="13" text-anchor="middle" fill="#889">2016–2018</text>
+  <line x1="225" y1="178" x2="225" y2="204" stroke="#0f2d52" stroke-width="1.5"/>
+
+  <!-- Múnich -->
+  <circle cx="360" cy="165" r="11" fill="#0f2d52"/>
+  <rect x="290" y="55" width="140" height="76" rx="10" fill="#ffffff" stroke="#0f2d52" stroke-width="1.5"/>
+  <text x="360" y="82" font-size="15" text-anchor="middle" font-weight="700" fill="#0f2d52">Múnich</text>
+  <text x="360" y="102" font-size="13" text-anchor="middle" fill="#334">MSc LMU · Max Planck</text>
+  <text x="360" y="120" font-size="13" text-anchor="middle" fill="#889">2018–2020</text>
+  <line x1="360" y1="131" x2="360" y2="152" stroke="#0f2d52" stroke-width="1.5"/>
+
+  <!-- Harvard/MIT -->
+  <circle cx="495" cy="165" r="11" fill="#0f2d52"/>
+  <rect x="425" y="204" width="140" height="76" rx="10" fill="#ffffff" stroke="#0f2d52" stroke-width="1.5"/>
+  <text x="495" y="231" font-size="15" text-anchor="middle" font-weight="700" fill="#0f2d52">Harvard · MIT</text>
+  <text x="495" y="251" font-size="13" text-anchor="middle" fill="#334">visiting · RA Sloan</text>
+  <text x="495" y="269" font-size="13" text-anchor="middle" fill="#889">2019–2020</text>
+  <line x1="495" y1="178" x2="495" y2="204" stroke="#0f2d52" stroke-width="1.5"/>
+
+  <!-- World Bank -->
+  <circle cx="630" cy="165" r="11" fill="#0f2d52"/>
+  <rect x="560" y="55" width="140" height="76" rx="10" fill="#ffffff" stroke="#0f2d52" stroke-width="1.5"/>
+  <text x="630" y="82" font-size="15" text-anchor="middle" font-weight="700" fill="#0f2d52">Banco Mundial</text>
+  <text x="630" y="102" font-size="13" text-anchor="middle" fill="#334">IA y desarrollo</text>
+  <text x="630" y="120" font-size="13" text-anchor="middle" fill="#889">2020–2025</text>
+  <line x1="630" y1="131" x2="630" y2="152" stroke="#0f2d52" stroke-width="1.5"/>
+
+  <!-- Cornell/GitHub -->
+  <circle cx="765" cy="165" r="11" fill="#0f2d52"/>
+  <rect x="690" y="204" width="150" height="76" rx="10" fill="#ffffff" stroke="#0f2d52" stroke-width="1.5"/>
+  <text x="765" y="231" font-size="15" text-anchor="middle" font-weight="700" fill="#0f2d52">Cornell · GitHub</text>
+  <text x="765" y="251" font-size="13" text-anchor="middle" fill="#334">MS CS · Research</text>
+  <text x="765" y="269" font-size="13" text-anchor="middle" fill="#889">2024–2026</text>
+  <line x1="765" y1="178" x2="765" y2="204" stroke="#0f2d52" stroke-width="1.5"/>
+
+  <!-- Caltech -->
+  <circle cx="905" cy="165" r="14" fill="#0e7c86"/>
+  <rect x="835" y="50" width="150" height="81" rx="10" fill="#e8f6f5" stroke="#0e7c86" stroke-width="2.5"/>
+  <text x="910" y="77" font-size="16" text-anchor="middle" font-weight="700" fill="#0e7c86">Caltech</text>
+  <text x="910" y="98" font-size="13.5" text-anchor="middle" fill="#334">PhD Computing &amp;</text>
+  <text x="910" y="115" font-size="13.5" text-anchor="middle" fill="#334">Mathematical Sciences</text>
+  <line x1="905" y1="131" x2="905" y2="149" stroke="#0e7c86" stroke-width="2"/>
+
+  <text x="500" y="317" font-size="16" text-anchor="middle" fill="#556">De <tspan font-weight="700" fill="#c05621">Economía en la PUCP</tspan> a un doctorado en <tspan font-weight="700" fill="#0e7c86">ciencias de la computación</tspan> — sin dejar de ser economista</text>
+</svg>

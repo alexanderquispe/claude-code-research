@@ -1,0 +1,295 @@
+---
+title: "Inteligencia Artificial y Economía"
+subtitle: "Charla invitada — Introducción al Estudio de la Economía Peruana (1ECO23)"
+author: "Alexander Quispe · Caltech & GitHub Research"
+institute: "Invitado por José Carlos Orihuela y César Contreras · PUCP"
+format:
+  revealjs:
+    footer: "Inteligencia Artificial y Economía — Economía Peruana (1ECO23) · PUCP"
+lang: es
+---
+
+## El plan de hoy: tres historias {.smaller}
+
+| | Historia | Qué quiero que se lleven |
+|---|---|---|
+| 1 | **Mi ruta** — de este campus a Caltech | Que el camino existe, y empieza aquí |
+| 2 | **Cómo investigo hoy** — agentes de IA sobre datos peruanos | Que la barrera técnica acaba de caer |
+| 3 | **Un paper** — lo que presenté en Harvard en julio | Que la IA también es una pregunta económica |
+
+. . .
+
+[45 minutos de charla, 30 de preguntas — y las preguntas son la mejor parte.]{.warm}
+
+# Parte 1 — Mi ruta
+
+## Hace 13 años yo estaba sentado donde ustedes {.smaller}
+
+![](../figures/charla/mi-ruta.svg){.nostretch width=94% fig-align="center"}
+
+Ninguna etapa estaba planeada desde el inicio. Cada una abrió la puerta de la siguiente.
+
+## PUCP: donde se construyó todo (2013–2017) {.smaller}
+
+- **BS en Economía** — Estudios Generales Letras, después Economía, en estas mismas aulas.
+- Beca completa por excelencia académica, **cinco años consecutivos** — estudiar becado era mi trabajo.
+
+. . .
+
+::: {.callout-tip}
+## La cosa bonita de esta etapa
+Todo lo que viene después — Yale, Múnich, Harvard, Caltech — se apoya en lo que se aprende **aquí**: micro, mate, econometría. No hay salto sin esta base.
+:::
+
+## Yale, sin salir de Lima (2016–2018) {.smaller}
+
+- Siendo aún **alumno de pregrado**, trabajé como asistente de investigación **a distancia** para Yale.
+- El proyecto era **sobre el Perú**: ¿los bonos monetarios logran retener a los docentes en zonas rurales? (regresión discontinua).
+- Mi tarea estrella: un algoritmo de *fuzzy matching* para cruzar una base con el registro nacional de **4 millones de docentes**.
+
+. . .
+
+::: {.callout-tip}
+## La cosa bonita
+No esperé el título para investigar. La primera puerta se abrió con un correo bien escrito y las ganas de programar lo que nadie más quería programar.
+:::
+
+## Múnich: los métodos son un pasaporte (2018–2020) {.smaller}
+
+- **MSc en Economía Cuantitativa** en LMU Múnich — con la beca de intercambio de la PUCP y luego becas DAAD.
+- En el **Max Planck Institute**: calculé tiempos de viaje de **inventores** a sus trabajos (en tren, auto y bicicleta) para estudiar si los impuestos los hacen mudarse.
+
+. . .
+
+::: {.callout-tip}
+## La cosa bonita
+La econometría que aprendí en la PUCP fue el boleto. Los métodos viajan: el mismo RDD que usé para docentes peruanos servía para inventores alemanes.
+:::
+
+## Harvard y MIT: encontré mi tema (2019–2020) {.smaller}
+
+- **Visiting scholar en Harvard** — Laboratory for Innovation Science, con Karim Lakhani.
+- **Research associate en MIT Sloan**: cómo la tecnología (los contenedores, los barcos, los cables) redujo los costos de comerciar y comunicarse.
+
+. . .
+
+::: {.callout-tip}
+## La cosa bonita
+Ahí hizo clic: **la tecnología es una pregunta económica**. Quién adopta, quién queda fuera, qué se produce que antes no — ese es mi tema hasta hoy.
+:::
+
+## Banco Mundial: investigar y construir (2020–2025) {.smaller}
+
+- Lideré la investigación sobre el **impacto de ChatGPT en los desarrolladores de software**, con datos administrativos de GitHub.
+- Enseñé **Causal Machine Learning** a nivel de posgrado y construí herramientas con IA para investigación en desarrollo.
+
+. . .
+
+Y en paralelo, la parte que más lejos ha viajado:
+
+| | |
+|---|---|
+| Libro con **Victor Chernozhukov** (MIT) | se usa en el curso 14.38 de MIT |
+| Mi libro de **Causal ML con Python** | se usa en un curso de Stanford |
+| `csdid.py`, con **Pedro Sant'Anna** | **464 000 descargas** |
+
+. . .
+
+::: {.callout-tip}
+## La cosa bonita
+Lo que publiquen **gratis y abierto** viaja más lejos que ustedes: un paquete escrito por un economista de la PUCP corre hoy en universidades de todo el mundo.
+:::
+
+## Hoy: la frontera entre dos carreras desapareció {.smaller}
+
+- **Microsoft–GitHub Research** (2024–2026): economía de la IA agéntica y el software libre — 3.15 millones de commits, 5 346 desarrolladores.
+- **MS en Computer Science, Cornell** (2024–2025).
+- **PhD en Computing & Mathematical Sciences, Caltech** (2025–2029).
+
+. . .
+
+::: {.callout-tip}
+## La cosa bonita
+No "dejé" la economía por la computación: hoy son **una sola caja de herramientas**. Y el que llega desde economía trae lo que más escasea allá: saber qué pregunta vale la pena.
+:::
+
+# Parte 2 — Cómo investigo hoy
+
+## Su curso es mi laboratorio {.smaller}
+
+Este semestre ustedes estudian la **economía peruana**. Les muestro cómo la investigaría hoy, con una pregunta real:
+
+> En los departamentos mineros del Perú, ¿la renta minera **reduce** la conflictividad social — o solo cambia **aquello por lo que se protesta**?
+
+. . .
+
+Los datos existen y son públicos: los reportes de conflictos de la **Defensoría del Pueblo**, la producción minera del **MINEM**, las mesas de diálogo de la **PCM**, los proyectos de ley del **Congreso**.
+
+. . .
+
+[El problema nunca fueron los datos. Era el **costo de convertirlos en investigación**. Eso es lo que acaba de cambiar.]{.warm}
+
+## La herramienta: un agente de IA {.smaller}
+
+![](../figures/es/agent-loop.svg){width=58% fig-align="center"}
+
+Un **agente** no es un chat al que le pegan texto: vive en su computadora, **ve sus archivos**, escribe y ejecuta código, **lee sus propios errores y los corrige**. Ustedes dirigen; él ejecuta.
+
+## El problema, en crudo: 269 reportes en PDF {.smaller}
+
+![](../figures/screenshots/defensoria-raw.png){.nostretch width=76% fig-align="center"}
+
+La serie de conflictos de la Defensoría existe desde 2004 — **caso por caso, con narrativa** — pero solo en PDF. Nadie la tiene como base de datos. *Nadie.*
+
+## Lo que hace el agente, por dentro {.smaller}
+
+![](../figures/es/pipeline-extraccion.svg){.nostretch width=88% fig-align="center"}
+
+## Y para la literatura: un equipo entero {.smaller}
+
+![](../figures/es/deep-research-caso.svg){.nostretch width=76% fig-align="center"}
+
+Una revisión de literatura que tomaba semanas: **~100 agentes en paralelo**, 20 minutos, con las citas **verificadas entre ellos** — y los PDFs descargados en su carpeta.
+
+## Hasta lo hablado se vuelve dato {.smaller}
+
+![](../figures/es/whisper-pipeline.svg){.nostretch width=90% fig-align="center"}
+
+Con **Whisper** (gratuito y local), 12 minutos de video sobre conflictos sociales se transcriben en **9 segundos** — y las entrevistas de campo, las clases y los seminarios dejan de evaporarse.
+
+## Esto no es el futuro: sus profesores ya están ahí {.smaller}
+
+Este ciclo se lo enseñamos **este mes** a los docentes de la Facultad de Ciencias Sociales — dos sesiones completas, públicas, paso a paso:
+
+- Sesión 1 — Confianza y verificación:
+  [alexanderquispe.github.io/claude-code-research/profesores/sesion1-confianza.html]{.small}
+- Sesión 2 — El flujo completo (Git, datos, OCR, Whisper, MCPs):
+  [alexanderquispe.github.io/claude-code-research/profesores/sesion2-flujo.html]{.small}
+
+. . .
+
+**Todo el material es de ustedes también.** Si sus profesores están aprendiendo esto a mitad de carrera, ustedes tienen la ventaja de empezar en el primer año.
+
+. . .
+
+[La regla que les enseñamos a ellos aplica igual aquí: la IA **recuerda** rápido y **se equivoca** con confianza — todo lo que importe, se **verifica** contra la fuente.]{.warm}
+
+# Parte 3 — La IA como objeto de estudio
+
+## El paper que presenté en Harvard {.smaller}
+
+> **Agentic Delegation and the Language Frontier of Software Developers**
+> *A Model and Evidence from Claude Code on GitHub*
+
+Con **Kevin Xu** (GitHub) · Open & User Innovation Conference 2026, **Harvard Business School** · arXiv:2605.25438
+
+. . .
+
+La pregunta, en una línea:
+
+**¿Los agentes de IA solo hacen más rápida a la gente — o expanden *lo que* puede producir?**
+
+. . .
+
+[Fíjense en el movimiento: en la Parte 2 la IA era mi *herramienta*. Aquí es mi *objeto de estudio* — con teoría económica y econometría de las que enseña este departamento.]{.warm}
+
+## El problema económico: una barrera de habilidad {.smaller}
+
+![](../figures/charla/barrera-lenguaje.svg){.nostretch width=88% fig-align="center"}
+
+Piénsenlo como economistas: hay **valor sin producir** porque falta una habilidad específica — no talento general.
+
+## Tres formas de producir el mismo proyecto {.smaller}
+
+![](../figures/charla/tres-modos.svg){.nostretch width=80% fig-align="center"}
+
+La generación 1 (autocompletar) **amplifica la habilidad que ya tienes**. La generación 2 (delegar) es distinta: el agente ejecuta **lo que tú no sabes escribir** — y tú diriges y revisas.
+
+## El modelo, en una figura {.smaller}
+
+Cada quien produce un proyecto solo si su valor supera un **umbral** (como todo en economía). El agente **baja el umbral**:
+
+![](../figures/charla/banda-activacion.svg){.nostretch width=88% fig-align="center"}
+
+[La predicción: al adoptar el agente, la gente empieza a producir en lenguajes que **jamás había usado**. Eso es lo que vamos a buscar en los datos.]{.warm}
+
+## Los datos: la adopción deja huella pública {.smaller}
+
+Cuando Claude Code co-escribe un commit en GitHub, lo **firma**. Esa firma nos deja fechar la adopción de cada desarrollador:
+
+| | |
+|---|---|
+| Commits firmados por Claude observados | **~23 millones** |
+| Adoptantes sostenidos en el panel | **6 120 desarrolladores** |
+| Sus historiales públicos | 3.4M commits · **~60M archivos** |
+| Ventana | 28 meses, cohortes Abr 2025 – Mar 2026 |
+
+. . .
+
+**El método** — el mismo que enseño en mis cursos: diferencias en diferencias escalonado (Callaway–Sant'Anna), comparando adoptantes tempranos contra los que adoptan después. [Sí: el mismo **Sant'Anna** del paquete de las 464 mil descargas. El mundo es chico.]{.small .muted}
+
+## Resultado 1: la actividad se expande {.smaller}
+
+![](../figures/charla/ext_es_n_languages.png){.nostretch width=72% fig-align="center"}
+
+Al adoptar, **+2.7 lenguajes activos** en el mes (la base era 0.7) — y los 12 meses previos, planos: no venían expandiéndose ya.
+
+## Resultado 2: producen lo que nunca habían producido {.smaller}
+
+![](../figures/charla/ext_es_n_new_languages.png){.nostretch width=72% fig-align="center"}
+
+**+1.25 lenguajes usados por primera vez en la vida** — 4 veces la tasa normal de entrada. Y no es un juguete: casi la mitad se **vuelve a usar** en los meses siguientes.
+
+## Resultado 3: ¿quién se expande más? Los especialistas {.smaller}
+
+![](../figures/charla/ext_es_specialist.png){.nostretch width=56% fig-align="center"}
+
+Los **especialistas** (pocos lenguajes previos) entran a **2–3× más** lenguajes nuevos que los generalistas — exactamente lo que predice el modelo: tenían más frontera por delante.
+
+## Lo que esto significa (y lo que no) {.smaller}
+
+- La IA agéntica no solo **acelera**: mueve la **frontera de producción**. Hay proyectos que no existirían sin ella.
+- Si las barreras de habilidad específica caen, cambia una pregunta central de la economía: **¿quién puede contribuir a qué?**
+- La expansión es **producción, no aprendizaje**: la persona entrega Rust sin necesariamente saber Rust. (Discutan las implicancias — da para un ensayo entero.)
+
+. . .
+
+::: {.callout-warning}
+## La honestidad metodológica que este departamento les va a exigir siempre
+La adopción es **voluntaria**: esto son asociaciones en tiempo de evento con controles exigentes — no un experimento. Lo decimos en el paper con todas sus letras.
+:::
+
+# Cierre
+
+## ¿Y ustedes? {.smaller}
+
+Están estudiando **economía peruana** en el mejor momento posible:
+
+1. **Los datos del Perú están ahí** — Defensoría, MINEM, INEI, Congreso — esperando a quien los convierta en investigación.
+2. **La barrera técnica acaba de caer.** Lo que me tomó años de código, hoy se dirige conversando.
+3. Lo que se volvió escaso — y valioso — es lo que enseña este curso: **buenas preguntas, contexto peruano, y el criterio para verificar**.
+
+. . .
+
+[La IA ejecuta. La pregunta, el diseño y el juicio siguen siendo de ustedes. Esa es la parte de economista — y no está en riesgo: está en demanda.]{.warm}
+
+## Cómo empezar esta semana {.smaller}
+
+1. **Usen el material del taller de sus profesores** (público): [alexanderquispe.github.io/claude-code-research]{.small}
+2. **Tomen en serio la econometría y la causalidad** — es exactamente lo que la IA no decide por ustedes.
+3. **Publiquen lo que hagan** — código, datos, notas. Lo abierto viaja (pregúntenle a `csdid.py`).
+4. Y cuando algo les salga mal con la IA: **verifiquen, no confíen**. Ese hábito vale más que cualquier herramienta.
+
+## Gracias {.smaller}
+
+**Alexander Quispe**
+
+- aquisper@caltech.edu
+- alexanderquispe.github.io
+- El paper: arXiv:2605.25438
+
+. . .
+
+[Ahora sí: **30 minutos de preguntas** — vale preguntar de la ruta, de las becas, de la IA, del paper o de cómo empezar.]{.big}
+
+[Estos slides fueron escritos, diagramados y compilados con Claude Code — como todo lo que les acabo de contar.]{.small .muted}
