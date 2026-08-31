@@ -302,6 +302,25 @@ Mi invitación concreta para sus trabajos y sus tesis:
 
 [El presupuesto tampoco es excusa: lo pagado cuesta **US$20 al mes** — Claude Pro o ChatGPT Plus, y con **una** basta. Hugging Face y GitHub son **gratis**. La supercomputadora de hace una década hoy cuesta lo que una pizza.]{.warm}
 
+## La caja de herramientas, para llevar {.smaller}
+
+Todo **open source**, todo **gratis**, todo corre **en su laptop**:
+
+| Herramienta | Para qué la usa un economista | Dónde |
+|---|---|---|
+| **Whisper** (mlx / faster) | Transcribir entrevistas, clases, audios de campo | [github.com/openai/whisper](https://github.com/openai/whisper) |
+| **PaddleOCR** | Texto y **tablas** desde PDFs escaneados | [github.com/PaddlePaddle/PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) |
+| **pdfplumber** | Extraer texto y tablas de PDFs digitales | [github.com/jsvine/pdfplumber](https://github.com/jsvine/pdfplumber) |
+| **Transformers** | Clasificar texto masivo: leyes, noticias, narrativas | [github.com/huggingface/transformers](https://github.com/huggingface/transformers) |
+| **Ollama** | Correr modelos de lenguaje abiertos, sin internet | [github.com/ollama/ollama](https://github.com/ollama/ollama) |
+| **EconML · CausalML** | Machine learning causal (Microsoft · Uber) | [github.com/py-why/EconML](https://github.com/py-why/EconML) |
+| **csdid · synthdid** | Diferencias en diferencias moderno — hechos en casa | `pip install csdid` |
+| **GeoPandas** | Datos espaciales: distritos, mapas, satélite | [github.com/geopandas/geopandas](https://github.com/geopandas/geopandas) |
+
+. . .
+
+[Y no tienen que aprenderlas una por una: **Claude Code sabe instalar y usar cada una de estas** — descríbanle el problema y pídanle la herramienta.]{.warm}
+
 ## Cómo empezar esta semana {.smaller}
 
 1. **Usen el material del taller de sus profesores** (público): [alexanderquispe.github.io/claude-code-research]{.small}
