@@ -82,7 +82,7 @@ No "dejé" la economía por la computación: hoy son **una sola caja de herramie
 
 ## 2025: el año en que el código se rindió {.smaller}
 
-![](../figures/charla/logos/claude.svg){height=42} &nbsp; ![](../figures/charla/logos/anthropic.svg){height=34} &nbsp;&nbsp;&nbsp; ![](../figures/charla/logos/github.svg){height=44}
+![](../figures/charla/logos/claude.svg){height=42} &nbsp; ![](../figures/charla/logos/anthropic.svg){height=34}
 
 - **Mayo 2025:** Anthropic lanza **Claude Code** — el primer *agente* de código masivo: ya no sugiere líneas, **ejecuta el trabajo**.
 - Hoy lo usa **~39% de los desarrolladores profesionales del mundo** (47% en EE. UU.) — y **9 de cada 10** usan agentes de IA al menos cada semana.
