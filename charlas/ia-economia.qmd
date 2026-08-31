@@ -1,7 +1,7 @@
 ---
 title: "Inteligencia Artificial y Economía"
 subtitle: "Charla invitada — Introducción al Estudio de la Economía Peruana (1ECO23)"
-author: "Alexander Quispe · Caltech & GitHub Research"
+author: "Alexander Quispe · Caltech & Microsoft–GitHub Research"
 institute: "Invitado por José Carlos Orihuela y César Contreras · PUCP"
 format:
   revealjs:

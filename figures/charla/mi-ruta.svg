@@ -45,9 +45,9 @@
 
   <!-- Cornell/GitHub -->
   <circle cx="765" cy="165" r="11" fill="#0f2d52"/>
-  <rect x="690" y="204" width="150" height="76" rx="10" fill="#ffffff" stroke="#0f2d52" stroke-width="1.5"/>
-  <text x="765" y="231" font-size="15" text-anchor="middle" font-weight="700" fill="#0f2d52">Cornell · GitHub</text>
-  <text x="765" y="251" font-size="13" text-anchor="middle" fill="#334">MS CS · Research</text>
+  <rect x="678" y="204" width="174" height="76" rx="10" fill="#ffffff" stroke="#0f2d52" stroke-width="1.5"/>
+  <text x="765" y="231" font-size="15" text-anchor="middle" font-weight="700" fill="#0f2d52">Microsoft–GitHub</text>
+  <text x="765" y="251" font-size="13" text-anchor="middle" fill="#334">Research · MS CS Cornell</text>
   <text x="765" y="269" font-size="13" text-anchor="middle" fill="#889">2024–2026</text>
   <line x1="765" y1="178" x2="765" y2="204" stroke="#0f2d52" stroke-width="1.5"/>
 
