@@ -29,42 +29,7 @@ lang: es
 
 Ninguna etapa estaba planeada desde el inicio. Cada una abrió la puerta de la siguiente.
 
-## PUCP: donde se construyó todo (2013–2017) {.smaller}
-
-- **BS en Economía** — Estudios Generales Letras, después Economía, en estas mismas aulas.
-- Beca completa por excelencia académica, **cinco años consecutivos** — estudiar becado era mi trabajo.
-
-. . .
-
-::: {.callout-tip}
-## La cosa bonita de esta etapa
-Todo lo que viene después — Yale, Múnich, Harvard, Caltech — se apoya en lo que se aprende **aquí**: micro, mate, econometría. No hay salto sin esta base.
-:::
-
-## Yale, sin salir de Lima (2016–2018) {.smaller}
-
-- Siendo aún **alumno de pregrado**, trabajé como asistente de investigación **a distancia** para Yale.
-- El proyecto era **sobre el Perú**: ¿los bonos monetarios logran retener a los docentes en zonas rurales? (regresión discontinua).
-- Mi tarea estrella: un algoritmo de *fuzzy matching* para cruzar una base con el registro nacional de **4 millones de docentes**.
-
-. . .
-
-::: {.callout-tip}
-## La cosa bonita
-No esperé el título para investigar. La primera puerta se abrió con un correo bien escrito y las ganas de programar lo que nadie más quería programar.
-:::
-
-## Múnich: los métodos son un pasaporte (2018–2020) {.smaller}
-
-- **MSc en Economía Cuantitativa** en LMU Múnich — con la beca de intercambio de la PUCP y luego becas DAAD.
-- En el **Max Planck Institute**: calculé tiempos de viaje de **inventores** a sus trabajos (en tren, auto y bicicleta) para estudiar si los impuestos los hacen mudarse.
-
-. . .
-
-::: {.callout-tip}
-## La cosa bonita
-La econometría que aprendí en la PUCP fue el boleto. Los métodos viajan: el mismo RDD que usé para docentes peruanos servía para inventores alemanes.
-:::
+[Las primeras tres, en una línea: beca completa **5 años consecutivos** en la PUCP · asistente de investigación **para Yale desde Lima**, siendo aún alumno · maestría en Múnich con la beca de intercambio + DAAD.]{.small .muted}
 
 ## Harvard y MIT: encontré mi tema (2019–2020) {.smaller}
 
