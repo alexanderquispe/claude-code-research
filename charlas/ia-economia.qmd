@@ -229,9 +229,11 @@ Un **agente** no es un chat al que le pegan texto: vive en su computadora, **ve 
 
 ## El problema, en crudo: 269 reportes en PDF {.smaller}
 
-![](../figures/screenshots/defensoria-raw.png){.nostretch width=76% fig-align="center"}
+![](../figures/screenshots/defensoria-raw.png){.nostretch width=71% fig-align="center"}
 
 La serie de conflictos de la Defensoría existe desde 2004 — **caso por caso, con narrativa** — pero solo en PDF. Nadie la tiene como base de datos. *Nadie.*
+
+[Y los años viejos (2004–2015) son **escaneados**: el PDF es una foto. Para eso existe **PaddleOCR** — OCR gratuito y local que extrae **texto y tablas** de la imagen: [github.com/PaddlePaddle/PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)]{.small}
 
 ## Lo que hace el agente, por dentro {.smaller}
 
@@ -239,9 +241,9 @@ La serie de conflictos de la Defensoría existe desde 2004 — **caso por caso, 
 
 ## Y para la literatura: un equipo entero {.smaller}
 
-![](../figures/es/deep-research-caso.svg){.nostretch width=76% fig-align="center"}
+![](../figures/es/deep-research-caso.svg){.nostretch width=94% fig-align="center"}
 
-Una revisión de literatura que tomaba semanas: **~100 agentes en paralelo**, 20 minutos, con las citas **verificadas entre ellos** — y los PDFs descargados en su carpeta.
+En Claude Code esto es **un solo comando: `/deep-research`**. Una revisión que tomaba semanas: ~100 agentes en paralelo, ~20 minutos, citas **verificadas entre ellos** — y los PDFs descargados en su carpeta.
 
 ## Hasta lo hablado se vuelve dato {.smaller}
 
@@ -249,14 +251,19 @@ Una revisión de literatura que tomaba semanas: **~100 agentes en paralelo**, 20
 
 Con **Whisper** (gratuito y local), 12 minutos de video sobre conflictos sociales se transcriben en **9 segundos** — y las entrevistas de campo, las clases y los seminarios dejan de evaporarse.
 
+[Para usarlo: [github.com/openai/whisper](https://github.com/openai/whisper) · en Mac, el modelo rápido [huggingface.co/mlx-community/whisper-large-v3-turbo](https://huggingface.co/mlx-community/whisper-large-v3-turbo) · en Windows, [github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)]{.small .muted}
+
 ## Esto no es el futuro: sus profesores ya están ahí {.smaller}
 
-Este ciclo se lo enseñamos **este mes** a los docentes de la Facultad de Ciencias Sociales — dos sesiones completas, públicas, paso a paso:
+Este ciclo se lo enseñamos **este mes** a los docentes de la Facultad de Ciencias Sociales — dos sesiones completas, públicas, paso a paso. **Todos los enlaces, para llevar:**
 
-- Sesión 1 — Confianza y verificación:
-  [alexanderquispe.github.io/claude-code-research/profesores/sesion1-confianza.html]{.small}
-- Sesión 2 — El flujo completo (Git, datos, OCR, Whisper, MCPs):
-  [alexanderquispe.github.io/claude-code-research/profesores/sesion2-flujo.html]{.small}
+| Qué | Dónde |
+|---|---|
+| El sitio completo del taller | [alexanderquispe.github.io/claude-code-research](https://alexanderquispe.github.io/claude-code-research) |
+| Sesión 1 — Confianza y verificación | […/profesores/sesion1-confianza.html](https://alexanderquispe.github.io/claude-code-research/profesores/sesion1-confianza.html) |
+| Sesión 2 — Git, datos, OCR, Whisper, MCPs | […/profesores/sesion2-flujo.html](https://alexanderquispe.github.io/claude-code-research/profesores/sesion2-flujo.html) |
+| Estos mismos slides | […/charlas/ia-economia.html](https://alexanderquispe.github.io/claude-code-research/charlas/ia-economia.html) |
+| Claude Code — documentación oficial | [code.claude.com/docs](https://code.claude.com/docs) |
 
 . . .
 

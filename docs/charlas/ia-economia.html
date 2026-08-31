@@ -485,10 +485,11 @@ Alexander Quispe · Caltech &amp; Microsoft–GitHub Research
 <h2>El problema, en crudo: 269 reportes en PDF</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/screenshots/defensoria-raw.png" class="quarto-figure quarto-figure-center" style="width:76.0%"></p>
+<p><img data-src="../figures/screenshots/defensoria-raw.png" class="quarto-figure quarto-figure-center" style="width:71.0%"></p>
 </figure>
 </div>
 <p>La serie de conflictos de la Defensoría existe desde 2004 — <strong>caso por caso, con narrativa</strong> — pero solo en PDF. Nadie la tiene como base de datos. <em>Nadie.</em></p>
+<p><span class="small">Y los años viejos (2004–2015) son <strong>escaneados</strong>: el PDF es una foto. Para eso existe <strong>PaddleOCR</strong> — OCR gratuito y local que extrae <strong>texto y tablas</strong> de la imagen: <a href="https://github.com/PaddlePaddle/PaddleOCR">github.com/PaddlePaddle/PaddleOCR</a></span></p>
 </section>
 <section id="lo-que-hace-el-agente-por-dentro" class="slide level2 smaller">
 <h2>Lo que hace el agente, por dentro</h2>
@@ -502,10 +503,10 @@ Alexander Quispe · Caltech &amp; Microsoft–GitHub Research
 <h2>Y para la literatura: un equipo entero</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../figures/es/deep-research-caso.svg" class="quarto-figure quarto-figure-center" style="width:76.0%"></p>
+<p><img data-src="../figures/es/deep-research-caso.svg" class="quarto-figure quarto-figure-center" style="width:94.0%"></p>
 </figure>
 </div>
-<p>Una revisión de literatura que tomaba semanas: <strong>~100 agentes en paralelo</strong>, 20 minutos, con las citas <strong>verificadas entre ellos</strong> — y los PDFs descargados en su carpeta.</p>
+<p>En Claude Code esto es <strong>un solo comando: <code>/deep-research</code></strong>. Una revisión que tomaba semanas: ~100 agentes en paralelo, ~20 minutos, citas <strong>verificadas entre ellos</strong> — y los PDFs descargados en su carpeta.</p>
 </section>
 <section id="hasta-lo-hablado-se-vuelve-dato" class="slide level2 smaller">
 <h2>Hasta lo hablado se vuelve dato</h2>
@@ -515,14 +516,41 @@ Alexander Quispe · Caltech &amp; Microsoft–GitHub Research
 </figure>
 </div>
 <p>Con <strong>Whisper</strong> (gratuito y local), 12 minutos de video sobre conflictos sociales se transcriben en <strong>9 segundos</strong> — y las entrevistas de campo, las clases y los seminarios dejan de evaporarse.</p>
+<p><span class="small muted">Para usarlo: <a href="https://github.com/openai/whisper">github.com/openai/whisper</a> · en Mac, el modelo rápido <a href="https://huggingface.co/mlx-community/whisper-large-v3-turbo">huggingface.co/mlx-community/whisper-large-v3-turbo</a> · en Windows, <a href="https://github.com/SYSTRAN/faster-whisper">github.com/SYSTRAN/faster-whisper</a></span></p>
 </section>
 <section id="esto-no-es-el-futuro-sus-profesores-ya-están-ahí" class="slide level2 smaller">
 <h2>Esto no es el futuro: sus profesores ya están ahí</h2>
-<p>Este ciclo se lo enseñamos <strong>este mes</strong> a los docentes de la Facultad de Ciencias Sociales — dos sesiones completas, públicas, paso a paso:</p>
-<ul>
-<li>Sesión 1 — Confianza y verificación: <span class="small">alexanderquispe.github.io/claude-code-research/profesores/sesion1-confianza.html</span></li>
-<li>Sesión 2 — El flujo completo (Git, datos, OCR, Whisper, MCPs): <span class="small">alexanderquispe.github.io/claude-code-research/profesores/sesion2-flujo.html</span></li>
-</ul>
+<p>Este ciclo se lo enseñamos <strong>este mes</strong> a los docentes de la Facultad de Ciencias Sociales — dos sesiones completas, públicas, paso a paso. <strong>Todos los enlaces, para llevar:</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Qué</th>
+<th>Dónde</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>El sitio completo del taller</td>
+<td><a href="https://alexanderquispe.github.io/claude-code-research">alexanderquispe.github.io/claude-code-research</a></td>
+</tr>
+<tr class="even">
+<td>Sesión 1 — Confianza y verificación</td>
+<td><a href="https://alexanderquispe.github.io/claude-code-research/profesores/sesion1-confianza.html">…/profesores/sesion1-confianza.html</a></td>
+</tr>
+<tr class="odd">
+<td>Sesión 2 — Git, datos, OCR, Whisper, MCPs</td>
+<td><a href="https://alexanderquispe.github.io/claude-code-research/profesores/sesion2-flujo.html">…/profesores/sesion2-flujo.html</a></td>
+</tr>
+<tr class="even">
+<td>Estos mismos slides</td>
+<td><a href="https://alexanderquispe.github.io/claude-code-research/charlas/ia-economia.html">…/charlas/ia-economia.html</a></td>
+</tr>
+<tr class="odd">
+<td>Claude Code — documentación oficial</td>
+<td><a href="https://code.claude.com/docs">code.claude.com/docs</a></td>
+</tr>
+</tbody>
+</table>
 <div class="fragment">
 <p><strong>Todo el material es de ustedes también.</strong> Si sus profesores están aprendiendo esto a mitad de carrera, ustedes tienen la ventaja de empezar en el primer año.</p>
 </div>
