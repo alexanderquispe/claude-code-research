@@ -14,8 +14,8 @@ lang: es
 | | Historia | Qué quiero que se lleven |
 |---|---|---|
 | 1 | **Mi ruta** — de este campus a Caltech | Que el camino existe, y empieza aquí |
-| 2 | **Cómo investigo hoy** — agentes de IA sobre datos peruanos | Que la barrera técnica acaba de caer |
-| 3 | **Un paper** — lo que presenté en Harvard en julio | Que la IA también es una pregunta económica |
+| 2 | **Un paper** — lo que presenté en Harvard en julio | Que la IA también es una pregunta económica |
+| 3 | **Cómo investigo hoy** — agentes de IA sobre datos peruanos | Que la barrera técnica acaba de caer |
 
 . . .
 
@@ -78,68 +78,49 @@ Lo que publiquen **gratis y abierto** viaja más lejos que ustedes: un paquete e
 No "dejé" la economía por la computación: hoy son **una sola caja de herramientas**. Y el que llega desde economía trae lo que más escasea allá: saber qué pregunta vale la pena.
 :::
 
-# Parte 2 — Cómo investigo hoy
+# El contexto — dos fortalezas cayeron
 
-## Su curso es mi laboratorio {.smaller}
+## 2025: el año en que el código se rindió {.smaller}
 
-Este semestre ustedes estudian la **economía peruana**. Les muestro cómo la investigaría hoy, con una pregunta real:
+![](../figures/charla/logos/anthropic.svg){height=34} &nbsp;&nbsp;&nbsp; ![](../figures/charla/logos/github.svg){height=44}
 
-> En los departamentos mineros del Perú, ¿la renta minera **reduce** la conflictividad social — o solo cambia **aquello por lo que se protesta**?
-
-. . .
-
-Los datos existen y son públicos: los reportes de conflictos de la **Defensoría del Pueblo**, la producción minera del **MINEM**, las mesas de diálogo de la **PCM**, los proyectos de ley del **Congreso**.
-
-. . .
-
-[El problema nunca fueron los datos. Era el **costo de convertirlos en investigación**. Eso es lo que acaba de cambiar.]{.warm}
-
-## La herramienta: un agente de IA {.smaller}
-
-![](../figures/es/agent-loop.svg){width=58% fig-align="center"}
-
-Un **agente** no es un chat al que le pegan texto: vive en su computadora, **ve sus archivos**, escribe y ejecuta código, **lee sus propios errores y los corrige**. Ustedes dirigen; él ejecuta.
-
-## El problema, en crudo: 269 reportes en PDF {.smaller}
-
-![](../figures/screenshots/defensoria-raw.png){.nostretch width=76% fig-align="center"}
-
-La serie de conflictos de la Defensoría existe desde 2004 — **caso por caso, con narrativa** — pero solo en PDF. Nadie la tiene como base de datos. *Nadie.*
-
-## Lo que hace el agente, por dentro {.smaller}
-
-![](../figures/es/pipeline-extraccion.svg){.nostretch width=88% fig-align="center"}
-
-## Y para la literatura: un equipo entero {.smaller}
-
-![](../figures/es/deep-research-caso.svg){.nostretch width=76% fig-align="center"}
-
-Una revisión de literatura que tomaba semanas: **~100 agentes en paralelo**, 20 minutos, con las citas **verificadas entre ellos** — y los PDFs descargados en su carpeta.
-
-## Hasta lo hablado se vuelve dato {.smaller}
-
-![](../figures/es/whisper-pipeline.svg){.nostretch width=90% fig-align="center"}
-
-Con **Whisper** (gratuito y local), 12 minutos de video sobre conflictos sociales se transcriben en **9 segundos** — y las entrevistas de campo, las clases y los seminarios dejan de evaporarse.
-
-## Esto no es el futuro: sus profesores ya están ahí {.smaller}
-
-Este ciclo se lo enseñamos **este mes** a los docentes de la Facultad de Ciencias Sociales — dos sesiones completas, públicas, paso a paso:
-
-- Sesión 1 — Confianza y verificación:
-  [alexanderquispe.github.io/claude-code-research/profesores/sesion1-confianza.html]{.small}
-- Sesión 2 — El flujo completo (Git, datos, OCR, Whisper, MCPs):
-  [alexanderquispe.github.io/claude-code-research/profesores/sesion2-flujo.html]{.small}
+- **Mayo 2025:** Anthropic lanza **Claude Code** — el primer *agente* de código masivo: ya no sugiere líneas, **ejecuta el trabajo**.
+- Hoy lo usa **~39% de los desarrolladores profesionales del mundo** (47% en EE. UU.) — y **9 de cada 10** usan agentes de IA al menos cada semana.
+- **~4 de cada 100 commits públicos de GitHub** ya los escribe Claude Code.
+- El propio creador de la herramienta: *no edita código a mano desde noviembre de 2025*.
 
 . . .
 
-**Todo el material es de ustedes también.** Si sus profesores están aprendiendo esto a mitad de carrera, ustedes tienen la ventaja de empezar en el primer año.
+[La palabra del año fue **agente**: la IA pasó de sugerir (copiloto) a ejecutar (delegar). Guarden esa palabra — vuelve en el paper.]{.warm}
+
+## 2026: la IA entró a la matemática de frontera {.smaller}
+
+![](../figures/charla/logos/openai.svg){height=30} &nbsp;&nbsp;&nbsp; ![](../figures/charla/logos/deepmind.svg){height=34}
+
+- Los **problemas de Erdős**: cientos de preguntas abiertas que dejó Paul Erdős — algunas llevaban **80 años** sin respuesta.
+- **Enero 2026:** primera resolución **autónoma** de un problema de Erdős por un sistema de IA, con prueba formal verificada en Lean.
+- **Mayo 2026:** un modelo de OpenAI encuentra un **contraejemplo** al problema de la distancia unitaria — una conjetura de Erdős **de 1946**. Los matemáticos: *"digno de un journal top"*.
+- Y los mejores del campo — **Terence Tao** incluido — ya publican resolviendo estos problemas **junto con** estos sistemas.
 
 . . .
 
-[La regla que les enseñamos a ellos aplica igual aquí: la IA **recuerda** rápido y **se equivoca** con confianza — todo lo que importe, se **verifica** contra la fuente.]{.warm}
+[Titular de Quanta Magazine, agosto 2026: *"Why the Legendary Erdős Problems Are Falling to AI".*]{.warm}
 
-# Parte 3 — La IA como objeto de estudio
+## ¿Por qué les cuento esto en un curso de economía? {.smaller}
+
+Fíjense **qué** cayó primero: el código y la matemática — los dos **lenguajes formales**, donde verificar una respuesta es barato y el error no se puede esconder.
+
+. . .
+
+Y ahora piensen qué disciplina habla **los dos idiomas a la vez**:
+
+> La economía modela con **matemática** y contrasta con **datos y código**.
+
+. . .
+
+[La pregunta ya no es *si* esto llega a la economía — **ya llegó**. Primero les muestro cómo lo **estudio** como economista; después, cómo lo **uso** todos los días.]{.warm}
+
+# Parte 2 — La IA como objeto de estudio
 
 ## El paper que presenté en Harvard {.smaller}
 
@@ -156,7 +137,7 @@ La pregunta, en una línea:
 
 . . .
 
-[Fíjense en el movimiento: en la Parte 2 la IA era mi *herramienta*. Aquí es mi *objeto de estudio* — con teoría económica y econometría de las que enseña este departamento.]{.warm}
+[Aquí la IA es mi *objeto de estudio* — con teoría económica y econometría de las que enseña este departamento. Al final les muestro la otra cara: la IA como *herramienta* de todos los días.]{.warm}
 
 ## El problema económico: una barrera de habilidad {.smaller}
 
@@ -223,6 +204,67 @@ Los **especialistas** (pocos lenguajes previos) entran a **2–3× más** lengua
 ## La honestidad metodológica que este departamento les va a exigir siempre
 La adopción es **voluntaria**: esto son asociaciones en tiempo de evento con controles exigentes — no un experimento. Lo decimos en el paper con todas sus letras.
 :::
+
+# Parte 3 — Cómo investigo hoy
+
+## Su curso es mi laboratorio {.smaller}
+
+Este semestre ustedes estudian la **economía peruana**. Les muestro cómo la investigaría hoy, con una pregunta real:
+
+> En los departamentos mineros del Perú, ¿la renta minera **reduce** la conflictividad social — o solo cambia **aquello por lo que se protesta**?
+
+. . .
+
+Los datos existen y son públicos: los reportes de conflictos de la **Defensoría del Pueblo**, la producción minera del **MINEM**, las mesas de diálogo de la **PCM**, los proyectos de ley del **Congreso**.
+
+. . .
+
+[El problema nunca fueron los datos. Era el **costo de convertirlos en investigación**. Eso es lo que acaba de cambiar.]{.warm}
+
+## La herramienta: un agente de IA {.smaller}
+
+![](../figures/es/agent-loop.svg){width=58% fig-align="center"}
+
+Un **agente** no es un chat al que le pegan texto: vive en su computadora, **ve sus archivos**, escribe y ejecuta código, **lee sus propios errores y los corrige**. Ustedes dirigen; él ejecuta.
+
+## El problema, en crudo: 269 reportes en PDF {.smaller}
+
+![](../figures/screenshots/defensoria-raw.png){.nostretch width=76% fig-align="center"}
+
+La serie de conflictos de la Defensoría existe desde 2004 — **caso por caso, con narrativa** — pero solo en PDF. Nadie la tiene como base de datos. *Nadie.*
+
+## Lo que hace el agente, por dentro {.smaller}
+
+![](../figures/es/pipeline-extraccion.svg){.nostretch width=88% fig-align="center"}
+
+## Y para la literatura: un equipo entero {.smaller}
+
+![](../figures/es/deep-research-caso.svg){.nostretch width=76% fig-align="center"}
+
+Una revisión de literatura que tomaba semanas: **~100 agentes en paralelo**, 20 minutos, con las citas **verificadas entre ellos** — y los PDFs descargados en su carpeta.
+
+## Hasta lo hablado se vuelve dato {.smaller}
+
+![](../figures/es/whisper-pipeline.svg){.nostretch width=90% fig-align="center"}
+
+Con **Whisper** (gratuito y local), 12 minutos de video sobre conflictos sociales se transcriben en **9 segundos** — y las entrevistas de campo, las clases y los seminarios dejan de evaporarse.
+
+## Esto no es el futuro: sus profesores ya están ahí {.smaller}
+
+Este ciclo se lo enseñamos **este mes** a los docentes de la Facultad de Ciencias Sociales — dos sesiones completas, públicas, paso a paso:
+
+- Sesión 1 — Confianza y verificación:
+  [alexanderquispe.github.io/claude-code-research/profesores/sesion1-confianza.html]{.small}
+- Sesión 2 — El flujo completo (Git, datos, OCR, Whisper, MCPs):
+  [alexanderquispe.github.io/claude-code-research/profesores/sesion2-flujo.html]{.small}
+
+. . .
+
+**Todo el material es de ustedes también.** Si sus profesores están aprendiendo esto a mitad de carrera, ustedes tienen la ventaja de empezar en el primer año.
+
+. . .
+
+[La regla que les enseñamos a ellos aplica igual aquí: la IA **recuerda** rápido y **se equivoca** con confianza — todo lo que importe, se **verifica** contra la fuente.]{.warm}
 
 # Cierre
 

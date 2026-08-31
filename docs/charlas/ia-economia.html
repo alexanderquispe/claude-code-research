@@ -171,13 +171,13 @@ Alexander Quispe · Caltech &amp; Microsoft–GitHub Research
 </tr>
 <tr class="even">
 <td>2</td>
-<td><strong>Cómo investigo hoy</strong> — agentes de IA sobre datos peruanos</td>
-<td>Que la barrera técnica acaba de caer</td>
+<td><strong>Un paper</strong> — lo que presenté en Harvard en julio</td>
+<td>Que la IA también es una pregunta económica</td>
 </tr>
 <tr class="odd">
 <td>3</td>
-<td><strong>Un paper</strong> — lo que presenté en Harvard en julio</td>
-<td>Que la IA también es una pregunta económica</td>
+<td><strong>Cómo investigo hoy</strong> — agentes de IA sobre datos peruanos</td>
+<td>Que la barrera técnica acaba de caer</td>
 </tr>
 </tbody>
 </table>
@@ -291,80 +291,52 @@ Alexander Quispe · Caltech &amp; Microsoft–GitHub Research
 </div>
 </section></section>
 <section>
-<section id="parte-2-cómo-investigo-hoy" class="title-slide slide level1 center">
-<h1>Parte 2 — Cómo investigo hoy</h1>
+<section id="el-contexto-dos-fortalezas-cayeron" class="title-slide slide level1 center">
+<h1>El contexto — dos fortalezas cayeron</h1>
 
 </section>
-<section id="su-curso-es-mi-laboratorio" class="slide level2 smaller">
-<h2>Su curso es mi laboratorio</h2>
-<p>Este semestre ustedes estudian la <strong>economía peruana</strong>. Les muestro cómo la investigaría hoy, con una pregunta real:</p>
-<blockquote>
-<p>En los departamentos mineros del Perú, ¿la renta minera <strong>reduce</strong> la conflictividad social — o solo cambia <strong>aquello por lo que se protesta</strong>?</p>
-</blockquote>
-<div class="fragment">
-<p>Los datos existen y son públicos: los reportes de conflictos de la <strong>Defensoría del Pueblo</strong>, la producción minera del <strong>MINEM</strong>, las mesas de diálogo de la <strong>PCM</strong>, los proyectos de ley del <strong>Congreso</strong>.</p>
-</div>
-<div class="fragment">
-<p><span class="warm">El problema nunca fueron los datos. Era el <strong>costo de convertirlos en investigación</strong>. Eso es lo que acaba de cambiar.</span></p>
-</div>
-</section>
-<section id="la-herramienta-un-agente-de-ia" class="slide level2 smaller">
-<h2>La herramienta: un agente de IA</h2>
-
-<img data-src="../figures/es/agent-loop.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:58.0%"><p>Un <strong>agente</strong> no es un chat al que le pegan texto: vive en su computadora, <strong>ve sus archivos</strong>, escribe y ejecuta código, <strong>lee sus propios errores y los corrige</strong>. Ustedes dirigen; él ejecuta.</p>
-</section>
-<section id="el-problema-en-crudo-269-reportes-en-pdf" class="slide level2 smaller">
-<h2>El problema, en crudo: 269 reportes en PDF</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../figures/screenshots/defensoria-raw.png" class="quarto-figure quarto-figure-center" style="width:76.0%"></p>
-</figure>
-</div>
-<p>La serie de conflictos de la Defensoría existe desde 2004 — <strong>caso por caso, con narrativa</strong> — pero solo en PDF. Nadie la tiene como base de datos. <em>Nadie.</em></p>
-</section>
-<section id="lo-que-hace-el-agente-por-dentro" class="slide level2 smaller">
-<h2>Lo que hace el agente, por dentro</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../figures/es/pipeline-extraccion.svg" class="quarto-figure quarto-figure-center" style="width:88.0%"></p>
-</figure>
-</div>
-</section>
-<section id="y-para-la-literatura-un-equipo-entero" class="slide level2 smaller">
-<h2>Y para la literatura: un equipo entero</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../figures/es/deep-research-caso.svg" class="quarto-figure quarto-figure-center" style="width:76.0%"></p>
-</figure>
-</div>
-<p>Una revisión de literatura que tomaba semanas: <strong>~100 agentes en paralelo</strong>, 20 minutos, con las citas <strong>verificadas entre ellos</strong> — y los PDFs descargados en su carpeta.</p>
-</section>
-<section id="hasta-lo-hablado-se-vuelve-dato" class="slide level2 smaller">
-<h2>Hasta lo hablado se vuelve dato</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../figures/es/whisper-pipeline.svg" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
-</figure>
-</div>
-<p>Con <strong>Whisper</strong> (gratuito y local), 12 minutos de video sobre conflictos sociales se transcriben en <strong>9 segundos</strong> — y las entrevistas de campo, las clases y los seminarios dejan de evaporarse.</p>
-</section>
-<section id="esto-no-es-el-futuro-sus-profesores-ya-están-ahí" class="slide level2 smaller">
-<h2>Esto no es el futuro: sus profesores ya están ahí</h2>
-<p>Este ciclo se lo enseñamos <strong>este mes</strong> a los docentes de la Facultad de Ciencias Sociales — dos sesiones completas, públicas, paso a paso:</p>
+<section id="el-año-en-que-el-código-se-rindió" class="slide level2 smaller">
+<h2>2025: el año en que el código se rindió</h2>
+<p><img data-src="../figures/charla/logos/anthropic.svg" height="34"> &nbsp;&nbsp;&nbsp; <img data-src="../figures/charla/logos/github.svg" height="44"></p>
 <ul>
-<li>Sesión 1 — Confianza y verificación: <span class="small">alexanderquispe.github.io/claude-code-research/profesores/sesion1-confianza.html</span></li>
-<li>Sesión 2 — El flujo completo (Git, datos, OCR, Whisper, MCPs): <span class="small">alexanderquispe.github.io/claude-code-research/profesores/sesion2-flujo.html</span></li>
+<li><strong>Mayo 2025:</strong> Anthropic lanza <strong>Claude Code</strong> — el primer <em>agente</em> de código masivo: ya no sugiere líneas, <strong>ejecuta el trabajo</strong>.</li>
+<li>Hoy lo usa <strong>~39% de los desarrolladores profesionales del mundo</strong> (47% en EE. UU.) — y <strong>9 de cada 10</strong> usan agentes de IA al menos cada semana.</li>
+<li><strong>~4 de cada 100 commits públicos de GitHub</strong> ya los escribe Claude Code.</li>
+<li>El propio creador de la herramienta: <em>no edita código a mano desde noviembre de 2025</em>.</li>
 </ul>
 <div class="fragment">
-<p><strong>Todo el material es de ustedes también.</strong> Si sus profesores están aprendiendo esto a mitad de carrera, ustedes tienen la ventaja de empezar en el primer año.</p>
+<p><span class="warm">La palabra del año fue <strong>agente</strong>: la IA pasó de sugerir (copiloto) a ejecutar (delegar). Guarden esa palabra — vuelve en el paper.</span></p>
+</div>
+</section>
+<section id="la-ia-entró-a-la-matemática-de-frontera" class="slide level2 smaller">
+<h2>2026: la IA entró a la matemática de frontera</h2>
+<p><img data-src="../figures/charla/logos/openai.svg" height="30"> &nbsp;&nbsp;&nbsp; <img data-src="../figures/charla/logos/deepmind.svg" height="34"></p>
+<ul>
+<li>Los <strong>problemas de Erdős</strong>: cientos de preguntas abiertas que dejó Paul Erdős — algunas llevaban <strong>80 años</strong> sin respuesta.</li>
+<li><strong>Enero 2026:</strong> primera resolución <strong>autónoma</strong> de un problema de Erdős por un sistema de IA, con prueba formal verificada en Lean.</li>
+<li><strong>Mayo 2026:</strong> un modelo de OpenAI encuentra un <strong>contraejemplo</strong> al problema de la distancia unitaria — una conjetura de Erdős <strong>de 1946</strong>. Los matemáticos: <em>“digno de un journal top”</em>.</li>
+<li>Y los mejores del campo — <strong>Terence Tao</strong> incluido — ya publican resolviendo estos problemas <strong>junto con</strong> estos sistemas.</li>
+</ul>
+<div class="fragment">
+<p><span class="warm">Titular de Quanta Magazine, agosto 2026: <em>“Why the Legendary Erdős Problems Are Falling to AI”.</em></span></p>
+</div>
+</section>
+<section id="por-qué-les-cuento-esto-en-un-curso-de-economía" class="slide level2 smaller">
+<h2>¿Por qué les cuento esto en un curso de economía?</h2>
+<p>Fíjense <strong>qué</strong> cayó primero: el código y la matemática — los dos <strong>lenguajes formales</strong>, donde verificar una respuesta es barato y el error no se puede esconder.</p>
+<div class="fragment">
+<p>Y ahora piensen qué disciplina habla <strong>los dos idiomas a la vez</strong>:</p>
+<blockquote>
+<p>La economía modela con <strong>matemática</strong> y contrasta con <strong>datos y código</strong>.</p>
+</blockquote>
 </div>
 <div class="fragment">
-<p><span class="warm">La regla que les enseñamos a ellos aplica igual aquí: la IA <strong>recuerda</strong> rápido y <strong>se equivoca</strong> con confianza — todo lo que importe, se <strong>verifica</strong> contra la fuente.</span></p>
+<p><span class="warm">La pregunta ya no es <em>si</em> esto llega a la economía — <strong>ya llegó</strong>. Primero les muestro cómo lo <strong>estudio</strong> como economista; después, cómo lo <strong>uso</strong> todos los días.</span></p>
 </div>
 </section></section>
 <section>
-<section id="parte-3-la-ia-como-objeto-de-estudio" class="title-slide slide level1 center">
-<h1>Parte 3 — La IA como objeto de estudio</h1>
+<section id="parte-2-la-ia-como-objeto-de-estudio" class="title-slide slide level1 center">
+<h1>Parte 2 — La IA como objeto de estudio</h1>
 
 </section>
 <section id="el-paper-que-presenté-en-harvard" class="slide level2 smaller">
@@ -378,7 +350,7 @@ Alexander Quispe · Caltech &amp; Microsoft–GitHub Research
 <p><strong>¿Los agentes de IA solo hacen más rápida a la gente — o expanden <em>lo que</em> puede producir?</strong></p>
 </div>
 <div class="fragment">
-<p><span class="warm">Fíjense en el movimiento: en la Parte 2 la IA era mi <em>herramienta</em>. Aquí es mi <em>objeto de estudio</em> — con teoría económica y econometría de las que enseña este departamento.</span></p>
+<p><span class="warm">Aquí la IA es mi <em>objeto de estudio</em> — con teoría económica y econometría de las que enseña este departamento. Al final les muestro la otra cara: la IA como <em>herramienta</em> de todos los días.</span></p>
 </div>
 </section>
 <section id="el-problema-económico-una-barrera-de-habilidad" class="slide level2 smaller">
@@ -484,6 +456,78 @@ Alexander Quispe · Caltech &amp; Microsoft–GitHub Research
 </div>
 </div>
 </div>
+</div>
+</section></section>
+<section>
+<section id="parte-3-cómo-investigo-hoy" class="title-slide slide level1 center">
+<h1>Parte 3 — Cómo investigo hoy</h1>
+
+</section>
+<section id="su-curso-es-mi-laboratorio" class="slide level2 smaller">
+<h2>Su curso es mi laboratorio</h2>
+<p>Este semestre ustedes estudian la <strong>economía peruana</strong>. Les muestro cómo la investigaría hoy, con una pregunta real:</p>
+<blockquote>
+<p>En los departamentos mineros del Perú, ¿la renta minera <strong>reduce</strong> la conflictividad social — o solo cambia <strong>aquello por lo que se protesta</strong>?</p>
+</blockquote>
+<div class="fragment">
+<p>Los datos existen y son públicos: los reportes de conflictos de la <strong>Defensoría del Pueblo</strong>, la producción minera del <strong>MINEM</strong>, las mesas de diálogo de la <strong>PCM</strong>, los proyectos de ley del <strong>Congreso</strong>.</p>
+</div>
+<div class="fragment">
+<p><span class="warm">El problema nunca fueron los datos. Era el <strong>costo de convertirlos en investigación</strong>. Eso es lo que acaba de cambiar.</span></p>
+</div>
+</section>
+<section id="la-herramienta-un-agente-de-ia" class="slide level2 smaller">
+<h2>La herramienta: un agente de IA</h2>
+
+<img data-src="../figures/es/agent-loop.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:58.0%"><p>Un <strong>agente</strong> no es un chat al que le pegan texto: vive en su computadora, <strong>ve sus archivos</strong>, escribe y ejecuta código, <strong>lee sus propios errores y los corrige</strong>. Ustedes dirigen; él ejecuta.</p>
+</section>
+<section id="el-problema-en-crudo-269-reportes-en-pdf" class="slide level2 smaller">
+<h2>El problema, en crudo: 269 reportes en PDF</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/screenshots/defensoria-raw.png" class="quarto-figure quarto-figure-center" style="width:76.0%"></p>
+</figure>
+</div>
+<p>La serie de conflictos de la Defensoría existe desde 2004 — <strong>caso por caso, con narrativa</strong> — pero solo en PDF. Nadie la tiene como base de datos. <em>Nadie.</em></p>
+</section>
+<section id="lo-que-hace-el-agente-por-dentro" class="slide level2 smaller">
+<h2>Lo que hace el agente, por dentro</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/es/pipeline-extraccion.svg" class="quarto-figure quarto-figure-center" style="width:88.0%"></p>
+</figure>
+</div>
+</section>
+<section id="y-para-la-literatura-un-equipo-entero" class="slide level2 smaller">
+<h2>Y para la literatura: un equipo entero</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/es/deep-research-caso.svg" class="quarto-figure quarto-figure-center" style="width:76.0%"></p>
+</figure>
+</div>
+<p>Una revisión de literatura que tomaba semanas: <strong>~100 agentes en paralelo</strong>, 20 minutos, con las citas <strong>verificadas entre ellos</strong> — y los PDFs descargados en su carpeta.</p>
+</section>
+<section id="hasta-lo-hablado-se-vuelve-dato" class="slide level2 smaller">
+<h2>Hasta lo hablado se vuelve dato</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/es/whisper-pipeline.svg" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
+</figure>
+</div>
+<p>Con <strong>Whisper</strong> (gratuito y local), 12 minutos de video sobre conflictos sociales se transcriben en <strong>9 segundos</strong> — y las entrevistas de campo, las clases y los seminarios dejan de evaporarse.</p>
+</section>
+<section id="esto-no-es-el-futuro-sus-profesores-ya-están-ahí" class="slide level2 smaller">
+<h2>Esto no es el futuro: sus profesores ya están ahí</h2>
+<p>Este ciclo se lo enseñamos <strong>este mes</strong> a los docentes de la Facultad de Ciencias Sociales — dos sesiones completas, públicas, paso a paso:</p>
+<ul>
+<li>Sesión 1 — Confianza y verificación: <span class="small">alexanderquispe.github.io/claude-code-research/profesores/sesion1-confianza.html</span></li>
+<li>Sesión 2 — El flujo completo (Git, datos, OCR, Whisper, MCPs): <span class="small">alexanderquispe.github.io/claude-code-research/profesores/sesion2-flujo.html</span></li>
+</ul>
+<div class="fragment">
+<p><strong>Todo el material es de ustedes también.</strong> Si sus profesores están aprendiendo esto a mitad de carrera, ustedes tienen la ventaja de empezar en el primer año.</p>
+</div>
+<div class="fragment">
+<p><span class="warm">La regla que les enseñamos a ellos aplica igual aquí: la IA <strong>recuerda</strong> rápido y <strong>se equivoca</strong> con confianza — todo lo que importe, se <strong>verifica</strong> contra la fuente.</span></p>
 </div>
 </section></section>
 <section>
