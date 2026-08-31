@@ -292,11 +292,11 @@ Están estudiando **economía peruana** en el mejor momento posible:
 Mi invitación concreta para sus trabajos y sus tesis:
 
 1. **Más matemática.** Que sus papers tengan modelo, no solo descripción: la formalización es lo que convierte una opinión en un argumento contrastable.
-2. **Problemas más intensivos en datos.** La serie completa, no la muestrita: los 269 reportes, el texto entero del Congreso, las imágenes satelitales. Que la ambición del problema mande.
+2. **Problemas más intensivos en datos.** La serie completa: los 269 reportes, el texto entero del Congreso, las imágenes satelitales. Que la ambición del problema mande.
 
 . . .
 
-**¿Y con qué?** Con lo que ya tienen: los modelos de OpenAI, **Claude Code**, los modelos abiertos de **Hugging Face** y las herramientas de **GitHub** corren **en su propia laptop** — cosas que hace diez años pedían una supercomputadora y una carta al decano.
+**¿Y con qué?** Con lo que ya tienen: los modelos de OpenAI, **Claude Code**, los modelos abiertos de **Hugging Face** y las herramientas de **GitHub** corren **en su propia laptop** — cosas que hace diez años pedían una supercomputadora.
 
 . . .
 
